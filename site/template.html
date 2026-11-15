@@ -12,9 +12,9 @@
 <header class="top"><div class="wrap">
   <h1>Hauskauf Bonn</h1>
   <p class="sub">Listings, costs and rankings for a home near Ippendorf / Kottenforst · data as of <span id="updated"></span></p>
-  <div class="tabs"><a href="overview.html" class="on">Shortlist</a><a href="offers.html">All offers<span class="count" id="offers-count"></span></a></div>
 </div></header>
 <nav class="sticky"><div class="wrap">
+  <span class="navtabs"><a href="overview.html" class="tab on">Shortlist</a><a href="offers.html" class="tab">All offers<span class="count" id="offers-count"></span></a></span>
   <a href="#ranking">Ranking</a><a href="#criteria">What counts</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#hoods">Neighbourhoods</a><a href="#market">Market prices</a>
   <a href="#calc">Calculators</a><a href="#details">Listings</a><a href="#screened">Screened</a><a href="#checklist">Checklist</a><a href="#log">Log</a><a href="#method">Method</a>
 </div></nav>
@@ -43,7 +43,7 @@
 
 <section id="value">
   <h2>Cost vs quality</h2>
-  <p class="lead">Top right is best: more wealth after 20 years and higher quality. Dots follow your weights above.</p>
+  <p class="lead">Top right is best: more wealth after 20 years and higher quality. Dots follow your weights above. Ringed dots on the dashed line are the <b>Pareto front</b>: for each of them no other home is both cheaper over 20 years and better in quality – every sensible choice is one of these, the rest is about how you trade money against quality.</p>
   <div class="card chartbox"><div class="legend" id="scatter-legend"></div><div id="scatter"></div><div class="tip" id="scatter-tip"></div></div>
 </section>
 
@@ -52,6 +52,7 @@
   <p class="lead">Listings are placed at their <b>district</b> (approximate, no addresses). Coloured rings show the average asking price per m² for the district.</p>
   <div class="card">
     <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px">
+      <div class="seg" id="map-color"><button data-c="type" class="on">By type</button><button data-c="money">By money</button><button data-c="quality">By quality</button><button data-c="score">By overall score</button></div>
       <div class="seg" id="map-kind"><button data-k="flat" class="on">Flat €/m²</button><button data-k="house">House €/m²</button><button data-k="none">Hide prices</button></div>
       <div class="legend" id="map-legend" style="margin:0"></div>
     </div>
@@ -188,7 +189,7 @@ const SC = Object.fromEntries(shortlist.map(l => [l.id, QC.forListing(l)]));
 function quality(l) { return QC.weighted(SC[l.id], W); }
 function moneyScore(id) { const v = DATA.model[id].vs_ref_20y; return Math.max(0, Math.min(5, 2.5 + v / 80000)); }
 function combined(l) { const m = W.money / 100; return m * moneyScore(l.id) + (1 - m) * quality(l); }
-function rerender() { store.set("weights2", W); renderRanking(); renderScatter(); renderCards(); }
+function rerender() { store.set("weights2", W); renderRanking(); renderScatter(); renderCards(); colorMarkers(); }
 function slider(k, lab, txt) {
   const wrap = document.createElement("label");
   wrap.innerHTML = `<span>${lab} <span class="val">${txt()}</span></span><input type="range" min="0" max="${k === "money" ? 100 : 30}" step="1" value="${W[k]}">`;
@@ -211,7 +212,8 @@ function buildWeights() {
 QC.setExamples(id => shortlist.map(l => [l.title, SC[l.id][id], "#d-" + l.id]).sort((a, b) => (b[1]?.s ?? -1) - (a[1]?.s ?? -1)));
 function renderCriteria() {
   $("#crit-cards").innerHTML = QC.GROUPS.map(g => `<div class="card"><h3 style="margin-top:0">${esc(g.label)}</h3>${QC.CRITS.filter(c => c.group === g.id).map(c =>
-    `<div class="critrow">${QC.label(c.id)} <span class="note">${c.kind === "computed" && c.id !== "space" ? "OpenStreetMap" : c.id === "space" ? "from m²" : "judged per home"}</span><div class="note">${esc(c.what)}</div></div>`).join("")}</div>`).join("");
+    `<div class="critrow">${QC.label(c.id)} <span class="note">${c.kind === "computed" && c.id !== "space" ? "OpenStreetMap" : c.id === "space" ? "from m²" : "judged per home"}</span><div class="note">${esc(c.what)}</div>
+      <ol class="scale">${Object.entries(c.scale).sort((x, y) => y[0] - x[0]).map(([k, t]) => `<li><b>${k}</b> ${esc(t)}</li>`).join("")}</ol></div>`).join("")}</div>`).join("");
 }
 function renderHoods() {
   const ids = ["nature", "shopping", "schools", "transport", "city"], am = QC.AM;
@@ -225,6 +227,10 @@ function renderHoods() {
       <td class="num"><b>${avg.toFixed(1)}</b></td><td class="note">${QC.m(a.forest?.m)} · ${QC.m(a.supermarket?.m)} · ${QC.m(a.rail?.m)}</td></tr>`;
   }).join("")}</tbody>`;
 }
+
+// ---------- photos (hotlinked from the portal; ImmoScout homes use their Immowelt/Kleinanzeigen copy) ----------
+const thumb = l => l.image ? `<img class="thumb-s" src="${esc(l.image)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : `<span class="thumb-s none"></span>`;
+const alsoOn = l => (l.also_on || []).map(a => `<a class="btn" href="${esc(a.url)}" target="_blank" rel="noopener">Also on ${esc({immowelt: "Immowelt", kleinanzeigen: "Kleinanzeigen", ohnemakler: "ohne-makler"}[a.source] || a.source)} ↗</a>`).join("");
 
 // ---------- ranking table ----------
 let sortKey = "combined", sortDir = -1;
@@ -247,7 +253,7 @@ function renderRanking() {
   const t = $("#rank-table");
   t.innerHTML = `<thead><tr>${COLS.map(c => `<th class="${c[3] ? "num " : ""}${c[2] || c[0] === "rank" ? "sortable" : ""}" data-k="${c[0]}">${c[1]}${sortKey === c[0] ? (sortDir < 0 ? " ↓" : " ↑") : ""}</th>`).join("")}</tr></thead><tbody>${rs.map(r => {
     const m = r.m, v = m.vs_ref_20y, mine = DATA.private ? `<td class="num">${fmtE(DATA.private.homes[r.l.id]?.monthly)}</td>` : "";
-    return `<tr><td class="num">${r.rank}</td><td><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</td>
+    return `<tr><td class="num">${r.rank}</td><td><div class="homecell">${thumb(r.l)}<div><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</div></div></td>
       <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
       <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
       <td class="num"><button class="qbtn" data-id="${r.l.id}" aria-expanded="${OPEN.has(r.l.id)}">${r.q.toFixed(1)} ${OPEN.has(r.l.id) ? "▴" : "▾"}</button></td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td>
@@ -282,9 +288,19 @@ function renderScatter() {
   el("text", {x: (P.l + W0 - P.r) / 2, y: H0 - 8, "text-anchor": "middle"}, s).textContent = "Wealth after 20 years vs reference flat (€, today's money) →";
   const yl = el("text", {x: 16, y: (P.t + H0 - P.b) / 2, "text-anchor": "middle", transform: `rotate(-90 16 ${(P.t + H0 - P.b) / 2})`}, s); yl.textContent = "Quality score (your weights) →";
   const placed = [], dots = pts.map(p => [X(p.m.vs_ref_20y / 1000), Y(p.q)]);
+  // Pareto front: homes that no other home beats on both money and quality.
+  const front = paretoFront(pts);
+  const fp = [...front].sort((a, b) => a.m.vs_ref_20y - b.m.vs_ref_20y);
+  if (fp.length > 1) {
+    let d = `M ${X(fp[0].m.vs_ref_20y / 1000)} ${Y(fp[0].q)}`;
+    for (let i = 1; i < fp.length; i++) d += ` H ${X(fp[i].m.vs_ref_20y / 1000)} V ${Y(fp[i].q)}`;
+    el("path", {d, fill: "none", stroke: css("--text-2"), "stroke-width": 1.5, "stroke-dasharray": "5 4"}, s);
+  }
   pts.sort((a, b) => b.q - a.q).forEach(p => {
     const cx = X(p.m.vs_ref_20y / 1000), cy = Y(p.q);
     el("line", {x1: X(p.m.vs_ref_min / 1000), x2: X(p.m.vs_ref_max / 1000), y1: cy, y2: cy, stroke: typeColor(p.l.type), "stroke-width": 2, opacity: .35}, s);
+    const onFront = front.has(p);
+    if (onFront) el("circle", {cx, cy, r: 11, fill: "none", stroke: css("--text"), "stroke-width": 1.5}, s);
     const c = el("circle", {cx, cy, r: 7, fill: typeColor(p.l.type), stroke: css("--surface"), "stroke-width": 2}, s);
     const label = SHORT[p.l.id] || p.l.title, lw = label.length * 6.6;
     const cands = [];
@@ -295,11 +311,14 @@ function renderScatter() {
     placed.push([lx, ly, lw]);
     el("text", {x: lx, y: ly, class: "lab"}, s).textContent = label;
     const hit = el("circle", {cx, cy, r: 16, fill: "transparent", style: "cursor:pointer"}, s);
-    hit.addEventListener("mousemove", e => { const r = box.getBoundingClientRect(); tipShow(tip, box.parentElement, `<b>${esc(p.l.title)}</b><br>${esc(p.l.district)} · ${fmtK(p.l.asking)}<br>20 yrs vs ref.: ${fmtS(p.m.vs_ref_20y)} (${fmtS(p.m.vs_ref_min)} … ${fmtS(p.m.vs_ref_max)})<br>Quality ${p.q.toFixed(1)} · Score ${p.c.toFixed(2)}`, e.clientX - r.left, e.clientY - r.top); });
+    hit.addEventListener("mousemove", e => { const r = box.getBoundingClientRect(); tipShow(tip, box.parentElement, `<b>${esc(p.l.title)}</b><br>${esc(p.l.district)} · ${fmtK(p.l.asking)}<br>20 yrs vs ref.: ${fmtS(p.m.vs_ref_20y)} (${fmtS(p.m.vs_ref_min)} … ${fmtS(p.m.vs_ref_max)})<br>Quality ${p.q.toFixed(1)} · Score ${p.c.toFixed(2)}${onFront ? "<br><b>On the Pareto front</b>" : ""}`, e.clientX - r.left, e.clientY - r.top); });
     hit.addEventListener("mouseleave", () => tip.style.display = "none");
     hit.addEventListener("click", () => location.hash = "d-" + p.l.id);
   });
-  $("#scatter-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span class="note">Line = range across 9 market scenarios</span>`;
+  $("#scatter-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span class="note">Line = range across 9 market scenarios</span><span><i style="background:none;border:1.5px solid var(--text)"></i>Pareto front (dashed): ${fp.map(p => esc(SHORT[p.l.id] || p.l.title)).join(" · ")}</span>`;
+}
+function paretoFront(pts) {
+  return new Set(pts.filter(a => !pts.some(b => b !== a && b.m.vs_ref_20y >= a.m.vs_ref_20y && b.q >= a.q && (b.m.vs_ref_20y > a.m.vs_ref_20y || b.q > a.q))));
 }
 
 // ---------- market ----------
@@ -332,7 +351,7 @@ function renderMap() {
   if (!window.L) { $("#map").innerHTML = '<p style="padding:20px">Map library could not be loaded (offline?).</p>'; return; }
   map = L.map("map", {scrollWheelZoom: false}).setView([50.70, 7.11], 12);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 18, attribution: "© OpenStreetMap contributors"}).addTo(map);
-  const counts = {};
+  const counts = {}; MARKERS = [];
   DATA.listings.forEach(l => {
     if (l.lat == null) return;
     const n = counts[l.district] = (counts[l.district] || 0) + 1, a = n * 2.4, r = 0.0018 * Math.sqrt(n);
@@ -340,11 +359,38 @@ function renderMap() {
     const short = l.category === "shortlist";
     const m = L.circleMarker([lat, lon], {radius: short ? 8 : 5, color: css("--surface"), weight: 2, fillColor: typeColor(l.category === "shortlist" || l.category === "screened" ? l.type : l.category), fillOpacity: short ? .95 : .6}).addTo(map);
     const mm = DATA.model[l.id];
-    m.bindPopup(`<b>${esc(l.title)}</b><br>${esc(l.district)} · ${fmtK(l.asking)} · ${l.size_m2 ?? "?"} m²<br>${mm ? "20 yrs vs ref.: " + fmtS(mm.vs_ref_20y) + "<br>" : ""}${esc(l.category === "shortlist" ? "" : l.reason || "")}<br>${short ? `<a href="#d-${l.id}">Details</a> · ` : ""}<a href="${esc(l.url)}" target="_blank" rel="noopener">Listing</a>`);
+    MARKERS.push([m, l]);
+    m.bindPopup(() => `${l.image ? `<img src="${esc(l.image)}" referrerpolicy="no-referrer" style="width:220px;height:140px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px">` : ""}<b>${esc(l.title)}</b><br>${esc(l.district)} · ${fmtK(l.asking)} · ${l.size_m2 ?? "?"} m²<br>${mm ? "20 yrs vs ref.: " + fmtS(mm.vs_ref_20y) + ` · quality ${quality(l).toFixed(1)} · score ${combined(l).toFixed(2)}<br>` : ""}${esc(l.category === "shortlist" ? "" : l.reason || "")}<br>${short ? `<a href="#d-${l.id}">Details</a> · ` : ""}<a href="${esc(l.url)}" target="_blank" rel="noopener">Listing</a>`);
   });
-  drawPrices();
-  $("#map-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span><i style="background:${css("--muted")}"></i>Investment / sold</span><span class="note">big dot = modelled</span>`;
+  drawPrices(); colorMarkers();
 }
+// ---------- map dot colours: type, money, quality or overall score ----------
+let MARKERS = [], mapColor = "type";
+function ramp(t) { // 0 → red, 0.5 → amber, 1 → green
+  const c = [[208, 59, 59], [201, 133, 0], [12, 163, 12]], x = Math.max(0, Math.min(1, t)) * 2, i = Math.min(1, Math.floor(x)), f = x - i;
+  return `rgb(${c[i].map((v, k) => Math.round(v + (c[i + 1][k] - v) * f)).join(",")})`;
+}
+function dotColor(l) {
+  const short = l.category === "shortlist" && DATA.model[l.id];
+  if (mapColor === "type") return typeColor(l.category === "shortlist" || l.category === "screened" ? l.type : l.category);
+  if (!short) return css("--muted");
+  if (mapColor === "money") return ramp(0.5 + DATA.model[l.id].vs_ref_20y / 300000);
+  if (mapColor === "quality") return ramp((quality(l) - 2) / 2.5);
+  return ramp((combined(l) - 2) / 2);
+}
+function colorMarkers() {
+  if (!map) return;
+  MARKERS.forEach(([m, l]) => m.setStyle({fillColor: dotColor(l)}));
+  const grad = `<span><i style="background:linear-gradient(90deg,${ramp(0)},${ramp(.5)},${ramp(1)});width:60px;border-radius:5px"></i>`;
+  $("#map-legend").innerHTML = mapColor === "type"
+    ? ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span><i style="background:${css("--muted")}"></i>Investment / sold</span><span class="note">big dot = modelled</span>`
+    : mapColor === "money" ? `${grad}−€150k … ref. … +€150k vs reference (20 yrs)</span><span class="note">grey = not modelled</span>`
+    : mapColor === "quality" ? `${grad}quality 2 … 4.5 (your weights)</span><span class="note">grey = not modelled</span>`
+    : `${grad}overall score 2 … 4 (your money/quality mix)</span><span class="note">grey = not modelled</span>`;
+}
+document.querySelectorAll("#map-color button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#map-color button").forEach(x => x.classList.toggle("on", x === b)); mapColor = b.dataset.c; colorMarkers();
+});
 function drawPrices() {
   if (!map) return; if (priceLayer) priceLayer.remove(); if (mapKind === "none") return;
   priceLayer = L.layerGroup().addTo(map);
@@ -377,13 +423,13 @@ function renderCards() {
     if (p) money.push(["My monthly (private)", fmtE(p.monthly)], ["My net worth 20 yrs (private)", fmtE(p.nw20)]);
     const hist = (l.price_history || []).map(h => `${esc(h.date)}: ${fmtK(h.price)}${h.note ? " – " + esc(h.note) : ""}`).join("<br>");
 
-    return `<div class="card listing" id="d-${l.id}"><div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a></div></div>
+    return `<div class="card listing" id="d-${l.id}">${l.image ? `<a class="hero" href="${esc((l.also_on || [])[0]?.url || l.url)}" target="_blank" rel="noopener" style="background-image:url('${esc(l.image)}')" title="Photo from the portal – opens the listing"></a>` : ""}<div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a>${alsoOn(l)}</div></div>
       <div class="note">${esc(l.district)}${l.area_note ? " · " + esc(l.area_note) : ""}</div>
       <div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
       <div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
       <div class="cols3"><div><h4>Good</h4><ul>${l.highlights.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Risks</h4><ul>${l.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Check</h4><ul>${l.checks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
       ${hist ? `<p class="note" style="margin:10px 0 0"><b>Price history:</b><br>${hist}</p>` : ""}
-      <details class="qdetails"><summary>Quality <b>${r.q.toFixed(1)}</b> / 5 – why</summary>${QC.breakdownTable(SC[l.id], W)}</details>
+      <details class="qdetails" open><summary>Quality <b>${r.q.toFixed(1)}</b> / 5 – how each criterion scores (click a name for its full scale)</summary>${QC.breakdownTable(SC[l.id], W)}</details>
       <div class="verdict">${esc(l.verdict)}</div></div>`;
   }).join("");
 }

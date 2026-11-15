@@ -43,8 +43,11 @@ dialog::backdrop { background: rgba(0,0,0,.5); }
 <header class="top"><div class="wrap">
   <h1>Hauskauf Bonn</h1>
   <p class="sub">Every current offer in Bonn and Wachtberg, refreshed daily · last run <span id="updated"></span></p>
-  <div class="tabs"><a href="overview.html">Shortlist</a><a href="offers.html" class="on">All offers<span class="count" id="offers-count"></span></a></div>
 </div></header>
+<nav class="sticky"><div class="wrap">
+  <span class="navtabs"><a href="overview.html" class="tab">Shortlist</a><a href="offers.html" class="tab on">All offers<span class="count" id="offers-count"></span></a></span>
+  <span class="navinfo" id="navinfo"></span>
+</div></nav>
 <main><div class="wrap">
 
 <section style="margin-top:20px">
@@ -164,6 +167,7 @@ let CUR = [];
 function render() {
   CUR = visible();
   $("#count").textContent = `${CUR.length} of ${OFFERS.filter(o => o.active).length} offers`;
+  $("#navinfo").textContent = `${CUR.length} shown`;
   $("#offers").innerHTML = CUR.length ? CUR.map(o => `<article class="offer${o.active ? "" : " gone"}" data-k="${esc(o.key)}">
       <div class="thumb" style="${img(o)}"><div class="badges">${badges(o)}</div></div>
       <div class="body"><div class="price">${o.price ? fmtE(o.price) : "Price on request"}</div>
@@ -204,10 +208,10 @@ function showPreview() {
     <div class="facts">${rows.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
     ${hist && o.price_history.length > 1 ? `<p class="note">Price history: ${hist}</p>` : ""}
     <h4 style="margin:14px 0 4px">The home <span class="note">(indicative, from the listing facts – check the exposé)</span></h4>
-    <table class="qtable"><tbody>${homeRows(o).map(([id, x]) => `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why : "not in the listing summary"}</td></tr>`).join("")}</tbody></table>
+    <table class="qtable"><tbody>${homeRows(o).map(([id, x]) => `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why + QC.rule(id, x.s) : "not in the listing summary"}</td></tr>`).join("")}</tbody></table>
     ${o.hood ? `<h4 style="margin:14px 0 4px">Neighbourhood · ${esc(o.district)} <span class="note">(district centre, OpenStreetMap – click a criterion for its scale)</span></h4>
-      <table class="qtable"><tbody>${AREA_IDS.map(id => { const x = o.hood[id]; return `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why : ""}</td></tr>`; }).join("")}
-      <tr><td>${QC.label("location")}</td><td class="num">${o.fit ?? "–"}</td><td>${QC.bar(o.fit)}</td><td class="why">Our district preference</td></tr></tbody></table>`
+      <table class="qtable"><tbody>${AREA_IDS.map(id => { const x = o.hood[id]; return `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why + QC.rule(id, x.s) : ""}</td></tr>`; }).join("")}
+      <tr><td>${QC.label("location")}</td><td class="num">${o.fit ?? "–"}</td><td>${QC.bar(o.fit)}</td><td class="why">Our district preference${QC.rule("location", o.fit)}</td></tr></tbody></table>`
       : `<p class="note">No neighbourhood data: the listing only gives postcode ${esc(o.zip ?? "")}.</p>`}
     <div class="linkrow" style="margin-top:12px"><a class="btn primary" href="${esc(o.url)}" target="_blank" rel="noopener">Open on ${esc(LABEL[o.source])} ↗</a>
       ${others.map(x => `<a class="btn" href="${esc(x.url)}" target="_blank" rel="noopener">Also on ${esc(LABEL[x.source])} ↗</a>`).join("")}

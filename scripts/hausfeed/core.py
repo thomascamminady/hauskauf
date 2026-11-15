@@ -39,6 +39,7 @@ class Offer:
     energy_class: str | None = None
     image: str | None = None
     seller: Seller | None = None
+    new_build: bool = False
 
     @property
     def key(self) -> str:
@@ -230,6 +231,20 @@ def scrub(text: str) -> str:
     for pat in _SCRUB:
         text = pat.sub("…", text)
     return text
+
+
+_NEW_BUILD = re.compile(
+    r"neubau|projektiert|bauprojekt|bauvorhaben|bauträger|\bentsteht\b|\bentstehen\b|im bau\b|baubeginn|rohbau"
+    r"|fertigstellung|bezugsfertig\w* (?:ab |im |voraussichtlich )?\w* ?20(?:2[6-9]|3\d)|vorvermarktung|baugenehmigung"
+    r"|noch zu (?:errichten|bauen)|wird (?:neu )?errichtet|hausbau|bauen sie|ihr (?:neues )?traumhaus|livinghaus"
+    r"|\berstbezug\b(?! nach)",
+    re.IGNORECASE,
+)
+
+
+def is_new_build(text: str) -> bool:
+    """Off-plan or still-to-be-built offers (a renovated 'Erstbezug nach Sanierung' is not one)."""
+    return bool(_NEW_BUILD.search(text))
 
 
 def squash(text: str, limit: int = 140) -> str:

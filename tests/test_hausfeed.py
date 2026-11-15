@@ -16,6 +16,7 @@ from hausfeed.core import (
     clean_location,
     de_number,
     in_area,
+    is_new_build,
     parse_area,
     parse_price,
     parse_rooms,
@@ -79,6 +80,29 @@ def test_squash_scrubs_personal_bits(text: str) -> None:
     out = squash(text)
     for bad in ["Rheingasse 4", "Marie", "Muster", "4567", "example", "Hang 3a"]:
         assert bad not in out
+
+
+@pytest.mark.parametrize(
+    ("text", "new"),
+    [
+        ("Neubauwohnung mit Garten – Teil eines Neubauprojektes", True),
+        ("In gefragter Lage entsteht ein Mehrfamilienhaus", True),
+        ("Das projektierte Einfamilienhaus", True),
+        ("Fertigstellung voraussichtlich Ende 2027", True),
+        ("Reihenmittelhaus zum Kauf - Erstbezug · provisionsfrei", True),
+        ("Erstbezug nach Kernsanierung – modernes Apartment", False),
+        ("Gepflegtes Einfamilienhaus aus 1986 mit Garten", False),
+    ],
+)
+def test_new_build_detection(text: str, new: bool) -> None:
+    assert is_new_build(text) is new
+
+
+def test_merge_drops_new_builds() -> None:
+    feed = store.load(Path("/nonexistent"))
+    nb = Offer("kleinanzeigen", "n", "u", "flat", "t", 500000, 120, 4, "53127", "Ippendorf", new_build=True)
+    store.merge(feed, [CrawlResult("kleinanzeigen", [nb], 1)], "2026-11-15", {})
+    assert feed["offers"] == {}
 
 
 def test_in_area() -> None:

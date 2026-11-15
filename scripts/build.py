@@ -164,11 +164,42 @@ def shared() -> dict[str, Any]:
     }
 
 
+def attach_feed_photos(listings: list[dict[str, Any]]) -> None:
+    """Give hand-added listings a photo and 'also on' links from the same home in the offer feed.
+
+    Same home = same district, living area within 1 m², asking price within 3 %. ImmoScout24 pages can't be
+    fetched, but many of those homes are cross-listed on Immowelt or Kleinanzeigen.
+    """
+    path = ROOT / "data" / "feed.json"
+    if not path.exists():
+        return
+    offers = [o for o in json.loads(path.read_text(encoding="utf-8"))["offers"].values() if o.get("active")]
+    for row in listings:
+        size, price = row.get("size_m2"), row.get("asking")
+        if not size or not price:
+            continue
+        same = [
+            o
+            for o in offers
+            if o.get("district") == row.get("district")
+            and o.get("size_m2")
+            and o.get("price")
+            and abs(o["size_m2"] - size) <= 1
+            and abs(o["price"] - price) <= 0.03 * price
+        ]
+        if not same:
+            continue
+        row.setdefault("image", next((o["image"] for o in same if o.get("image")), None))
+        row["also_on"] = [{"source": o["source"], "url": o["url"]} for o in same if o["url"] != row.get("url")]
+
+
 def payload(private_model: Path | None, updated: str) -> dict[str, Any]:
+    listings = load("listings.json")
+    attach_feed_photos(listings)
     data: dict[str, Any] = {
         **shared(),
         "updated": updated,
-        "listings": load("listings.json"),
+        "listings": listings,
         "model": load("model_public.json"),
         "market": load("market.json"),
         "log": load("log.json"),

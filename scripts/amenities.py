@@ -58,7 +58,7 @@ GREEN_QUERY = """
   relation(around:{r},{lat},{lon})[natural=wood];
   way(around:{r},{lat},{lon})[leisure=park];
 );
-out tags geom({s},{w},{n},{e});
+out tags geom;
 """
 MIN_FOREST_HA = 5.0  # ignore small copses: only woodland of roughly this size counts as "forest"
 
@@ -193,7 +193,7 @@ def summarise(centre: tuple[float, float], pois: list[dict[str, Any]], greens: l
         name = tags.get("name", "")
         if tags.get("leisure") == "park":
             park.append((d, name))
-        elif el["type"] == "relation" or ring_area_ha(rings[0]) >= MIN_FOREST_HA:
+        elif sum(ring_area_ha(r) for r in rings) >= MIN_FOREST_HA:
             forest.append((d, name or "Wald"))
     near = lambda k, r: sum(1 for d, _ in by[k] if d <= r)
     return {
@@ -237,7 +237,7 @@ def main(only: str | tuple[str, ...] = "", delay: float = 3.0, refresh: bool = F
             try:
                 pois = query(client, POI_QUERY.format(r=RADIUS, lat=lat, lon=lon))
                 time.sleep(delay)
-                greens = query(client, GREEN_QUERY.format(r=RADIUS, lat=lat, lon=lon, **bbox(lat, lon, RADIUS + 500)))
+                greens = query(client, GREEN_QUERY.format(r=RADIUS, lat=lat, lon=lon))
                 time.sleep(delay)
             except RuntimeError as e:
                 print(f"{name}: skipped – {e}", flush=True)

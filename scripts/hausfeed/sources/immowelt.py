@@ -13,7 +13,18 @@ from urllib.parse import urljoin
 
 from selectolax.lexbor import LexborHTMLParser
 
-from hausfeed.core import Kind, Offer, Page, clean_location, in_area, parse_area, parse_price, parse_rooms, squash
+from hausfeed.core import (
+    Kind,
+    Offer,
+    Page,
+    clean_location,
+    in_area,
+    is_new_build,
+    parse_area,
+    parse_price,
+    parse_rooms,
+    squash,
+)
 
 BASE = "https://www.immowelt.de"
 PLACES = {
@@ -99,6 +110,7 @@ class Immowelt:
                     energy_class=energy.text(strip=True) or None if energy else None,
                     image=image,
                     seller=None,
+                    new_build=is_new_build(card.text(separator=" ", strip=True)),
                 )
             )
         # Facet links only from top-level city pages (keeps the crawl bounded).

@@ -7,7 +7,7 @@ from urllib.parse import urljoin
 
 from selectolax.lexbor import LexborHTMLParser, LexborNode
 
-from hausfeed.core import Kind, Offer, Page, clean_location, in_area, parse_area, parse_price, squash
+from hausfeed.core import Kind, Offer, Page, clean_location, in_area, is_new_build, parse_area, parse_price, squash
 
 BASE = "https://www.ohne-makler.net"
 PLACES = ["bonn", "wachtberg"]
@@ -88,6 +88,7 @@ class OhneMakler:
                     energy_class=energy,
                     image=next((i for i in imgs if "media.ohne-makler.net" in i), None),
                     seller="private",
+                    new_build=is_new_build(" ".join(lines)),
                 )
             )
         n = _page_of(url)

@@ -7,7 +7,18 @@ from urllib.parse import urljoin
 
 from selectolax.lexbor import LexborHTMLParser
 
-from hausfeed.core import Kind, Offer, Page, clean_location, in_area, parse_area, parse_price, parse_rooms, squash
+from hausfeed.core import (
+    Kind,
+    Offer,
+    Page,
+    clean_location,
+    in_area,
+    is_new_build,
+    parse_area,
+    parse_price,
+    parse_rooms,
+    squash,
+)
 
 BASE = "https://www.kleinanzeigen.de"
 # (slug, location id) – ids from /s-ort-empfehlungen.json
@@ -74,6 +85,7 @@ class Kleinanzeigen:
                     district=district,
                     image=img.attributes.get("src") if img else None,
                     seller=seller,
+                    new_build=is_new_build(" ".join(lines)),
                 )
             )
         n = _page_of(url)

@@ -34,6 +34,8 @@ def keep(offer: Offer, config: dict[str, Any]) -> bool:
         return False
     if offer.price is not None and offer.price < config.get("min_price", 0):
         return False
+    if offer.new_build and config.get("exclude_new_build", True):
+        return False
     pattern = config.get("exclude_title_regex")
     return not (pattern and re.search(pattern, offer.title, re.IGNORECASE))
 
@@ -52,6 +54,7 @@ def merge(feed: FeedDict, results: list[CrawlResult], today: str, config: dict[s
         seen_now: set[str] = set()
         for o in res.offers:
             if not keep(o, config):
+                offers.pop(o.key, None)  # filtered out (e.g. new build): drop it entirely
                 continue
             seen_now.add(o.key)
             stats["seen"] += 1

@@ -1513,7 +1513,8 @@
     "s": 2.5,
     "why": "Sitting tenants; If converted to condos after the tenancy began, owner-occupation notice can be blocked for years"
    }
-  }
+  },
+  "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3f/3f56d0a1-7163-4409-a452-38b34b3e5151?rule=$_59.AUTO"
  },
  {
   "id": "ippendorf-garden-flat",
@@ -1590,7 +1591,8 @@
     "s": 2,
     "why": "Needs full renovation; Old oil boiler shared by 3 owners; Broker % not stated (3.57% assumed)"
    }
-  }
+  },
+  "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c5/c5bc36ed-d9fb-4cd8-b87b-49f0353dc1f8?rule=$_59.AUTO"
  },
  {
   "id": "godesberg-villa-flat",
@@ -1679,7 +1681,8 @@
     "s": 3.5,
     "why": "Bathrooms not stated; Gas boiler from 2002; Ad to be taken down in ~2 weeks"
    }
-  }
+  },
+  "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7e/7e83cec4-579f-4858-a585-221424d41a1f?rule=$_59.AUTO"
  },
  {
   "id": "poppelsdorf-maisonette",
@@ -2110,7 +2113,8 @@
   "risks": [],
   "checks": [],
   "lat": 50.701,
-  "lon": 7.039
+  "lon": 7.039,
+  "image": "https://logisimmo.de/wp-content/uploads/2026/09/8c8a5da6-7ece-4d06-afb2-5e67d84760d8.jpg"
  },
  {
   "id": "rosenburg-apartments",
@@ -2155,6 +2159,7 @@
   "risks": [],
   "checks": [],
   "lat": 50.73,
-  "lon": 7.17
+  "lon": 7.17,
+  "image": "https://logisimmo.de/wp-content/uploads/2026/07/88609.jpg"
  }
 ]

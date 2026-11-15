@@ -70,13 +70,20 @@ const QC = (() => {
     for (const c of CRITS) { const x = scores[c.id]; if (x && x.s != null && W[c.id]) { n += W[c.id] * x.s; d += W[c.id]; } }
     return d ? n / d : 0;
   }
+  // Scale step a score falls on, e.g. 4.5 → "4 = …" (the step at or below the score).
+  function rule(id, sc) {
+    const c = BY[id]; if (!c || sc == null) return "";
+    const k = Math.max(1, Math.min(5, Math.floor(sc + 1e-9)));
+    const txt = c.scale[String(k)];
+    return txt ? `<div class="rule">${k} = ${e(txt)}${c.id === "space" ? "" : ""}</div>` : "";
+  }
   const bar = s => `<span class="qbar"><span style="width:${(s ?? 0) * 20}%"></span></span>`;
   const label = id => `<button type="button" class="crit" data-crit="${id}">${e(BY[id].label)}</button>`;
   function breakdown(scores, W) {
     return GROUPS.map(g => {
       const rows = CRITS.filter(c => c.group === g.id).map(c => {
         const x = scores[c.id];
-        return `<tr><td>${label(c.id)}</td><td class="num">${x ? x.s : "–"}</td><td>${bar(x?.s)}</td><td class="note num">${W ? W[c.id] : c.weight}</td><td class="why">${x ? x.why : "<span class='note'>no data</span>"}</td></tr>`;
+        return `<tr><td>${label(c.id)}</td><td class="num">${x ? x.s : "–"}</td><td>${bar(x?.s)}</td><td class="note num">${W ? W[c.id] : c.weight}</td><td class="why">${x ? x.why + rule(c.id, x.s) : "<span class='note'>no data yet</span>"}</td></tr>`;
       }).join("");
       return `<tr class="grp"><td colspan="5">${e(g.label)}</td></tr>${rows}`;
     }).join("");
@@ -100,10 +107,10 @@ const QC = (() => {
       <h3>${e(c.label)}</h3><p>${e(c.what)}</p>
       <table class="qtable"><tbody>${Object.entries(c.scale).sort((a, b) => b[0] - a[0]).map(([s, t]) => `<tr><td class="num"><b>${s}</b></td><td>${bar(+s)}</td><td>${e(t)}</td></tr>`).join("")}</tbody></table>
       ${src}
-      ${ex.length ? `<h4>How the homes score</h4><table class="qtable"><tbody>${ex.map(([n, x, href]) => `<tr><td>${href ? `<a href="${href}">${e(n)}</a>` : e(n)}</td><td class="num">${x ? x.s : "–"}</td><td>${bar(x?.s)}</td><td class="why">${x ? x.why : ""}</td></tr>`).join("")}</tbody></table>` : ""}</div>`;
+      ${ex.length ? `<h4>How the homes score</h4><table class="qtable"><tbody>${ex.map(([n, x, href]) => `<tr><td>${href ? `<a href="${href}">${e(n)}</a>` : e(n)}</td><td class="num">${x ? x.s : "–"}</td><td>${bar(x?.s)}</td><td class="why">${x ? x.why + rule(id, x.s) : ""}</td></tr>`).join("")}</tbody></table>` : ""}</div>`;
     dlg.querySelectorAll("a").forEach(a => a.addEventListener("click", () => dlg.close()));
     dlg.showModal();
   }
   document.addEventListener("click", ev => { const b = ev.target.closest("button.crit"); if (b) { ev.preventDefault(); ev.stopPropagation(); explain(b.dataset.crit); } }, true);
-  return {CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
+  return {rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
 })();
