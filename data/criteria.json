@@ -1,0 +1,325 @@
+{
+ "about": "Quality criteria shown on the page. 'judged' criteria are scored per home with a written reason (in listings.json → features). 'computed' criteria are derived from data/amenities.json (OpenStreetMap, district centre) using the thresholds below. 'space' is computed from living area.",
+ "groups": [
+  {
+   "id": "home",
+   "label": "The home"
+  },
+  {
+   "id": "area",
+   "label": "Neighbourhood"
+  },
+  {
+   "id": "risk",
+   "label": "Risk"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "guests",
+   "group": "home",
+   "label": "Visiting family",
+   "kind": "judged",
+   "weight": 12,
+   "what": "Can parents stay for weeks without everyone getting in each other's way? Own room, own bathroom, ideally own door and kitchen.",
+   "scale": {
+    "5": "Separate flat or studio with own bath (and kitchen)",
+    "4": "Guest room with its own shower room",
+    "3": "Two bathrooms, guests share one",
+    "2": "One bathroom for everyone",
+    "1": "No spare room"
+   }
+  },
+  {
+   "id": "office",
+   "group": "home",
+   "label": "Home office",
+   "kind": "judged",
+   "weight": 8,
+   "what": "A real room with a door for working from home – on top of the bedroom and the guest room, so the office doesn't disappear when family visits.",
+   "scale": {
+    "5": "Office and guest room both dedicated, plus a spare room",
+    "4": "Office and guest room both dedicated",
+    "3": "Office doubles as guest room",
+    "2": "Only a corner, gallery or attic nook",
+    "1": "No room for an office"
+   }
+  },
+  {
+   "id": "garden",
+   "group": "home",
+   "label": "Garden & outdoor",
+   "kind": "judged",
+   "weight": 9,
+   "what": "Private outdoor space: a garden to sit, grow things and host; terraces count less, balconies least.",
+   "scale": {
+    "5": "Private garden ≥ 300 m²",
+    "4": "Private garden < 300 m², or a large garden share in exclusive use",
+    "3": "Large terrace or roof terrace (≥ 15 m²)",
+    "2": "Balcony / small terrace",
+    "1": "No outdoor space"
+   }
+  },
+  {
+   "id": "space",
+   "group": "home",
+   "label": "Space",
+   "kind": "computed",
+   "weight": 8,
+   "what": "Living area. Computed as (m² − 90) / 20, capped at 0–5: 110 m² → 1, 130 m² → 2, 150 m² → 3, 170 m² → 4, 190 m² → 5.",
+   "scale": {
+    "5": "≥ 190 m²",
+    "4": "≈ 170 m²",
+    "3": "≈ 150 m²",
+    "2": "≈ 130 m²",
+    "1": "≈ 110 m²"
+   }
+  },
+  {
+   "id": "stepfree",
+   "group": "home",
+   "label": "Step-free living",
+   "kind": "judged",
+   "weight": 4,
+   "what": "Stairs matter for older visitors and later for ourselves: can daily life happen on one level?",
+   "scale": {
+    "5": "One level, ground floor or lift, no steps inside",
+    "4": "One level, a few steps to the door",
+    "3": "Several levels but a bedroom + bathroom on the entrance level",
+    "2": "House or maisonette with stairs for daily life",
+    "1": "Steep or spiral stairs"
+   }
+  },
+  {
+   "id": "condition",
+   "group": "home",
+   "label": "Condition & energy",
+   "kind": "judged",
+   "weight": 10,
+   "what": "How much work and money before it's nice and efficient: age, renovation state, heating type and energy demand.",
+   "scale": {
+    "5": "New or renovated, efficient (≤ 100 kWh/m²·yr, modern heating)",
+    "4": "Good, some updates due",
+    "3": "Liveable, energy upgrades needed",
+    "2": "Major work: old heating, high demand",
+    "1": "Full renovation, oil or electric heating"
+   }
+  },
+  {
+   "id": "quiet",
+   "group": "home",
+   "label": "Quiet street",
+   "kind": "judged",
+   "weight": 5,
+   "what": "Traffic, rail and neighbour noise at the address, judged from the listing (cul-de-sac, through road, sound-proof windows…).",
+   "scale": {
+    "5": "Cul-de-sac or forest edge",
+    "4": "Quiet residential street",
+    "3": "Normal street / not stated",
+    "2": "Through road or rail nearby",
+    "1": "Main road"
+   }
+  },
+  {
+   "id": "location",
+   "group": "area",
+   "label": "Preferred area",
+   "kind": "judged",
+   "weight": 18,
+   "what": "Our own ranking of districts: Ippendorf, Kottenforst edge, Venusberg and Röttgen first; Lengsdorf, Friesdorf, Schweinheim fine; central Godesberg okay; Mehlem/Wachtberg so-so; not keen on Heiderhof.",
+   "scale": {
+    "5": "Ippendorf / Kottenforst edge / Venusberg / Röttgen",
+    "4": "Lengsdorf, Friesdorf, Schweinheim",
+    "3": "Central Bad Godesberg",
+    "2": "Mehlem, Wachtberg",
+    "1": "Heiderhof"
+   }
+  },
+  {
+   "id": "nature",
+   "group": "area",
+   "label": "Forest & green",
+   "kind": "computed",
+   "weight": 7,
+   "what": "Straight-line distance from the district centre to the nearest forest (woodland ≥ 5 ha, e.g. Kottenforst) in OpenStreetMap. A park counts as a fallback one step lower.",
+   "metric": "forest",
+   "thresholds": [
+    [
+     300,
+     5
+    ],
+    [
+     700,
+     4
+    ],
+    [
+     1200,
+     3
+    ],
+    [
+     2000,
+     2
+    ]
+   ],
+   "else": 1,
+   "scale": {
+    "5": "Forest ≤ 300 m",
+    "4": "≤ 700 m",
+    "3": "≤ 1.2 km",
+    "2": "≤ 2 km",
+    "1": "Further"
+   }
+  },
+  {
+   "id": "shopping",
+   "group": "area",
+   "label": "Daily shopping",
+   "kind": "computed",
+   "weight": 4,
+   "what": "Distance to the nearest supermarket from the district centre; +0.5 if there are 3 or more within 1 km.",
+   "metric": "supermarket",
+   "thresholds": [
+    [
+     400,
+     5
+    ],
+    [
+     800,
+     4
+    ],
+    [
+     1200,
+     3
+    ],
+    [
+     2000,
+     2
+    ]
+   ],
+   "else": 1,
+   "scale": {
+    "5": "Supermarket ≤ 400 m",
+    "4": "≤ 800 m",
+    "3": "≤ 1.2 km",
+    "2": "≤ 2 km",
+    "1": "Further"
+   }
+  },
+  {
+   "id": "schools",
+   "group": "area",
+   "label": "Kita & schools",
+   "kind": "computed",
+   "weight": 3,
+   "what": "Average of three distances from the district centre: nearest Kita, primary school (Grundschule) and secondary school (Gymnasium / Gesamtschule / Realschule).",
+   "metric": "schools",
+   "thresholds": [
+    [
+     500,
+     5
+    ],
+    [
+     1000,
+     4
+    ],
+    [
+     1500,
+     3
+    ],
+    [
+     2500,
+     2
+    ]
+   ],
+   "else": 1,
+   "scale": {
+    "5": "Each ≤ 500 m on average",
+    "4": "≤ 1 km",
+    "3": "≤ 1.5 km",
+    "2": "≤ 2.5 km",
+    "1": "Further"
+   }
+  },
+  {
+   "id": "transport",
+   "group": "area",
+   "label": "Public transport",
+   "kind": "computed",
+   "weight": 4,
+   "what": "Nearest Stadtbahn, tram or train stop from the district centre. Without one within 1.5 km, bus coverage decides (3+ bus stops within 500 m → 2.5).",
+   "metric": "rail",
+   "thresholds": [
+    [
+     500,
+     5
+    ],
+    [
+     1000,
+     4
+    ],
+    [
+     1500,
+     3
+    ]
+   ],
+   "else": 2,
+   "scale": {
+    "5": "Stadtbahn/train ≤ 500 m",
+    "4": "≤ 1 km",
+    "3": "≤ 1.5 km",
+    "2": "Bus only",
+    "1": "Little service"
+   }
+  },
+  {
+   "id": "city",
+   "group": "area",
+   "label": "To the city",
+   "kind": "computed",
+   "weight": 3,
+   "what": "Straight-line distance from the district centre to Bonn Hauptbahnhof (≈ minutes by bike = km × 4).",
+   "metric": "hbf_km",
+   "thresholds": [
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     9,
+     2
+    ]
+   ],
+   "else": 1,
+   "scale": {
+    "5": "≤ 2 km",
+    "4": "≤ 4 km",
+    "3": "≤ 6 km",
+    "2": "≤ 9 km",
+    "1": "Further"
+   }
+  },
+  {
+   "id": "risk",
+   "group": "risk",
+   "label": "Low risk / hassle",
+   "kind": "judged",
+   "weight": 5,
+   "what": "Things that can go wrong or cost time: sitting tenants, damp, big renovations, unclear service charges, legal issues.",
+   "scale": {
+    "5": "Clean sale, nothing open",
+    "4": "Minor open questions",
+    "3": "Some unknowns to check",
+    "2": "Real risk (tenant, damp, big renovation)",
+    "1": "Serious risk"
+   }
+  }
+ ]
+}

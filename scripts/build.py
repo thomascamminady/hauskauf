@@ -144,6 +144,7 @@ def render(template_name: str, data: dict[str, Any]) -> str:
     template = (ROOT / "site" / template_name).read_text(encoding="utf-8")
     vendor = ROOT / "site" / "vendor"
     template = template.replace("/*__BASE_CSS__*/", (ROOT / "site" / "base.css").read_text(encoding="utf-8"))
+    template = template.replace("/*__COMMON_JS__*/", (ROOT / "site" / "common.js").read_text(encoding="utf-8"))
     template = template.replace("/*__LEAFLET_CSS__*/", (vendor / "leaflet.css").read_text(encoding="utf-8"))
     template = template.replace("/*__LEAFLET_JS__*/", (vendor / "leaflet.js").read_text(encoding="utf-8"))
     if MARKER not in template:
@@ -152,8 +153,20 @@ def render(template_name: str, data: dict[str, Any]) -> str:
     return template.replace(MARKER, blob)
 
 
+def shared() -> dict[str, Any]:
+    """Data both pages need for quality criteria and neighbourhood facts."""
+    market = load("market.json")
+    amenities_path = ROOT / "data" / "amenities.json"
+    return {
+        "criteria": load("criteria.json"),
+        "amenities": json.loads(amenities_path.read_text(encoding="utf-8")) if amenities_path.exists() else None,
+        "districts": {n: {"lat": d["lat"], "lon": d["lon"]} for n, d in market["districts"].items()},
+    }
+
+
 def payload(private_model: Path | None, updated: str) -> dict[str, Any]:
     data: dict[str, Any] = {
+        **shared(),
         "updated": updated,
         "listings": load("listings.json"),
         "model": load("model_public.json"),
@@ -188,7 +201,7 @@ def main(out: str = "overview.html", private_model: str | None = None, updated: 
     feed = feed_payload(data["listings"], data["market"])
     if feed is not None:
         offers_page = target.parent / "offers.html"
-        offers_page.write_text(render("offers.html", {"feed": feed}), encoding="utf-8")
+        offers_page.write_text(render("offers.html", {"feed": feed, **shared()}), encoding="utf-8")
         print(
             f"wrote {offers_page.relative_to(ROOT)} ({offers_page.stat().st_size / 1024:.0f} KB, {feed['active']} active offers)"
         )

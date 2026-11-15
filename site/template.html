@@ -15,7 +15,7 @@
   <div class="tabs"><a href="overview.html" class="on">Shortlist</a><a href="offers.html">All offers<span class="count" id="offers-count"></span></a></div>
 </div></header>
 <nav class="sticky"><div class="wrap">
-  <a href="#ranking">Ranking</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#market">Market prices</a>
+  <a href="#ranking">Ranking</a><a href="#criteria">What counts</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#hoods">Neighbourhoods</a><a href="#market">Market prices</a>
   <a href="#calc">Calculators</a><a href="#details">Listings</a><a href="#screened">Screened</a><a href="#checklist">Checklist</a><a href="#log">Log</a><a href="#method">Method</a>
 </div></nav>
 <main><div class="wrap">
@@ -25,13 +25,20 @@
 
 <section id="ranking">
   <h2>Ranking</h2>
-  <p class="lead">Weigh money against quality yourself. <b>Money</b> = 20-year wealth compared with the reference flat (same budget and starting capital everywhere; money not spent on the home is invested). <b>Quality</b> = weighted scores for location, room for visiting family, space, condition and risk (0–5, my judgement from the listings).</p>
+  <p class="lead">Weigh money against quality yourself. <b>Money</b> = 20-year wealth compared with the reference flat (same budget and starting capital everywhere; money not spent on the home is invested). <b>Quality</b> = weighted average of 14 criteria, 0–5 each – click a <b>quality score</b> to see every criterion with its reason, or a <b>criterion name</b> to see what it means and how all homes compare.</p>
   <div class="card">
-    <div class="controls" id="weights"></div>
+    <div class="moneyw" id="money-w"></div>
+    <details class="wdetails"><summary>Adjust what counts (criterion weights)</summary><div class="wgroups" id="weights"></div></details>
     <div class="tablewrap"><table id="rank-table"></table></div>
     <p class="note">Click a column header to sort. “Std. monthly” = running costs + mortgage if 70% of the all-in cost is borrowed at 4.15% with 3% repayment (a neutral standard, not anyone's real financing). Range = worst/best of 9 market scenarios.</p>
   </div>
   <div class="kpis" id="kpis"></div>
+</section>
+
+<section id="criteria">
+  <h2>What counts</h2>
+  <p class="lead">The quality score is built from these criteria. Click any of them for the full scale, the data behind it and how every shortlisted home scores. Change the weights above under “Adjust what counts”.</p>
+  <div class="critgrid" id="crit-cards"></div>
 </section>
 
 <section id="value">
@@ -51,6 +58,12 @@
     <div id="map"></div>
     <p class="note">Map © OpenStreetMap contributors. Needs an internet connection for map tiles.</p>
   </div>
+</section>
+
+<section id="hoods">
+  <h2>Neighbourhoods</h2>
+  <p class="lead" id="hoods-lead"></p>
+  <div class="tablewrap"><table id="hoods-table"></table></div>
 </section>
 
 <section id="market">
@@ -138,7 +151,7 @@
       <li><b>Mortgage:</b> 3% repayment; 10-year fixed rate by loan-to-value (≤60% 4.05%, ≤70% 4.15%, ≤80% 4.25%, ≤90% 4.45%), refinanced at 4.25% afterwards.</li>
       <li><b>Markets:</b> prices and rents +3%/yr, inflation 2.3%, index fund 6.5%/yr nominal taxed at 26.375% with 30% partial exemption; 4% selling costs at the end. Scenario range: fund 5 / 6.5 / 8% × prices 2 / 3 / 4%.</li>
       <li><b>Per home:</b> rent of a comparable home, running costs, upkeep and renovation budgets are estimates from the listings and Bonn market data. Renovation projects assume a KfW 261 tranche (~€150k at ~2.9%, 10% grant).</li>
-      <li><b>Quality scores</b> (0–5) are judgement calls from the listings: location fit (Ippendorf / Kottenforst / Venusberg preferred), visiting family (separate flat 5 … one bathroom 2), space (from m²), condition &amp; energy, risk &amp; hassle.</li>
+      <li><b>Quality scores</b> (0–5): see <a href="#criteria">What counts</a>. Home criteria are judged per listing with a written reason; neighbourhood criteria come from OpenStreetMap, measured from the district centre; space is computed from m².</li>
       <li><b>Not captured:</b> light, layout, neighbours, and how much extra space is worth to you – that is what the weights are for.</li>
     </ul>
   </div>
@@ -151,6 +164,7 @@
 <script>/*__LEAFLET_JS__*/</script>
 <script>
 const DATA = /*__DATA__*/null;
+/*__COMMON_JS__*/
 const $ = (s, el = document) => el.querySelector(s);
 const fmtE = v => v == null ? "–" : "€" + Math.round(v).toLocaleString("en-US");
 const fmtK = v => v == null ? "–" : (v < 0 ? "−" : "") + "€" + Math.round(Math.abs(v) / 1000).toLocaleString("en-US") + "k";
@@ -168,28 +182,53 @@ const shortlist = DATA.listings.filter(l => l.category === "shortlist" && DATA.m
 shortlist.forEach(l => SHORT[l.id] = l.short || l.title);
 
 // ---------- weights & scores ----------
-const CRIT = [["location", "Location"], ["guests", "Visiting family"], ["space", "Space"], ["condition", "Condition & energy"], ["risk", "Low risk / hassle"]];
-const DEFAULT_W = {location: 30, guests: 25, space: 15, condition: 20, risk: 10, money: 50};
-let W = Object.assign({}, DEFAULT_W, store.get("weights", {}));
-function quality(l) { const s = l.scores; let n = 0, d = 0; for (const [k] of CRIT) { n += W[k] * s[k]; d += W[k]; } return d ? n / d : 0; }
+const DEFAULT_W = Object.assign(Object.fromEntries(QC.CRITS.map(c => [c.id, c.weight])), {money: 50});
+let W = Object.assign({}, DEFAULT_W, store.get("weights2", {}));
+const SC = Object.fromEntries(shortlist.map(l => [l.id, QC.forListing(l)]));
+function quality(l) { return QC.weighted(SC[l.id], W); }
 function moneyScore(id) { const v = DATA.model[id].vs_ref_20y; return Math.max(0, Math.min(5, 2.5 + v / 80000)); }
 function combined(l) { const m = W.money / 100; return m * moneyScore(l.id) + (1 - m) * quality(l); }
+function rerender() { store.set("weights2", W); renderRanking(); renderScatter(); renderCards(); }
+function slider(k, lab, txt) {
+  const wrap = document.createElement("label");
+  wrap.innerHTML = `<span>${lab} <span class="val">${txt()}</span></span><input type="range" min="0" max="${k === "money" ? 100 : 30}" step="1" value="${W[k]}">`;
+  wrap.querySelector("input").addEventListener("input", e => { W[k] = +e.target.value; wrap.querySelector(".val").textContent = txt(); rerender(); });
+  return wrap;
+}
 function buildWeights() {
+  const mw = $("#money-w"); mw.innerHTML = "";
+  mw.appendChild(slider("money", "<b>Money vs quality</b>", () => `${W.money}% money · ${100 - W.money}% quality`));
   const el = $("#weights"); el.innerHTML = "";
-  for (const [k, lab] of [...CRIT, ["money", "Money vs quality"]]) {
-    const wrap = document.createElement("label");
-    const txt = k === "money" ? () => `${W.money}% money · ${100 - W.money}% quality` : () => `${W[k]}`;
-    wrap.innerHTML = `${lab} <span class="val">${txt()}</span><input type="range" min="0" max="100" step="5" value="${W[k]}">`;
-    wrap.querySelector("input").addEventListener("input", e => { W[k] = +e.target.value; wrap.querySelector(".val").textContent = txt(); store.set("weights", W); renderRanking(); renderScatter(); renderCards(); });
-    el.appendChild(wrap);
+  for (const g of QC.GROUPS) {
+    const box = document.createElement("div"); box.className = "wgroup"; box.innerHTML = `<h4>${esc(g.label)}</h4>`;
+    QC.CRITS.filter(c => c.group === g.id).forEach(c => box.appendChild(slider(c.id, QC.label(c.id), () => `${W[c.id]}`)));
+    el.appendChild(box);
   }
-  const reset = document.createElement("label"); reset.innerHTML = `&nbsp;<button class="btn">Reset weights</button>`;
-  reset.querySelector("button").onclick = () => { W = Object.assign({}, DEFAULT_W); store.del("weights"); buildWeights(); renderRanking(); renderScatter(); renderCards(); };
+  const reset = document.createElement("div"); reset.innerHTML = `<button class="btn">Reset weights</button>`;
+  reset.querySelector("button").onclick = () => { W = Object.assign({}, DEFAULT_W); store.del("weights2"); buildWeights(); rerender(); };
   el.appendChild(reset);
+}
+QC.setExamples(id => shortlist.map(l => [l.title, SC[l.id][id], "#d-" + l.id]).sort((a, b) => (b[1]?.s ?? -1) - (a[1]?.s ?? -1)));
+function renderCriteria() {
+  $("#crit-cards").innerHTML = QC.GROUPS.map(g => `<div class="card"><h3 style="margin-top:0">${esc(g.label)}</h3>${QC.CRITS.filter(c => c.group === g.id).map(c =>
+    `<div class="critrow">${QC.label(c.id)} <span class="note">${c.kind === "computed" && c.id !== "space" ? "OpenStreetMap" : c.id === "space" ? "from m²" : "judged per home"}</span><div class="note">${esc(c.what)}</div></div>`).join("")}</div>`).join("");
+}
+function renderHoods() {
+  const ids = ["nature", "shopping", "schools", "transport", "city"], am = QC.AM;
+  const used = new Set(shortlist.map(l => QC.districtOf(l.district, l.lat, l.lon)));
+  const names = Object.keys(am).sort((a, b) => (used.has(b) - used.has(a)) || a.localeCompare(b));
+  $("#hoods-lead").innerHTML = `Everyday facts per district from OpenStreetMap, measured from the district centre (approximate; homes aren't placed more exactly). Scores use the scales under <a href="#criteria">What counts</a>; hover a score for the detail. ${esc(DATA.amenities?.source || "")}`;
+  if (!names.length) { $("#hoods-table").innerHTML = "<tbody><tr><td class='note'>No neighbourhood data yet.</td></tr></tbody>"; return; }
+  $("#hoods-table").innerHTML = `<thead><tr><th>District</th>${ids.map(id => `<th class="num">${QC.label(id)}</th>`).join("")}<th class="num">Avg</th><th>Nearest forest · supermarket · Stadtbahn/train</th></tr></thead><tbody>${names.map(n => {
+    const xs = ids.map(id => QC.area(id, n)), avg = xs.reduce((t, x) => t + (x?.s ?? 0), 0) / ids.length, a = am[n];
+    return `<tr${used.has(n) ? ' class="hl"' : ""}><td>${esc(n)}${used.has(n) ? ' <span class="note">· shortlist</span>' : ""}</td>${xs.map(x => `<td class="num" title="${x ? x.why.replace(/<[^>]+>/g, "") : ""}">${x ? x.s : "–"}</td>`).join("")}
+      <td class="num"><b>${avg.toFixed(1)}</b></td><td class="note">${QC.m(a.forest?.m)} · ${QC.m(a.supermarket?.m)} · ${QC.m(a.rail?.m)}</td></tr>`;
+  }).join("")}</tbody>`;
 }
 
 // ---------- ranking table ----------
 let sortKey = "combined", sortDir = -1;
+const OPEN = new Set();
 function rows() {
   return shortlist.map(l => { const m = DATA.model[l.id]; return {l, m, q: quality(l), c: combined(l), m2: l.asking / l.size_m2}; });
 }
@@ -211,9 +250,11 @@ function renderRanking() {
     return `<tr><td class="num">${r.rank}</td><td><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</td>
       <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
       <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
-      <td class="num">${r.q.toFixed(1)}</td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td>
-      <td style="white-space:nowrap"><a href="${esc(r.l.url)}" target="_blank" rel="noopener">${esc(r.l.portal)} ↗</a><br><a href="${calcLink(r.l)}" class="note">Calculate</a></td></tr>`;
+      <td class="num"><button class="qbtn" data-id="${r.l.id}" aria-expanded="${OPEN.has(r.l.id)}">${r.q.toFixed(1)} ${OPEN.has(r.l.id) ? "▴" : "▾"}</button></td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td>
+      <td style="white-space:nowrap"><a href="${esc(r.l.url)}" target="_blank" rel="noopener">${esc(r.l.portal)} ↗</a><br><a href="${calcLink(r.l)}" class="note">Calculate</a></td></tr>
+      ${OPEN.has(r.l.id) ? `<tr class="qrow"><td></td><td colspan="${COLS.length - 1}">${QC.breakdownTable(SC[r.l.id], W)}</td></tr>` : ""}`;
   }).join("")}</tbody>`;
+  t.querySelectorAll(".qbtn").forEach(b => b.onclick = () => { const id = b.dataset.id; OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id); renderRanking(); });
   t.querySelectorAll("th.sortable").forEach(th => th.onclick = () => { const k = th.dataset.k; if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderRanking(); });
   const top = [...rs].sort((a, b) => b.c - a.c);
   const best$ = [...rs].sort((a, b) => b.m.vs_ref_20y - a.m.vs_ref_20y)[0], bestQ = [...rs].sort((a, b) => b.q - a.q)[0];
@@ -335,14 +376,14 @@ function renderCards() {
     if (m.vs_ref_as_is != null) money.push(["Without heating fix", fmtS(m.vs_ref_as_is) + " vs ref."]);
     if (p) money.push(["My monthly (private)", fmtE(p.monthly)], ["My net worth 20 yrs (private)", fmtE(p.nw20)]);
     const hist = (l.price_history || []).map(h => `${esc(h.date)}: ${fmtK(h.price)}${h.note ? " – " + esc(h.note) : ""}`).join("<br>");
-    const sc = CRIT.map(([k, lab]) => `${lab} ${l.scores[k]}`).join(" · ");
+
     return `<div class="card listing" id="d-${l.id}"><div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a></div></div>
       <div class="note">${esc(l.district)}${l.area_note ? " · " + esc(l.area_note) : ""}</div>
       <div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
       <div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
       <div class="cols3"><div><h4>Good</h4><ul>${l.highlights.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Risks</h4><ul>${l.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Check</h4><ul>${l.checks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
       ${hist ? `<p class="note" style="margin:10px 0 0"><b>Price history:</b><br>${hist}</p>` : ""}
-      <p class="note" style="margin:8px 0 0">Scores: ${sc} → quality ${r.q.toFixed(1)}</p>
+      <details class="qdetails"><summary>Quality <b>${r.q.toFixed(1)}</b> / 5 – why</summary>${QC.breakdownTable(SC[l.id], W)}</details>
       <div class="verdict">${esc(l.verdict)}</div></div>`;
   }).join("");
 }
@@ -523,7 +564,7 @@ function feedTeaser() {
 }
 
 if (DATA.private) { $("#privacy-note").textContent = "PRIVATE VERSION – contains personal figures. Do not publish."; }
-buildWeights(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset();
+buildWeights(); renderCriteria(); renderHoods(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset();
 let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcMort(); calcRvB(); }, 150); });
 </script>
 </body>

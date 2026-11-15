@@ -239,3 +239,43 @@ def test_duplicates_across_portals() -> None:
     r2 = CrawlResult("immowelt", [_offer("z", 505000, source="immowelt")], 1)
     store.merge(feed, [r1, r2], "2026-11-15", {})
     assert feed["offers"]["kleinanzeigen:a"]["same_as"] == ["immowelt:z"]
+
+
+# --- amenities (OpenStreetMap summary) -----------------------------------------------------------
+
+
+def test_amenities_summary() -> None:
+    import amenities
+
+    centre = (50.7155, 7.0645)
+    pois = [
+        {"type": "node", "lat": 50.7160, "lon": 7.0645, "tags": {"shop": "supermarket", "name": "Markt A"}},
+        {"type": "node", "lat": 50.7300, "lon": 7.0645, "tags": {"shop": "supermarket", "name": "Markt B"}},
+        {
+            "type": "way",
+            "center": {"lat": 50.7180, "lon": 7.0645},
+            "tags": {"amenity": "school", "name": "KGS Grundschule"},
+        },
+        {"type": "node", "lat": 50.7155, "lon": 7.0700, "tags": {"amenity": "school", "name": "Städt. Gymnasium"}},
+        {"type": "node", "lat": 50.7155, "lon": 7.0650, "tags": {"highway": "bus_stop"}},
+        {"type": "node", "lat": 50.7200, "lon": 7.0645, "tags": {"railway": "tram_stop", "name": "Stop"}},
+    ]
+    # A ~1 km² square of forest starting ~330 m south of the centre, and a tiny copse right next to it.
+    sq = [(50.7125, 7.06), (50.7125, 7.074), (50.7035, 7.074), (50.7035, 7.06), (50.7125, 7.06)]
+    tiny = [(50.7156, 7.0646), (50.7156, 7.0647), (50.7157, 7.0647), (50.7156, 7.0646)]
+    greens = [
+        {
+            "type": "way",
+            "tags": {"landuse": "forest", "name": "Kottenforst"},
+            "geometry": [{"lat": a, "lon": b} for a, b in sq],
+        },
+        {"type": "way", "tags": {"natural": "wood"}, "geometry": [{"lat": a, "lon": b} for a, b in tiny]},
+    ]
+    s = amenities.summarise(centre, pois, greens)
+    assert s["supermarket"] == {"m": 56, "name": "Markt A"} and s["supermarkets_1km"] == 1
+    assert s["primary_school"]["name"] == "KGS Grundschule" and s["secondary_school"]["name"] == "Städt. Gymnasium"
+    assert s["forest"]["name"] == "Kottenforst" and 300 < s["forest"]["m"] < 360  # the copse is ignored
+    assert s["rail"]["m"] == 500 and s["bus_stops_500m"] == 1
+    assert 2 < s["hbf_km"] < 4
+    inside = amenities.ring_distance((50.708, 7.067), sq)
+    assert inside == 0.0

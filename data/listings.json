@@ -52,17 +52,44 @@
    "Terrace privacy"
   ],
   "verdict": "Best move-in-ready value in Ippendorf; investigate the price cut first.",
-  "scores": {
-   "location": 5,
-   "guests": 4,
-   "space": 1.4,
-   "condition": 5,
-   "risk": 3.5
-  },
   "first_seen": "2026-11-15",
   "lat": 50.7155,
   "lon": 7.0645,
-  "short": "Ippendorf ground-floor flat"
+  "short": "Ippendorf ground-floor flat",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 2 (one en-suite). Two daylight bathrooms, one en-suite"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms: master, guest room and an office"
+   },
+   "garden": {
+    "s": 3,
+    "why": "Wraparound sunny terrace, no garden"
+   },
+   "stepfree": {
+    "s": 5,
+    "why": "Ground floor, no stairs inside the flat"
+   },
+   "condition": {
+    "s": 5,
+    "why": "Built 2010; Gas, underfloor heating; 100 kWh/m²·yr (consumption)"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "End of a quiet dead-end street"
+   },
+   "location": {
+    "s": 5,
+    "why": "Ippendorf: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · End of a quiet dead-end street"
+   },
+   "risk": {
+    "s": 3.5,
+    "why": "€50k price cut not yet explained; €540/mo service charge is high; Ground-floor privacy and security"
+   }
+  }
  },
  {
   "id": "kottenforst-maisonette",
@@ -116,17 +143,44 @@
    "Roof and window age"
   ],
   "verdict": "Location winner; one bathroom is the compromise. Room to negotiate.",
-  "scores": {
-   "location": 5,
-   "guests": 2,
-   "space": 2.0,
-   "condition": 3.5,
-   "risk": 4
-  },
   "first_seen": "2026-11-15",
   "lat": 50.7155,
   "lon": 7.0645,
-  "short": "Kottenforst maisonette"
+  "short": "Kottenforst maisonette",
+  "features": {
+   "guests": {
+    "s": 2,
+    "why": "Bathrooms: 1 + guest WC. Only one full bathroom"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms + half room: office and guest room both possible"
+   },
+   "garden": {
+    "s": 3,
+    "why": "15 m² terrace facing the forest + balcony"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Maisonette over two floors, sloped ceilings upstairs"
+   },
+   "condition": {
+    "s": 3.5,
+    "why": "Built 1980/81 (core renovation 2007); New gas condensing boiler 2026 (heat-pump ready), underfloor, wood stove; 173 kWh/m²·yr (consumption, before new boiler)"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "Dead-end street at the forest edge"
+   },
+   "location": {
+    "s": 5,
+    "why": "Ippendorf: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · Dead-end street directly at the forest edge; two-flat house"
+   },
+   "risk": {
+    "s": 4,
+    "why": "Only one full bathroom; Sloped ceilings upstairs; Energy certificate predates the new boiler"
+   }
+  }
  },
  {
   "id": "roettgen-two-family",
@@ -169,18 +223,45 @@
    "Option: let one flat until needed (both flats now bring €26,040/yr)"
   ],
   "verdict": "The pick if family stays are long; costs more because of the extra space.",
-  "scores": {
-   "location": 5,
-   "guests": 5,
-   "space": 5,
-   "condition": 4,
-   "risk": 4
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6905,
   "lon": 7.0505,
-  "short": "Röttgen two-family house"
+  "short": "Röttgen two-family house",
+  "features": {
+   "guests": {
+    "s": 5,
+    "why": "Bathrooms: 3 + guest WC. Separate flat with own kitchen and bath – ideal for long family stays"
+   },
+   "office": {
+    "s": 5,
+    "why": "Two 3-room flats – rooms to spare"
+   },
+   "garden": {
+    "s": 5,
+    "why": "695 m² south-west garden"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Ground-floor flat is on one level; upper flat via an outdoor spiral stair"
+   },
+   "condition": {
+    "s": 4,
+    "why": "Built 1978 (renovated 2016); Gas condensing (2008/2018 per listing); 122 kWh/m²·yr (consumption, D)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Quiet residential street"
+   },
+   "location": {
+    "s": 5,
+    "why": "Röttgen: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · Quiet street; Röttgen borders the Kottenforst"
+   },
+   "risk": {
+    "s": 4,
+    "why": "~70 m² more than needed – more to heat and maintain; Outdoor steel spiral stair to the upper flat; Merging into one home needs a wall opening (check permit)"
+   }
+  }
  },
  {
   "id": "roettgener-maisonette",
@@ -221,18 +302,45 @@
    "Agreed price in writing"
   ],
   "verdict": "Reference for the model; solid but beaten on money by two other flats.",
-  "scores": {
-   "location": 4,
-   "guests": 3.5,
-   "space": 1.7,
-   "condition": 5,
-   "risk": 4.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.7155,
   "lon": 7.0645,
-  "short": "Röttgener Str. maisonette (ref.)"
+  "short": "Röttgener Str. maisonette (ref.)",
+  "features": {
+   "guests": {
+    "s": 3.5,
+    "why": "Bathrooms: 2 + guest WC. Two bathrooms + guest WC"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms: master, guest room and an office"
+   },
+   "garden": {
+    "s": 2,
+    "why": "Two balconies, no garden"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Maisonette with stairs inside"
+   },
+   "condition": {
+    "s": 5,
+    "why": "Built 2012; Gas, underfloor heating; 106 kWh/m²·yr (consumption, D)"
+   },
+   "quiet": {
+    "s": 2,
+    "why": "Röttgener Straße is a through road"
+   },
+   "location": {
+    "s": 4,
+    "why": "Ippendorf: Fine (Lengsdorf / Friesdorf / Schweinheim level) · On Röttgener Straße (through road); 4-flat building"
+   },
+   "risk": {
+    "s": 4.5,
+    "why": "Road noise on Röttgener Straße; Sloped ceilings; ~€110k more all-in than the 2010 ground-floor flat for similar space"
+   }
+  }
  },
  {
   "id": "roettgen-1950-fixer",
@@ -273,18 +381,45 @@
    "Traffic on the street"
   ],
   "verdict": "Roughly level with the reference if the renovation stays on budget.",
-  "scores": {
-   "location": 4,
-   "guests": 3,
-   "space": 2.5,
-   "condition": 1.5,
-   "risk": 2
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6905,
   "lon": 7.0505,
-  "short": "Röttgen 1950 fixer"
+  "short": "Röttgen 1950 fixer",
+  "features": {
+   "guests": {
+    "s": 3,
+    "why": "Bathrooms: 2. Detached house in Röttgen for the price of a flat"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms: master, guest room and an office"
+   },
+   "garden": {
+    "s": 5,
+    "why": "Detached house on a 385 m² plot"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "House over several floors"
+   },
+   "condition": {
+    "s": 1.5,
+    "why": "Built 1950; Old gas central heating"
+   },
+   "quiet": {
+    "s": 3,
+    "why": "Village centre"
+   },
+   "location": {
+    "s": 4,
+    "why": "Röttgen: Fine (Lengsdorf / Friesdorf / Schweinheim level) · Village centre"
+   },
+   "risk": {
+    "s": 2,
+    "why": "Renovation budget (~€170k) is an estimate; Old wiring, partly original windows; Months of paying rent and loan together"
+   }
+  }
  },
  {
   "id": "ippendorf-1900-fixer",
@@ -325,18 +460,45 @@
    "Heritage listing?"
   ],
   "verdict": "Great guest set-up in Ippendorf; a real renovation project.",
-  "scores": {
-   "location": 5,
-   "guests": 4.5,
-   "space": 2.4,
-   "condition": 1.5,
-   "risk": 1.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.7155,
   "lon": 7.0645,
-  "short": "Ippendorf 1900 fixer"
+  "short": "Ippendorf 1900 fixer",
+  "features": {
+   "guests": {
+    "s": 4.5,
+    "why": "Bathrooms: 3. Ground-floor room with kitchenette and shower – works as a guest flat"
+   },
+   "office": {
+    "s": 5,
+    "why": "4 bedrooms plus a ground-floor guest room"
+   },
+   "garden": {
+    "s": 5,
+    "why": "449 m² plot with courtyard"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Ground-floor room with kitchenette and shower for guests"
+   },
+   "condition": {
+    "s": 1.5,
+    "why": "Built c. 1900 (extended); Oil central heating; 264 kWh/m²·yr (demand)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Garden backs onto a quiet side street"
+   },
+   "location": {
+    "s": 5,
+    "why": "Ippendorf: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · Sunny side; garden backs onto a quiet side street"
+   },
+   "risk": {
+    "s": 1.5,
+    "why": "Old oil boiler may have to be replaced within two years of buying; c. 1900 structure; renovation could exceed €180k"
+   }
+  }
  },
  {
   "id": "schweinheim-garden-house",
@@ -376,18 +538,45 @@
    "Walk away above ~€650–660k"
   ],
   "verdict": "Fair at ~€620–630k; beats renting it from ~€655k down.",
-  "scores": {
-   "location": 5,
-   "guests": 4,
-   "space": 3.8,
-   "condition": 4,
-   "risk": 2.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6775,
   "lon": 7.135,
-  "short": "Schweinheim garden house"
+  "short": "Schweinheim garden house",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 2 + 2 WCs. "
+   },
+   "office": {
+    "s": 5,
+    "why": "4–5 bedrooms"
+   },
+   "garden": {
+    "s": 5,
+    "why": "828 m² garden by the forest"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "1950s house over several floors"
+   },
+   "condition": {
+    "s": 4,
+    "why": "Built 1953 (last modernised 2006); Heat pump; 58 kWh/m²·yr (demand, B)"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "Next to the Kottenforst"
+   },
+   "location": {
+    "s": 5,
+    "why": "Schweinheim: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · Next to the Kottenforst"
+   },
+   "risk": {
+    "s": 2.5,
+    "why": "Sitting tenant; Asking price above what the numbers support"
+   }
+  }
  },
  {
   "id": "mehlem-terraced",
@@ -427,18 +616,45 @@
    "Exact position vs railway and NRW flood maps"
   ],
   "verdict": "Pass at asking; fair around €450–465k (model includes €22k heat pumps).",
-  "scores": {
-   "location": 2,
-   "guests": 4.5,
-   "space": 1.5,
-   "condition": 2,
-   "risk": 3
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.662,
   "lon": 7.188,
-  "short": "Mehlem terraced"
+  "short": "Mehlem terraced",
+  "features": {
+   "guests": {
+    "s": 4.5,
+    "why": "Bathrooms: 2 + guest WC. Top-floor studio with own shower room and kitchen hook-ups"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms + top-floor studio for guests"
+   },
+   "garden": {
+    "s": 4,
+    "why": "South garden on a 232 m² plot"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Terraced house over three floors"
+   },
+   "condition": {
+    "s": 2,
+    "why": "Built 1938 (modernised 2007); Electric radiators; 249 kWh/m²·yr (demand)"
+   },
+   "quiet": {
+    "s": 3,
+    "why": "Cul-de-sac, but possible rail noise"
+   },
+   "location": {
+    "s": 2,
+    "why": "Mehlem: So-so (Mehlem / Wachtberg level) · Quiet cul-de-sac on the Rhine side"
+   },
+   "risk": {
+    "s": 3,
+    "why": "Direct electric heating: ~€450–600/mo as is; 1938 building; Possible rail noise / flood risk – check"
+   }
+  }
  },
  {
   "id": "heiderhof-terraced",
@@ -476,18 +692,45 @@
    "Roof and facade age"
   ],
   "verdict": "Nice but expensive.",
-  "scores": {
-   "location": 2,
-   "guests": 4,
-   "space": 2.6,
-   "condition": 3.5,
-   "risk": 4
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.669,
   "lon": 7.122,
-  "short": "Heiderhof terraced"
+  "short": "Heiderhof terraced",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 2 + guest WC. Garden-level guest room with its own shower room"
+   },
+   "office": {
+    "s": 5,
+    "why": "3 bedrooms + garden-level guest room"
+   },
+   "garden": {
+    "s": 4,
+    "why": "Garden on a 284 m² plot"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Terraced house over several levels"
+   },
+   "condition": {
+    "s": 3.5,
+    "why": "Built 1973; District heating (CHP); 125 kWh/m²·yr (demand)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Borders the Kottenforst"
+   },
+   "location": {
+    "s": 2,
+    "why": "Heiderhof: So-so (Mehlem / Wachtberg level) · Borders the Kottenforst"
+   },
+   "risk": {
+    "s": 4,
+    "why": "Priced high for a 1973 mid-terrace; District heating tariff can't be shopped around"
+   }
+  }
  },
  {
   "id": "niederbachem-detached",
@@ -541,16 +784,43 @@
    "Floor plan: upper floor vs attic"
   ],
   "verdict": "Only at ~€570–600k; seller nets about the old private price at asking.",
-  "scores": {
-   "location": 3,
-   "guests": 4,
-   "space": 2.8,
-   "condition": 3,
-   "risk": 2
-  },
   "lat": 50.653,
   "lon": 7.162,
-  "short": "Niederbachem house"
+  "short": "Niederbachem house",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 1 + ground-floor shower room. Ground-floor guest room + shower room"
+   },
+   "office": {
+    "s": 3,
+    "why": "Only 2 bedrooms upstairs; the ground-floor room is guest room or office, not both"
+   },
+   "garden": {
+    "s": 5,
+    "why": "1,780 m² plot"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Ground-floor room + shower room"
+   },
+   "condition": {
+    "s": 3,
+    "why": "Built 1999; Gas (renewed 2023); 126 kWh/m²·yr (consumption, D)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "30 km/h zone"
+   },
+   "location": {
+    "s": 3,
+    "why": "Wachtberg-Niederbachem: Okay (central Bad Godesberg level) · 30 km/h zone; plot slopes to the Mehlemer Bach"
+   },
+   "risk": {
+    "s": 2,
+    "why": "Disclosed water damage, damp in basement, no survey; Slope to a stream – check flood/heavy-rain maps; Only two bedrooms upstairs"
+   }
+  }
  },
  {
   "id": "brueser-berg-detached",
@@ -587,18 +857,45 @@
    "Energy certificate, heating type"
   ],
   "verdict": "Worth a viewing (rough model only).",
-  "scores": {
-   "location": 3,
-   "guests": 3,
-   "space": 2.3,
-   "condition": 3,
-   "risk": 3
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.701,
   "lon": 7.039,
-  "short": "Brüser Berg house"
+  "short": "Brüser Berg house",
+  "features": {
+   "guests": {
+    "s": 3,
+    "why": "Bathrooms: 2. "
+   },
+   "office": {
+    "s": 5,
+    "why": "4 bedrooms"
+   },
+   "garden": {
+    "s": 5,
+    "why": "1,141 m² plot"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "House with converted attic"
+   },
+   "condition": {
+    "s": 3,
+    "why": "Built 1959 (attic converted & heating renewed 2013)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Next to the Kottenforst"
+   },
+   "location": {
+    "s": 3,
+    "why": "Brüser Berg: Okay (central Bad Godesberg level) · Next to the Kottenforst"
+   },
+   "risk": {
+    "s": 3,
+    "why": "Energy data missing; Not checked in detail"
+   }
+  }
  },
  {
   "id": "lengsdorf-house",
@@ -634,18 +931,45 @@
    "Energy refurbishment cost"
   ],
   "verdict": "Worth a viewing for space (rough model only).",
-  "scores": {
-   "location": 4,
-   "guests": 3.5,
-   "space": 5,
-   "condition": 2.5,
-   "risk": 3
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.7135,
   "lon": 7.048,
-  "short": "Lengsdorf 210 m² house"
+  "short": "Lengsdorf 210 m² house",
+  "features": {
+   "guests": {
+    "s": 3.5,
+    "why": "Bathrooms: 2. "
+   },
+   "office": {
+    "s": 5,
+    "why": "6 rooms, 3 bedrooms – rooms to spare"
+   },
+   "garden": {
+    "s": 4,
+    "why": "Small 252 m² plot"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "House over several floors"
+   },
+   "condition": {
+    "s": 2.5,
+    "why": "Built 1964; Gas central; 198 kWh/m²·yr (demand)"
+   },
+   "quiet": {
+    "s": 3,
+    "why": "Street not described"
+   },
+   "location": {
+    "s": 4,
+    "why": "Lengsdorf: Fine (Lengsdorf / Friesdorf / Schweinheim level) · Next to Ippendorf"
+   },
+   "risk": {
+    "s": 3,
+    "why": "High energy demand; Small plot"
+   }
+  }
  },
  {
   "id": "heiderhof-whole-floor",
@@ -683,18 +1007,45 @@
    "Minutes, reserve, planned facade/roof/heating works"
   ],
   "verdict": "Strongest on money – but Heiderhof isn't a favourite.",
-  "scores": {
-   "location": 1,
-   "guests": 2,
-   "space": 2.2,
-   "condition": 4,
-   "risk": 3
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.669,
   "lon": 7.122,
-  "short": "Heiderhof whole floor"
+  "short": "Heiderhof whole floor",
+  "features": {
+   "guests": {
+    "s": 2,
+    "why": "Bathrooms: 1 + WC. Only one bathroom"
+   },
+   "office": {
+    "s": 4,
+    "why": "5 rooms, 3 bedrooms"
+   },
+   "garden": {
+    "s": 2,
+    "why": "Balcony with a view, no garden"
+   },
+   "stepfree": {
+    "s": 4,
+    "why": "Whole floor on one level (lift not confirmed)"
+   },
+   "condition": {
+    "s": 4,
+    "why": "Built 1975 (core renovation 2015); District heating"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Hillside residential block"
+   },
+   "location": {
+    "s": 1,
+    "why": "Heiderhof: Not keen (Heiderhof) · Hillside block, view to the Siebengebirge"
+   },
+   "risk": {
+    "s": 3,
+    "why": "1970s large owners' association – levies; Parts of Heiderhof are listed; Only one bathroom"
+   }
+  }
  },
  {
   "id": "heiderhof-lake",
@@ -731,18 +1082,45 @@
    "Service charge, reserve, levies"
   ],
   "verdict": "Great value; location is the question.",
-  "scores": {
-   "location": 1,
-   "guests": 4,
-   "space": 2.6,
-   "condition": 3,
-   "risk": 3
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.669,
   "lon": 7.122,
-  "short": "Heiderhof lake flat"
+  "short": "Heiderhof lake flat",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 1 + guest WC with shower. Guest room next to a shower WC"
+   },
+   "office": {
+    "s": 4,
+    "why": "5 rooms, 3 bedrooms"
+   },
+   "garden": {
+    "s": 3,
+    "why": "Two terraces with lake view"
+   },
+   "stepfree": {
+    "s": 4,
+    "why": "Flat on one level"
+   },
+   "condition": {
+    "s": 3,
+    "why": "Built 1972; District heating; 114 kWh/m²·yr"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "Small 7-flat complex on a lake"
+   },
+   "location": {
+    "s": 1,
+    "why": "Heiderhof: Not keen (Heiderhof) · 7-flat complex on a lake"
+   },
+   "risk": {
+    "s": 3,
+    "why": "1970s building; Service charge not stated"
+   }
+  }
  },
  {
   "id": "friesdorf-kottenforst",
@@ -782,18 +1160,45 @@
    "Bedroom count vs needs"
   ],
   "verdict": "Strong on money; small for guests.",
-  "scores": {
-   "location": 4,
-   "guests": 2.5,
-   "space": 1.1,
-   "condition": 3,
-   "risk": 4
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6945,
   "lon": 7.137,
-  "short": "Friesdorf Kottenforst flat"
+  "short": "Friesdorf Kottenforst flat",
+  "features": {
+   "guests": {
+    "s": 2.5,
+    "why": "Bathrooms: 2. "
+   },
+   "office": {
+    "s": 3,
+    "why": "Only 2 bedrooms: office doubles as guest room"
+   },
+   "garden": {
+    "s": 3,
+    "why": "16.7 m² roof terrace"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Floor and lift not stated"
+   },
+   "condition": {
+    "s": 3,
+    "why": "Built old building, renovated 2012; Gas, underfloor heating; 228 kWh/m²·yr"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "Right at the forest"
+   },
+   "location": {
+    "s": 4,
+    "why": "Friesdorf: Fine (Lengsdorf / Friesdorf / Schweinheim level) · House with four flats, right at the forest"
+   },
+   "risk": {
+    "s": 4,
+    "why": "Only two bedrooms; High heating demand"
+   }
+  }
  },
  {
   "id": "alt-godesberg-5room",
@@ -831,18 +1236,45 @@
    "Owners' association finances"
   ],
   "verdict": "Good value if you like renovating.",
-  "scores": {
-   "location": 3,
-   "guests": 3.5,
-   "space": 1.6,
-   "condition": 2,
-   "risk": 2.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.685,
   "lon": 7.155,
-  "short": "Alt-Godesberg 5-room"
+  "short": "Alt-Godesberg 5-room",
+  "features": {
+   "guests": {
+    "s": 3.5,
+    "why": "Bathrooms: 2. Two bathrooms"
+   },
+   "office": {
+    "s": 5,
+    "why": "3 bedrooms + study"
+   },
+   "garden": {
+    "s": 2,
+    "why": "Loggia + two balconies"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Flat on one level; lift not stated"
+   },
+   "condition": {
+    "s": 2,
+    "why": "Built 1972; Gas"
+   },
+   "quiet": {
+    "s": 3,
+    "why": "Near Godesberg centre"
+   },
+   "location": {
+    "s": 3,
+    "why": "Alt-Godesberg: Okay (central Bad Godesberg level) · Near Godesberg centre"
+   },
+   "risk": {
+    "s": 2.5,
+    "why": "Needs modernising (~€60k in model)"
+   }
+  }
  },
  {
   "id": "friesdorf-maisonette",
@@ -879,18 +1311,45 @@
    "Street noise"
   ],
   "verdict": "About level with the #1 flat, with two more rooms.",
-  "scores": {
-   "location": 3,
-   "guests": 4,
-   "space": 2.2,
-   "condition": 3.5,
-   "risk": 3.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6945,
   "lon": 7.137,
-  "short": "Friesdorf maisonette"
+  "short": "Friesdorf maisonette",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 2 + WC. "
+   },
+   "office": {
+    "s": 5,
+    "why": "4 bedrooms"
+   },
+   "garden": {
+    "s": 2,
+    "why": "No garden mentioned"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Maisonette with stairs inside"
+   },
+   "condition": {
+    "s": 3.5,
+    "why": "Built 1959 (attic 2015, baths 2014); Gas; 92 kWh/m²·yr"
+   },
+   "quiet": {
+    "s": 2,
+    "why": "Sound-proof windows suggest a busy road"
+   },
+   "location": {
+    "s": 3,
+    "why": "Friesdorf: Okay (central Bad Godesberg level)"
+   },
+   "risk": {
+    "s": 3.5,
+    "why": "Sound-proof windows with ventilation suggest a busy road"
+   }
+  }
  },
  {
   "id": "schweinheim-studio",
@@ -928,18 +1387,45 @@
    "Bathrooms"
   ],
   "verdict": "The flat that works like a house for visiting family.",
-  "scores": {
-   "location": 4,
-   "guests": 5,
-   "space": 4.2,
-   "condition": 3.5,
-   "risk": 3.5
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.6775,
   "lon": 7.135,
-  "short": "Schweinheim flat + studio"
+  "short": "Schweinheim flat + studio",
+  "features": {
+   "guests": {
+    "s": 5,
+    "why": "Bathrooms: not stated. Separate studio = guest flat with own door"
+   },
+   "office": {
+    "s": 5,
+    "why": "4 bedrooms + separate studio"
+   },
+   "garden": {
+    "s": 2,
+    "why": "Two balconies"
+   },
+   "stepfree": {
+    "s": 4,
+    "why": "Building with lift"
+   },
+   "condition": {
+    "s": 3.5,
+    "why": "Built 1990; Gas; 153 kWh/m²·yr"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Quiet residential street"
+   },
+   "location": {
+    "s": 4,
+    "why": "Schweinheim: Fine (Lengsdorf / Friesdorf / Schweinheim level) · Building with lift"
+   },
+   "risk": {
+    "s": 3.5,
+    "why": "Service charge and bathroom count not in listing"
+   }
+  }
  },
  {
   "id": "lengsdorf-flat",
@@ -990,17 +1476,44 @@
    "Date of the condominium split (Teilungserklärung)"
   ],
   "verdict": "As good as #1 on money – only once vacancy is confirmed in writing.",
-  "scores": {
-   "location": 4.5,
-   "guests": 4,
-   "space": 1.5,
-   "condition": 4,
-   "risk": 2.5
-  },
   "first_seen": "2026-11-15",
   "lat": 50.7135,
   "lon": 7.048,
-  "short": "Lengsdorf flat (let)"
+  "short": "Lengsdorf flat (let)",
+  "features": {
+   "guests": {
+    "s": 4,
+    "why": "Bathrooms: 2 (one in the attic room). Attic room with own bath = guest floor"
+   },
+   "office": {
+    "s": 4,
+    "why": "3 bedrooms, one of them the attic guest room"
+   },
+   "garden": {
+    "s": 2,
+    "why": "Large balcony with Venusberg view"
+   },
+   "stepfree": {
+    "s": 2,
+    "why": "Guest room and bath in the attic"
+   },
+   "condition": {
+    "s": 4,
+    "why": "Built 1974 (renovated); Gas"
+   },
+   "quiet": {
+    "s": 5,
+    "why": "Dead-end street"
+   },
+   "location": {
+    "s": 4.5,
+    "why": "Lengsdorf: Next to the favourites · Dead-end street near Ippendorf / Venusberg"
+   },
+   "risk": {
+    "s": 2.5,
+    "why": "Sitting tenants; If converted to condos after the tenancy began, owner-occupation notice can be blocked for years"
+   }
+  }
  },
  {
   "id": "ippendorf-garden-flat",
@@ -1039,18 +1552,45 @@
    "Renovation quote"
   ],
   "verdict": "Lovely, but too expensive after renovation.",
-  "scores": {
-   "location": 5,
-   "guests": 3,
-   "space": 3.1,
-   "condition": 1.5,
-   "risk": 2
-  },
   "price_history": [],
   "first_seen": "2026-11-15",
   "lat": 50.7155,
   "lon": 7.0645,
-  "short": "Ippendorf garden flat"
+  "short": "Ippendorf garden flat",
+  "features": {
+   "guests": {
+    "s": 3,
+    "why": "Bathrooms: 1 + guest WC. "
+   },
+   "office": {
+    "s": 5,
+    "why": "4 bedrooms"
+   },
+   "garden": {
+    "s": 4,
+    "why": "Big south-west garden shared by a 3-flat house on 1,048 m²"
+   },
+   "stepfree": {
+    "s": 5,
+    "why": "Everything on one level"
+   },
+   "condition": {
+    "s": 1.5,
+    "why": "Built 1970 (windows 2020); Oil (boiler 1998); 198 kWh/m²·yr (demand, F)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Detached 3-flat house"
+   },
+   "location": {
+    "s": 5,
+    "why": "Ippendorf: Top of our list (Ippendorf / Kottenforst / Venusberg / Röttgen) · Detached 3-flat house, 1,048 m² plot"
+   },
+   "risk": {
+    "s": 2,
+    "why": "Needs full renovation; Old oil boiler shared by 3 owners; Broker % not stated (3.57% assumed)"
+   }
+  }
  },
  {
   "id": "godesberg-villa-flat",
@@ -1102,17 +1642,44 @@
    "Roof and heating plans"
   ],
   "verdict": "About level with the reference near €590k.",
-  "scores": {
-   "location": 3.5,
-   "guests": 3,
-   "space": 2.2,
-   "condition": 3,
-   "risk": 3.5
-  },
   "first_seen": "2026-11-15",
   "lat": 50.693,
   "lon": 7.156,
-  "short": "Godesberg villa flat"
+  "short": "Godesberg villa flat",
+  "features": {
+   "guests": {
+    "s": 3,
+    "why": "Bathrooms: not stated. Bathrooms not stated"
+   },
+   "office": {
+    "s": 3,
+    "why": "2 bedrooms + attic room that is office or guest room"
+   },
+   "garden": {
+    "s": 4,
+    "why": "Own share of the villa garden"
+   },
+   "stepfree": {
+    "s": 3,
+    "why": "Villa flat; attic room up a stair"
+   },
+   "condition": {
+    "s": 3,
+    "why": "Built 1922; Gas (2002)"
+   },
+   "quiet": {
+    "s": 4,
+    "why": "Residential street near schools"
+   },
+   "location": {
+    "s": 3.5,
+    "why": "Bad Godesberg (53173): Between central Godesberg and the favourites · Two-flat villa near schools and playground"
+   },
+   "risk": {
+    "s": 3.5,
+    "why": "Bathrooms not stated; Gas boiler from 2002; Ad to be taken down in ~2 weeks"
+   }
+  }
  },
  {
   "id": "poppelsdorf-maisonette",

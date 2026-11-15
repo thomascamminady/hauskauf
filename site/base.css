@@ -111,3 +111,37 @@ a.btn:hover { text-decoration: none; }
 .badge.fit { background: color-mix(in srgb, var(--renovation) 16%, transparent); color: var(--renovation); }
 #rank-table td:nth-child(2) { min-width: 220px; }
 #calc-for { position: relative; }
+
+/* --- quality criteria --- */
+button.crit { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-align: left; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); }
+button.crit:hover { color: var(--text); border-bottom-color: var(--text); }
+th button.crit { font-weight: 600; font-size: 12.5px; }
+.qbar { display: inline-block; width: 70px; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; vertical-align: middle; }
+.qbar > span { display: block; height: 100%; background: var(--renovation); border-radius: 3px; }
+.qtable { width: 100%; font-size: 13.5px; }
+.qtable td { padding: 4px 8px; border-bottom: 1px solid var(--grid); }
+.qtable tr.grp td { font-weight: 650; color: var(--text-2); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding-top: 10px; background: none; }
+.qtable td.why { color: var(--text-2); }
+.qtable tbody tr:hover { background: none; }
+.qbtn { font: inherit; font-variant-numeric: tabular-nums; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 7px; cursor: pointer; color: var(--text); }
+.qbtn:hover { border-color: var(--text-3); }
+tr.qrow > td { background: var(--surface-2); padding: 6px 10px 12px; }
+tr.qrow:hover { background: none; }
+.qdetails { margin-top: 10px; } .qdetails summary { font-size: 14px; }
+.moneyw { max-width: 420px; margin: 4px 0 10px; }
+.moneyw label, .wgroup label { display: flex; flex-direction: column; gap: 2px; font-size: 13px; color: var(--text-2); }
+.wdetails { margin: 0 0 14px; } .wdetails > summary { font-size: 14px; margin-bottom: 8px; }
+.wgroups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; align-items: start; }
+.wgroup h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-3); }
+.wgroup label { margin-bottom: 6px; } .wgroup .val { color: var(--text); font-weight: 600; }
+.critgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.critrow { padding: 7px 0; border-bottom: 1px solid var(--grid); } .critrow:last-child { border-bottom: 0; }
+.critrow .note { margin-top: 2px; }
+tr.hl td:first-child { font-weight: 600; }
+dialog.critdlg { border: 0; padding: 0; border-radius: 14px; width: min(760px, 94vw); max-height: 88vh; background: var(--surface); color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+dialog.critdlg::backdrop { background: rgba(0,0,0,.45); }
+.critbody { padding: 18px 22px 22px; position: relative; } .critbody h3 { margin: 4px 0 6px; font-size: 20px; } .critbody h4 { margin: 16px 0 6px; }
+.critclose { position: absolute; right: 12px; top: 12px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); cursor: pointer; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 2px 9px; border-radius: 99px; background: var(--surface-2); color: var(--text-2); white-space: nowrap; }
+.chip b { color: var(--text); }

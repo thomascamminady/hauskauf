@@ -60,7 +60,7 @@ dialog::backdrop { background: rgba(0,0,0,.5); }
       <label>Seen<select id="f-new"><option value="">Any time</option><option value="1">New today</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
       <label>Sort<select id="f-sort">
         <option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
-        <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Best area fit</option></select></label>
+        <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Preferred area first</option><option value="hood">Best neighbourhood</option><option value="forest">Closest to forest</option></select></label>
       <label class="check"><input type="checkbox" id="f-private"> Private sellers only</label>
       <label class="check"><input type="checkbox" id="f-gone"> Show gone</label>
       <label><button class="btn" id="f-reset" type="button">Reset filters</button></label>
@@ -89,6 +89,7 @@ dialog::backdrop { background: rgba(0,0,0,.5); }
 
 <script>
 const DATA = /*__DATA__*/null;
+/*__COMMON_JS__*/
 const $ = (s, el = document) => el.querySelector(s);
 const fmtE = v => v == null ? "–" : "€" + Math.round(v).toLocaleString("en-US");
 const fmtK = v => v == null ? "–" : "€" + Math.round(v / 1000).toLocaleString("en-US") + "k";
@@ -96,6 +97,13 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&
 const store = { get(k, d) { try { const v = localStorage.getItem("hk:" + k); return v ? JSON.parse(v) : d; } catch { return d; } },
                 set(k, v) { try { localStorage.setItem("hk:" + k, JSON.stringify(v)); } catch {} } };
 const F = DATA.feed, OFFERS = F.offers, BYKEY = Object.fromEntries(OFFERS.map(o => [o.key, o]));
+// Neighbourhood scores per offer (district level, OpenStreetMap)
+const AREA_IDS = ["nature", "shopping", "schools", "transport", "city"];
+for (const o of OFFERS) {
+  const d = o.district && QC.AM[o.district] ? o.district : null;
+  o.hood = d ? Object.fromEntries(AREA_IDS.map(id => [id, QC.area(id, d)])) : null;
+  o.hood_avg = d ? AREA_IDS.reduce((t, id) => t + (o.hood[id]?.s ?? 0), 0) / AREA_IDS.length : null;
+}
 const LABEL = Object.fromEntries(F.sources.map(s => [s.name, s.label]));
 const today = F.updated, dayDiff = d => Math.round((Date.parse(today) - Date.parse(d)) / 864e5);
 $("#updated").textContent = F.updated; $("#offers-count").textContent = F.active;
@@ -132,7 +140,8 @@ function visible() {
     return true;
   });
   const by = {new: o => -Date.parse(o.first_seen) - (o.price ?? 0) / 1e12, price: o => o.price ?? 1e12, m2: o => o.eur_m2 ?? 1e12,
-              vs: o => o.vs_district ?? 1e3, size: o => -(o.size_m2 ?? 0), fit: o => -(o.fit ?? 0) * 1e7 + (o.eur_m2 ?? 0)}[S.sort];
+              vs: o => o.vs_district ?? 1e3, size: o => -(o.size_m2 ?? 0), fit: o => -(o.fit ?? 0) * 1e7 + (o.eur_m2 ?? 0),
+              hood: o => -(o.hood_avg ?? -1), forest: o => o.district && QC.AM[o.district]?.forest ? QC.AM[o.district].forest.m : 1e9}[S.sort] || (o => 0);
   return list.sort((a, b) => by(a) - by(b));
 }
 
@@ -161,6 +170,7 @@ function render() {
         <div class="facts1">${facts(o)}</div>
         <div class="where">${esc(o.area)} ${o.zip ? `· ${esc(o.zip)}` : ""} · ${o.kind === "house" ? "House" : "Flat"}</div>
         <div class="title">${esc(o.title)}</div>
+        ${o.district && QC.AM[o.district] ? `<div class="note">Forest ${QC.m(QC.AM[o.district].forest?.m)} · Supermarket ${QC.m(QC.AM[o.district].supermarket?.m)}</div>` : ""}
         <div class="foot"><span>${o.sources.map(s => LABEL[s]).join(" · ")}</span><span>${vsTxt(o)}</span></div></div></article>`).join("")
     : `<div class="empty">No offers match these filters.</div>`;
 }
@@ -193,10 +203,31 @@ function showPreview() {
     <p style="margin:0 0 12px">${esc(o.title)}</p>
     <div class="facts">${rows.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
     ${hist && o.price_history.length > 1 ? `<p class="note">Price history: ${hist}</p>` : ""}
+    <h4 style="margin:14px 0 4px">The home <span class="note">(indicative, from the listing facts – check the exposé)</span></h4>
+    <table class="qtable"><tbody>${homeRows(o).map(([id, x]) => `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why : "not in the listing summary"}</td></tr>`).join("")}</tbody></table>
+    ${o.hood ? `<h4 style="margin:14px 0 4px">Neighbourhood · ${esc(o.district)} <span class="note">(district centre, OpenStreetMap – click a criterion for its scale)</span></h4>
+      <table class="qtable"><tbody>${AREA_IDS.map(id => { const x = o.hood[id]; return `<tr><td>${QC.label(id)}</td><td class="num">${x ? x.s : "–"}</td><td>${QC.bar(x?.s)}</td><td class="why">${x ? x.why : ""}</td></tr>`; }).join("")}
+      <tr><td>${QC.label("location")}</td><td class="num">${o.fit ?? "–"}</td><td>${QC.bar(o.fit)}</td><td class="why">Our district preference</td></tr></tbody></table>`
+      : `<p class="note">No neighbourhood data: the listing only gives postcode ${esc(o.zip ?? "")}.</p>`}
     <div class="linkrow" style="margin-top:12px"><a class="btn primary" href="${esc(o.url)}" target="_blank" rel="noopener">Open on ${esc(LABEL[o.source])} ↗</a>
       ${others.map(x => `<a class="btn" href="${esc(x.url)}" target="_blank" rel="noopener">Also on ${esc(LABEL[x.source])} ↗</a>`).join("")}
       ${o.price ? `<a class="btn" href="${calcLink(o)}">Calculate costs</a>` : ""}</div>`;
   if (!pv.open) pv.showModal();
+}
+// Indicative home criteria from the few facts a search result gives.
+function homeRows(o) {
+  const r = o.rooms, office = r == null ? null
+    : r >= 5 ? {s: 5, why: `${r} rooms: bedroom, guest room, office and a spare room`}
+    : r >= 4 ? {s: 4, why: `${r} rooms: bedroom, guest room and office`}
+    : r >= 3 ? {s: 3, why: `${r} rooms: the office has to double as guest room`}
+    : {s: 1, why: `${r} rooms: no room for an office`};
+  let garden = null;
+  if (o.kind === "house" && o.plot_m2) garden = {s: o.plot_m2 >= 500 ? 5 : o.plot_m2 >= 250 ? 4 : 3, why: `House on a ${o.plot_m2.toLocaleString("en-US")} m² plot`};
+  else if (/garten/i.test(o.title)) garden = {s: 4, why: "Title mentions a garden"};
+  else if (/terrasse|dachterrasse/i.test(o.title)) garden = {s: 3, why: "Title mentions a terrace"};
+  else if (/balkon|loggia/i.test(o.title)) garden = {s: 2, why: "Title mentions a balcony"};
+  const stepfree = /erdgeschoss|\beg\b|barrierefrei|aufzug|lift|bungalow/i.test(o.title) ? {s: 5, why: "Title mentions ground floor / lift / barrier-free / bungalow"} : null;
+  return [["office", office], ["garden", garden], ["space", QC.space(o.size_m2)], ["stepfree", stepfree]];
 }
 function step(d) { const i = CUR.findIndex(x => "#o=" + x.key === decodeURIComponent(location.hash)); const n = CUR[i + d]; if (n) location.replace("#o=" + n.key); }
 $("#pv-prev").onclick = () => step(-1); $("#pv-next").onclick = () => step(1); $("#pv-close").onclick = () => pv.close();
