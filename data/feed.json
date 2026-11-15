@@ -24,6 +24,30 @@
    "requests": 16,
    "offers": 14,
    "errors": []
+  },
+  {
+   "date": "2026-11-15",
+   "source": "immowelt",
+   "ok": true,
+   "requests": 87,
+   "offers": 553,
+   "errors": []
+  },
+  {
+   "date": "2026-11-15",
+   "source": "kleinanzeigen",
+   "ok": true,
+   "requests": 15,
+   "offers": 246,
+   "errors": []
+  },
+  {
+   "date": "2026-11-15",
+   "source": "ohnemakler",
+   "ok": true,
+   "requests": 16,
+   "offers": 14,
+   "errors": []
   }
  ],
  "offers": {
@@ -100,6 +124,35 @@
      "2026-11-15",
      535000
     ]
+   ]
+  },
+  "immowelt:0169e501-b6b6-4e8c-a60e-4366db10c558": {
+   "source": "immowelt",
+   "source_id": "0169e501-b6b6-4e8c-a60e-4366db10c558",
+   "url": "https://www.immowelt.de/expose/0169e501-b6b6-4e8c-a60e-4366db10c558",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 511149,
+   "size_m2": 146.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 492.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/d/7/2/c/d72c523e-c0cd-4024-8f61-a0dde3d21938.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     511149
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3539727795",
+    "kleinanzeigen:3572808642"
    ]
   },
   "immowelt:01a45374-0979-4826-ba1b-5230c9e51356": {
@@ -582,6 +635,35 @@
     ]
    ]
   },
+  "immowelt:0c340180-c15b-40ae-b680-11d2abd55e84": {
+   "source": "immowelt",
+   "source_id": "0c340180-c15b-40ae-b680-11d2abd55e84",
+   "url": "https://www.immowelt.de/expose/0c340180-c15b-40ae-b680-11d2abd55e84",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 511149,
+   "size_m2": 146.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 492.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/c/2/a/9c2aa225-f899-4d59-8401-ea44bc29171f.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     511149
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3539727795",
+    "kleinanzeigen:3572808642"
+   ]
+  },
   "immowelt:0c46bcea-dc3c-4afe-a977-fedae1b7449a": {
    "source": "immowelt",
    "source_id": "0c46bcea-dc3c-4afe-a977-fedae1b7449a",
@@ -632,6 +714,31 @@
     [
      "2026-11-15",
      468840
+    ]
+   ]
+  },
+  "immowelt:0cd86d40-d2d1-4716-be1e-456a885b5040": {
+   "source": "immowelt",
+   "source_id": "0cd86d40-d2d1-4716-be1e-456a885b5040",
+   "url": "https://www.immowelt.de/expose/0cd86d40-d2d1-4716-be1e-456a885b5040",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 399000,
+   "size_m2": 120.0,
+   "rooms": 4.0,
+   "zip": "53111",
+   "district": "Zentrum",
+   "plot_m2": 345.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/3/7/d/7/37d7e396-dbef-4fab-88bb-c80e3b9871c7.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     399000
     ]
    ]
   },
@@ -812,6 +919,34 @@
      "2026-11-15",
      498000
     ]
+   ]
+  },
+  "immowelt:139c618e-71b7-45ad-87ee-d95f21ae5f66": {
+   "source": "immowelt",
+   "source_id": "139c618e-71b7-45ad-87ee-d95f21ae5f66",
+   "url": "https://www.immowelt.de/expose/139c618e-71b7-45ad-87ee-d95f21ae5f66",
+   "kind": "house",
+   "title": "Haus",
+   "price": 538135,
+   "size_m2": 120.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 300.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/4/b/1/b4b13380-86ed-4d97-8260-f8058630194f.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     538135
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569132503"
    ]
   },
   "immowelt:142de60a-0719-4974-afba-adf73f8a523a": {
@@ -1098,6 +1233,31 @@
     ]
    ]
   },
+  "immowelt:1a86de3d-6105-4e9e-9415-6c883ed59bb4": {
+   "source": "immowelt",
+   "source_id": "1a86de3d-6105-4e9e-9415-6c883ed59bb4",
+   "url": "https://www.immowelt.de/expose/1a86de3d-6105-4e9e-9415-6c883ed59bb4",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 833533,
+   "size_m2": 143.0,
+   "rooms": 5.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 690.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/2/a/7/92a72e7c-9395-426b-813c-083645cef367.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     833533
+    ]
+   ]
+  },
   "immowelt:1b7c2c23-f46b-41c5-8527-00fdaff74b8b": {
    "source": "immowelt",
    "source_id": "1b7c2c23-f46b-41c5-8527-00fdaff74b8b",
@@ -1232,6 +1392,34 @@
     ]
    ]
   },
+  "immowelt:1e02cb5c-06fc-4c42-ab03-6ca3eca95c73": {
+   "source": "immowelt",
+   "source_id": "1e02cb5c-06fc-4c42-ab03-6ca3eca95c73",
+   "url": "https://www.immowelt.de/expose/1e02cb5c-06fc-4c42-ab03-6ca3eca95c73",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 760674,
+   "size_m2": 154.0,
+   "rooms": 6.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/c/6/6/bc661b71-f39d-4f9a-9207-c612c5a593e2.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     760674
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3453965351"
+   ]
+  },
   "immowelt:1e6b7349-2489-45e5-8882-fca92356d7cd": {
    "source": "immowelt",
    "source_id": "1e6b7349-2489-45e5-8882-fca92356d7cd",
@@ -1341,6 +1529,64 @@
     "kleinanzeigen:3538927217"
    ]
   },
+  "immowelt:223df49b-c8ee-4423-956a-1072f049e893": {
+   "source": "immowelt",
+   "source_id": "223df49b-c8ee-4423-956a-1072f049e893",
+   "url": "https://www.immowelt.de/expose/223df49b-c8ee-4423-956a-1072f049e893",
+   "kind": "house",
+   "title": "Haus",
+   "price": 679888,
+   "size_m2": 166.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 800.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/2/3/c/823c7582-5f0a-4db2-8c1f-9232f6b4bf95.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     679888
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3553571379",
+    "kleinanzeigen:3569262241",
+    "kleinanzeigen:3569262644"
+   ]
+  },
+  "immowelt:22d6f9eb-7e39-45a9-9bc2-3654ec4eb42b": {
+   "source": "immowelt",
+   "source_id": "22d6f9eb-7e39-45a9-9bc2-3654ec4eb42b",
+   "url": "https://www.immowelt.de/expose/22d6f9eb-7e39-45a9-9bc2-3654ec4eb42b",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 888000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 3273.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/6/e/0/a/6e0a7ad4-b465-4bef-9767-f8ef988bd474.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     888000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261787"
+   ]
+  },
   "immowelt:23136e31-4248-44fa-a2de-99d1addc4d1c": {
    "source": "immowelt",
    "source_id": "23136e31-4248-44fa-a2de-99d1addc4d1c",
@@ -1366,6 +1612,34 @@
     ]
    ]
   },
+  "immowelt:2341a585-3779-457c-8101-0fd7bf726b08": {
+   "source": "immowelt",
+   "source_id": "2341a585-3779-457c-8101-0fd7bf726b08",
+   "url": "https://www.immowelt.de/expose/2341a585-3779-457c-8101-0fd7bf726b08",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 599000,
+   "size_m2": 150.0,
+   "rooms": 4.0,
+   "zip": "53111",
+   "district": "Zentrum",
+   "plot_m2": 350.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/6/f/8/2/6f822547-e790-41db-9259-9bc7d9fce6da.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     599000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395339"
+   ]
+  },
   "immowelt:237e4a1c-933e-4009-a367-3d39dd55151f": {
    "source": "immowelt",
    "source_id": "237e4a1c-933e-4009-a367-3d39dd55151f",
@@ -1388,6 +1662,31 @@
     [
      "2026-11-15",
      398000
+    ]
+   ]
+  },
+  "immowelt:23910494-5f11-4b47-a938-20969781013a": {
+   "source": "immowelt",
+   "source_id": "23910494-5f11-4b47-a938-20969781013a",
+   "url": "https://www.immowelt.de/expose/23910494-5f11-4b47-a938-20969781013a",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 663064,
+   "size_m2": 117.0,
+   "rooms": 3.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 333.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/4/9/6/f/496f4e35-7f87-44a6-b925-c84e4031fa5b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     663064
     ]
    ]
   },
@@ -1602,6 +1901,34 @@
     ]
    ]
   },
+  "immowelt:26ce4af5-dda9-459c-bde9-f862190decd9": {
+   "source": "immowelt",
+   "source_id": "26ce4af5-dda9-459c-bde9-f862190decd9",
+   "url": "https://www.immowelt.de/expose/26ce4af5-dda9-459c-bde9-f862190decd9",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 656030,
+   "size_m2": 148.0,
+   "rooms": 5.0,
+   "zip": "53179",
+   "district": "Mehlem",
+   "plot_m2": 349.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/0/c/3/00c33673-449a-4231-8ee8-6631b835d9df.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     656030
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3558294277"
+   ]
+  },
   "immowelt:26gjlglnjeur": {
    "source": "immowelt",
    "source_id": "26gjlglnjeur",
@@ -1653,6 +1980,35 @@
    ],
    "same_as": [
     "kleinanzeigen:3532427180"
+   ]
+  },
+  "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69": {
+   "source": "immowelt",
+   "source_id": "2716ec89-9177-4807-8ea8-53fffb1f3c69",
+   "url": "https://www.immowelt.de/expose/2716ec89-9177-4807-8ea8-53fffb1f3c69",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 349999,
+   "size_m2": 90.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 247.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/a/5/3/ea53ae41-cde6-4f18-ae6a-db16157e2314.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     349999
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395289",
+    "kleinanzeigen:3544395614"
    ]
   },
   "immowelt:2727c6b4-6484-490f-a8e8-0584b08a1d9a": {
@@ -2015,9 +2371,31 @@
      "2026-11-15",
      239000
     ]
-   ],
-   "same_as": [
-    "kleinanzeigen:3568244957"
+   ]
+  },
+  "immowelt:2bf7b8c2-a30b-48cc-a849-48cf3609a156": {
+   "source": "immowelt",
+   "source_id": "2bf7b8c2-a30b-48cc-a849-48cf3609a156",
+   "url": "https://www.immowelt.de/expose/2bf7b8c2-a30b-48cc-a849-48cf3609a156",
+   "kind": "house",
+   "title": "Mehrfamilienhaus",
+   "price": 921086,
+   "size_m2": 190.0,
+   "rooms": 7.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/3/3/1/f/331f680c-6220-4599-a524-09abc72065d1.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     921086
+    ]
    ]
   },
   "immowelt:2d5c963b-7e8b-4210-97ff-3671510e745b": {
@@ -2043,6 +2421,35 @@
      "2026-11-15",
      869000
     ]
+   ]
+  },
+  "immowelt:2d801f65-30af-4553-b865-45d25fdc2dcf": {
+   "source": "immowelt",
+   "source_id": "2d801f65-30af-4553-b865-45d25fdc2dcf",
+   "url": "https://www.immowelt.de/expose/2d801f65-30af-4553-b865-45d25fdc2dcf",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 470879,
+   "size_m2": 142.2,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 492.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/2/0/7/f/207ff302-574e-4c0b-a363-fd8b88b5233a.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     470879
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3542842823",
+    "kleinanzeigen:3555815768"
    ]
   },
   "immowelt:2ec4b5b6-a06c-4664-8a77-8b376bfad311": {
@@ -2145,6 +2552,31 @@
     [
      "2026-11-15",
      540000
+    ]
+   ]
+  },
+  "immowelt:2faf5382-8356-4736-9b43-5053e430200f": {
+   "source": "immowelt",
+   "source_id": "2faf5382-8356-4736-9b43-5053e430200f",
+   "url": "https://www.immowelt.de/expose/2faf5382-8356-4736-9b43-5053e430200f",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 691511,
+   "size_m2": 125.0,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 398.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/f/d/c/2/fdc25447-5d3f-4e98-a605-270980ab4929.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     691511
     ]
    ]
   },
@@ -2376,6 +2808,35 @@
     ]
    ]
   },
+  "immowelt:336422ea-c889-46ff-bc1f-bec022b4ea5c": {
+   "source": "immowelt",
+   "source_id": "336422ea-c889-46ff-bc1f-bec022b4ea5c",
+   "url": "https://www.immowelt.de/expose/336422ea-c889-46ff-bc1f-bec022b4ea5c",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 470879,
+   "size_m2": 142.2,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 492.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/7/5/2/3/752324f4-b024-4150-a845-dfeeee367678.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     470879
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3542842823",
+    "kleinanzeigen:3555815768"
+   ]
+  },
   "immowelt:340f7347-ae7a-4e65-add8-58269220387e": {
    "source": "immowelt",
    "source_id": "340f7347-ae7a-4e65-add8-58269220387e",
@@ -2454,6 +2915,31 @@
     ]
    ]
   },
+  "immowelt:356dda53-fc7d-4dd5-b3f6-8ea414bed75f": {
+   "source": "immowelt",
+   "source_id": "356dda53-fc7d-4dd5-b3f6-8ea414bed75f",
+   "url": "https://www.immowelt.de/expose/356dda53-fc7d-4dd5-b3f6-8ea414bed75f",
+   "kind": "house",
+   "title": "Villa",
+   "price": 896800,
+   "size_m2": 218.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 770.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/a/0/d/b/a0db68e7-6cbb-49e2-a253-2407327e4e1e.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     896800
+    ]
+   ]
+  },
   "immowelt:3570b884-db86-4518-83ed-ac66a00ef0d6": {
    "source": "immowelt",
    "source_id": "3570b884-db86-4518-83ed-ac66a00ef0d6",
@@ -2480,6 +2966,34 @@
    ],
    "same_as": [
     "kleinanzeigen:3533671688"
+   ]
+  },
+  "immowelt:35cd0434-32d9-4870-b85d-89e2bc511a05": {
+   "source": "immowelt",
+   "source_id": "35cd0434-32d9-4870-b85d-89e2bc511a05",
+   "url": "https://www.immowelt.de/expose/35cd0434-32d9-4870-b85d-89e2bc511a05",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 618000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 559.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/d/d/6/9dd6717b-24cf-40bf-9a03-c790cb7ca237.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     618000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569262253"
    ]
   },
   "immowelt:3655c2f7-8db6-4c13-9b8f-2047c4e27a6d": {
@@ -2687,6 +3201,31 @@
     ]
    ]
   },
+  "immowelt:3a3dddab-7d0a-491c-8d0c-aea721362884": {
+   "source": "immowelt",
+   "source_id": "3a3dddab-7d0a-491c-8d0c-aea721362884",
+   "url": "https://www.immowelt.de/expose/3a3dddab-7d0a-491c-8d0c-aea721362884",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 533670,
+   "size_m2": 136.8,
+   "rooms": 4.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 354.4,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/d/4/4/1d4457d8-7aed-44f4-b8f0-1ff731530034.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     533670
+    ]
+   ]
+  },
   "immowelt:3a4ea95e-d51e-46b0-856c-724924a31628": {
    "source": "immowelt",
    "source_id": "3a4ea95e-d51e-46b0-856c-724924a31628",
@@ -2740,6 +3279,31 @@
     "kleinanzeigen:3540771052"
    ]
   },
+  "immowelt:3b739346-9189-4b15-880a-62a1204adae6": {
+   "source": "immowelt",
+   "source_id": "3b739346-9189-4b15-880a-62a1204adae6",
+   "url": "https://www.immowelt.de/expose/3b739346-9189-4b15-880a-62a1204adae6",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 505169,
+   "size_m2": 136.8,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 329.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/4/5/5/e4556e25-f640-4cb2-a2af-1bf567b9e65f.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     505169
+    ]
+   ]
+  },
   "immowelt:3ca075bc-6653-4a4d-8346-a4159ea4ddac": {
    "source": "immowelt",
    "source_id": "3ca075bc-6653-4a4d-8346-a4159ea4ddac",
@@ -2791,6 +3355,35 @@
      "2026-11-15",
      329000
     ]
+   ]
+  },
+  "immowelt:3de44863-6187-4072-8d3e-caf478781fd9": {
+   "source": "immowelt",
+   "source_id": "3de44863-6187-4072-8d3e-caf478781fd9",
+   "url": "https://www.immowelt.de/expose/3de44863-6187-4072-8d3e-caf478781fd9",
+   "kind": "house",
+   "title": "Haus",
+   "price": 531489,
+   "size_m2": 136.1,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 487.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/3/9/9/5/3995cc6b-c6c8-4b3b-8276-050331d0f36e.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     531489
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3535092899",
+    "kleinanzeigen:3569254305"
    ]
   },
   "immowelt:3e4d38da-d5d0-465b-96f9-3a06470fc0ec": {
@@ -3105,6 +3698,60 @@
     ]
    ]
   },
+  "immowelt:445cc12b-d927-4d12-90c9-5b0bc0f546a5": {
+   "source": "immowelt",
+   "source_id": "445cc12b-d927-4d12-90c9-5b0bc0f546a5",
+   "url": "https://www.immowelt.de/expose/445cc12b-d927-4d12-90c9-5b0bc0f546a5",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 566106,
+   "size_m2": 125.0,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 263.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/9/c/9/19c9d88e-7d5c-4e6a-aca8-99332ab24c95.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     566106
+    ]
+   ]
+  },
+  "immowelt:4541c86a-0698-48dd-bb03-9ae5a423cf05": {
+   "source": "immowelt",
+   "source_id": "4541c86a-0698-48dd-bb03-9ae5a423cf05",
+   "url": "https://www.immowelt.de/expose/4541c86a-0698-48dd-bb03-9ae5a423cf05",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 511149,
+   "size_m2": 146.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 492.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/4/1/0/94100714-5771-4808-9f6e-780e8f7edba1.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     511149
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3539727795",
+    "kleinanzeigen:3572808642"
+   ]
+  },
   "immowelt:464d30f7-38dc-49bc-8dc4-6d4b88b7aee0": {
    "source": "immowelt",
    "source_id": "464d30f7-38dc-49bc-8dc4-6d4b88b7aee0",
@@ -3255,7 +3902,7 @@
    "source_id": "476eea27-54c4-45d3-ab88-a904fd5c79a5",
    "url": "https://www.immowelt.de/expose/476eea27-54c4-45d3-ab88-a904fd5c79a5",
    "kind": "house",
-   "title": "Einfamilienhaus zum Kauf - Wachtberg - 410.000 € - 5 Zimmer, 120 m², 850 m² Grundstück",
+   "title": "Einfamilienhaus",
    "price": 410000,
    "size_m2": 120.0,
    "rooms": 5.0,
@@ -3499,6 +4146,31 @@
     ]
    ]
   },
+  "immowelt:4c7d9668-9c64-4ae0-bbd7-cba731b37699": {
+   "source": "immowelt",
+   "source_id": "4c7d9668-9c64-4ae0-bbd7-cba731b37699",
+   "url": "https://www.immowelt.de/expose/4c7d9668-9c64-4ae0-bbd7-cba731b37699",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 680396,
+   "size_m2": 107.0,
+   "rooms": 3.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 398.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/1/7/1/91713e7a-b234-414c-b641-53670153fca5.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     680396
+    ]
+   ]
+  },
   "immowelt:4c99cd11-e085-446c-8704-720be2e37c78": {
    "source": "immowelt",
    "source_id": "4c99cd11-e085-446c-8704-720be2e37c78",
@@ -3549,6 +4221,31 @@
     ]
    ]
   },
+  "immowelt:4d3a8fb8-0110-4154-b4f0-a8a99952fe5a": {
+   "source": "immowelt",
+   "source_id": "4d3a8fb8-0110-4154-b4f0-a8a99952fe5a",
+   "url": "https://www.immowelt.de/expose/4d3a8fb8-0110-4154-b4f0-a8a99952fe5a",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 667356,
+   "size_m2": 112.0,
+   "rooms": 4.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 398.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/9/2/0/b920a2b0-ea82-4bb5-ad72-c624d15aa789.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     667356
+    ]
+   ]
+  },
   "immowelt:4dd7cd85-ba3d-4b82-91cd-9ed3d2e8cc7f": {
    "source": "immowelt",
    "source_id": "4dd7cd85-ba3d-4b82-91cd-9ed3d2e8cc7f",
@@ -3572,6 +4269,34 @@
      "2026-11-15",
      399000
     ]
+   ]
+  },
+  "immowelt:4df5b83e-9c87-43fd-9f5b-15a3b193493a": {
+   "source": "immowelt",
+   "source_id": "4df5b83e-9c87-43fd-9f5b-15a3b193493a",
+   "url": "https://www.immowelt.de/expose/4df5b83e-9c87-43fd-9f5b-15a3b193493a",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 968000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 698.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/5/9/e/159e8496-c84a-47c3-b725-0a6f696fb9e1.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     968000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261810"
    ]
   },
   "immowelt:4e731071-48dc-41d7-9429-2cb1d5b7d64c": {
@@ -3621,6 +4346,31 @@
     [
      "2026-11-15",
      399000
+    ]
+   ]
+  },
+  "immowelt:4ecd47aa-e87e-4300-bccb-0af3b0338ae2": {
+   "source": "immowelt",
+   "source_id": "4ecd47aa-e87e-4300-bccb-0af3b0338ae2",
+   "url": "https://www.immowelt.de/expose/4ecd47aa-e87e-4300-bccb-0af3b0338ae2",
+   "kind": "house",
+   "title": "Mehrfamilienhaus",
+   "price": 1067997,
+   "size_m2": 228.0,
+   "rooms": 8.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 690.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/5/6/8/d/568db206-360f-439e-af56-824b88bf3765.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     1067997
     ]
    ]
   },
@@ -4012,6 +4762,34 @@
     ]
    ]
   },
+  "immowelt:568cff14-d5b9-43ad-a738-7b1a5e2d6885": {
+   "source": "immowelt",
+   "source_id": "568cff14-d5b9-43ad-a738-7b1a5e2d6885",
+   "url": "https://www.immowelt.de/expose/568cff14-d5b9-43ad-a738-7b1a5e2d6885",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 534189,
+   "size_m2": 123.9,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 557.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/f/a/6/4/fa64c17b-ab95-4f0e-8b23-78244a07ae05.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     534189
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3556484697"
+   ]
+  },
   "immowelt:587bfbf7-b2b1-422c-b3ad-e607e96562cb": {
    "source": "immowelt",
    "source_id": "587bfbf7-b2b1-422c-b3ad-e607e96562cb",
@@ -4274,6 +5052,31 @@
     ]
    ]
   },
+  "immowelt:5c10cca4-69da-4890-ac3f-f52eddf3aff1": {
+   "source": "immowelt",
+   "source_id": "5c10cca4-69da-4890-ac3f-f52eddf3aff1",
+   "url": "https://www.immowelt.de/expose/5c10cca4-69da-4890-ac3f-f52eddf3aff1",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 650675,
+   "size_m2": 117.0,
+   "rooms": 4.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 333.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/4/5/8/7/458716af-78ee-4d2b-a77a-2dfb0993e413.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     650675
+    ]
+   ]
+  },
   "immowelt:5c43f461-44ec-4cb2-812e-524e8b67e18c": {
    "source": "immowelt",
    "source_id": "5c43f461-44ec-4cb2-812e-524e8b67e18c",
@@ -4296,6 +5099,56 @@
     [
      "2026-11-15",
      296000
+    ]
+   ]
+  },
+  "immowelt:5d4163a0-224a-4a26-92a3-c0d36eb9bab7": {
+   "source": "immowelt",
+   "source_id": "5d4163a0-224a-4a26-92a3-c0d36eb9bab7",
+   "url": "https://www.immowelt.de/expose/5d4163a0-224a-4a26-92a3-c0d36eb9bab7",
+   "kind": "house",
+   "title": "Haus",
+   "price": 913060,
+   "size_m2": 130.0,
+   "rooms": 5.0,
+   "zip": "53175",
+   "district": null,
+   "plot_m2": 390.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/d/5/b/1d5bb0c0-701b-4c3a-b571-1fd99ac5a231.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     913060
+    ]
+   ]
+  },
+  "immowelt:5d7386a8-345e-4537-aa07-e316443bf391": {
+   "source": "immowelt",
+   "source_id": "5d7386a8-345e-4537-aa07-e316443bf391",
+   "url": "https://www.immowelt.de/expose/5d7386a8-345e-4537-aa07-e316443bf391",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 669317,
+   "size_m2": 125.0,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 350.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/1/3/3/e133e893-1b84-48e5-994e-43f2f49d572e.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     669317
     ]
    ]
   },
@@ -4522,6 +5375,31 @@
     ]
    ]
   },
+  "immowelt:644b5328-9e78-4c74-9313-a71dc4e7dd6a": {
+   "source": "immowelt",
+   "source_id": "644b5328-9e78-4c74-9313-a71dc4e7dd6a",
+   "url": "https://www.immowelt.de/expose/644b5328-9e78-4c74-9313-a71dc4e7dd6a",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 608064,
+   "size_m2": 117.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 378.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/1/d/4/e1d49abb-405a-4794-bab1-02fd5390c28c.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     608064
+    ]
+   ]
+  },
   "immowelt:64703ace-10ab-4cc3-8e33-645426d7d2bd": {
    "source": "immowelt",
    "source_id": "64703ace-10ab-4cc3-8e33-645426d7d2bd",
@@ -4739,6 +5617,34 @@
     "kleinanzeigen:3569261800"
    ]
   },
+  "immowelt:6709b1dd-b237-4727-a381-584749b77972": {
+   "source": "immowelt",
+   "source_id": "6709b1dd-b237-4727-a381-584749b77972",
+   "url": "https://www.immowelt.de/expose/6709b1dd-b237-4727-a381-584749b77972",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 399999,
+   "size_m2": 179.0,
+   "rooms": 6.0,
+   "zip": "53177",
+   "district": "Friesdorf",
+   "plot_m2": 488.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/f/9/f/b/f9fb2b88-c251-4a37-8438-885e7f6d0ef4.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     399999
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395104"
+   ]
+  },
   "immowelt:6777ca81-fe79-4836-9f99-b51d5b43da85": {
    "source": "immowelt",
    "source_id": "6777ca81-fe79-4836-9f99-b51d5b43da85",
@@ -4910,6 +5816,31 @@
     [
      "2026-11-15",
      663568
+    ]
+   ]
+  },
+  "immowelt:69e50c27-00d8-4537-9245-96dea26eea14": {
+   "source": "immowelt",
+   "source_id": "69e50c27-00d8-4537-9245-96dea26eea14",
+   "url": "https://www.immowelt.de/expose/69e50c27-00d8-4537-9245-96dea26eea14",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 600568,
+   "size_m2": 125.0,
+   "rooms": 4.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 345.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/a/a/c/1/aac1cc5f-f3f4-40ae-86ba-5070c0572ed5.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     600568
     ]
    ]
   },
@@ -5505,6 +6436,31 @@
     ]
    ]
   },
+  "immowelt:729b14af-e557-439c-9e82-beb7d1392a27": {
+   "source": "immowelt",
+   "source_id": "729b14af-e557-439c-9e82-beb7d1392a27",
+   "url": "https://www.immowelt.de/expose/729b14af-e557-439c-9e82-beb7d1392a27",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 745925,
+   "size_m2": 145.0,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 335.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/6/0/9/1/60914ec0-c719-47b0-839f-2fdc8928c880.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     745925
+    ]
+   ]
+  },
   "immowelt:74151606-4f5c-4cfc-97ac-d7f46534b335": {
    "source": "immowelt",
    "source_id": "74151606-4f5c-4cfc-97ac-d7f46534b335",
@@ -5555,6 +6511,31 @@
     ]
    ]
   },
+  "immowelt:7483fa7b-d4c5-44c3-857b-5ef8a29b6cc8": {
+   "source": "immowelt",
+   "source_id": "7483fa7b-d4c5-44c3-857b-5ef8a29b6cc8",
+   "url": "https://www.immowelt.de/expose/7483fa7b-d4c5-44c3-857b-5ef8a29b6cc8",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 857572,
+   "size_m2": 167.0,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 625.0,
+   "energy_class": null,
+   "image": null,
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     857572
+    ]
+   ]
+  },
   "immowelt:75543cfb-f43f-4409-a5e2-c9230a471e17": {
    "source": "immowelt",
    "source_id": "75543cfb-f43f-4409-a5e2-c9230a471e17",
@@ -5581,6 +6562,60 @@
    ],
    "same_as": [
     "kleinanzeigen:3561635794"
+   ]
+  },
+  "immowelt:7558d1b8-1d7c-4acd-8e63-4cb98dc8f238": {
+   "source": "immowelt",
+   "source_id": "7558d1b8-1d7c-4acd-8e63-4cb98dc8f238",
+   "url": "https://www.immowelt.de/expose/7558d1b8-1d7c-4acd-8e63-4cb98dc8f238",
+   "kind": "house",
+   "title": "Haus",
+   "price": 531489,
+   "size_m2": 136.1,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 487.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/4/1/f/d/41fdc5c4-efa4-4488-acd7-77f3efda9580.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     531489
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3535092899",
+    "kleinanzeigen:3569254305"
+   ]
+  },
+  "immowelt:75dc944e-bbc8-44f1-aa20-81dc0a94bd1e": {
+   "source": "immowelt",
+   "source_id": "75dc944e-bbc8-44f1-aa20-81dc0a94bd1e",
+   "url": "https://www.immowelt.de/expose/75dc944e-bbc8-44f1-aa20-81dc0a94bd1e",
+   "kind": "house",
+   "title": "Haus",
+   "price": 1088700,
+   "size_m2": 160.0,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/d/4/e/8d4eabea-99e7-42e8-90a6-3dd9beae43ac.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     1088700
+    ]
    ]
   },
   "immowelt:761808be-28d4-4bec-bed1-192f10e6985b": {
@@ -5630,6 +6665,31 @@
     [
      "2026-11-15",
      259000
+    ]
+   ]
+  },
+  "immowelt:772c7b69-98c6-437b-b47d-5bc3156d8fbd": {
+   "source": "immowelt",
+   "source_id": "772c7b69-98c6-437b-b47d-5bc3156d8fbd",
+   "url": "https://www.immowelt.de/expose/772c7b69-98c6-437b-b47d-5bc3156d8fbd",
+   "kind": "house",
+   "title": "Mehrfamilienhaus",
+   "price": 849370,
+   "size_m2": 239.5,
+   "rooms": 6.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 695.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/b/e/0/0be0e674-f700-4bc6-a49d-59d26eaafe75.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     849370
     ]
    ]
   },
@@ -5842,6 +6902,31 @@
     ]
    ]
   },
+  "immowelt:7b372754-a2d1-463a-9c28-a595f8b0daf7": {
+   "source": "immowelt",
+   "source_id": "7b372754-a2d1-463a-9c28-a595f8b0daf7",
+   "url": "https://www.immowelt.de/expose/7b372754-a2d1-463a-9c28-a595f8b0daf7",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 578119,
+   "size_m2": 143.3,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 513.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/d/6/8/1d68ddf7-1276-4f63-ab06-890ed49ecff7.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     578119
+    ]
+   ]
+  },
   "immowelt:7b48fecf-8036-4639-99b0-0fbd57f7c783": {
    "source": "immowelt",
    "source_id": "7b48fecf-8036-4639-99b0-0fbd57f7c783",
@@ -6027,6 +7112,36 @@
      "2026-11-15",
      895000
     ]
+   ]
+  },
+  "immowelt:7d1b198c-2ee6-42a8-9c32-8742beff14d9": {
+   "source": "immowelt",
+   "source_id": "7d1b198c-2ee6-42a8-9c32-8742beff14d9",
+   "url": "https://www.immowelt.de/expose/7d1b198c-2ee6-42a8-9c32-8742beff14d9",
+   "kind": "house",
+   "title": "Haus",
+   "price": 679888,
+   "size_m2": 166.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 800.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/2/4/4/9/2449fd6c-5ca6-49c5-b5ba-7f900a73916f.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     679888
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3553571379",
+    "kleinanzeigen:3569262241",
+    "kleinanzeigen:3569262644"
    ]
   },
   "immowelt:7d4b3826-70e6-487f-8fa9-e20be0a5c298": {
@@ -6308,6 +7423,56 @@
     [
      "2026-11-15",
      625000
+    ]
+   ]
+  },
+  "immowelt:8217927a-83ed-491f-8846-9cb56a4602c9": {
+   "source": "immowelt",
+   "source_id": "8217927a-83ed-491f-8846-9cb56a4602c9",
+   "url": "https://www.immowelt.de/expose/8217927a-83ed-491f-8846-9cb56a4602c9",
+   "kind": "house",
+   "title": "Doppelhaushälfte · provisionsfrei",
+   "price": 569000,
+   "size_m2": 131.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 1989.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/d/4/3/b/d43b181d-00f1-496b-98bf-2d3e99de1a06.png?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     569000
+    ]
+   ]
+  },
+  "immowelt:827bea7c-a4e5-44fa-8784-92c425eb435b": {
+   "source": "immowelt",
+   "source_id": "827bea7c-a4e5-44fa-8784-92c425eb435b",
+   "url": "https://www.immowelt.de/expose/827bea7c-a4e5-44fa-8784-92c425eb435b",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 755947,
+   "size_m2": 135.0,
+   "rooms": 6.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 332.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/9/2/7/b92780c6-ae3f-416a-97f9-a908f50b3d19.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     755947
     ]
    ]
   },
@@ -6889,6 +8054,31 @@
     "ohnemakler:428198"
    ]
   },
+  "immowelt:8a04a85e-cd89-41e9-ac67-f838d00955ef": {
+   "source": "immowelt",
+   "source_id": "8a04a85e-cd89-41e9-ac67-f838d00955ef",
+   "url": "https://www.immowelt.de/expose/8a04a85e-cd89-41e9-ac67-f838d00955ef",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 559396,
+   "size_m2": 107.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 263.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/7/7/2/8/7728f8c3-b0ca-46cb-a1f1-0af0cdf3d741.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     559396
+    ]
+   ]
+  },
   "immowelt:8b8e22d7-33dc-474d-9ed8-24a7897adb47": {
    "source": "immowelt",
    "source_id": "8b8e22d7-33dc-474d-9ed8-24a7897adb47",
@@ -6964,6 +8154,35 @@
     ]
    ]
   },
+  "immowelt:8c674023-1d69-4748-9f50-d6ccc04a435a": {
+   "source": "immowelt",
+   "source_id": "8c674023-1d69-4748-9f50-d6ccc04a435a",
+   "url": "https://www.immowelt.de/expose/8c674023-1d69-4748-9f50-d6ccc04a435a",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 503469,
+   "size_m2": 171.8,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 531.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/a/a/d/1aadbd10-c3f8-4b37-87bb-9ebbc2217df4.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     503469
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3547403926",
+    "kleinanzeigen:3562523222"
+   ]
+  },
   "immowelt:8c75f63b-b091-4e8c-83bc-b192baab7b50": {
    "source": "immowelt",
    "source_id": "8c75f63b-b091-4e8c-83bc-b192baab7b50",
@@ -6994,7 +8213,7 @@
    "source_id": "8c9bf3f8-fb1a-4d7e-b2e7-9411c4f8bd28",
    "url": "https://www.immowelt.de/expose/8c9bf3f8-fb1a-4d7e-b2e7-9411c4f8bd28",
    "kind": "flat",
-   "title": "Wohnung zum Kauf - Bonn - 639.000 € - 3 Zimmer, 147,1 m², 3. Geschoss",
+   "title": "Wohnung · provisionsfrei",
    "price": 639000,
    "size_m2": 147.1,
    "rooms": 3.0,
@@ -7242,6 +8461,31 @@
     ]
    ]
   },
+  "immowelt:920fd34d-381e-46f8-be28-6b122a408197": {
+   "source": "immowelt",
+   "source_id": "920fd34d-381e-46f8-be28-6b122a408197",
+   "url": "https://www.immowelt.de/expose/920fd34d-381e-46f8-be28-6b122a408197",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 804169,
+   "size_m2": 167.0,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/6/8/7/0/68705b70-933f-4c40-9368-cd5bc123d1aa.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     804169
+    ]
+   ]
+  },
   "immowelt:93cb175c-0719-430d-94e9-6e08c30a9d30": {
    "source": "immowelt",
    "source_id": "93cb175c-0719-430d-94e9-6e08c30a9d30",
@@ -7376,6 +8620,34 @@
     "kleinanzeigen:3569692994"
    ]
   },
+  "immowelt:9662fd56-ad52-4248-b15c-514e47c3e075": {
+   "source": "immowelt",
+   "source_id": "9662fd56-ad52-4248-b15c-514e47c3e075",
+   "url": "https://www.immowelt.de/expose/9662fd56-ad52-4248-b15c-514e47c3e075",
+   "kind": "house",
+   "title": "Haus",
+   "price": 399000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53123",
+   "district": "Duisdorf",
+   "plot_m2": 374.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/3/6/0/83606401-58d0-45ff-9c3d-f5630cc4c593.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     399000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395984"
+   ]
+  },
   "immowelt:9782dac4-263f-4d75-9ccd-938e565f33e5": {
    "source": "immowelt",
    "source_id": "9782dac4-263f-4d75-9ccd-938e565f33e5",
@@ -7423,6 +8695,31 @@
     [
      "2026-11-15",
      799000
+    ]
+   ]
+  },
+  "immowelt:98363d60-672b-4806-9e55-887cdbd5bf8d": {
+   "source": "immowelt",
+   "source_id": "98363d60-672b-4806-9e55-887cdbd5bf8d",
+   "url": "https://www.immowelt.de/expose/98363d60-672b-4806-9e55-887cdbd5bf8d",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 547570,
+   "size_m2": 158.4,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 354.4,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/4/0/d/940daebe-b72b-482a-ae15-274a02aa7467.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     547570
     ]
    ]
   },
@@ -7557,6 +8854,31 @@
     "kleinanzeigen:3561623920"
    ]
   },
+  "immowelt:9ab95a05-562a-464f-a0ce-f38de9da9aea": {
+   "source": "immowelt",
+   "source_id": "9ab95a05-562a-464f-a0ce-f38de9da9aea",
+   "url": "https://www.immowelt.de/expose/9ab95a05-562a-464f-a0ce-f38de9da9aea",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 433219,
+   "size_m2": 136.1,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 607.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/e/8/7/8e877037-a2eb-4578-b4af-8b5fb4272d92.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     433219
+    ]
+   ]
+  },
   "immowelt:9b9f476a-24ba-4e01-a5ef-5895d3ba045c": {
    "source": "immowelt",
    "source_id": "9b9f476a-24ba-4e01-a5ef-5895d3ba045c",
@@ -7601,6 +8923,59 @@
    "last_seen": "2026-11-15",
    "active": true,
    "price_history": []
+  },
+  "immowelt:9c482a60-4528-46d1-8eb5-b742786d1a65": {
+   "source": "immowelt",
+   "source_id": "9c482a60-4528-46d1-8eb5-b742786d1a65",
+   "url": "https://www.immowelt.de/expose/9c482a60-4528-46d1-8eb5-b742786d1a65",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 733000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 720.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/d/b/4/9db4839f-82fd-499a-838e-0e541a44292d.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     733000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261758"
+   ]
+  },
+  "immowelt:9ca54799-91f6-4220-8de0-aab29fe5325c": {
+   "source": "immowelt",
+   "source_id": "9ca54799-91f6-4220-8de0-aab29fe5325c",
+   "url": "https://www.immowelt.de/expose/9ca54799-91f6-4220-8de0-aab29fe5325c",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 702356,
+   "size_m2": 113.0,
+   "rooms": 4.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 398.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/f/d/8/0fd8f2ab-2832-452b-b3ae-94361d94233a.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     702356
+    ]
+   ]
   },
   "immowelt:9dc159f7-17c0-46d7-ae51-47da644f2a86": {
    "source": "immowelt",
@@ -7649,6 +9024,31 @@
     [
      "2026-11-15",
      545900
+    ]
+   ]
+  },
+  "immowelt:9f5d58b9-aeea-40cb-8d79-485c6b8aa67a": {
+   "source": "immowelt",
+   "source_id": "9f5d58b9-aeea-40cb-8d79-485c6b8aa67a",
+   "url": "https://www.immowelt.de/expose/9f5d58b9-aeea-40cb-8d79-485c6b8aa67a",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 568568,
+   "size_m2": 125.0,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 263.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/e/b/e/0ebedd66-7cb8-45e1-b9bb-0274f52f8e8b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     568568
     ]
    ]
   },
@@ -7889,6 +9289,31 @@
     ]
    ]
   },
+  "immowelt:a2d92382-f9d4-4075-aed1-d40277bc2798": {
+   "source": "immowelt",
+   "source_id": "a2d92382-f9d4-4075-aed1-d40277bc2798",
+   "url": "https://www.immowelt.de/expose/a2d92382-f9d4-4075-aed1-d40277bc2798",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 524880,
+   "size_m2": 118.0,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 354.4,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/7/d/2/17d29edc-cd98-497e-9cb9-6f33c438ebd8.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     524880
+    ]
+   ]
+  },
   "immowelt:a30d6a3f-c897-4708-ae0c-dbacd5359d4c": {
    "source": "immowelt",
    "source_id": "a30d6a3f-c897-4708-ae0c-dbacd5359d4c",
@@ -7911,6 +9336,31 @@
     [
      "2026-11-15",
      929000
+    ]
+   ]
+  },
+  "immowelt:a35fe8f9-6e01-41b6-bc09-6251bf468946": {
+   "source": "immowelt",
+   "source_id": "a35fe8f9-6e01-41b6-bc09-6251bf468946",
+   "url": "https://www.immowelt.de/expose/a35fe8f9-6e01-41b6-bc09-6251bf468946",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 769384,
+   "size_m2": 147.0,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/c/b/5/4/cb542458-52c3-4709-89e2-1e3d29a3c342.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     769384
     ]
    ]
   },
@@ -8223,6 +9673,35 @@
      "2026-11-15",
      575000
     ]
+   ]
+  },
+  "immowelt:a98b79e6-6f96-42e5-b1a1-893e4a6900ac": {
+   "source": "immowelt",
+   "source_id": "a98b79e6-6f96-42e5-b1a1-893e4a6900ac",
+   "url": "https://www.immowelt.de/expose/a98b79e6-6f96-42e5-b1a1-893e4a6900ac",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 798769,
+   "size_m2": 167.2,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 630.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/c/b/d/9/cbd93d53-37ca-496e-b85c-e70384b17f25.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     798769
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261946",
+    "kleinanzeigen:3569261974"
    ]
   },
   "immowelt:a99cbaca-00a9-402b-a841-4d69bf3e23ac": {
@@ -8613,6 +10092,31 @@
     ]
    ]
   },
+  "immowelt:b045f18d-c332-424d-8908-fc467bc16cf3": {
+   "source": "immowelt",
+   "source_id": "b045f18d-c332-424d-8908-fc467bc16cf3",
+   "url": "https://www.immowelt.de/expose/b045f18d-c332-424d-8908-fc467bc16cf3",
+   "kind": "house",
+   "title": "Mehrfamilienhaus",
+   "price": 1011346,
+   "size_m2": 183.0,
+   "rooms": 7.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 625.0,
+   "energy_class": null,
+   "image": null,
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     1011346
+    ]
+   ]
+  },
   "immowelt:b0728c06-64c8-4e4b-816f-88d0648663f9": {
    "source": "immowelt",
    "source_id": "b0728c06-64c8-4e4b-816f-88d0648663f9",
@@ -8717,6 +10221,31 @@
     ]
    ]
   },
+  "immowelt:b28a9add-5de3-4815-b4dc-bb5eef677494": {
+   "source": "immowelt",
+   "source_id": "b28a9add-5de3-4815-b4dc-bb5eef677494",
+   "url": "https://www.immowelt.de/expose/b28a9add-5de3-4815-b4dc-bb5eef677494",
+   "kind": "house",
+   "title": "Haus",
+   "price": 1070400,
+   "size_m2": 180.0,
+   "rooms": 6.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 500.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/d/1/a/0d1ac402-f1c5-4094-b54e-388dc9d343f8.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     1070400
+    ]
+   ]
+  },
   "immowelt:b28fea62-dfc1-43ab-bcc8-5abaf97465f1": {
    "source": "immowelt",
    "source_id": "b28fea62-dfc1-43ab-bcc8-5abaf97465f1",
@@ -8771,6 +10300,60 @@
    ],
    "same_as": [
     "kleinanzeigen:3520186945"
+   ]
+  },
+  "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71": {
+   "source": "immowelt",
+   "source_id": "b331c1f8-5e90-42cb-8d6c-f08be5479f71",
+   "url": "https://www.immowelt.de/expose/b331c1f8-5e90-42cb-8d6c-f08be5479f71",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 349999,
+   "size_m2": 90.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 247.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/6/3/b/7/63b73814-5eaa-489d-a3e0-fc2bd92d6ffc.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     349999
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395289",
+    "kleinanzeigen:3544395614"
+   ]
+  },
+  "immowelt:b343a5d7-2370-4d88-929f-ba1a124a60df": {
+   "source": "immowelt",
+   "source_id": "b343a5d7-2370-4d88-929f-ba1a124a60df",
+   "url": "https://www.immowelt.de/expose/b343a5d7-2370-4d88-929f-ba1a124a60df",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 599999,
+   "size_m2": 200.0,
+   "rooms": 6.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 467.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/7/0/d/f/70df0464-ca48-40a0-b8d2-e7e910aaef72.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     599999
+    ]
    ]
   },
   "immowelt:b353e332-be4e-44a2-8f25-052c722f4efa": {
@@ -8904,6 +10487,56 @@
     "kleinanzeigen:3484379247"
    ]
   },
+  "immowelt:b615ac8c-64b5-4b42-bb81-dddc8702172a": {
+   "source": "immowelt",
+   "source_id": "b615ac8c-64b5-4b42-bb81-dddc8702172a",
+   "url": "https://www.immowelt.de/expose/b615ac8c-64b5-4b42-bb81-dddc8702172a",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 836555,
+   "size_m2": 130.0,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 625.0,
+   "energy_class": null,
+   "image": null,
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     836555
+    ]
+   ]
+  },
+  "immowelt:b65623b4-3106-4985-bcab-588b4a540ea7": {
+   "source": "immowelt",
+   "source_id": "b65623b4-3106-4985-bcab-588b4a540ea7",
+   "url": "https://www.immowelt.de/expose/b65623b4-3106-4985-bcab-588b4a540ea7",
+   "kind": "house",
+   "title": "Bungalow",
+   "price": 797531,
+   "size_m2": 82.0,
+   "rooms": 2.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 510.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/8/4/8/0848bf3c-ada7-4771-b807-a63bc42f09da.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     797531
+    ]
+   ]
+  },
   "immowelt:b6625e09-bda5-4d3a-aa1f-d81b6779c28b": {
    "source": "immowelt",
    "source_id": "b6625e09-bda5-4d3a-aa1f-d81b6779c28b",
@@ -8958,6 +10591,31 @@
    ],
    "same_as": [
     "kleinanzeigen:3460989639"
+   ]
+  },
+  "immowelt:b7a1216b-f801-4f61-8a6d-99a405f06ef3": {
+   "source": "immowelt",
+   "source_id": "b7a1216b-f801-4f61-8a6d-99a405f06ef3",
+   "url": "https://www.immowelt.de/expose/b7a1216b-f801-4f61-8a6d-99a405f06ef3",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 859467,
+   "size_m2": 143.0,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 625.0,
+   "energy_class": null,
+   "image": null,
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     859467
+    ]
    ]
   },
   "immowelt:b7d0212e-af72-4b62-8a81-bcaa8e0ef697": {
@@ -9036,6 +10694,34 @@
    ],
    "same_as": [
     "kleinanzeigen:3526949019"
+   ]
+  },
+  "immowelt:b9ec2ff3-0379-467b-a5fa-72ee5fe3fbf1": {
+   "source": "immowelt",
+   "source_id": "b9ec2ff3-0379-467b-a5fa-72ee5fe3fbf1",
+   "url": "https://www.immowelt.de/expose/b9ec2ff3-0379-467b-a5fa-72ee5fe3fbf1",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 818000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 2530.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/5/3/f/2/53f2d44f-3727-4e9e-a115-5ba20a500d91.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     818000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261772"
    ]
   },
   "immowelt:b9f75599-98aa-455a-bcac-4f113f848744": {
@@ -9188,6 +10874,36 @@
     ]
    ]
   },
+  "immowelt:bfe1647a-0b12-4b25-b6a3-7cd2751e2674": {
+   "source": "immowelt",
+   "source_id": "bfe1647a-0b12-4b25-b6a3-7cd2751e2674",
+   "url": "https://www.immowelt.de/expose/bfe1647a-0b12-4b25-b6a3-7cd2751e2674",
+   "kind": "house",
+   "title": "Haus",
+   "price": 679888,
+   "size_m2": 166.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 800.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/e/5/3/0e53aaa1-6881-4b48-9c47-173fef5fad7b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     679888
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3553571379",
+    "kleinanzeigen:3569262241",
+    "kleinanzeigen:3569262644"
+   ]
+  },
   "immowelt:c054a2d5-3baf-4e41-aee1-289a9fe9dbe3": {
    "source": "immowelt",
    "source_id": "c054a2d5-3baf-4e41-aee1-289a9fe9dbe3",
@@ -9239,6 +10955,34 @@
      "2026-11-15",
      595000
     ]
+   ]
+  },
+  "immowelt:c1bcb268-d955-4389-82d6-28dc97a97643": {
+   "source": "immowelt",
+   "source_id": "c1bcb268-d955-4389-82d6-28dc97a97643",
+   "url": "https://www.immowelt.de/expose/c1bcb268-d955-4389-82d6-28dc97a97643",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 899999,
+   "size_m2": 170.0,
+   "rooms": 5.0,
+   "zip": "53111",
+   "district": "Zentrum",
+   "plot_m2": 990.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/a/0/f/ba0f93b5-5a58-4ff8-9578-5cce966dc16b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     899999
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544396467"
    ]
   },
   "immowelt:c3288698-065b-494c-85cd-089b09a216d2": {
@@ -9308,6 +11052,31 @@
    "last_seen": "2026-11-15",
    "active": true,
    "price_history": []
+  },
+  "immowelt:c45f322d-c4ce-4371-aedd-84e00e3d3c3b": {
+   "source": "immowelt",
+   "source_id": "c45f322d-c4ce-4371-aedd-84e00e3d3c3b",
+   "url": "https://www.immowelt.de/expose/c45f322d-c4ce-4371-aedd-84e00e3d3c3b",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 597169,
+   "size_m2": 147.3,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 384.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/a/6/9/3/a6939b4c-9c86-4bd8-959f-d2311a7e8d1c.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     597169
+    ]
+   ]
   },
   "immowelt:c508c430-2d1b-4d77-9608-1b74bdf414ed": {
    "source": "immowelt",
@@ -9409,6 +11178,56 @@
     [
      "2026-11-15",
      859000
+    ]
+   ]
+  },
+  "immowelt:c6ce4f2d-0bb7-4e18-8c7b-2563aa135e71": {
+   "source": "immowelt",
+   "source_id": "c6ce4f2d-0bb7-4e18-8c7b-2563aa135e71",
+   "url": "https://www.immowelt.de/expose/c6ce4f2d-0bb7-4e18-8c7b-2563aa135e71",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 794141,
+   "size_m2": 107.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 630.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/a/d/4/7/ad478f23-7e2b-4def-8dc1-30dd240c2d48.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     794141
+    ]
+   ]
+  },
+  "immowelt:c735ccf3-8037-4d39-924d-a631900c68a7": {
+   "source": "immowelt",
+   "source_id": "c735ccf3-8037-4d39-924d-a631900c68a7",
+   "url": "https://www.immowelt.de/expose/c735ccf3-8037-4d39-924d-a631900c68a7",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 519999,
+   "size_m2": 210.0,
+   "rooms": 8.0,
+   "zip": "53111",
+   "district": "Plittersdorf",
+   "plot_m2": 990.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/b/b/6/bbb6dec7-9f80-4848-b471-779f4b6c263d.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     519999
     ]
    ]
   },
@@ -9769,6 +11588,34 @@
     "ohnemakler:464198"
    ]
   },
+  "immowelt:cdaf29d5-bf36-4239-b1eb-206465fb5405": {
+   "source": "immowelt",
+   "source_id": "cdaf29d5-bf36-4239-b1eb-206465fb5405",
+   "url": "https://www.immowelt.de/expose/cdaf29d5-bf36-4239-b1eb-206465fb5405",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 495015,
+   "size_m2": 142.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 511.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/8/b/3/08b3adb5-1252-479e-bacc-403fd4ec0d3c.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     495015
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3547820491"
+   ]
+  },
   "immowelt:ce26c0f7-fb38-4683-8c75-866ffb20bc44": {
    "source": "immowelt",
    "source_id": "ce26c0f7-fb38-4683-8c75-866ffb20bc44",
@@ -9792,6 +11639,34 @@
      "2026-11-15",
      248000
     ]
+   ]
+  },
+  "immowelt:ce34640a-9ca2-41d4-b0a3-13cded9de7fb": {
+   "source": "immowelt",
+   "source_id": "ce34640a-9ca2-41d4-b0a3-13cded9de7fb",
+   "url": "https://www.immowelt.de/expose/ce34640a-9ca2-41d4-b0a3-13cded9de7fb",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 669000,
+   "size_m2": 135.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 760.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/2/6/f/b/26fbe96b-be8c-4560-82d7-c8071be3afe3.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     669000
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569262260"
    ]
   },
   "immowelt:cf22cd7a-ceee-47e4-8dd9-5d5e7576306f": {
@@ -9907,6 +11782,31 @@
     "kleinanzeigen:3569377740"
    ]
   },
+  "immowelt:d145b7f8-5e5a-4dc4-b0b0-38aa5df0e6fc": {
+   "source": "immowelt",
+   "source_id": "d145b7f8-5e5a-4dc4-b0b0-38aa5df0e6fc",
+   "url": "https://www.immowelt.de/expose/d145b7f8-5e5a-4dc4-b0b0-38aa5df0e6fc",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 598175,
+   "size_m2": 117.0,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 378.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/0/0/9/1009c7cd-2e40-4d56-95b3-ebe19f7bd183.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     598175
+    ]
+   ]
+  },
   "immowelt:d1cd106d-1839-4550-a9c2-20b26b508980": {
    "source": "immowelt",
    "source_id": "d1cd106d-1839-4550-a9c2-20b26b508980",
@@ -10005,6 +11905,35 @@
     ]
    ]
   },
+  "immowelt:d619c260-f2cf-4e82-bdc7-b247beaead0e": {
+   "source": "immowelt",
+   "source_id": "d619c260-f2cf-4e82-bdc7-b247beaead0e",
+   "url": "https://www.immowelt.de/expose/d619c260-f2cf-4e82-bdc7-b247beaead0e",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 503469,
+   "size_m2": 171.8,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 531.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/d/f/2/3/df2314fd-e07b-48eb-8556-d6233ea8ac47.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     503469
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3547403926",
+    "kleinanzeigen:3562523222"
+   ]
+  },
   "immowelt:d65239b2-d08d-48b0-8448-5c92e91a4ed2": {
    "source": "immowelt",
    "source_id": "d65239b2-d08d-48b0-8448-5c92e91a4ed2",
@@ -10053,6 +11982,34 @@
      "2026-11-15",
      849000
     ]
+   ]
+  },
+  "immowelt:d705778b-f9d5-41f4-98fe-4b68808a859e": {
+   "source": "immowelt",
+   "source_id": "d705778b-f9d5-41f4-98fe-4b68808a859e",
+   "url": "https://www.immowelt.de/expose/d705778b-f9d5-41f4-98fe-4b68808a859e",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 590420,
+   "size_m2": 149.0,
+   "rooms": 3.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 497.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/4/5/f/9/45f99b26-3987-47fc-a24e-4282f2a9c19d.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     590420
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569377727"
    ]
   },
   "immowelt:d734c4d6-b392-4457-9843-8f063a4c0c1b": {
@@ -10106,6 +12063,31 @@
    ],
    "same_as": [
     "kleinanzeigen:3568945574"
+   ]
+  },
+  "immowelt:d7462171-49ca-4bc9-944b-f14c973a3117": {
+   "source": "immowelt",
+   "source_id": "d7462171-49ca-4bc9-944b-f14c973a3117",
+   "url": "https://www.immowelt.de/expose/d7462171-49ca-4bc9-944b-f14c973a3117",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 601106,
+   "size_m2": 125.0,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 313.0,
+   "energy_class": null,
+   "image": null,
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     601106
+    ]
    ]
   },
   "immowelt:d7614822-5401-42eb-b12e-bec4b8e07e50": {
@@ -10443,6 +12425,64 @@
     "kleinanzeigen:3569405141"
    ]
   },
+  "immowelt:dc698b66-3bb6-4e55-952b-d2e225e3dbd3": {
+   "source": "immowelt",
+   "source_id": "dc698b66-3bb6-4e55-952b-d2e225e3dbd3",
+   "url": "https://www.immowelt.de/expose/dc698b66-3bb6-4e55-952b-d2e225e3dbd3",
+   "kind": "house",
+   "title": "Haus",
+   "price": 799600,
+   "size_m2": 166.7,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 630.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/b/2/8/c/b28cfa38-2f8f-4ae4-a8c4-719c32234e0b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     799600
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569261946",
+    "kleinanzeigen:3569261974"
+   ]
+  },
+  "immowelt:dc7aaf17-aa3b-4410-a94c-3cfd9dd10f9f": {
+   "source": "immowelt",
+   "source_id": "dc7aaf17-aa3b-4410-a94c-3cfd9dd10f9f",
+   "url": "https://www.immowelt.de/expose/dc7aaf17-aa3b-4410-a94c-3cfd9dd10f9f",
+   "kind": "house",
+   "title": "Haus",
+   "price": 531489,
+   "size_m2": 136.1,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 487.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/d/4/9/2/d492a6ca-8120-452b-bb7d-3de1ef071bea.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     531489
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3535092899",
+    "kleinanzeigen:3569254305"
+   ]
+  },
   "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8": {
    "source": "immowelt",
    "source_id": "dcece25f-e8f4-46a5-b407-1d959b8010a8",
@@ -10608,6 +12648,31 @@
     ]
    ]
   },
+  "immowelt:ddaafa9c-c14c-4b09-b5f1-bf290f21b7c2": {
+   "source": "immowelt",
+   "source_id": "ddaafa9c-c14c-4b09-b5f1-bf290f21b7c2",
+   "url": "https://www.immowelt.de/expose/ddaafa9c-c14c-4b09-b5f1-bf290f21b7c2",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 980734,
+   "size_m2": 210.0,
+   "rooms": 6.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 690.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/9/d/3/e9d36005-0d43-4966-87a1-217f1b13851c.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     980734
+    ]
+   ]
+  },
   "immowelt:deca691b-c64e-4269-bcc9-4a431599b49a": {
    "source": "immowelt",
    "source_id": "deca691b-c64e-4269-bcc9-4a431599b49a",
@@ -10634,6 +12699,31 @@
    ],
    "same_as": [
     "kleinanzeigen:3569122933"
+   ]
+  },
+  "immowelt:df08ac53-3282-4f2b-b894-414111a094fa": {
+   "source": "immowelt",
+   "source_id": "df08ac53-3282-4f2b-b894-414111a094fa",
+   "url": "https://www.immowelt.de/expose/df08ac53-3282-4f2b-b894-414111a094fa",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 851572,
+   "size_m2": 167.0,
+   "rooms": 5.0,
+   "zip": "53227",
+   "district": null,
+   "plot_m2": 690.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/7/d/1/5/7d159b18-7566-4c22-b50c-82b32b0903bf.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     851572
+    ]
    ]
   },
   "immowelt:e00d6842-ef56-40ec-983b-b79eeaa364f5": {
@@ -10715,6 +12805,31 @@
    ],
    "same_as": [
     "kleinanzeigen:3424107731"
+   ]
+  },
+  "immowelt:e031d52d-1131-47dd-b766-f30eb7478062": {
+   "source": "immowelt",
+   "source_id": "e031d52d-1131-47dd-b766-f30eb7478062",
+   "url": "https://www.immowelt.de/expose/e031d52d-1131-47dd-b766-f30eb7478062",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 700533,
+   "size_m2": 143.0,
+   "rooms": 5.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 398.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/3/6/3/a/363afc0e-2683-4e75-80e9-4448ea6803d6.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     700533
+    ]
    ]
   },
   "immowelt:e038a1b9-024f-4d58-9744-3a9481a9f1f1": {
@@ -11104,6 +13219,34 @@
     "kleinanzeigen:3556257295"
    ]
   },
+  "immowelt:e59e5838-6534-46a0-a76f-d9d6289e6714": {
+   "source": "immowelt",
+   "source_id": "e59e5838-6534-46a0-a76f-d9d6289e6714",
+   "url": "https://www.immowelt.de/expose/e59e5838-6534-46a0-a76f-d9d6289e6714",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 622300,
+   "size_m2": 115.0,
+   "rooms": 4.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 559.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/a/2/4/9a24336e-f986-481c-9699-bd65c401b888.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     622300
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569262231"
+   ]
+  },
   "immowelt:e67a03a7-1acc-4a36-beea-aab09a99efd4": {
    "source": "immowelt",
    "source_id": "e67a03a7-1acc-4a36-beea-aab09a99efd4",
@@ -11419,6 +13562,84 @@
     ]
    ]
   },
+  "immowelt:ed83a301-8082-4f92-981f-44aa2e2bf0b2": {
+   "source": "immowelt",
+   "source_id": "ed83a301-8082-4f92-981f-44aa2e2bf0b2",
+   "url": "https://www.immowelt.de/expose/ed83a301-8082-4f92-981f-44aa2e2bf0b2",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 545680,
+   "size_m2": 123.8,
+   "rooms": 4.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 258.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/4/6/5/6/46562c91-b04b-44f2-82e7-b9d14449d038.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     545680
+    ]
+   ]
+  },
+  "immowelt:ed8b6e2e-e2aa-4000-962e-d8f16e46e20b": {
+   "source": "immowelt",
+   "source_id": "ed8b6e2e-e2aa-4000-962e-d8f16e46e20b",
+   "url": "https://www.immowelt.de/expose/ed8b6e2e-e2aa-4000-962e-d8f16e46e20b",
+   "kind": "house",
+   "title": "Haus",
+   "price": 596120,
+   "size_m2": 120.0,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 350.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/9/2/4/3/92433185-b109-4751-923e-0a7e1da0bcc7.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     596120
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3569110314"
+   ]
+  },
+  "immowelt:ede86f1d-06e7-45d9-926b-247fd87ad42d": {
+   "source": "immowelt",
+   "source_id": "ede86f1d-06e7-45d9-926b-247fd87ad42d",
+   "url": "https://www.immowelt.de/expose/ede86f1d-06e7-45d9-926b-247fd87ad42d",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 518030,
+   "size_m2": 114.0,
+   "rooms": 4.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 354.4,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/1/a/d/2/1ad25973-60e6-48a5-a768-ac442d0f9380.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     518030
+    ]
+   ]
+  },
   "immowelt:f0b9a328-9ba4-4f00-8ac6-2a5f9b284313": {
    "source": "immowelt",
    "source_id": "f0b9a328-9ba4-4f00-8ac6-2a5f9b284313",
@@ -11680,6 +13901,9 @@
      "2026-11-15",
      236000
     ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3542310953"
    ]
   },
   "immowelt:f6fcfbff-4035-495f-97a8-03880e63a1e5": {
@@ -11811,6 +14035,35 @@
    ],
    "same_as": [
     "kleinanzeigen:3500698172"
+   ]
+  },
+  "immowelt:f8d85aff-a710-4167-8411-4c5c71bd7362": {
+   "source": "immowelt",
+   "source_id": "f8d85aff-a710-4167-8411-4c5c71bd7362",
+   "url": "https://www.immowelt.de/expose/f8d85aff-a710-4167-8411-4c5c71bd7362",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 503469,
+   "size_m2": 171.8,
+   "rooms": 5.0,
+   "zip": "53343",
+   "district": "Wachtberg",
+   "plot_m2": 531.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/c/2/6/8c2666b3-1bce-48b2-890d-3b9aa067567f.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     503469
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3547403926",
+    "kleinanzeigen:3562523222"
    ]
   },
   "immowelt:f8dbd91c-ad79-4f73-83dd-634a464ed4b7": {
@@ -12092,6 +14345,34 @@
    ],
    "same_as": [
     "kleinanzeigen:3541980993"
+   ]
+  },
+  "immowelt:ff87ee8a-4e7d-4c8e-96f2-7b1ab59842da": {
+   "source": "immowelt",
+   "source_id": "ff87ee8a-4e7d-4c8e-96f2-7b1ab59842da",
+   "url": "https://www.immowelt.de/expose/ff87ee8a-4e7d-4c8e-96f2-7b1ab59842da",
+   "kind": "house",
+   "title": "Haus · provisionsfrei",
+   "price": 399999,
+   "size_m2": 179.0,
+   "rooms": 6.0,
+   "zip": "53123",
+   "district": "Duisdorf",
+   "plot_m2": 374.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/0/1/3/8013cb72-e33c-4bfc-b8ed-134cf9df9e2b.jpg?w=480&h=360",
+   "seller": null,
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     399999
+    ]
+   ],
+   "same_as": [
+    "kleinanzeigen:3544395073"
    ]
   },
   "immowelt:ff907ec9-1198-4b36-9259-fb24dfa32af8": {
@@ -12965,7 +15246,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bf/bf9c77fe-c7b2-4c4f-ad34-42a1bd60436e?rule=$_1.AUTO",
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bf/bf9c77fe-c7b2-4c4f-ad34-42a1bd60436e?rule=$_59.AUTO",
    "seller": "agent",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -13324,7 +15605,7 @@
    "district": "Ippendorf",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/56/56defa37-b38a-4cf9-a930-1555499e7c34?rule=$_59.AUTO",
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/56/56defa37-b38a-4cf9-a930-1555499e7c34?rule=$_1.AUTO",
    "seller": "agent",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -13532,6 +15813,7 @@
     ]
    ],
    "same_as": [
+    "immowelt:1e02cb5c-06fc-4c42-ab03-6ca3eca95c73",
     "immowelt:a0f18478-e40c-48ea-8311-ebde7c871a1b"
    ]
   },
@@ -14456,7 +16738,7 @@
    "district": "Brüser Berg",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/98/98845e4e-e5ed-4a3f-b23e-30ffc625418b?rule=$_1.AUTO",
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/98/98845e4e-e5ed-4a3f-b23e-30ffc625418b?rule=$_59.AUTO",
    "seller": "agent",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -14929,6 +17211,11 @@
      "2026-11-15",
      531489
     ]
+   ],
+   "same_as": [
+    "immowelt:3de44863-6187-4072-8d3e-caf478781fd9",
+    "immowelt:7558d1b8-1d7c-4acd-8e63-4cb98dc8f238",
+    "immowelt:dc7aaf17-aa3b-4410-a94c-3cfd9dd10f9f"
    ]
   },
   "kleinanzeigen:3538703755": {
@@ -15085,6 +17372,11 @@
      "2026-11-15",
      511149
     ]
+   ],
+   "same_as": [
+    "immowelt:0169e501-b6b6-4e8c-a60e-4366db10c558",
+    "immowelt:0c340180-c15b-40ae-b680-11d2abd55e84",
+    "immowelt:4541c86a-0698-48dd-bb03-9ae5a423cf05"
    ]
   },
   "kleinanzeigen:3539759172": {
@@ -15445,6 +17737,34 @@
     "immowelt:ff6703be-7cb5-4cad-91f4-51f7f85a71f2"
    ]
   },
+  "kleinanzeigen:3542310953": {
+   "source": "kleinanzeigen",
+   "source_id": "3542310953",
+   "url": "https://www.kleinanzeigen.de/s-anzeige/solide-kapitalanlage-in-ruhigem-mehrfamilienhaus/3542310953-196-1041",
+   "kind": "flat",
+   "title": "Solide Kapitalanlage in ruhigem Mehrfamilienhaus",
+   "price": 236000,
+   "size_m2": 79.07,
+   "rooms": 3.0,
+   "zip": "53177",
+   "district": null,
+   "plot_m2": null,
+   "energy_class": null,
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b3/b3bf21a7-c6a7-42be-bf1f-e7bc3d6fb31d?rule=$_2.AUTO",
+   "seller": "agent",
+   "first_seen": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-15",
+     236000
+    ]
+   ],
+   "same_as": [
+    "immowelt:f663ba35-0a56-45ab-9028-f27ce96d9278"
+   ]
+  },
   "kleinanzeigen:3542478830": {
    "source": "kleinanzeigen",
    "source_id": "3542478830",
@@ -15571,6 +17891,10 @@
      "2026-11-15",
      470879
     ]
+   ],
+   "same_as": [
+    "immowelt:2d801f65-30af-4553-b865-45d25fdc2dcf",
+    "immowelt:336422ea-c889-46ff-bc1f-bec022b4ea5c"
    ]
   },
   "kleinanzeigen:3542873029": {
@@ -15621,6 +17945,9 @@
      "2026-11-15",
      399999
     ]
+   ],
+   "same_as": [
+    "immowelt:ff87ee8a-4e7d-4c8e-96f2-7b1ab59842da"
    ]
   },
   "kleinanzeigen:3544395104": {
@@ -15646,6 +17973,9 @@
      "2026-11-15",
      399999
     ]
+   ],
+   "same_as": [
+    "immowelt:6709b1dd-b237-4727-a381-584749b77972"
    ]
   },
   "kleinanzeigen:3544395289": {
@@ -15671,6 +18001,10 @@
      "2026-11-15",
      349999
     ]
+   ],
+   "same_as": [
+    "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69",
+    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71"
    ]
   },
   "kleinanzeigen:3544395339": {
@@ -15698,6 +18032,7 @@
     ]
    ],
    "same_as": [
+    "immowelt:2341a585-3779-457c-8101-0fd7bf726b08",
     "immowelt:d7e3195e-58d0-4043-b691-293995d3053b"
    ]
   },
@@ -15724,6 +18059,10 @@
      "2026-11-15",
      349999
     ]
+   ],
+   "same_as": [
+    "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69",
+    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71"
    ]
   },
   "kleinanzeigen:3544395984": {
@@ -15749,6 +18088,9 @@
      "2026-11-15",
      399000
     ]
+   ],
+   "same_as": [
+    "immowelt:9662fd56-ad52-4248-b15c-514e47c3e075"
    ]
   },
   "kleinanzeigen:3544396467": {
@@ -15774,6 +18116,9 @@
      "2026-11-15",
      899999
     ]
+   ],
+   "same_as": [
+    "immowelt:c1bcb268-d955-4389-82d6-28dc97a97643"
    ]
   },
   "kleinanzeigen:3544396528": {
@@ -15842,7 +18187,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/45/4523f8b1-b7f9-4ccb-81dd-319ab33d3976?rule=$_59.AUTO",
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/45/4523f8b1-b7f9-4ccb-81dd-319ab33d3976?rule=$_1.AUTO",
    "seller": "agent",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -15905,6 +18250,11 @@
      "2026-11-15",
      503469
     ]
+   ],
+   "same_as": [
+    "immowelt:8c674023-1d69-4748-9f50-d6ccc04a435a",
+    "immowelt:d619c260-f2cf-4e82-bdc7-b247beaead0e",
+    "immowelt:f8d85aff-a710-4167-8411-4c5c71bd7362"
    ]
   },
   "kleinanzeigen:3547820491": {
@@ -15930,6 +18280,9 @@
      "2026-11-15",
      495015
     ]
+   ],
+   "same_as": [
+    "immowelt:cdaf29d5-bf36-4239-b1eb-206465fb5405"
    ]
   },
   "kleinanzeigen:3548395015": {
@@ -16288,6 +18641,11 @@
      "2026-11-15",
      679888
     ]
+   ],
+   "same_as": [
+    "immowelt:223df49b-c8ee-4423-956a-1072f049e893",
+    "immowelt:7d1b198c-2ee6-42a8-9c32-8742beff14d9",
+    "immowelt:bfe1647a-0b12-4b25-b6a3-7cd2751e2674"
    ]
   },
   "kleinanzeigen:3553853140": {
@@ -16587,6 +18945,10 @@
      "2026-11-15",
      470879
     ]
+   ],
+   "same_as": [
+    "immowelt:2d801f65-30af-4553-b865-45d25fdc2dcf",
+    "immowelt:336422ea-c889-46ff-bc1f-bec022b4ea5c"
    ]
   },
   "kleinanzeigen:3555925448": {
@@ -16690,6 +19052,9 @@
      "2026-11-15",
      534189
     ]
+   ],
+   "same_as": [
+    "immowelt:568cff14-d5b9-43ad-a738-7b1a5e2d6885"
    ]
   },
   "kleinanzeigen:3556529191": {
@@ -16825,6 +19190,9 @@
      "2026-11-15",
      656030
     ]
+   ],
+   "same_as": [
+    "immowelt:26ce4af5-dda9-459c-bde9-f862190decd9"
    ]
   },
   "kleinanzeigen:3559803475": {
@@ -17091,6 +19459,11 @@
      "2026-11-15",
      503469
     ]
+   ],
+   "same_as": [
+    "immowelt:8c674023-1d69-4748-9f50-d6ccc04a435a",
+    "immowelt:d619c260-f2cf-4e82-bdc7-b247beaead0e",
+    "immowelt:f8d85aff-a710-4167-8411-4c5c71bd7362"
    ]
   },
   "kleinanzeigen:3562981999": {
@@ -17134,7 +19507,7 @@
    "district": "Poppelsdorf",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/f5/f5899121-d59f-4ddc-8f46-1e273081ef9d?rule=$_59.AUTO",
+   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/f5/f5899121-d59f-4ddc-8f46-1e273081ef9d?rule=$_1.AUTO",
    "seller": "agent",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -17356,16 +19729,14 @@
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-15",
      239000
     ]
    ],
-   "same_as": [
-    "immowelt:2b48a6e6-b181-4abd-8095-5728ffe2452e"
-   ]
+   "gone": "2026-11-15"
   },
   "kleinanzeigen:3568467647": {
    "source": "kleinanzeigen",
@@ -17589,6 +19960,9 @@
      "2026-11-15",
      596120
     ]
+   ],
+   "same_as": [
+    "immowelt:ed8b6e2e-e2aa-4000-962e-d8f16e46e20b"
    ]
   },
   "kleinanzeigen:3569122933": {
@@ -17642,6 +20016,9 @@
      "2026-11-15",
      538135
     ]
+   ],
+   "same_as": [
+    "immowelt:139c618e-71b7-45ad-87ee-d95f21ae5f66"
    ]
   },
   "kleinanzeigen:3569254305": {
@@ -17667,6 +20044,11 @@
      "2026-11-15",
      531489
     ]
+   ],
+   "same_as": [
+    "immowelt:3de44863-6187-4072-8d3e-caf478781fd9",
+    "immowelt:7558d1b8-1d7c-4acd-8e63-4cb98dc8f238",
+    "immowelt:dc7aaf17-aa3b-4410-a94c-3cfd9dd10f9f"
    ]
   },
   "kleinanzeigen:3569261758": {
@@ -17692,6 +20074,9 @@
      "2026-11-15",
      733000
     ]
+   ],
+   "same_as": [
+    "immowelt:9c482a60-4528-46d1-8eb5-b742786d1a65"
    ]
   },
   "kleinanzeigen:3569261772": {
@@ -17717,6 +20102,9 @@
      "2026-11-15",
      818000
     ]
+   ],
+   "same_as": [
+    "immowelt:b9ec2ff3-0379-467b-a5fa-72ee5fe3fbf1"
    ]
   },
   "kleinanzeigen:3569261787": {
@@ -17742,6 +20130,9 @@
      "2026-11-15",
      888000
     ]
+   ],
+   "same_as": [
+    "immowelt:22d6f9eb-7e39-45a9-9bc2-3654ec4eb42b"
    ]
   },
   "kleinanzeigen:3569261800": {
@@ -17795,6 +20186,9 @@
      "2026-11-15",
      968000
     ]
+   ],
+   "same_as": [
+    "immowelt:4df5b83e-9c87-43fd-9f5b-15a3b193493a"
    ]
   },
   "kleinanzeigen:3569261946": {
@@ -17820,6 +20214,10 @@
      "2026-11-15",
      799600
     ]
+   ],
+   "same_as": [
+    "immowelt:a98b79e6-6f96-42e5-b1a1-893e4a6900ac",
+    "immowelt:dc698b66-3bb6-4e55-952b-d2e225e3dbd3"
    ]
   },
   "kleinanzeigen:3569261974": {
@@ -17845,6 +20243,10 @@
      "2026-11-15",
      798769
     ]
+   ],
+   "same_as": [
+    "immowelt:a98b79e6-6f96-42e5-b1a1-893e4a6900ac",
+    "immowelt:dc698b66-3bb6-4e55-952b-d2e225e3dbd3"
    ]
   },
   "kleinanzeigen:3569262231": {
@@ -17870,6 +20272,9 @@
      "2026-11-15",
      622300
     ]
+   ],
+   "same_as": [
+    "immowelt:e59e5838-6534-46a0-a76f-d9d6289e6714"
    ]
   },
   "kleinanzeigen:3569262241": {
@@ -17895,6 +20300,11 @@
      "2026-11-15",
      679888
     ]
+   ],
+   "same_as": [
+    "immowelt:223df49b-c8ee-4423-956a-1072f049e893",
+    "immowelt:7d1b198c-2ee6-42a8-9c32-8742beff14d9",
+    "immowelt:bfe1647a-0b12-4b25-b6a3-7cd2751e2674"
    ]
   },
   "kleinanzeigen:3569262253": {
@@ -17920,6 +20330,9 @@
      "2026-11-15",
      618000
     ]
+   ],
+   "same_as": [
+    "immowelt:35cd0434-32d9-4870-b85d-89e2bc511a05"
    ]
   },
   "kleinanzeigen:3569262260": {
@@ -17945,6 +20358,9 @@
      "2026-11-15",
      669000
     ]
+   ],
+   "same_as": [
+    "immowelt:ce34640a-9ca2-41d4-b0a3-13cded9de7fb"
    ]
   },
   "kleinanzeigen:3569262644": {
@@ -17970,6 +20386,11 @@
      "2026-11-15",
      679888
     ]
+   ],
+   "same_as": [
+    "immowelt:223df49b-c8ee-4423-956a-1072f049e893",
+    "immowelt:7d1b198c-2ee6-42a8-9c32-8742beff14d9",
+    "immowelt:bfe1647a-0b12-4b25-b6a3-7cd2751e2674"
    ]
   },
   "kleinanzeigen:3569262786": {
@@ -18080,6 +20501,9 @@
      "2026-11-15",
      590420
     ]
+   ],
+   "same_as": [
+    "immowelt:d705778b-f9d5-41f4-98fe-4b68808a859e"
    ]
   },
   "kleinanzeigen:3569377740": {
@@ -18687,6 +21111,11 @@
      "2026-11-15",
      511149
     ]
+   ],
+   "same_as": [
+    "immowelt:0169e501-b6b6-4e8c-a60e-4366db10c558",
+    "immowelt:0c340180-c15b-40ae-b680-11d2abd55e84",
+    "immowelt:4541c86a-0698-48dd-bb03-9ae5a423cf05"
    ]
   },
   "ohnemakler:363062": {
@@ -18702,7 +21131,7 @@
    "district": "Röttgen",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL3I2ajNpY241?sig=MFpRJORDCil_JpTcqaj5cqc17A2pSvkLfVT6u94fm4w&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL3I2ajNpY241?sig=uvNEVeqGiycynFR22i4enqh-gNj6xfUaSa1KLSrraRA&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18727,7 +21156,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=odjhYd-DBCdSMGxL3TiwHuEV8UoC-80emm3cIbDumaw&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=nIWXIkseSCbQR1LIjTsoJUeBRPeCNravdQYbHsThRDg&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18756,7 +21185,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=5GhxDvQsFDJLqWGoVWG5w2ZaJ82yxy-vJsYRTkL61UU&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=sibmBsh3odr8JU55iRQiDGYN5P7pFD1ejLKXfEH573g&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18785,7 +21214,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=knW3SIGe7pi-oLduG9A4SaMYkXrKBSKPuZOEnh7DRCY&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=RD6pioUa61H75QGQZdj_kd-UqF5gjNdLpBO0yVmeAE0&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18814,7 +21243,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": "D",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=zpiRD-UqFHrsHj2PG_nmzCrwCe57eRmr3IDMc4sk4tE&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=BW1d2gFI3jyTHJTxqVt0qEzmrUh90om9bqsb0hh44Mc&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18839,7 +21268,7 @@
    "district": "Brüser Berg",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=KHwkC_Pt2WNtMJLfj6iq9buUOmvs_c4uUM2Ay_oj_1I&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=99NNGLFxzGLUPzyCuDbqnPi_COVF6GxbX7yCNOdo98g&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18867,7 +21296,7 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=DAdAuEJAEEUCg0Altf_bRYGtwYVqtYuMTLqIFAbF9MU&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=bk4LgEg_KveLDYMAtqJAf1OVPdHMX53W75rjiCCC5SE&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18892,7 +21321,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=Qrff6roovijKxa6JnLg9fNE4Wp7iCyHH4dByHaGZdS4&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=UXYJmBh1eff_We34I-eJv6Jw97xhA2kan_PwvMoNbP4&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18917,7 +21346,7 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=dPw-Mac41ilvhqe382ovv8W9gwQkotCq5ZsODRXfe3I&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=ZdogFacrbsUQ94eQajerQp1FDyEb7dqfNCekJ0nGx4A&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18945,7 +21374,7 @@
    "district": "Heiderhof",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=iQ63gfo2OqTOzp-3bvNtbaS5x-TJc-i-2qu3yB7H4HY&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=6aGKut90gjbswYZjPwgjInFT3NfY8Hcf-v6xGFNCAjQ&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -18974,7 +21403,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=lRWxS_4EhSweQZ5d2Jt-UbRBT2A7a2WsPZXHzJ7ypZY&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=m8BaLkLt9SLGTNC5TjIm5hYzmlTJg6DYcfQHDtM3Vps&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -19003,7 +21432,7 @@
    "district": "Ippendorf",
    "plot_m2": null,
    "energy_class": "F",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=7Z8-3jHHhECOA0t-m6RZKdMcXrkgEYy4Ly1cub1xp3g&exp=1794812878",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=S3nhNAOoleayqBbccRBybmG3c2q9-jbvFdPz8GFA0rc&exp=1794813331",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -19031,7 +21460,7 @@
    "district": "Lannesdorf",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAxNzI3L281MHpucXZj?sig=w9MketJEbIA4bWF-AmqwAUErgrF0WqmnbbEgWQHHr-0&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNTAxNzI3L281MHpucXZj?sig=x28QNmyJvrVnFTjZ16iWuQSIHIZepwgWVHqcXaHGIO4&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
@@ -19059,7 +21488,7 @@
    "district": "Lengsdorf",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=3IkMNGbARW8rbGizxxFvf9XDETGu-Ztz07JpwcWylGo&exp=1794812872",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=SeeYSgILOFYRr_DA_pBuNTVhvbgRqliN_1s58cMfdkA&exp=1794813325",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-15",
