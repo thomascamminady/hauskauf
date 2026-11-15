@@ -3,7 +3,9 @@
 A personal research tool for buying a home in Bonn (around Ippendorf, the Kottenforst and Venusberg):
 listings, cost analysis, rankings, district price levels, a map and calculators, all in one standalone page.
 
-**Open the page:** `overview.html` (works offline except for map tiles), or the GitHub Pages site once published.
+**Open the pages:** `overview.html` (shortlist, model, calculators) and `offers.html` (every current offer in Bonn
+and Wachtberg from Immowelt, Kleinanzeigen and ohne-makler.net, refreshed daily with photos, price changes and a
+preview), or the GitHub Pages site.
 
 ## What's inside
 
@@ -23,14 +25,17 @@ listings, cost analysis, rankings, district price levels, a map and calculators,
 ```
 data/        listings.json, model_public.json, market.json, log.json, listings.csv (generated)
 site/        template.html (HTML/CSS/JS) and vendor/leaflet.*
-scripts/     build.py – injects the data into the template → overview.html, index.html, data/listings.csv
+scripts/     build.py – injects the data into the templates → overview.html, offers.html, index.html, data/listings.csv
+             scrape.py + hausfeed/ – daily offer feed (portal adapters, crawler, store) → data/feed.json
 private/     git-ignored: personal model, inputs and reports (never published)
 ```
 
 ## Build
 
 ```bash
-uv run scripts/build.py
+uv run scripts/scrape.py   # refresh data/feed.json (also runs daily on GitHub Actions)
+uv run scripts/build.py    # render the pages
+uv run pytest -q           # tests
 ```
 
 ## Privacy

@@ -1,0 +1,25 @@
+[project]
+name = "hauskauf"
+version = "0.1.0"
+description = "Home search tool for Bonn: listings, cost model, daily offer feed"
+requires-python = ">=3.12"
+dependencies = ["fire", "httpx", "selectolax>=0.3.27"]
+
+[dependency-groups]
+dev = ["pytest", "ruff", "ty"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.ty.environment]
+extra-paths = ["scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

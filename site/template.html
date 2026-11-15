@@ -6,105 +6,13 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Hauskauf Bonn – listings, costs, rankings</title>
 <style>/*__LEAFLET_CSS__*/</style>
-<style>
-:root {
-  color-scheme: light;
-  --bg: #f6f5f1; --surface: #fcfcfb; --surface-2: #f0efec; --border: #e2e0da;
-  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974; --grid: #e4e3df;
-  --accent: #2a78d6; --accent-soft: #e6f0fb;
-  --flat: #2a78d6; --house: #eb6834; --renovation: #1baf7a; --muted: #b9b7b0;
-  --good: #0ca30c; --bad: #d03b3b; --warn: #c98500;
-  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #121211; --surface: #1a1a19; --surface-2: #232321; --border: #33332f;
-    --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e86; --grid: #2e2e2b;
-    --accent: #3987e5; --accent-soft: #1d2a3a;
-    --flat: #3987e5; --house: #d95926; --renovation: #199e70; --muted: #5a5954;
-    --good: #0ca30c; --bad: #e66767; --warn: #e0a020;
-    --shadow: none;
-  }
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 64px; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
-a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
-header.top { background: var(--surface); border-bottom: 1px solid var(--border); }
-header.top .wrap { padding: 28px 20px 18px; }
-h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -.02em; }
-.sub { color: var(--text-2); margin: 0; }
-nav.sticky { position: sticky; top: 0; z-index: 1000; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
-nav.sticky .wrap { display: flex; gap: 4px; overflow-x: auto; padding: 8px 20px; }
-nav.sticky a { color: var(--text-2); padding: 6px 10px; border-radius: 6px; white-space: nowrap; font-size: 14px; }
-nav.sticky a:hover { background: var(--surface-2); text-decoration: none; color: var(--text); }
-.wrap { max-width: 1240px; margin: 0 auto; }
-main .wrap { padding: 0 20px 80px; }
-section { margin-top: 36px; }
-h2 { font-size: 21px; margin: 0 0 4px; letter-spacing: -.01em; }
-h3 { font-size: 16px; margin: 18px 0 6px; }
-.lead { color: var(--text-2); margin: 0 0 14px; max-width: 880px; }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; }
-.grid { display: grid; gap: 14px; }
-.g2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-.g3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 14px 0; }
-.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }
-.kpi .v { font-size: 22px; font-weight: 650; letter-spacing: -.01em; }
-.kpi .l { color: var(--text-2); font-size: 13px; }
-.note { font-size: 13px; color: var(--text-3); }
-.privacy { background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: var(--radius); padding: 10px 14px; font-size: 14px; color: var(--text-2); margin-top: 14px; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { padding: 7px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
-th { font-weight: 600; color: var(--text-2); font-size: 12.5px; background: var(--surface); cursor: default; }
-th.sortable { cursor: pointer; } th.sortable:hover { color: var(--text); }
-td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-tbody tr:hover { background: var(--surface-2); }
-.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
-.pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 12px; font-weight: 600; border: 1px solid transparent; white-space: nowrap; }
-.pill.flat { color: var(--flat); border-color: var(--flat); } .pill.house { color: var(--house); border-color: var(--house); }
-.pill.renovation { color: var(--renovation); border-color: var(--renovation); } .pill.investment, .pill.sold { color: var(--text-3); border-color: var(--muted); }
-.pos { color: var(--good); } .neg { color: var(--bad); }
-.bar { height: 6px; background: var(--surface-2); border-radius: 3px; min-width: 60px; overflow: hidden; }
-.bar > span { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
-.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 18px; margin: 10px 0 14px; }
-.controls label, .form label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
-.controls label span.val { color: var(--text); font-weight: 600; }
-input[type=range] { width: 100%; accent-color: var(--accent); }
-.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 14px; }
-.form input, .form select { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); width: 100%; }
-.out { margin-top: 14px; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
-.out div { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; }
-.out b { display: block; font-size: 18px; } .out small { color: var(--text-2); }
-.btn { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
-.btn:hover { background: var(--surface-2); }
-.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-.seg button { font: inherit; font-size: 13px; padding: 5px 12px; border: 0; background: var(--surface); color: var(--text-2); cursor: pointer; }
-.seg button.on { background: var(--accent); color: #fff; }
-#map { height: 520px; border-radius: var(--radius); border: 1px solid var(--border); }
-.listing { margin-top: 16px; }
-.listing .head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; justify-content: space-between; }
-.listing .head h3 { margin: 0; font-size: 18px; }
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 6px 16px; margin: 10px 0; font-size: 14px; }
-.facts div span { display: block; color: var(--text-3); font-size: 12px; }
-.cols3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; font-size: 14px; }
-.cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
-.verdict { margin-top: 10px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 6px 6px 0; font-size: 14px; }
-.chartbox { position: relative; }
-.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); border-radius: 8px; padding: 6px 9px; font-size: 13px; display: none; max-width: 260px; z-index: 5; }
-svg text { fill: var(--text-2); font-size: 12px; } svg .lab { fill: var(--text); font-size: 12px; } svg .axis { stroke: var(--grid); } svg .zero { stroke: var(--text-3); stroke-dasharray: 3 3; }
-.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--text-2); margin: 6px 0; }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
-details summary { cursor: pointer; color: var(--text-2); }
-footer { color: var(--text-3); font-size: 13px; margin-top: 48px; }
-@media print { nav.sticky, .controls, #calc { display: none; } th { position: static; } }
-</style>
+<style>/*__BASE_CSS__*/</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <h1>Hauskauf Bonn</h1>
   <p class="sub">Listings, costs and rankings for a home near Ippendorf / Kottenforst · data as of <span id="updated"></span></p>
+  <div class="tabs"><a href="overview.html" class="on">Shortlist</a><a href="offers.html">All offers<span class="count" id="offers-count"></span></a></div>
 </div></header>
 <nav class="sticky"><div class="wrap">
   <a href="#ranking">Ranking</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#market">Market prices</a>
@@ -112,6 +20,7 @@ footer { color: var(--text-3); font-size: 13px; margin-top: 48px; }
 </div></nav>
 <main><div class="wrap">
 
+<div class="banner" id="feed-teaser" hidden></div>
 <div class="privacy" id="privacy-note">No personal data on this page. Model results are relative to a reference home. The calculators run in your browser; nothing is sent anywhere, and inputs are only remembered on this device if you tick the box.</div>
 
 <section id="ranking">
@@ -159,6 +68,7 @@ footer { color: var(--text-3); font-size: 13px; margin-top: 48px; }
   <p class="lead">All calculations run locally in your browser.</p>
   <label style="font-size:13px;color:var(--text-2)"><input type="checkbox" id="remember"> Remember my calculator inputs on this device</label>
   <button class="btn" id="reset-inputs" style="margin-left:8px">Reset to defaults</button>
+  <div class="banner" id="calc-for" hidden></div>
 
   <div class="grid g2" style="margin-top:12px">
     <div class="card"><h3 style="margin-top:0">1 · Purchase costs</h3>
@@ -237,6 +147,7 @@ footer { color: var(--text-3); font-size: 13px; margin-top: 48px; }
 <footer>Data collected from public listings on ImmoScout24, Immowelt, Kleinanzeigen, ohne-makler.net and broker sites. Listings change daily; always check the original. Not financial advice.</footer>
 </div></main>
 
+<button class="totop" id="totop" title="Back to top" aria-label="Back to top">↑</button>
 <script>/*__LEAFLET_JS__*/</script>
 <script>
 const DATA = /*__DATA__*/null;
@@ -287,7 +198,7 @@ function renderRanking() {
     ["rank", "#", r => "", true], ["title", "Home", null, false], ["district", "District", r => r.l.district, false],
     ["asking", "Asking", r => r.l.asking, true], ["allin", "All-in", r => r.m.all_in, true], ["m2", "€/m²", r => r.m2, true],
     ["std", "Std. monthly", r => r.m.std_monthly, true], ["money", "20 yrs vs ref.", r => r.m.vs_ref_20y, true],
-    ["q", "Quality", r => r.q, true], ["combined", "Score", r => r.c, true]];
+    ["q", "Quality", r => r.q, true], ["combined", "Score", r => r.c, true], ["links", "", null, false]];
   if (DATA.private) COLS.splice(7, 0, ["mine", "My monthly", r => DATA.private.homes[r.l.id]?.monthly, true]);
   let rs = rows();
   const ranked = [...rs].sort((a, b) => b.c - a.c); ranked.forEach((r, i) => r.rank = i + 1);
@@ -300,7 +211,8 @@ function renderRanking() {
     return `<tr><td class="num">${r.rank}</td><td><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</td>
       <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
       <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
-      <td class="num">${r.q.toFixed(1)}</td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td></tr>`;
+      <td class="num">${r.q.toFixed(1)}</td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td>
+      <td style="white-space:nowrap"><a href="${esc(r.l.url)}" target="_blank" rel="noopener">${esc(r.l.portal)} ↗</a><br><a href="${calcLink(r.l)}" class="note">Calculate</a></td></tr>`;
   }).join("")}</tbody>`;
   t.querySelectorAll("th.sortable").forEach(th => th.onclick = () => { const k = th.dataset.k; if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderRanking(); });
   const top = [...rs].sort((a, b) => b.c - a.c);
@@ -424,7 +336,7 @@ function renderCards() {
     if (p) money.push(["My monthly (private)", fmtE(p.monthly)], ["My net worth 20 yrs (private)", fmtE(p.nw20)]);
     const hist = (l.price_history || []).map(h => `${esc(h.date)}: ${fmtK(h.price)}${h.note ? " – " + esc(h.note) : ""}`).join("<br>");
     const sc = CRIT.map(([k, lab]) => `${lab} ${l.scores[k]}`).join(" · ");
-    return `<div class="card listing" id="d-${l.id}"><div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span> <a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.portal)} ↗</a></div></div>
+    return `<div class="card listing" id="d-${l.id}"><div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a></div></div>
       <div class="note">${esc(l.district)}${l.area_note ? " · " + esc(l.area_note) : ""}</div>
       <div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
       <div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
@@ -559,8 +471,59 @@ function lineChart(box, series, o) {
   }
 }
 
+// ---------- calculator presets from a link: #calc?price=…&size=…&kind=…&district=…&broker=… ----------
+function calcLink(l) {
+  const m = DATA.model[l.id] || {};
+  const q = {price: l.asking, size: l.size_m2, kind: l.type === "flat" ? "flat" : "house", district: l.district, broker: l.broker_pct || 0,
+    works: m.works || 0, rent: m.rent_equivalent, running: m.running_month, title: l.title, url: l.url, back: "#d-" + l.id};
+  return "#calc?" + new URLSearchParams(Object.entries(q).filter(([, v]) => v != null && v !== "")).toString();
+}
+function applyCalcPreset() {
+  const h = location.hash;
+  if (!h.startsWith("#calc?")) return false;
+  const p = new URLSearchParams(h.slice(6)), num = k => p.has(k) && p.get(k) !== "" && !isNaN(+p.get(k)) ? +p.get(k) : null;
+  const price = num("price"); if (!price) return false;
+  const size = num("size"), broker = num("broker") ?? 3.57, works = num("works") ?? 0, kind = p.get("kind") === "house" ? "house" : "flat";
+  const district = DATA.market.districts[p.get("district")] ? p.get("district") : IN.m2.district;
+  IN = JSON.parse(JSON.stringify(DEF));
+  Object.assign(IN.cost, {price, broker, works});
+  const feePct = broker + IN.cost.tax + IN.cost.notary, allIn = price * (1 + feePct / 100) + works;
+  IN.mort.loan = Math.round(0.7 * allIn / 1000) * 1000;
+  const rentGuess = !num("rent") && size ? Math.round(size * 13 / 10) * 10 : null;
+  Object.assign(IN.rvb, {price, fees: +feePct.toFixed(2), works, rent: num("rent") ?? rentGuess ?? IN.rvb.rent, running: num("running") ?? IN.rvb.running});
+  Object.assign(IN.m2, {price, size: size ?? IN.m2.size, district, kind});
+  buildForms();
+  const title = p.get("title") || "this home", url = p.get("url"), back = p.get("back");
+  const b = $("#calc-for"); b.hidden = false;
+  b.innerHTML = `<div>Set up for <b>${esc(title)}</b> · ${fmtE(price)}${size ? ` · ${size} m²` : ""} · broker ${broker}%${works ? ` · works ${fmtK(works)}` : ""}${rentGuess ? ` · <span class="note">rent estimated at €13/m²</span>` : ""}. Loan = 70% of all-in.</div>
+    <div class="linkrow">${back ? `<a class="btn" href="${esc(back)}">← Back</a>` : ""}${url ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">Listing ↗</a>` : ""}<button class="btn" id="calc-clear">Clear</button></div>`;
+  $("#calc-clear").onclick = () => { b.hidden = true; IN = JSON.parse(JSON.stringify(DEF)); buildForms(); history.replaceState(null, "", "#calc"); };
+  requestAnimationFrame(() => $("#calc").scrollIntoView());
+  return true;
+}
+window.addEventListener("hashchange", applyCalcPreset);
+
+// ---------- navigation: active section, back to top ----------
+function setupNav() {
+  const links = [...document.querySelectorAll("nav.sticky a[href^='#']")], secs = links.map(a => $(a.getAttribute("href"))).filter(Boolean);
+  const onScroll = () => {
+    const y = window.scrollY + 90; let cur = null;
+    for (const s of secs) if (s.offsetTop <= y) cur = s.id;
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + cur));
+    $("#totop").classList.toggle("show", window.scrollY > 600);
+  };
+  window.addEventListener("scroll", onScroll, {passive: true}); onScroll();
+  $("#totop").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+}
+function feedTeaser() {
+  const f = DATA.feed; if (!f) return;
+  $("#offers-count").textContent = f.active;
+  const t = $("#feed-teaser"); t.hidden = false;
+  t.innerHTML = `<div><b>${f.active}</b> offers tracked across ${f.sources.join(", ")}${f.new_today ? ` · <b>${f.new_today}</b> new on ${esc(f.updated)}` : ""}${f.fit ? ` · ${f.fit} in preferred areas with ≥105 m²` : ""}.</div><a class="btn primary" href="offers.html">Browse all offers →</a>`;
+}
+
 if (DATA.private) { $("#privacy-note").textContent = "PRIVATE VERSION – contains personal figures. Do not publish."; }
-buildWeights(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap();
+buildWeights(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset();
 let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcMort(); calcRvB(); }, 150); });
 </script>
 </body>

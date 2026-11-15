@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Hauskauf Bonn – all offers</title>
+<style>/*__BASE_CSS__*/</style>
+<style>
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 14px; align-items: end; }
+.filters label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
+.filters label.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 6px; }
+.filters input:not([type=checkbox]), .filters select { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); width: 100%; }
+.bar2 { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 16px 0 10px; color: var(--text-2); font-size: 14px; }
+.offers { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.offer { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; cursor: pointer; display: flex; flex-direction: column; transition: border-color .15s, transform .15s; }
+.offer:hover { border-color: var(--text-3); transform: translateY(-1px); }
+.offer.gone { opacity: .55; }
+.thumb { aspect-ratio: 4 / 3; background: var(--surface-2) center / cover no-repeat; position: relative; }
+.thumb .badges { position: absolute; left: 8px; top: 8px; display: flex; gap: 4px; flex-wrap: wrap; }
+.thumb .badges .badge { box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+.thumb .badges .badge:not(.new):not(.down):not(.up) { background: var(--surface); }
+.offer .body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 3px; flex: 1; }
+.offer .price { font-size: 19px; font-weight: 650; letter-spacing: -.01em; }
+.offer .facts1 { font-size: 14px; }
+.offer .where { font-size: 13px; color: var(--text-2); }
+.offer .title { font-size: 13px; color: var(--text-3); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.offer .foot { margin-top: auto; padding-top: 6px; display: flex; justify-content: space-between; font-size: 12px; color: var(--text-3); }
+dialog { border: 0; padding: 0; border-radius: 14px; width: min(860px, 94vw); max-height: 92vh; background: var(--surface); color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+dialog::backdrop { background: rgba(0,0,0,.5); }
+.pv-img { aspect-ratio: 16 / 9; background: var(--surface-2) center / cover no-repeat; position: relative; }
+.pv-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(0,0,0,.45); color: #fff; font-size: 20px; cursor: pointer; }
+.pv-nav:hover { background: rgba(0,0,0,.65); } .pv-prev { left: 10px; } .pv-next { right: 10px; }
+.pv-close { position: absolute; right: 10px; top: 10px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(0,0,0,.45); color: #fff; font-size: 18px; cursor: pointer; }
+.pv-body { padding: 16px 20px 20px; }
+.pv-body h3 { margin: 0 0 4px; font-size: 18px; }
+.pv-pos { font-size: 12px; color: var(--text-3); }
+.empty { padding: 40px; text-align: center; color: var(--text-3); }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Hauskauf Bonn</h1>
+  <p class="sub">Every current offer in Bonn and Wachtberg, refreshed daily · last run <span id="updated"></span></p>
+  <div class="tabs"><a href="overview.html">Shortlist</a><a href="offers.html" class="on">All offers<span class="count" id="offers-count"></span></a></div>
+</div></header>
+<main><div class="wrap">
+
+<section style="margin-top:20px">
+  <div class="card">
+    <div class="filters" id="filters">
+      <label>Search<input id="f-q" type="search" placeholder="district, word…"></label>
+      <label>Type<select id="f-kind"><option value="">Flats and houses</option><option value="flat">Flats</option><option value="house">Houses</option></select></label>
+      <label>Min m²<input id="f-size" type="number" step="5"></label>
+      <label>Max price (€k)<input id="f-price" type="number" step="25"></label>
+      <label>Min rooms<input id="f-rooms" type="number" step="1"></label>
+      <label>Area<select id="f-area"><option value="">All of Bonn + Wachtberg</option><option value="4">Preferred (fit ≥ 4)</option><option value="3">Fit ≥ 3</option><option value="nohh">All except Heiderhof</option></select></label>
+      <label>Source<select id="f-src"><option value="">All portals</option></select></label>
+      <label>Seen<select id="f-new"><option value="">Any time</option><option value="1">New today</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
+      <label>Sort<select id="f-sort">
+        <option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
+        <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Best area fit</option></select></label>
+      <label class="check"><input type="checkbox" id="f-private"> Private sellers only</label>
+      <label class="check"><input type="checkbox" id="f-gone"> Show gone</label>
+      <label><button class="btn" id="f-reset" type="button">Reset filters</button></label>
+    </div>
+  </div>
+  <div class="bar2"><span id="count"></span><span class="note">Click an offer for a preview · ← → to step through · Esc to close</span></div>
+  <div class="offers" id="offers"></div>
+</section>
+
+<section>
+  <details><summary>Sources and daily runs</summary>
+    <p class="note">ImmoScout24 blocks automated access, so its listings only appear on the shortlist page when added by hand.
+      Photos are shown from the portals' own servers. Locations are reduced to postcode and district.</p>
+    <div class="tablewrap"><table id="runs"></table></div>
+  </details>
+</section>
+
+<footer>Listing facts from Immowelt, Kleinanzeigen and ohne-makler.net search pages. Offers change daily; always check the original. Not financial advice.</footer>
+</div></main>
+
+<dialog id="pv"><div class="pv-img" id="pv-img">
+  <button class="pv-close" id="pv-close" aria-label="Close">✕</button>
+  <button class="pv-nav pv-prev" id="pv-prev" aria-label="Previous">‹</button><button class="pv-nav pv-next" id="pv-next" aria-label="Next">›</button>
+</div><div class="pv-body" id="pv-body"></div></dialog>
+<button class="totop" id="totop" title="Back to top" aria-label="Back to top">↑</button>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s, el = document) => el.querySelector(s);
+const fmtE = v => v == null ? "–" : "€" + Math.round(v).toLocaleString("en-US");
+const fmtK = v => v == null ? "–" : "€" + Math.round(v / 1000).toLocaleString("en-US") + "k";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const store = { get(k, d) { try { const v = localStorage.getItem("hk:" + k); return v ? JSON.parse(v) : d; } catch { return d; } },
+                set(k, v) { try { localStorage.setItem("hk:" + k, JSON.stringify(v)); } catch {} } };
+const F = DATA.feed, OFFERS = F.offers, BYKEY = Object.fromEntries(OFFERS.map(o => [o.key, o]));
+const LABEL = Object.fromEntries(F.sources.map(s => [s.name, s.label]));
+const today = F.updated, dayDiff = d => Math.round((Date.parse(today) - Date.parse(d)) / 864e5);
+$("#updated").textContent = F.updated; $("#offers-count").textContent = F.active;
+
+// ---------- filters (kept on this device) ----------
+const DEF = {q: "", kind: "", size: 100, price: 900, rooms: 3, area: "", src: "", new: "", sort: "new", private: false, gone: false};
+let S = Object.assign({}, DEF, store.get("offer-filters", {}));
+const FIELDS = {q: "f-q", kind: "f-kind", size: "f-size", price: "f-price", rooms: "f-rooms", area: "f-area", src: "f-src", new: "f-new", sort: "f-sort", private: "f-private", gone: "f-gone"};
+F.sources.forEach(s => $("#f-src").add(new Option(s.label, s.name)));
+function syncInputs() { for (const [k, id] of Object.entries(FIELDS)) { const el = $("#" + id); if (el.type === "checkbox") el.checked = S[k]; else el.value = S[k]; } }
+for (const [k, id] of Object.entries(FIELDS)) {
+  const el = $("#" + id);
+  el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", () => {
+    S[k] = el.type === "checkbox" ? el.checked : el.type === "number" ? (el.value === "" ? "" : +el.value) : el.value;
+    store.set("offer-filters", S); render();
+  });
+}
+$("#f-reset").onclick = () => { S = Object.assign({}, DEF); store.set("offer-filters", S); syncInputs(); render(); };
+
+function visible() {
+  const q = S.q.trim().toLowerCase();
+  const list = OFFERS.filter(o => {
+    if (!S.gone && !o.active) return false;
+    if (S.kind && o.kind !== S.kind) return false;
+    if (S.size !== "" && o.size_m2 != null && o.size_m2 < S.size) return false;
+    if (S.price !== "" && o.price != null && o.price > S.price * 1000) return false;
+    if (S.rooms !== "" && o.rooms != null && o.rooms < S.rooms) return false;
+    if (S.area === "nohh" && o.district === "Heiderhof") return false;
+    if (S.area && S.area !== "nohh" && (o.fit ?? 0) < +S.area) return false;
+    if (S.src && !o.sources.includes(S.src)) return false;
+    if (S.new && dayDiff(o.first_seen) >= +S.new) return false;
+    if (S.private && o.seller !== "private") return false;
+    if (q && !`${o.title} ${o.area} ${o.zip ?? ""}`.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const by = {new: o => -Date.parse(o.first_seen) - (o.price ?? 0) / 1e12, price: o => o.price ?? 1e12, m2: o => o.eur_m2 ?? 1e12,
+              vs: o => o.vs_district ?? 1e3, size: o => -(o.size_m2 ?? 0), fit: o => -(o.fit ?? 0) * 1e7 + (o.eur_m2 ?? 0)}[S.sort];
+  return list.sort((a, b) => by(a) - by(b));
+}
+
+// ---------- cards ----------
+function badges(o) {
+  const b = [];
+  if (!o.active) b.push(`<span class="badge gone">gone ${esc(o.gone)}</span>`);
+  else if (o.first_seen === today) b.push(`<span class="badge new">New</span>`);
+  else if (dayDiff(o.first_seen) < 7) b.push(`<span class="badge new">${dayDiff(o.first_seen)}d</span>`);
+  if (o.price_change) b.push(`<span class="badge ${o.price_change < 0 ? "down" : "up"}">${o.price_change < 0 ? "↓" : "↑"} ${fmtK(Math.abs(o.price_change))}</span>`);
+  if ((o.fit ?? 0) >= 4) b.push(`<span class="badge fit">Preferred area</span>`);
+  if (o.seller === "private") b.push(`<span class="badge">Private</span>`);
+  if (o.tracked) b.push(`<span class="badge">On shortlist</span>`);
+  return b.join("");
+}
+const vsTxt = o => o.vs_district == null ? "" : `<span class="${o.vs_district > 0 ? "neg" : "pos"}">${o.vs_district > 0 ? "+" : ""}${o.vs_district}%</span> vs district`;
+const facts = o => [o.size_m2 ? `${o.size_m2.toLocaleString("en-US")} m²` : null, o.rooms ? `${o.rooms} rooms` : null, o.eur_m2 ? `${fmtE(o.eur_m2)}/m²` : null].filter(Boolean).join(" · ");
+const img = o => o.image ? `background-image:url('${esc(o.image)}')` : "";
+let CUR = [];
+function render() {
+  CUR = visible();
+  $("#count").textContent = `${CUR.length} of ${OFFERS.filter(o => o.active).length} offers`;
+  $("#offers").innerHTML = CUR.length ? CUR.map(o => `<article class="offer${o.active ? "" : " gone"}" data-k="${esc(o.key)}">
+      <div class="thumb" style="${img(o)}"><div class="badges">${badges(o)}</div></div>
+      <div class="body"><div class="price">${o.price ? fmtE(o.price) : "Price on request"}</div>
+        <div class="facts1">${facts(o)}</div>
+        <div class="where">${esc(o.area)} ${o.zip ? `· ${esc(o.zip)}` : ""} · ${o.kind === "house" ? "House" : "Flat"}</div>
+        <div class="title">${esc(o.title)}</div>
+        <div class="foot"><span>${o.sources.map(s => LABEL[s]).join(" · ")}</span><span>${vsTxt(o)}</span></div></div></article>`).join("")
+    : `<div class="empty">No offers match these filters.</div>`;
+}
+$("#offers").addEventListener("click", e => { const c = e.target.closest(".offer"); if (c) openPreview(c.dataset.k); });
+
+// ---------- preview (hash #o=<key>, so Back closes it) ----------
+const pv = $("#pv");
+function calcLink(o) {
+  const q = {price: o.price, size: o.size_m2, kind: o.kind, district: o.district ?? "", broker: o.seller === "private" ? 0 : 3.57,
+    title: `${o.kind === "house" ? "House" : "Flat"} in ${o.area}, ${o.size_m2 ?? "?"} m²`, url: o.url, back: "offers.html#o=" + o.key};
+  return "overview.html#calc?" + new URLSearchParams(Object.entries(q).filter(([, v]) => v != null && v !== "")).toString();
+}
+function openPreview(key) { if (location.hash !== "#o=" + key) location.hash = "o=" + key; else showPreview(); }
+function showPreview() {
+  const key = decodeURIComponent(location.hash.startsWith("#o=") ? location.hash.slice(3) : "");
+  const o = BYKEY[key];
+  if (!o) { if (pv.open) pv.close(); return; }
+  const i = CUR.findIndex(x => x.key === key);
+  $("#pv-img").style.backgroundImage = o.image ? `url('${o.image.replace(/'/g, "%27")}')` : "";
+  $("#pv-prev").style.visibility = i > 0 ? "visible" : "hidden"; $("#pv-next").style.visibility = i >= 0 && i < CUR.length - 1 ? "visible" : "hidden";
+  const hist = (o.price_history || []).map(([d, p]) => `${esc(d)}: ${fmtE(p)}`).join(" → ");
+  const rows = [["Price", o.price ? fmtE(o.price) : "on request"], ["Living area", o.size_m2 ? o.size_m2 + " m²" : "–"], ["Rooms", o.rooms ?? "–"],
+    ["€/m²", o.eur_m2 ? fmtE(o.eur_m2) : "–"], ["District average", o.district_eur ? `${fmtE(o.district_eur)}/m²` : "–"], ["vs district", vsTxt(o).replace(" vs district", "") || "–"],
+    ["Plot", o.plot_m2 ? o.plot_m2.toLocaleString("en-US") + " m²" : "–"], ["Energy class", o.energy_class ?? "–"], ["Seller", o.seller ?? "–"],
+    ["Area fit", o.fit != null ? o.fit + " / 5" : "–"], ["First seen", o.first_seen], ["Last seen", o.last_seen + (o.active ? "" : " (gone)")]];
+  const others = o.same_as.map(k => BYKEY[k]).filter(Boolean);
+  $("#pv-body").innerHTML = `<div class="pv-pos">${i >= 0 ? `${i + 1} of ${CUR.length}` : ""}</div>
+    <h3>${o.price ? fmtE(o.price) : ""} · ${esc(facts(o))}</h3>
+    <div class="note" style="margin-bottom:8px">${esc(o.area)} ${o.zip ? "· " + esc(o.zip) : ""} · ${o.kind === "house" ? "House" : "Flat"} ${badges(o)}</div>
+    <p style="margin:0 0 12px">${esc(o.title)}</p>
+    <div class="facts">${rows.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
+    ${hist && o.price_history.length > 1 ? `<p class="note">Price history: ${hist}</p>` : ""}
+    <div class="linkrow" style="margin-top:12px"><a class="btn primary" href="${esc(o.url)}" target="_blank" rel="noopener">Open on ${esc(LABEL[o.source])} ↗</a>
+      ${others.map(x => `<a class="btn" href="${esc(x.url)}" target="_blank" rel="noopener">Also on ${esc(LABEL[x.source])} ↗</a>`).join("")}
+      ${o.price ? `<a class="btn" href="${calcLink(o)}">Calculate costs</a>` : ""}</div>`;
+  if (!pv.open) pv.showModal();
+}
+function step(d) { const i = CUR.findIndex(x => "#o=" + x.key === decodeURIComponent(location.hash)); const n = CUR[i + d]; if (n) location.replace("#o=" + n.key); }
+$("#pv-prev").onclick = () => step(-1); $("#pv-next").onclick = () => step(1); $("#pv-close").onclick = () => pv.close();
+pv.addEventListener("close", () => { if (location.hash.startsWith("#o=")) history.replaceState(null, "", location.pathname + location.search); });
+pv.addEventListener("click", e => { if (e.target === pv) pv.close(); });
+document.addEventListener("keydown", e => { if (!pv.open) return; if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+window.addEventListener("hashchange", showPreview);
+
+// ---------- runs ----------
+$("#runs").innerHTML = `<thead><tr><th>Date</th><th>Portal</th><th>Status</th><th class="num">Pages</th><th class="num">Offers</th></tr></thead><tbody>${
+  [...F.runs].reverse().slice(0, 30).map(r => `<tr><td>${esc(r.date)}</td><td>${esc(LABEL[r.source] ?? r.source)}</td><td>${r.ok ? "ok" : `<span class="neg">failed</span> <span class="note">${esc((r.errors || [])[0] || "")}</span>`}</td><td class="num">${r.requests}</td><td class="num">${r.offers}</td></tr>`).join("")}</tbody>`;
+
+window.addEventListener("scroll", () => $("#totop").classList.toggle("show", window.scrollY > 600), {passive: true});
+$("#totop").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+syncInputs(); render(); showPreview();
+</script>
+</body>
+</html>

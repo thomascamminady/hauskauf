@@ -1,0 +1,35 @@
+name: Daily offers
+
+on:
+  schedule:
+    - cron: "17 5 * * *" # 06:17 CET / 07:17 CEST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-offers
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Tests
+        run: uv run pytest -q
+      - name: Scrape portals
+        run: uv run scripts/scrape.py
+      - name: Build pages
+        run: uv run scripts/build.py
+      - name: Commit if changed
+        run: |
+          git config user.name "thomascamminady"
+          git config user.email "24543638+thomascamminady@users.noreply.github.com"
+          git add data/feed.json offers.html overview.html index.html data/listings.csv
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Daily offers $(date -u +%F)"
+          git push

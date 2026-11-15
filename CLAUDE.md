@@ -27,7 +27,11 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
 | `data/market.json` | District €/m² (ImmoScout24 market insights) with approx. district centres |
 | `data/log.json` | Discussion log shown on the page |
 | `site/template.html` | All HTML/CSS/JS; data is injected at `/*__DATA__*/null`; Leaflet inlined at build |
-| `scripts/build.py` | `uv run scripts/build.py` → `overview.html`, `index.html`, `data/listings.csv` |
+| `scripts/build.py` | `uv run scripts/build.py` → `overview.html`, `offers.html`, `index.html`, `data/listings.csv` |
+| `scripts/scrape.py` | Daily offer feed: crawls the portals into `data/feed.json` (GitHub Action `daily-offers.yml`) |
+| `scripts/hausfeed/` | Feed package: `core.py` (Offer/Page/Source protocol, parsing, location cleaning), `sources/*` (one adapter per portal), `fetch.py` (polite crawl), `store.py` (merge, price history, gone, duplicates) |
+| `data/feed.json` | Every offer seen (generated). `data/feed_config.json`: coarse filters + district area-fit scores |
+| `site/offers.html`, `site/base.css` | Offers page template; CSS shared by both pages |
 | `private/compute.py` | Personal rent-vs-buy model run (needs `private/model/rent_vs_buy.py`) |
 | `private/HANDOFF.md` | Personal handoff notes (git-ignored) |
 
@@ -38,6 +42,14 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
   entries, add model parameters in `private/compute.py`, run
   `uv run --with numpy --with matplotlib --with fire python private/compute.py`, then `uv run scripts/build.py`.
   The page only shows shortlist entries that have model results.
+- **Offer feed:** `uv run scripts/scrape.py` (all portals, ~5 min) or `--sources=immowelt --max_requests=5 --dry_run`.
+  Runs daily on GitHub Actions and commits `data/feed.json` + rebuilt pages. Add a portal by writing a `Source`
+  (`seeds()` + pure `parse(html, url) -> Page`) in `scripts/hausfeed/sources/`, registering it in `sources/__init__.py`,
+  and adding a synthetic fixture test. Never store street addresses or contact names; `clean_location` reduces
+  locations to postcode + district. ImmoScout24 blocks automated access – don't try to get around it.
+- **Checks:** `uv run pytest -q && uv run ruff check scripts tests && uv run ty check scripts tests`.
+- **Calculator links:** `overview.html#calc?price=…&size=…&kind=flat|house&district=…&broker=…&title=…&url=…&back=…`
+  pre-fills all four calculators.
 - **Private view:** `uv run scripts/build.py --private_model=private/model_private.json --out=private/overview_private.html`.
 - **Refresh market data:** ImmoScout24 search pages per district (`/Suche/de/nordrhein-westfalen/bonn/<bezirk>/<district>/wohnung-kaufen`
   and `/haus-kaufen`) show “Ø Kaufpreis/m²” and trend in the market-insights box; update `data/market.json`.
