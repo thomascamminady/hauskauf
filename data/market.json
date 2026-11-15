@@ -1,0 +1,563 @@
+{
+ "source": "ImmoScout24 market insights (AVM estimates with Sprengnetter), Q3 2026 vs Q3 2025, read 15 Nov 2026",
+ "districts": {
+  "Ippendorf": {
+   "lat": 50.7155,
+   "lon": 7.0645,
+   "flat": {
+    "eur": 4394,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "88 m²",
+    "new30": "14"
+   },
+   "house": {
+    "eur": 5401,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "184 m²",
+    "new30": "42"
+   }
+  },
+  "Venusberg": {
+   "lat": 50.7085,
+   "lon": 7.088,
+   "flat": {
+    "eur": 4778,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "110 m²",
+    "new30": "8"
+   },
+   "house": {
+    "eur": 5932,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "131,11 m²",
+    "new30": "5"
+   }
+  },
+  "Röttgen": {
+   "lat": 50.6905,
+   "lon": 7.0505,
+   "flat": {
+    "eur": 3654,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "91,52 m²",
+    "new30": "6"
+   },
+   "house": {
+    "eur": 4838,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "181 m²",
+    "new30": "20"
+   }
+  },
+  "Ückesdorf": {
+   "lat": 50.699,
+   "lon": 7.045,
+   "flat": {
+    "eur": 3629,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "94,33 m²",
+    "new30": "2"
+   },
+   "house": {
+    "eur": 4495,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "164 m²",
+    "new30": "19"
+   }
+  },
+  "Poppelsdorf": {
+   "lat": 50.724,
+   "lon": 7.088,
+   "flat": {
+    "eur": 4942,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "65,57 m²",
+    "new30": "24"
+   },
+   "house": {
+    "eur": 5960,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "249 m²",
+    "new30": "9"
+   }
+  },
+  "Kessenich": {
+   "lat": 50.7135,
+   "lon": 7.111,
+   "flat": {
+    "eur": 4677,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "62,37 m²",
+    "new30": "30"
+   },
+   "house": {
+    "eur": 5682,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "184,13 m²",
+    "new30": "12"
+   }
+  },
+  "Südstadt": {
+   "lat": 50.7255,
+   "lon": 7.1035,
+   "flat": {
+    "eur": 5338,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "86 m²",
+    "new30": "9"
+   },
+   "house": {
+    "eur": 6836,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "261 m²",
+    "new30": "8"
+   }
+  },
+  "Zentrum": {
+   "lat": 50.736,
+   "lon": 7.1,
+   "flat": {
+    "eur": 4990,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "74,39 m²",
+    "new30": "19"
+   },
+   "house": {
+    "eur": 5326,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "210 m²",
+    "new30": "9"
+   }
+  },
+  "Weststadt": {
+   "lat": 50.733,
+   "lon": 7.083,
+   "flat": {
+    "eur": 4760,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "64,1 m²",
+    "new30": "18"
+   },
+   "house": {
+    "eur": 5882,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "117,04 m²",
+    "new30": "4"
+   }
+  },
+  "Endenich": {
+   "lat": 50.727,
+   "lon": 7.07,
+   "flat": {
+    "eur": 4239,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "66,63 m²",
+    "new30": "29"
+   },
+   "house": {
+    "eur": 4397,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "139 m²",
+    "new30": "6"
+   }
+  },
+  "Dottendorf": {
+   "lat": 50.708,
+   "lon": 7.12,
+   "flat": {
+    "eur": 4325,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "67,27 m²",
+    "new30": "16"
+   },
+   "house": {
+    "eur": 5171,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "168 m²",
+    "new30": "13"
+   }
+  },
+  "Gronau": {
+   "lat": 50.7175,
+   "lon": 7.1245,
+   "flat": {
+    "eur": 4999,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "98,29 m²",
+    "new30": "14"
+   },
+   "house": {
+    "eur": 5814,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "433 m²",
+    "new30": "4"
+   }
+  },
+  "Lengsdorf": {
+   "lat": 50.7135,
+   "lon": 7.048,
+   "flat": {
+    "eur": 3904,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "65,74 m²",
+    "new30": "23"
+   },
+   "house": {
+    "eur": 4099,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "146 m²",
+    "new30": "8"
+   }
+  },
+  "Duisdorf": {
+   "lat": 50.718,
+   "lon": 7.031,
+   "flat": {
+    "eur": 3732,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "72,75 m²",
+    "new30": "65"
+   },
+   "house": {
+    "eur": 4016,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "145 m²",
+    "new30": "62"
+   }
+  },
+  "Brüser Berg": {
+   "lat": 50.701,
+   "lon": 7.039,
+   "flat": {
+    "eur": 3462,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "82 m²",
+    "new30": "34"
+   },
+   "house": {
+    "eur": 4172,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "135,35 m²",
+    "new30": "10"
+   }
+  },
+  "Schweinheim": {
+   "lat": 50.6775,
+   "lon": 7.135,
+   "flat": {
+    "eur": 3994,
+    "q": "Q3 2026",
+    "trend": "+3%",
+    "median_m2": "130 m²",
+    "new30": "26"
+   },
+   "house": {
+    "eur": 5152,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "216 m²",
+    "new30": "15"
+   }
+  },
+  "Friesdorf": {
+   "lat": 50.6945,
+   "lon": 7.137,
+   "flat": {
+    "eur": 3980,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "60,5 m²",
+    "new30": "22"
+   },
+   "house": {
+    "eur": 4688,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "136 m²",
+    "new30": "19"
+   }
+  },
+  "Alt-Godesberg": {
+   "lat": 50.685,
+   "lon": 7.155,
+   "flat": {
+    "eur": 3873,
+    "q": "Q3 2026",
+    "trend": "+3%",
+    "median_m2": "70 m²",
+    "new30": "43"
+   },
+   "house": {
+    "eur": 5220,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "190,5 m²",
+    "new30": "29"
+   }
+  },
+  "Godesberg-Villenviertel": {
+   "lat": 50.693,
+   "lon": 7.16,
+   "flat": {
+    "eur": 4327,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "67 m²",
+    "new30": "5"
+   },
+   "house": {
+    "eur": 6273,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "291 m²",
+    "new30": "22"
+   }
+  },
+  "Plittersdorf": {
+   "lat": 50.6985,
+   "lon": 7.161,
+   "flat": {
+    "eur": 4462,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "72,42 m²",
+    "new30": "24"
+   },
+   "house": {
+    "eur": 5561,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "224,1 m²",
+    "new30": "38"
+   }
+  },
+  "Mehlem": {
+   "lat": 50.662,
+   "lon": 7.188,
+   "flat": {
+    "eur": 3853,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "78,81 m²",
+    "new30": "42"
+   },
+   "house": {
+    "eur": 4230,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "171 m²",
+    "new30": "54"
+   }
+  },
+  "Heiderhof": {
+   "lat": 50.669,
+   "lon": 7.122,
+   "flat": {
+    "eur": 3552,
+    "q": "Q3 2026",
+    "trend": "+3%",
+    "median_m2": "84,02 m²",
+    "new30": "27"
+   },
+   "house": {
+    "eur": 4117,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "144,43 m²",
+    "new30": "5"
+   }
+  },
+  "Muffendorf": {
+   "lat": 50.672,
+   "lon": 7.158,
+   "flat": {
+    "eur": 3750,
+    "q": "Q3 2026",
+    "trend": "+3%",
+    "median_m2": "100 m²",
+    "new30": "8"
+   },
+   "house": {
+    "eur": 4570,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "180 m²",
+    "new30": "20"
+   }
+  },
+  "Lannesdorf": {
+   "lat": 50.664,
+   "lon": 7.172,
+   "flat": {
+    "eur": 3447,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "73,5 m²",
+    "new30": "34"
+   },
+   "house": {
+    "eur": 4183,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "141,21 m²",
+    "new30": "15"
+   }
+  },
+  "Rüngsdorf": {
+   "lat": 50.677,
+   "lon": 7.172,
+   "flat": {
+    "eur": 4374,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "82,5 m²",
+    "new30": "12"
+   },
+   "house": {
+    "eur": 5438,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "194,32 m²",
+    "new30": "18"
+   }
+  },
+  "Pennenfeld": {
+   "lat": 50.678,
+   "lon": 7.148,
+   "flat": {
+    "eur": 3865,
+    "q": "Q3 2026",
+    "trend": "+3%",
+    "median_m2": "92,1 m²",
+    "new30": "7"
+   },
+   "house": {
+    "eur": 5059,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "195 m²",
+    "new30": "8"
+   }
+  },
+  "Beuel-Mitte": {
+   "lat": 50.738,
+   "lon": 7.122,
+   "flat": {
+    "eur": 4736,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "62 m²",
+    "new30": "25"
+   },
+   "house": {
+    "eur": 5068,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "192,5 m²",
+    "new30": "8"
+   }
+  },
+  "Holzlar": {
+   "lat": 50.748,
+   "lon": 7.164,
+   "flat": {
+    "eur": 3777,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "78 m²",
+    "new30": "13"
+   },
+   "house": {
+    "eur": 4352,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "144,5 m²",
+    "new30": "74"
+   }
+  },
+  "Wachtberg": {
+   "lat": 50.64,
+   "lon": 7.135,
+   "flat": {
+    "eur": 3009,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "83 m²",
+    "new30": "8"
+   },
+   "house": {
+    "eur": 3952,
+    "q": "Q3 2026",
+    "trend": "-",
+    "median_m2": "151,61 m²",
+    "new30": "184"
+   }
+  },
+  "Alfter": {
+   "lat": 50.735,
+   "lon": 7.005,
+   "flat": {
+    "eur": 3308,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "78,13 m²",
+    "new30": "59"
+   },
+   "house": {
+    "eur": 3968,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "144,08 m²",
+    "new30": "173"
+   }
+  },
+  "Bonn (city)": {
+   "lat": null,
+   "lon": null,
+   "flat": {
+    "eur": 4044,
+    "q": "Q3 2026",
+    "trend": "+2%",
+    "median_m2": "74 m²",
+    "new30": "803"
+   },
+   "house": {
+    "eur": 4663,
+    "q": "Q3 2026",
+    "trend": "+1%",
+    "median_m2": "160 m²",
+    "new30": "799"
+   }
+  }
+ }
+}

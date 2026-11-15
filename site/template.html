@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hauskauf Bonn – listings, costs, rankings</title>
+<style>/*__LEAFLET_CSS__*/</style>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f5f1; --surface: #fcfcfb; --surface-2: #f0efec; --border: #e2e0da;
+  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974; --grid: #e4e3df;
+  --accent: #2a78d6; --accent-soft: #e6f0fb;
+  --flat: #2a78d6; --house: #eb6834; --renovation: #1baf7a; --muted: #b9b7b0;
+  --good: #0ca30c; --bad: #d03b3b; --warn: #c98500;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #121211; --surface: #1a1a19; --surface-2: #232321; --border: #33332f;
+    --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e86; --grid: #2e2e2b;
+    --accent: #3987e5; --accent-soft: #1d2a3a;
+    --flat: #3987e5; --house: #d95926; --renovation: #199e70; --muted: #5a5954;
+    --good: #0ca30c; --bad: #e66767; --warn: #e0a020;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+header.top { background: var(--surface); border-bottom: 1px solid var(--border); }
+header.top .wrap { padding: 28px 20px 18px; }
+h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -.02em; }
+.sub { color: var(--text-2); margin: 0; }
+nav.sticky { position: sticky; top: 0; z-index: 1000; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+nav.sticky .wrap { display: flex; gap: 4px; overflow-x: auto; padding: 8px 20px; }
+nav.sticky a { color: var(--text-2); padding: 6px 10px; border-radius: 6px; white-space: nowrap; font-size: 14px; }
+nav.sticky a:hover { background: var(--surface-2); text-decoration: none; color: var(--text); }
+.wrap { max-width: 1240px; margin: 0 auto; }
+main .wrap { padding: 0 20px 80px; }
+section { margin-top: 36px; }
+h2 { font-size: 21px; margin: 0 0 4px; letter-spacing: -.01em; }
+h3 { font-size: 16px; margin: 18px 0 6px; }
+.lead { color: var(--text-2); margin: 0 0 14px; max-width: 880px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; }
+.grid { display: grid; gap: 14px; }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 14px 0; }
+.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }
+.kpi .v { font-size: 22px; font-weight: 650; letter-spacing: -.01em; }
+.kpi .l { color: var(--text-2); font-size: 13px; }
+.note { font-size: 13px; color: var(--text-3); }
+.privacy { background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: var(--radius); padding: 10px 14px; font-size: 14px; color: var(--text-2); margin-top: 14px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 7px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+th { font-weight: 600; color: var(--text-2); font-size: 12.5px; background: var(--surface); cursor: default; }
+th.sortable { cursor: pointer; } th.sortable:hover { color: var(--text); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tbody tr:hover { background: var(--surface-2); }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 12px; font-weight: 600; border: 1px solid transparent; white-space: nowrap; }
+.pill.flat { color: var(--flat); border-color: var(--flat); } .pill.house { color: var(--house); border-color: var(--house); }
+.pill.renovation { color: var(--renovation); border-color: var(--renovation); } .pill.investment, .pill.sold { color: var(--text-3); border-color: var(--muted); }
+.pos { color: var(--good); } .neg { color: var(--bad); }
+.bar { height: 6px; background: var(--surface-2); border-radius: 3px; min-width: 60px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 18px; margin: 10px 0 14px; }
+.controls label, .form label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
+.controls label span.val { color: var(--text); font-weight: 600; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 14px; }
+.form input, .form select { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); width: 100%; }
+.out { margin-top: 14px; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.out div { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; }
+.out b { display: block; font-size: 18px; } .out small { color: var(--text-2); }
+.btn { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
+.btn:hover { background: var(--surface-2); }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13px; padding: 5px 12px; border: 0; background: var(--surface); color: var(--text-2); cursor: pointer; }
+.seg button.on { background: var(--accent); color: #fff; }
+#map { height: 520px; border-radius: var(--radius); border: 1px solid var(--border); }
+.listing { margin-top: 16px; }
+.listing .head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; justify-content: space-between; }
+.listing .head h3 { margin: 0; font-size: 18px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 6px 16px; margin: 10px 0; font-size: 14px; }
+.facts div span { display: block; color: var(--text-3); font-size: 12px; }
+.cols3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; font-size: 14px; }
+.cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
+.verdict { margin-top: 10px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 6px 6px 0; font-size: 14px; }
+.chartbox { position: relative; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); border-radius: 8px; padding: 6px 9px; font-size: 13px; display: none; max-width: 260px; z-index: 5; }
+svg text { fill: var(--text-2); font-size: 12px; } svg .lab { fill: var(--text); font-size: 12px; } svg .axis { stroke: var(--grid); } svg .zero { stroke: var(--text-3); stroke-dasharray: 3 3; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--text-2); margin: 6px 0; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+details summary { cursor: pointer; color: var(--text-2); }
+footer { color: var(--text-3); font-size: 13px; margin-top: 48px; }
+@media print { nav.sticky, .controls, #calc { display: none; } th { position: static; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Hauskauf Bonn</h1>
+  <p class="sub">Listings, costs and rankings for a home near Ippendorf / Kottenforst · data as of <span id="updated"></span></p>
+</div></header>
+<nav class="sticky"><div class="wrap">
+  <a href="#ranking">Ranking</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#market">Market prices</a>
+  <a href="#calc">Calculators</a><a href="#details">Listings</a><a href="#screened">Screened</a><a href="#checklist">Checklist</a><a href="#log">Log</a><a href="#method">Method</a>
+</div></nav>
+<main><div class="wrap">
+
+<div class="privacy" id="privacy-note">No personal data on this page. Model results are relative to a reference home. The calculators run in your browser; nothing is sent anywhere, and inputs are only remembered on this device if you tick the box.</div>
+
+<section id="ranking">
+  <h2>Ranking</h2>
+  <p class="lead">Weigh money against quality yourself. <b>Money</b> = 20-year wealth compared with the reference flat (same budget and starting capital everywhere; money not spent on the home is invested). <b>Quality</b> = weighted scores for location, room for visiting family, space, condition and risk (0–5, my judgement from the listings).</p>
+  <div class="card">
+    <div class="controls" id="weights"></div>
+    <div class="tablewrap"><table id="rank-table"></table></div>
+    <p class="note">Click a column header to sort. “Std. monthly” = running costs + mortgage if 70% of the all-in cost is borrowed at 4.15% with 3% repayment (a neutral standard, not anyone's real financing). Range = worst/best of 9 market scenarios.</p>
+  </div>
+  <div class="kpis" id="kpis"></div>
+</section>
+
+<section id="value">
+  <h2>Cost vs quality</h2>
+  <p class="lead">Top right is best: more wealth after 20 years and higher quality. Dots follow your weights above.</p>
+  <div class="card chartbox"><div class="legend" id="scatter-legend"></div><div id="scatter"></div><div class="tip" id="scatter-tip"></div></div>
+</section>
+
+<section id="map-sec">
+  <h2>Map</h2>
+  <p class="lead">Listings are placed at their <b>district</b> (approximate, no addresses). Coloured rings show the average asking price per m² for the district.</p>
+  <div class="card">
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px">
+      <div class="seg" id="map-kind"><button data-k="flat" class="on">Flat €/m²</button><button data-k="house">House €/m²</button><button data-k="none">Hide prices</button></div>
+      <div class="legend" id="map-legend" style="margin:0"></div>
+    </div>
+    <div id="map"></div>
+    <p class="note">Map © OpenStreetMap contributors. Needs an internet connection for map tiles.</p>
+  </div>
+</section>
+
+<section id="market">
+  <h2>Market prices by district</h2>
+  <p class="lead" id="market-source"></p>
+  <div class="card">
+    <div class="seg" id="mk-kind"><button data-k="flat" class="on">Flats</button><button data-k="house">Houses</button></div>
+    <div class="chartbox" id="market-chart" style="margin-top:10px"></div>
+    <details style="margin-top:10px"><summary>Table</summary><div class="tablewrap" style="margin-top:8px"><table id="market-table"></table></div></details>
+  </div>
+</section>
+
+<section id="calc">
+  <h2>Calculators</h2>
+  <p class="lead">All calculations run locally in your browser.</p>
+  <label style="font-size:13px;color:var(--text-2)"><input type="checkbox" id="remember"> Remember my calculator inputs on this device</label>
+  <button class="btn" id="reset-inputs" style="margin-left:8px">Reset to defaults</button>
+
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><h3 style="margin-top:0">1 · Purchase costs</h3>
+      <div class="form" id="f-cost"></div><div class="out" id="o-cost"></div></div>
+    <div class="card"><h3 style="margin-top:0">2 · Mortgage</h3>
+      <div class="form" id="f-mort"></div><div class="out" id="o-mort"></div><div class="chartbox" id="c-mort"></div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3 style="margin-top:0">3 · Buy vs rent the same home</h3>
+    <p class="note">Same monthly budget in both cases; whatever housing doesn't use is invested in a world index fund. Results in today's euros after tax and selling costs.</p>
+    <div class="form" id="f-rvb"></div>
+    <div style="margin-top:10px"><button class="btn" id="btn-breakeven">Find break-even price</button> <span class="note" id="be-out"></span></div>
+    <div class="out" id="o-rvb"></div><div class="chartbox" id="c-rvb"></div><div class="tip" id="rvb-tip"></div></div>
+  <div class="card" style="margin-top:14px"><h3 style="margin-top:0">4 · Price per m² check</h3>
+    <div class="form" id="f-m2"></div><div class="out" id="o-m2"></div></div>
+</section>
+
+<section id="details">
+  <h2>Listings in detail</h2>
+  <p class="lead">Every home I modelled, in the current ranking order. Links go to the original listing.</p>
+  <div id="listing-cards"></div>
+</section>
+
+<section id="screened">
+  <h2>Screened, not shortlisted</h2>
+  <div class="tablewrap"><table id="screened-table"></table></div>
+  <h3>Investments and sold</h3>
+  <div class="tablewrap"><table id="invest-table"></table></div>
+</section>
+
+<section id="checklist">
+  <h2>Checklist</h2>
+  <div class="grid g3">
+    <div class="card"><h3 style="margin-top:0">Ask for before an offer</h3><ul>
+      <li>Floor plan with areas, energy certificate</li>
+      <li>Flats: declaration of division (Teilungserklärung), owners' meeting minutes for 3 years, budget (Wirtschaftsplan), last service-charge statement, repair-reserve balance, planned levies</li>
+      <li>Land register extract (Grundbuch), easements and building charges (Baulasten), contamination register</li>
+      <li>If let: tenancy agreement, rent, notice situation, date of the condominium split</li>
+      <li>Heating: type, age, maintenance records</li></ul></div>
+    <div class="card"><h3 style="margin-top:0">At the viewing</h3><ul>
+      <li>Damp: basement, window reveals, smell; roof and gutters</li>
+      <li>Noise at rush hour; trains; flight path</li>
+      <li>Sun and light at different times; neighbours</li>
+      <li>Bathrooms and guest set-up for long family visits</li>
+      <li>Parking, bike storage, accessibility for older visitors</li></ul></div>
+    <div class="card"><h3 style="margin-top:0">Money and rules</h3><ul>
+      <li>NRW: transfer tax 6.5%, notary + land registry ~2%, broker usually 3.57% (buyer half)</li>
+      <li>Rates jump above 60 / 70 / 80% loan-to-value</li>
+      <li>After buying an old house: some heating/insulation duties within 2 years (GEG)</li>
+      <li>Funding: KfW 261 (renovation to efficiency-house standard), KfW 458 (heating), BAFA/tax credit for single measures – check current terms</li>
+      <li>Buying a let flat to live in: notice periods 3–9 months, hardship objections, possible block after a condo split</li>
+      <li>A building surveyor (~€1,000–1,500) pays for itself in negotiation</li></ul></div>
+  </div>
+</section>
+
+<section id="log">
+  <h2>Log</h2>
+  <p class="lead">Everything discussed while building this list (15 Nov 2026 unless noted).</p>
+  <div class="tablewrap"><table id="log-table"></table></div>
+</section>
+
+<section id="method">
+  <h2>Method and assumptions</h2>
+  <div class="card">
+    <ul>
+      <li><b>Model:</b> monthly simulation over 25 years. Every option gets the same monthly budget and the same starting capital; housing costs come out of the budget and the rest is invested in a world index fund. Personal figures are kept private; only differences are shown here.</li>
+      <li><b>Reference:</b> the 2012 maisonette in Ippendorf at a model price of €600k. “vs reference” = wealth after 20 years minus the reference's.</li>
+      <li><b>Mortgage:</b> 3% repayment; 10-year fixed rate by loan-to-value (≤60% 4.05%, ≤70% 4.15%, ≤80% 4.25%, ≤90% 4.45%), refinanced at 4.25% afterwards.</li>
+      <li><b>Markets:</b> prices and rents +3%/yr, inflation 2.3%, index fund 6.5%/yr nominal taxed at 26.375% with 30% partial exemption; 4% selling costs at the end. Scenario range: fund 5 / 6.5 / 8% × prices 2 / 3 / 4%.</li>
+      <li><b>Per home:</b> rent of a comparable home, running costs, upkeep and renovation budgets are estimates from the listings and Bonn market data. Renovation projects assume a KfW 261 tranche (~€150k at ~2.9%, 10% grant).</li>
+      <li><b>Quality scores</b> (0–5) are judgement calls from the listings: location fit (Ippendorf / Kottenforst / Venusberg preferred), visiting family (separate flat 5 … one bathroom 2), space (from m²), condition &amp; energy, risk &amp; hassle.</li>
+      <li><b>Not captured:</b> light, layout, neighbours, and how much extra space is worth to you – that is what the weights are for.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>Data collected from public listings on ImmoScout24, Immowelt, Kleinanzeigen, ohne-makler.net and broker sites. Listings change daily; always check the original. Not financial advice.</footer>
+</div></main>
+
+<script>/*__LEAFLET_JS__*/</script>
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s, el = document) => el.querySelector(s);
+const fmtE = v => v == null ? "–" : "€" + Math.round(v).toLocaleString("en-US");
+const fmtK = v => v == null ? "–" : (v < 0 ? "−" : "") + "€" + Math.round(Math.abs(v) / 1000).toLocaleString("en-US") + "k";
+const fmtS = v => v == null ? "–" : (v >= 0 ? "+" : "−") + "€" + Math.round(Math.abs(v) / 1000) + "k";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const store = { get(k, d) { try { const v = localStorage.getItem("hk:" + k); return v ? JSON.parse(v) : d; } catch { return d; } },
+                set(k, v) { try { localStorage.setItem("hk:" + k, JSON.stringify(v)); } catch {} },
+                del(k) { try { localStorage.removeItem("hk:" + k); } catch {} } };
+$("#updated").textContent = DATA.updated;
+const TYPE_LABEL = {flat: "Flat", house: "House", renovation: "Renovation", investment: "Investment", sold: "Sold"};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const typeColor = t => css("--" + (t === "investment" || t === "sold" ? "muted" : t));
+const SHORT = {};
+const shortlist = DATA.listings.filter(l => l.category === "shortlist" && DATA.model[l.id]);
+shortlist.forEach(l => SHORT[l.id] = l.short || l.title);
+
+// ---------- weights & scores ----------
+const CRIT = [["location", "Location"], ["guests", "Visiting family"], ["space", "Space"], ["condition", "Condition & energy"], ["risk", "Low risk / hassle"]];
+const DEFAULT_W = {location: 30, guests: 25, space: 15, condition: 20, risk: 10, money: 50};
+let W = Object.assign({}, DEFAULT_W, store.get("weights", {}));
+function quality(l) { const s = l.scores; let n = 0, d = 0; for (const [k] of CRIT) { n += W[k] * s[k]; d += W[k]; } return d ? n / d : 0; }
+function moneyScore(id) { const v = DATA.model[id].vs_ref_20y; return Math.max(0, Math.min(5, 2.5 + v / 80000)); }
+function combined(l) { const m = W.money / 100; return m * moneyScore(l.id) + (1 - m) * quality(l); }
+function buildWeights() {
+  const el = $("#weights"); el.innerHTML = "";
+  for (const [k, lab] of [...CRIT, ["money", "Money vs quality"]]) {
+    const wrap = document.createElement("label");
+    const txt = k === "money" ? () => `${W.money}% money · ${100 - W.money}% quality` : () => `${W[k]}`;
+    wrap.innerHTML = `${lab} <span class="val">${txt()}</span><input type="range" min="0" max="100" step="5" value="${W[k]}">`;
+    wrap.querySelector("input").addEventListener("input", e => { W[k] = +e.target.value; wrap.querySelector(".val").textContent = txt(); store.set("weights", W); renderRanking(); renderScatter(); renderCards(); });
+    el.appendChild(wrap);
+  }
+  const reset = document.createElement("label"); reset.innerHTML = `&nbsp;<button class="btn">Reset weights</button>`;
+  reset.querySelector("button").onclick = () => { W = Object.assign({}, DEFAULT_W); store.del("weights"); buildWeights(); renderRanking(); renderScatter(); renderCards(); };
+  el.appendChild(reset);
+}
+
+// ---------- ranking table ----------
+let sortKey = "combined", sortDir = -1;
+function rows() {
+  return shortlist.map(l => { const m = DATA.model[l.id]; return {l, m, q: quality(l), c: combined(l), m2: l.asking / l.size_m2}; });
+}
+function renderRanking() {
+  const COLS = [
+    ["rank", "#", r => "", true], ["title", "Home", null, false], ["district", "District", r => r.l.district, false],
+    ["asking", "Asking", r => r.l.asking, true], ["allin", "All-in", r => r.m.all_in, true], ["m2", "€/m²", r => r.m2, true],
+    ["std", "Std. monthly", r => r.m.std_monthly, true], ["money", "20 yrs vs ref.", r => r.m.vs_ref_20y, true],
+    ["q", "Quality", r => r.q, true], ["combined", "Score", r => r.c, true]];
+  if (DATA.private) COLS.splice(7, 0, ["mine", "My monthly", r => DATA.private.homes[r.l.id]?.monthly, true]);
+  let rs = rows();
+  const ranked = [...rs].sort((a, b) => b.c - a.c); ranked.forEach((r, i) => r.rank = i + 1);
+  const col = COLS.find(c => c[0] === sortKey);
+  rs.sort((a, b) => sortKey === "rank" ? (a.rank - b.rank) * -sortDir : ((col && col[2] ? (col[2](a) ?? -1e12) - (col[2](b) ?? -1e12) : 0) * sortDir) || (b.c - a.c));
+  const maxC = Math.max(...rs.map(r => r.c));
+  const t = $("#rank-table");
+  t.innerHTML = `<thead><tr>${COLS.map(c => `<th class="${c[3] ? "num " : ""}${c[2] || c[0] === "rank" ? "sortable" : ""}" data-k="${c[0]}">${c[1]}${sortKey === c[0] ? (sortDir < 0 ? " ↓" : " ↑") : ""}</th>`).join("")}</tr></thead><tbody>${rs.map(r => {
+    const m = r.m, v = m.vs_ref_20y, mine = DATA.private ? `<td class="num">${fmtE(DATA.private.homes[r.l.id]?.monthly)}</td>` : "";
+    return `<tr><td class="num">${r.rank}</td><td><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</td>
+      <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
+      <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
+      <td class="num">${r.q.toFixed(1)}</td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td></tr>`;
+  }).join("")}</tbody>`;
+  t.querySelectorAll("th.sortable").forEach(th => th.onclick = () => { const k = th.dataset.k; if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderRanking(); });
+  const top = [...rs].sort((a, b) => b.c - a.c);
+  const best$ = [...rs].sort((a, b) => b.m.vs_ref_20y - a.m.vs_ref_20y)[0], bestQ = [...rs].sort((a, b) => b.q - a.q)[0];
+  $("#kpis").innerHTML = [[top[0].l.title, "Top with your weights"], [best$.l.title, "Best on money"], [bestQ.l.title, "Best on quality"], [String(shortlist.length), "Homes modelled"]]
+    .map(([v, l]) => `<div class="kpi"><div class="v" style="font-size:16px">${esc(v)}</div><div class="l">${l}</div></div>`).join("");
+}
+
+// ---------- SVG helpers ----------
+const NS = "http://www.w3.org/2000/svg";
+function svg(w, h) { const s = document.createElementNS(NS, "svg"); s.setAttribute("viewBox", `0 0 ${w} ${h}`); s.setAttribute("width", "100%"); s.style.display = "block"; return s; }
+function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function tipShow(tip, box, html, x, y) { tip.innerHTML = html; tip.style.display = "block"; const bw = box.clientWidth; tip.style.left = Math.min(x + 12, bw - 270) + "px"; tip.style.top = (y + 12) + "px"; }
+
+// ---------- scatter ----------
+function renderScatter() {
+  const box = $("#scatter"), tip = $("#scatter-tip"); box.innerHTML = "";
+  const W0 = Math.max(360, box.clientWidth || 1000), H0 = Math.min(560, Math.max(380, W0 * 0.55)), P = {l: 56, r: 20, t: 20, b: 48};
+  const s = svg(W0, H0); box.appendChild(s);
+  const pts = rows();
+  const qs = pts.map(p => p.q), ylo = Math.floor(Math.min(...qs) * 2) / 2 - 0.25, yhi = Math.ceil(Math.max(...qs) * 2) / 2 + 0.25;
+  const xs = pts.flatMap(p => [p.m.vs_ref_min / 1000, p.m.vs_ref_max / 1000]), xmin = Math.floor(Math.min(...xs) / 50) * 50, xmax = Math.ceil(Math.max(...xs) / 50) * 50;
+  const X = v => P.l + (v - xmin) / (xmax - xmin) * (W0 - P.l - P.r), Y = v => H0 - P.b - (v - ylo) / (yhi - ylo) * (H0 - P.t - P.b);
+  for (let v = Math.ceil(xmin / 50) * 50; v <= xmax; v += 50) { el("line", {x1: X(v), x2: X(v), y1: P.t, y2: H0 - P.b, class: v === 0 ? "zero" : "axis"}, s); el("text", {x: X(v), y: H0 - P.b + 18, "text-anchor": "middle"}, s).textContent = (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v) + "k"; }
+  for (let v = Math.ceil(ylo * 2) / 2; v <= yhi; v += 0.5) { el("line", {x1: P.l, x2: W0 - P.r, y1: Y(v), y2: Y(v), class: "axis"}, s); el("text", {x: P.l - 8, y: Y(v) + 4, "text-anchor": "end"}, s).textContent = v.toFixed(1); }
+  el("text", {x: (P.l + W0 - P.r) / 2, y: H0 - 8, "text-anchor": "middle"}, s).textContent = "Wealth after 20 years vs reference flat (€, today's money) →";
+  const yl = el("text", {x: 16, y: (P.t + H0 - P.b) / 2, "text-anchor": "middle", transform: `rotate(-90 16 ${(P.t + H0 - P.b) / 2})`}, s); yl.textContent = "Quality score (your weights) →";
+  const placed = [], dots = pts.map(p => [X(p.m.vs_ref_20y / 1000), Y(p.q)]);
+  pts.sort((a, b) => b.q - a.q).forEach(p => {
+    const cx = X(p.m.vs_ref_20y / 1000), cy = Y(p.q);
+    el("line", {x1: X(p.m.vs_ref_min / 1000), x2: X(p.m.vs_ref_max / 1000), y1: cy, y2: cy, stroke: typeColor(p.l.type), "stroke-width": 2, opacity: .35}, s);
+    const c = el("circle", {cx, cy, r: 7, fill: typeColor(p.l.type), stroke: css("--surface"), "stroke-width": 2}, s);
+    const label = SHORT[p.l.id] || p.l.title, lw = label.length * 6.6;
+    const cands = [];
+    for (const dy of [-10, 16, -24, 30, -38, 44]) for (const side of [1, -1]) cands.push([side > 0 ? cx + 10 : cx - 10 - lw, cy + dy]);
+    const overlaps = ([x, y]) => x < P.l || x + lw > W0 - 4 || placed.some(q => x < q[0] + q[2] + 4 && q[0] < x + lw + 4 && Math.abs(q[1] - y) < 13)
+      || dots.some(d => d[0] > x - 7 && d[0] < x + lw + 7 && d[1] > y - 16 && d[1] < y + 6);
+    const [lx, ly] = cands.find(c => !overlaps(c)) || cands[0];
+    placed.push([lx, ly, lw]);
+    el("text", {x: lx, y: ly, class: "lab"}, s).textContent = label;
+    const hit = el("circle", {cx, cy, r: 16, fill: "transparent", style: "cursor:pointer"}, s);
+    hit.addEventListener("mousemove", e => { const r = box.getBoundingClientRect(); tipShow(tip, box.parentElement, `<b>${esc(p.l.title)}</b><br>${esc(p.l.district)} · ${fmtK(p.l.asking)}<br>20 yrs vs ref.: ${fmtS(p.m.vs_ref_20y)} (${fmtS(p.m.vs_ref_min)} … ${fmtS(p.m.vs_ref_max)})<br>Quality ${p.q.toFixed(1)} · Score ${p.c.toFixed(2)}`, e.clientX - r.left, e.clientY - r.top); });
+    hit.addEventListener("mouseleave", () => tip.style.display = "none");
+    hit.addEventListener("click", () => location.hash = "d-" + p.l.id);
+  });
+  $("#scatter-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span class="note">Line = range across 9 market scenarios</span>`;
+}
+
+// ---------- market ----------
+let mkKind = "flat";
+function renderMarket() {
+  const M = DATA.market, ds = Object.entries(M.districts).filter(([n]) => n !== "Bonn (city)");
+  $("#market-source").textContent = "Average asking price per m² and year-on-year trend. Source: " + M.source + ".";
+  const city = M.districts["Bonn (city)"]?.[mkKind]?.eur;
+  const arr = ds.map(([n, v]) => [n, v[mkKind]]).filter(([, v]) => v && v.eur).sort((a, b) => b[1].eur - a[1].eur);
+  const box = $("#market-chart"); box.innerHTML = "";
+  const rowH = 22, P = {l: 170, r: 96, t: 10, b: 44}, W0 = Math.max(420, box.clientWidth || 900), H0 = P.t + P.b + rowH * arr.length;
+  const s = svg(W0, H0); box.appendChild(s);
+  const max = Math.max(...arr.map(a => a[1].eur)) * 1.05, X = v => P.l + v / max * (W0 - P.l - P.r);
+  for (let v = 0; v <= max; v += 1000) { el("line", {x1: X(v), x2: X(v), y1: P.t, y2: H0 - P.b, class: "axis"}, s); el("text", {x: X(v), y: H0 - 8, "text-anchor": "middle"}, s).textContent = "€" + (v / 1000) + "k"; }
+  const fav = new Set(["Ippendorf", "Venusberg", "Röttgen", "Ückesdorf", "Lengsdorf", "Schweinheim", "Friesdorf"]);
+  arr.forEach(([n, v], i) => {
+    const y = P.t + i * rowH;
+    el("text", {x: P.l - 8, y: y + 15, "text-anchor": "end", class: fav.has(n) ? "lab" : ""}, s).textContent = n;
+    el("rect", {x: P.l, y: y + 4, width: Math.max(2, X(v.eur) - P.l), height: rowH - 8, rx: 3, fill: fav.has(n) ? css("--accent") : css("--muted")}, s);
+    el("text", {x: X(v.eur) + 6, y: y + 15}, s).textContent = "€" + v.eur.toLocaleString("en-US") + "  " + (v.trend || "");
+  });
+  if (city) { el("line", {x1: X(city), x2: X(city), y1: P.t, y2: H0 - P.b, class: "zero"}, s); el("text", {x: X(city), y: H0 - 26, class: "lab", "text-anchor": "middle"}, s).textContent = "Bonn average €" + city.toLocaleString("en-US"); }
+  $("#market-table").innerHTML = `<thead><tr><th>District</th><th class="num">Flats €/m²</th><th class="num">Trend</th><th class="num">Median flat</th><th class="num">Houses €/m²</th><th class="num">Trend</th><th class="num">Median house</th><th class="num">New listings 30 d (flats / houses)</th></tr></thead><tbody>${Object.entries(M.districts).sort((a, b) => (b[1].flat?.eur || 0) - (a[1].flat?.eur || 0)).map(([n, v]) => `<tr><td>${esc(n)}</td><td class="num">${fmtE(v.flat?.eur)}</td><td class="num">${esc(v.flat?.trend)}</td><td class="num">${esc(v.flat?.median_m2)}</td><td class="num">${fmtE(v.house?.eur)}</td><td class="num">${esc(v.house?.trend)}</td><td class="num">${esc(v.house?.median_m2)}</td><td class="num">${esc(v.flat?.new30)} / ${esc(v.house?.new30)}</td></tr>`).join("")}</tbody>`;
+}
+document.querySelectorAll("#mk-kind button").forEach(b => b.onclick = () => { mkKind = b.dataset.k; document.querySelectorAll("#mk-kind button").forEach(x => x.classList.toggle("on", x === b)); renderMarket(); });
+
+// ---------- map ----------
+let map, priceLayer, mapKind = "flat";
+function renderMap() {
+  if (!window.L) { $("#map").innerHTML = '<p style="padding:20px">Map library could not be loaded (offline?).</p>'; return; }
+  map = L.map("map", {scrollWheelZoom: false}).setView([50.70, 7.11], 12);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 18, attribution: "© OpenStreetMap contributors"}).addTo(map);
+  const counts = {};
+  DATA.listings.forEach(l => {
+    if (l.lat == null) return;
+    const n = counts[l.district] = (counts[l.district] || 0) + 1, a = n * 2.4, r = 0.0018 * Math.sqrt(n);
+    const lat = l.lat + r * Math.sin(a), lon = l.lon + r * 1.5 * Math.cos(a);
+    const short = l.category === "shortlist";
+    const m = L.circleMarker([lat, lon], {radius: short ? 8 : 5, color: css("--surface"), weight: 2, fillColor: typeColor(l.category === "shortlist" || l.category === "screened" ? l.type : l.category), fillOpacity: short ? .95 : .6}).addTo(map);
+    const mm = DATA.model[l.id];
+    m.bindPopup(`<b>${esc(l.title)}</b><br>${esc(l.district)} · ${fmtK(l.asking)} · ${l.size_m2 ?? "?"} m²<br>${mm ? "20 yrs vs ref.: " + fmtS(mm.vs_ref_20y) + "<br>" : ""}${esc(l.category === "shortlist" ? "" : l.reason || "")}<br>${short ? `<a href="#d-${l.id}">Details</a> · ` : ""}<a href="${esc(l.url)}" target="_blank" rel="noopener">Listing</a>`);
+  });
+  drawPrices();
+  $("#map-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span><i style="background:${css("--muted")}"></i>Investment / sold</span><span class="note">big dot = modelled</span>`;
+}
+function drawPrices() {
+  if (!map) return; if (priceLayer) priceLayer.remove(); if (mapKind === "none") return;
+  priceLayer = L.layerGroup().addTo(map);
+  const ds = Object.entries(DATA.market.districts).filter(([, v]) => v.lat != null && v[mapKind]?.eur);
+  const vals = ds.map(([, v]) => v[mapKind].eur), lo = Math.min(...vals), hi = Math.max(...vals);
+  const ramp = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95"];
+  ds.forEach(([n, v]) => {
+    const t = (v[mapKind].eur - lo) / (hi - lo || 1), col = ramp[Math.min(ramp.length - 1, Math.floor(t * ramp.length))];
+    L.circle([v.lat, v.lon], {radius: 650, color: col, weight: 3, fill: false, opacity: .9}).addTo(priceLayer)
+      .bindTooltip(`${n}: €${v[mapKind].eur.toLocaleString("en-US")}/m² (${v[mapKind].trend})`, {direction: "top"});
+  });
+}
+document.querySelectorAll("#map-kind button").forEach(b => b.onclick = () => { mapKind = b.dataset.k; document.querySelectorAll("#map-kind button").forEach(x => x.classList.toggle("on", x === b)); drawPrices(); });
+
+// ---------- listing cards ----------
+function renderCards() {
+  const order = rows().sort((a, b) => b.c - a.c);
+  $("#listing-cards").innerHTML = order.map((r, i) => {
+    const l = r.l, m = r.m, p = DATA.private?.homes?.[l.id];
+    const facts = [["Asking", fmtE(l.asking) + (l.extras ? ` <span class="note">(${esc(l.extras)})</span>` : "")], ["Broker", l.broker_pct ? l.broker_pct + "%" : l.private_sale ? "none (private sale)" : "–"],
+      ["Size", `${l.size_m2} m²` + (l.plot_m2 ? ` · plot ${l.plot_m2.toLocaleString("en-US")} m²` : "")], ["Rooms / bedrooms", `${l.rooms} / ${l.bedrooms}`], ["Bathrooms", esc(l.baths)],
+      ["Built", esc(l.built)], ["Heating", esc(l.heating)], ["Energy", esc(l.energy)], ["Service charge", l.service_charge ? fmtE(l.service_charge) + "/mo" : "–"], ["Availability", esc(l.availability)],
+      ["€/m²", fmtE(l.asking / l.size_m2)], ["First seen", esc(l.first_seen)]];
+    const money = [["All-in (price + fees + works)", fmtE(m.all_in) + (m.works ? ` <span class="note">incl. works ${fmtK(m.works)}</span>` : "")], ["Model price", fmtE(m.model_price)],
+      ["Running costs", fmtE(m.running_month) + "/mo"], ["Std. monthly (70% financed)", fmtE(m.std_monthly)], ["20 yrs vs reference", l.id === "roettgener-maisonette" ? "reference" : `${fmtS(m.vs_ref_20y)} <span class="note">(${fmtS(m.vs_ref_min)} … ${fmtS(m.vs_ref_max)})</span>`],
+      ["Owning vs renting it", fmtS(m.own_vs_rent_20y)]];
+    if (m.offer) money.push(["At " + fmtK(m.offer), fmtS(m.vs_ref_at_offer) + " vs ref."]);
+    if (m.vs_ref_no_kfw != null) money.push(["Without KfW loan", fmtS(m.vs_ref_no_kfw) + " vs ref."]);
+    if (m.vs_ref_as_is != null) money.push(["Without heating fix", fmtS(m.vs_ref_as_is) + " vs ref."]);
+    if (p) money.push(["My monthly (private)", fmtE(p.monthly)], ["My net worth 20 yrs (private)", fmtE(p.nw20)]);
+    const hist = (l.price_history || []).map(h => `${esc(h.date)}: ${fmtK(h.price)}${h.note ? " – " + esc(h.note) : ""}`).join("<br>");
+    const sc = CRIT.map(([k, lab]) => `${lab} ${l.scores[k]}`).join(" · ");
+    return `<div class="card listing" id="d-${l.id}"><div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span> <a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.portal)} ↗</a></div></div>
+      <div class="note">${esc(l.district)}${l.area_note ? " · " + esc(l.area_note) : ""}</div>
+      <div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
+      <div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
+      <div class="cols3"><div><h4>Good</h4><ul>${l.highlights.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Risks</h4><ul>${l.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Check</h4><ul>${l.checks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
+      ${hist ? `<p class="note" style="margin:10px 0 0"><b>Price history:</b><br>${hist}</p>` : ""}
+      <p class="note" style="margin:8px 0 0">Scores: ${sc} → quality ${r.q.toFixed(1)}</p>
+      <div class="verdict">${esc(l.verdict)}</div></div>`;
+  }).join("");
+}
+
+// ---------- other tables ----------
+function renderOther() {
+  const sc = DATA.listings.filter(l => l.category === "screened");
+  $("#screened-table").innerHTML = `<thead><tr><th>Home</th><th>District</th><th class="num">Asking</th><th class="num">m²</th><th class="num">€/m²</th><th>Bathrooms</th><th>Built</th><th>Why not</th></tr></thead><tbody>${sc.map(l => `<tr><td><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a> <span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span></td><td>${esc(l.district)}</td><td class="num">${fmtK(l.asking)}</td><td class="num">${l.size_m2}</td><td class="num">${fmtE(l.asking / l.size_m2)}</td><td>${esc(l.baths)}</td><td>${esc(l.built)}</td><td>${esc(l.reason)}</td></tr>`).join("")}</tbody>`;
+  const iv = DATA.listings.filter(l => l.category === "investment" || l.category === "sold");
+  $("#invest-table").innerHTML = `<thead><tr><th>Home</th><th>District</th><th class="num">Asking</th><th class="num">m²</th><th>Verdict</th></tr></thead><tbody>${iv.map(l => `<tr><td><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a> <span class="pill ${l.category}">${TYPE_LABEL[l.category]}</span></td><td>${esc(l.district)}</td><td class="num">${fmtK(l.asking)}</td><td class="num">${l.size_m2}</td><td>${esc(l.reason)}</td></tr>`).join("")}</tbody>`;
+  const titles = Object.fromEntries(DATA.listings.map(l => [l.id, l.title]));
+  $("#log-table").innerHTML = `<thead><tr><th>Time</th><th>Topic</th><th>Question</th><th>Outcome</th></tr></thead><tbody>${DATA.log.map(e => `<tr><td class="num">${esc(e.time)}</td><td>${esc(e.topic)}${e.ref ? `<br><a href="#d-${e.ref}" class="note">${esc(titles[e.ref] || "")}</a>` : ""}</td><td>${esc(e.text)}</td><td>${esc(e.outcome)}</td></tr>`).join("")}</tbody>`;
+}
+
+// ---------- calculators ----------
+const DEF = {
+  cost: {price: 550000, broker: 3.57, tax: 6.5, notary: 2.0, works: 0, parking: 0},
+  mort: {loan: 400000, rate: 4.15, repay: 3, fix: 10, refix: 4.75},
+  rvb: {price: 550000, fees: 12.07, works: 0, capital: 200000, reserve: 25000, budget: 4500, budgetGrowth: 2.5, rent: 1800, running: 400, upkeep: 0.8,
+        rentGrowth: 3, priceGrowth: 3, inflation: 2.3, etf: 6.5, rate: 4.15, repay: 3, fix: 10, refix: 4.25, years: 20, sell: 4},
+  m2: {price: 499000, size: 118, district: "Ippendorf", kind: "flat"},
+};
+const LABELS = {
+  price: "Price (€)", broker: "Broker (%)", tax: "Transfer tax (%)", notary: "Notary + registry (%)", works: "Renovation (€)", parking: "Parking/garage (€)",
+  loan: "Loan (€)", rate: "Rate, fixed period (%)", repay: "Initial repayment (%)", fix: "Fixed period (years)", refix: "Rate afterwards (%)",
+  fees: "Purchase fees (%)", capital: "Starting capital (€)", reserve: "Cash kept back (€)", budget: "Monthly budget (€)", budgetGrowth: "Budget growth (%/yr)",
+  rent: "Rent of same home, cold (€/mo)", running: "Running costs (€/mo)", upkeep: "Upkeep (% of value/yr)", rentGrowth: "Rent growth (%/yr)", priceGrowth: "Price growth (%/yr)",
+  inflation: "Inflation (%/yr)", etf: "Index fund return (%/yr)", years: "Years", sell: "Selling costs (%)", size: "Living area (m²)", district: "District", kind: "Type"};
+let IN = JSON.parse(JSON.stringify(DEF));
+if (store.get("remember", false)) { $("#remember").checked = true; const saved = store.get("inputs", null); if (saved) for (const k in DEF) IN[k] = Object.assign({}, DEF[k], saved[k] || {}); }
+$("#remember").onchange = e => { store.set("remember", e.target.checked); if (e.target.checked) store.set("inputs", IN); else store.del("inputs"); };
+$("#reset-inputs").onclick = () => { IN = JSON.parse(JSON.stringify(DEF)); store.del("inputs"); buildForms(); };
+function buildForm(id, key, onChange) {
+  const f = $("#" + id); f.innerHTML = "";
+  for (const k in IN[key]) {
+    const lab = document.createElement("label"); lab.textContent = LABELS[k] || k;
+    let inp;
+    if (k === "district") { inp = document.createElement("select"); Object.keys(DATA.market.districts).forEach(n => inp.add(new Option(n, n))); }
+    else if (k === "kind") { inp = document.createElement("select"); inp.add(new Option("Flat", "flat")); inp.add(new Option("House", "house")); }
+    else { inp = document.createElement("input"); inp.type = "number"; inp.step = "any"; }
+    inp.value = IN[key][k];
+    inp.addEventListener("input", () => { IN[key][k] = inp.tagName === "SELECT" ? inp.value : +inp.value; if ($("#remember").checked) store.set("inputs", IN); onChange(); });
+    lab.appendChild(inp); f.appendChild(lab);
+  }
+  onChange();
+}
+function outs(id, items) { $("#" + id).innerHTML = items.map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join(""); }
+function calcCost() {
+  const c = IN.cost, base = c.price + c.parking, fees = base * (c.broker + c.tax + c.notary) / 100;
+  outs("o-cost", [[fmtE(base + fees + c.works), "All-in"], [fmtE(base * c.tax / 100), "Transfer tax"], [fmtE(base * c.notary / 100), "Notary + registry"], [fmtE(base * c.broker / 100), "Broker"], [((c.broker + c.tax + c.notary)).toFixed(2) + "%", "Fees in total"]]);
+}
+function mortgage(loan, rate, repay, fix, refix, months = 600) {
+  const pay = loan * (rate + repay) / 100 / 12; let bal = loan, interestFix = 0, balFix = null, m = 0; const series = [[0, loan]];
+  while (bal > 0.5 && m < months) { const r = (m < fix * 12 ? rate : refix) / 100 / 12, i = bal * r; bal = bal + i - Math.min(pay, bal + i); m++; if (m <= fix * 12) interestFix += i; if (m === fix * 12) balFix = bal; if (m % 12 === 0) series.push([m / 12, bal]); }
+  if (m % 12) series.push([m / 12, 0]);
+  return {pay, interestFix, balFix: balFix ?? 0, months: m, series};
+}
+function calcMort() {
+  const c = IN.mort, r = mortgage(c.loan, c.rate, c.repay, c.fix, c.refix);
+  const shock = (r.balFix || 0) * (c.refix - c.rate) / 100 / 12;
+  outs("o-mort", [[fmtE(r.pay), "Monthly payment"], [fmtE(c.loan * c.rate / 100 / 12), "Interest in month 1"], [fmtE(r.balFix), `Left after ${c.fix} yrs`], [fmtE(r.interestFix), `Interest over ${c.fix} yrs`],
+    [(r.months / 12).toFixed(1) + " yrs", "Paid off after (same payment)"], [(shock >= 0 ? "+" : "−") + fmtE(Math.abs(shock)).slice(1) + "/mo", "Payment change if refinanced at new rate"]]);
+  lineChart($("#c-mort"), [{name: "Loan left", pts: r.series, color: css("--accent")}], {yfmt: v => "€" + Math.round(v / 1000) + "k", xlab: "Years", h: 240});
+}
+function simulateRvB(c, priceOverride) {
+  const price = priceOverride ?? c.price, months = c.years * 12, fees = price * c.fees / 100, need = price + fees + c.works, avail = c.capital - c.reserve;
+  const loan = Math.max(0, need - avail), etf0B = Math.max(0, avail - need);
+  const rate = c.rate / 100, refix = c.refix / 100, pay = loan * (rate + c.repay / 100) / 12;
+  const em = Math.pow(1 + c.etf / 100, 1 / 12) - 1, cm = Math.pow(1 + 0.028 * (1 - 0.26375), 1 / 12) - 1, TAX = 0.26375 * 0.7;
+  let bal = loan, eB = etf0B, bB = etf0B, eR = avail, bR = avail, cash = c.reserve;
+  const sB = [], sR = [];
+  const net = (m, eb, bb, er, br) => { const defl = Math.pow(1 + c.inflation / 100, m / 12), val = (price + 0.5 * c.works) * Math.pow(1 + c.priceGrowth / 100, m / 12);
+    const buy = val * (1 - c.sell / 100) - bal + eb - Math.max(0, eb - bb) * TAX + cash, rent = er - Math.max(0, er - br) * TAX + cash; return [buy / defl, rent / defl]; };
+  let n0 = net(0, eB, bB, eR, bR); sB.push([0, n0[0]]); sR.push([0, n0[1]]);
+  for (let m = 1; m <= months; m++) {
+    const t = (m - 1) / 12, budget = c.budget * Math.pow(1 + c.budgetGrowth / 100, t);
+    const r = (m <= c.fix * 12 ? rate : refix) / 12, i = bal * r, p = Math.min(pay, bal + i); bal = bal + i - p;
+    const val = (price + 0.5 * c.works) * Math.pow(1 + c.priceGrowth / 100, m / 12);
+    const own = p + c.running * Math.pow(1 + c.inflation / 100, t) + c.upkeep / 100 * val / 12, rentC = (c.rent + c.running) * Math.pow(1 + c.rentGrowth / 100, t);
+    eB = eB * (1 + em) + (budget - own); bB += (budget - own); eR = eR * (1 + em) + (budget - rentC); bR += (budget - rentC); cash *= (1 + cm);
+    if (m % 12 === 0) { const n = net(m, eB, bB, eR, bR); sB.push([m / 12, n[0]]); sR.push([m / 12, n[1]]); }
+  }
+  return {loan, pay, sB, sR, fees, need};
+}
+function calcRvB() {
+  const c = IN.rvb, r = simulateRvB(c), last = r.sB.length - 1, d = r.sB[last][1] - r.sR[last][1];
+  let cross = null; for (let i = 1; i <= last; i++) if ((r.sB[i][1] - r.sR[i][1]) * (r.sB[i - 1][1] - r.sR[i - 1][1]) <= 0 && r.sB[i][1] >= r.sR[i][1]) { cross = i; break; }
+  outs("o-rvb", [[fmtE(r.loan), "Loan"], [fmtE(r.pay), "Mortgage payment"], [fmtE(r.sB[last][1]), `Net worth if buying (${c.years} yrs)`], [fmtE(r.sR[last][1]), "Net worth if renting"],
+    [`<span class="${d >= 0 ? "pos" : "neg"}">${fmtS(d)}</span>`, "Buying minus renting"], [cross ? cross + " yrs" : "–", "Buying pulls ahead after"]]);
+  lineChart($("#c-rvb"), [{name: "Buy", pts: r.sB, color: css("--house")}, {name: "Rent & invest", pts: r.sR, color: css("--flat")}], {yfmt: v => Math.abs(v) >= 1e6 ? "€" + (v / 1e6).toFixed(1) + "M" : "€" + Math.round(v / 1000) + "k", xlab: "Years from purchase", h: 300, tip: $("#rvb-tip")});
+}
+$("#btn-breakeven").onclick = () => {
+  const c = IN.rvb; let lo = 50000, hi = 3000000;
+  const diff = p => { const r = simulateRvB(c, p), L = r.sB.length - 1; return r.sB[L][1] - r.sR[L][1]; };
+  if (diff(lo) < 0) { $("#be-out").textContent = "Renting wins at any price with these inputs."; return; }
+  for (let i = 0; i < 50; i++) { const mid = (lo + hi) / 2; if (diff(mid) > 0) lo = mid; else hi = mid; }
+  $("#be-out").innerHTML = `Buying beats renting the same home after ${c.years} years up to a price of about <b>${fmtE(Math.round(lo / 1000) * 1000)}</b>.`;
+};
+function calcM2() {
+  const c = IN.m2, per = c.price / c.size, d = DATA.market.districts[c.district]?.[c.kind];
+  const diff = d?.eur ? (per / d.eur - 1) * 100 : null;
+  outs("o-m2", [[fmtE(per), "Price per m²"], [d?.eur ? fmtE(d.eur) : "–", `${c.district} average (${c.kind})`], [diff == null ? "–" : `<span class="${diff > 0 ? "neg" : "pos"}">${diff > 0 ? "+" : ""}${diff.toFixed(0)}%</span>`, "vs district average"],
+    [d?.eur ? fmtE(d.eur * c.size) : "–", "Price at district average"]]);
+}
+function buildForms() { buildForm("f-cost", "cost", calcCost); buildForm("f-mort", "mort", calcMort); buildForm("f-rvb", "rvb", calcRvB); buildForm("f-m2", "m2", calcM2); $("#be-out").textContent = ""; }
+
+function lineChart(box, series, o) {
+  box.innerHTML = ""; const W0 = Math.max(320, box.clientWidth || 900), H0 = o.h || 260, P = {l: 60, r: 104, t: 14, b: 40}, s = svg(W0, H0); box.appendChild(s);
+  const xs = series.flatMap(x => x.pts.map(p => p[0])), ys = series.flatMap(x => x.pts.map(p => p[1]));
+  const xmax = Math.max(...xs), ymin = Math.min(0, ...ys), ymax = Math.max(...ys) * 1.05;
+  const X = v => P.l + v / (xmax || 1) * (W0 - P.l - P.r), Y = v => H0 - P.b - (v - ymin) / (ymax - ymin || 1) * (H0 - P.t - P.b);
+  const step = Math.pow(10, Math.floor(Math.log10((ymax - ymin) / 4 || 1))), ystep = [1, 2, 5, 10].map(m => m * step).find(v => (ymax - ymin) / v <= 6);
+  for (let v = Math.ceil(ymin / ystep) * ystep; v <= ymax; v += ystep) { el("line", {x1: P.l, x2: W0 - P.r, y1: Y(v), y2: Y(v), class: v === 0 ? "zero" : "axis"}, s); el("text", {x: P.l - 8, y: Y(v) + 4, "text-anchor": "end"}, s).textContent = o.yfmt(v); }
+  const xstep = xmax > 20 ? 5 : xmax > 10 ? 2 : 1; for (let v = 0; v <= xmax; v += xstep) el("text", {x: X(v), y: H0 - 20, "text-anchor": "middle"}, s).textContent = v;
+  el("text", {x: (P.l + W0 - P.r) / 2, y: H0 - 0, "text-anchor": "middle"}, s).textContent = o.xlab;
+  const ends = series.map(se => { const lp = se.pts[se.pts.length - 1]; return {se, x: X(lp[0]) + 6, y: Y(lp[1]) + 4}; }).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  series.forEach(se => el("path", {d: se.pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join(""), fill: "none", stroke: se.color, "stroke-width": 2}, s));
+  ends.forEach(e => { el("text", {x: e.x, y: e.y, class: "lab", fill: e.se.color}, s).textContent = e.se.name; });
+  if (o.tip) {
+    const guide = el("line", {y1: P.t, y2: H0 - P.b, class: "zero", style: "display:none"}, s);
+    s.addEventListener("mousemove", e => { const r = s.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W0, yr = Math.round((x - P.l) / (W0 - P.l - P.r) * xmax);
+      if (yr < 0 || yr > xmax) return; guide.setAttribute("x1", X(yr)); guide.setAttribute("x2", X(yr)); guide.style.display = "";
+      tipShow(o.tip, box.parentElement, `<b>Year ${yr}</b><br>` + series.map(se => `${se.name}: ${fmtE((se.pts.find(p => p[0] === yr) || [0, 0])[1])}`).join("<br>"), e.clientX - box.parentElement.getBoundingClientRect().left, e.clientY - box.parentElement.getBoundingClientRect().top); });
+    s.addEventListener("mouseleave", () => { o.tip.style.display = "none"; guide.style.display = "none"; });
+  }
+}
+
+if (DATA.private) { $("#privacy-note").textContent = "PRIVATE VERSION – contains personal figures. Do not publish."; }
+buildWeights(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap();
+let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcMort(); calcRvB(); }, 150); });
+</script>
+</body>
+</html>

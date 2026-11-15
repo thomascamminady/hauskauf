@@ -1,0 +1,131 @@
+[
+ {
+  "time": "earlier",
+  "topic": "Strategy",
+  "text": "Buy now vs. wait two years; flat vs. house; bigger down payment; renovation, KfW and tax incentives.",
+  "outcome": "Waiting ≈ neutral on money. Extra space, not buying itself, drives the cost. Fixer-uppers pay fees only on the purchase price; KfW 261 helps renovations to an efficiency-house standard."
+ },
+ {
+  "time": "earlier",
+  "topic": "Ranking & financing",
+  "text": "Rank the main options with a rent-vs-buy model; compare a 700k turnkey loan with 500k + 200k renovation.",
+  "outcome": "Flat ≈ break-even vs renting it; fixer-upper the cheapest way into a house if the budget holds; interest jumps above 60/70/80% loan-to-value."
+ },
+ {
+  "time": "earlier",
+  "topic": "Schweinheim garden house",
+  "text": "Evaluate the detached house with heat pump; sensible price?",
+  "outcome": "Offer ~€620k, walk away ~€650–660k.",
+  "ref": "schweinheim-garden-house"
+ },
+ {
+  "time": "earlier",
+  "topic": "Ippendorf maisonette",
+  "text": "Projections for the Röttgener Str. maisonette at €600k + fees.",
+  "outcome": "Becomes the model's reference home.",
+  "ref": "roettgener-maisonette"
+ },
+ {
+  "time": "16:24",
+  "topic": "Flat vs house",
+  "text": "Röttgener Str. vs Schweinheim house at the same price.",
+  "outcome": "House is better value per m²; costs ~€220/mo more."
+ },
+ {
+  "time": "16:27",
+  "topic": "Search Ippendorf / Kottenforst",
+  "text": "Find better options that work for family visits.",
+  "outcome": "2010 ground-floor flat (#1), Kottenforst maisonette, Röttgen two-family house."
+ },
+ {
+  "time": "16:29",
+  "topic": "Mehlem",
+  "text": "Terraced house with top-floor studio.",
+  "outcome": "Pass at asking: electric heating, outside the preferred area.",
+  "ref": "mehlem-terraced"
+ },
+ {
+  "time": "18:11",
+  "topic": "Ranked overview",
+  "text": "Ranked overview with links (became a PDF).",
+  "outcome": "Nine homes ranked."
+ },
+ {
+  "time": "18:14",
+  "topic": "Method",
+  "text": "How the 20-year comparison works.",
+  "outcome": "Same budget and starting capital everywhere; money not spent on the home is invested."
+ },
+ {
+  "time": "18:15",
+  "topic": "Brüser Berg 4 units",
+  "text": "Investment building.",
+  "outcome": "Not a home; weak investment.",
+  "ref": "brueser-berg-4units"
+ },
+ {
+  "time": "18:20",
+  "topic": "Niederbachem",
+  "text": "Detached 1999 house, VR Immobilien.",
+  "outcome": "Expensive for Wachtberg; damp; surveyor first.",
+  "ref": "niederbachem-detached"
+ },
+ {
+  "time": "18:22",
+  "topic": "Niederbachem price history",
+  "text": "Was offered privately at €620k earlier this year.",
+  "outcome": "Seller nets the same at asking; offer ~€570k, stop ~€600k.",
+  "ref": "niederbachem-detached"
+ },
+ {
+  "time": "18:23",
+  "topic": "Niederholtorf",
+  "text": "1967 house in Beuel.",
+  "outcome": "Already sold; useful price benchmark.",
+  "ref": "niederholtorf-sold"
+ },
+ {
+  "time": "18:32",
+  "topic": "Schweinheim as investment",
+  "text": "At what price is it sensible?",
+  "outcome": "As a home: break-even ~€605–710k depending on rent; as a rental only ~€430–590k.",
+  "ref": "schweinheim-garden-house"
+ },
+ {
+  "time": "18:33",
+  "topic": "Rosenburg apartments",
+  "text": "Three let micro-apartments.",
+  "outcome": "Pass: index-fund-like return with more risk.",
+  "ref": "rosenburg-apartments"
+ },
+ {
+  "time": "18:41",
+  "topic": "Top 4",
+  "text": "Schweinheim house vs Röttgener Str. vs two other flats.",
+  "outcome": "1 ground-floor flat · 2 Schweinheim house at ~€630k · 3 Kottenforst maisonette · 4 Röttgener Str."
+ },
+ {
+  "time": "18:45",
+  "topic": "City, Venusberg, Schweinheim flats",
+  "text": "Scan of all 44 matching Bonn flats on ImmoScout.",
+  "outcome": "Heiderhof flats strongest on money; Schweinheim flat with studio best for guests."
+ },
+ {
+  "time": "18:59",
+  "topic": "Other portals, no Heiderhof",
+  "text": "Immowelt, Kleinanzeigen, ohne-makler.net, broker sites.",
+  "outcome": "New: Lengsdorf private flat, Ippendorf garden flat, Godesberg villa flat."
+ },
+ {
+  "time": "19:15",
+  "topic": "Locations of private listings",
+  "text": "Exact addresses of the private listings.",
+  "outcome": "Ask the sellers directly."
+ },
+ {
+  "time": "19:19",
+  "topic": "This site",
+  "text": "Turn everything into a public overview with calculators, maps and market prices.",
+  "outcome": "You are here."
+ }
+]

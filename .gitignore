@@ -1,0 +1,8 @@
+# personal data – never commit
+private/
+
+# tooling
+__pycache__/
+.ruff_cache/
+.venv/
+.DS_Store
