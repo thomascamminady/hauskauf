@@ -4,7 +4,7 @@ A personal research tool for buying a home in Bonn (around Ippendorf, the Kotten
 listings, cost analysis, rankings, district price levels, a map and calculators, all in one standalone page.
 
 **Open the pages:** `overview.html` (shortlist, model, calculators) and `offers.html` (every current offer in Bonn
-and Wachtberg from Immowelt, Kleinanzeigen and ohne-makler.net, refreshed daily with photos, price changes and a
+and Wachtberg from Immowelt, Kleinanzeigen and ohne-makler.net, refreshed every other day with photos, price changes and a
 preview), or the GitHub Pages site.
 
 ## What's inside
@@ -33,7 +33,7 @@ private/     git-ignored: personal model, inputs and reports (never published)
 ## Build
 
 ```bash
-uv run scripts/scrape.py   # refresh data/feed.json (also runs daily on GitHub Actions)
+uv run scripts/scrape.py   # refresh data/feed.json (also runs every other day on GitHub Actions)
 uv run scripts/build.py    # render the pages
 uv run pytest -q           # tests
 ```

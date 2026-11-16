@@ -31,10 +31,11 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
 | `site/common.js` | Shared JS: criterion scoring, breakdown tables, explainer dialog (injected into both pages) |
 | `site/template.html` | All HTML/CSS/JS; data is injected at `/*__DATA__*/null`; Leaflet inlined at build |
 | `scripts/build.py` | `uv run scripts/build.py` → `overview.html`, `offers.html`, `index.html`, `data/listings.csv` |
-| `scripts/scrape.py` | Daily offer feed: crawls the portals into `data/feed.json` (GitHub Action `daily-offers.yml`) |
+| `scripts/scrape.py` | Offer feed: crawls the portals into `data/feed.json` (GitHub Action `refresh-data.yml`, every other day) |
 | `scripts/hausfeed/` | Feed package: `core.py` (Offer/Page/Source protocol, parsing, location cleaning), `sources/*` (one adapter per portal), `fetch.py` (polite crawl), `store.py` (merge, price history, gone, duplicates) |
 | `data/feed.json` | Every offer seen (generated). `data/feed_config.json`: coarse filters + district area-fit scores |
-| `site/offers.html`, `site/base.css` | Offers page template; CSS shared by both pages |
+| `site/offers.html`, `site/base.css` | Offers page template; the single stylesheet for both pages |
+| `.claude/skills/refresh-data/` | Skill: pull the latest data (trigger the Action or run locally), check, publish |
 | `private/compute.py` | Personal rent-vs-buy model run (needs `private/model/rent_vs_buy.py`) |
 | `private/HANDOFF.md` | Personal handoff notes (git-ignored) |
 
@@ -46,7 +47,7 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
   `uv run --with numpy --with matplotlib --with fire python private/compute.py`, then `uv run scripts/build.py`.
   The page only shows shortlist entries that have model results.
 - **Offer feed:** `uv run scripts/scrape.py` (all portals, ~5 min) or `--sources=immowelt --max_requests=5 --dry_run`.
-  Runs daily on GitHub Actions and commits `data/feed.json` + rebuilt pages. Add a portal by writing a `Source`
+  Runs every other day on GitHub Actions (`refresh-data.yml`; neighbourhood facts on the 1st of the month) and commits `data/feed.json` + rebuilt pages. To refresh on demand use the project skill `/refresh-data` (`.claude/skills/refresh-data/SKILL.md`). Add a portal by writing a `Source`
   (`seeds()` + pure `parse(html, url) -> Page`) in `scripts/hausfeed/sources/`, registering it in `sources/__init__.py`,
   and adding a synthetic fixture test. Never store street addresses or contact names; `clean_location` reduces
   locations to postcode + district. ImmoScout24 blocks automated access – don't try to get around it.

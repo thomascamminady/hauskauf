@@ -128,12 +128,15 @@ def feed_payload(listings: list[dict[str, Any]], market: dict[str, Any]) -> dict
         out["tracked"] = next((tracked[rec[k]] for k in ["url"] if rec.get(k) in tracked), None)
         offers.append(out)
     active = [o for o in offers if o["active"]]
+    # Offers from the very first run aren't "new" – they were simply there when tracking started.
+    first_run = min((r["date"] for r in feed["runs"]), default=updated)
     used = sorted({r["source"] for r in feed["runs"]})
     return {
         "updated": updated,
         "offers": offers,
         "active": len(active),
-        "new_today": sum(1 for o in active if o["first_seen"] == updated),
+        "new_today": sum(1 for o in active if o["first_seen"] == updated and updated > first_run),
+        "first_run": first_run,
         "fit": sum(1 for o in active if (o["fit"] or 0) >= 4 and (o["size_m2"] or 0) >= 105),
         "sources": [{"name": s, "label": SOURCE_LABELS.get(s, s)} for s in used],
         "runs": feed["runs"],

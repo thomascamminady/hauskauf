@@ -102,7 +102,7 @@ const QC = (() => {
     const src = c.kind === "computed" && c.id !== "space"
       ? `<p class="note">Source: ${e(DATA.amenities?.source || "OpenStreetMap")}. Homes are only placed at district level, so these are district facts, not the exact address.</p>`
       : c.kind === "judged" ? `<p class="note">Judged per home from the listing text and photos; the reason is shown next to each score.</p>` : "";
-    dlg.innerHTML = `<div class="critbody"><button class="critclose" aria-label="Close">✕</button>
+    dlg.innerHTML = `<div class="critbody"><button class="iconbtn critclose" aria-label="Close">✕</button>
       <div class="note">${e(GROUPS.find(g => g.id === c.group)?.label)} · default weight ${c.weight}</div>
       <h3>${e(c.label)}</h3><p>${e(c.what)}</p>
       <table class="qtable"><tbody>${Object.entries(c.scale).sort((a, b) => b[0] - a[0]).map(([s, t]) => `<tr><td class="num"><b>${s}</b></td><td>${bar(+s)}</td><td>${e(t)}</td></tr>`).join("")}</tbody></table>

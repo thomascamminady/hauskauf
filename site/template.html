@@ -56,10 +56,10 @@
   <h2>Map</h2>
   <p class="lead">Listings are placed at their <b>district</b> (approximate, no addresses). Coloured rings show the average asking price per m² for the district.</p>
   <div class="card">
-    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px">
+    <div class="toolbar">
       <div class="seg" id="map-color"><button data-c="type" class="on">By type</button><button data-c="money">By money</button><button data-c="quality">By quality</button><button data-c="score">By overall score</button></div>
       <div class="seg" id="map-kind"><button data-k="flat" class="on">Flat €/m²</button><button data-k="house">House €/m²</button><button data-k="none">Hide prices</button></div>
-      <div class="legend" id="map-legend" style="margin:0"></div>
+      <div class="legend" id="map-legend"></div>
     </div>
     <div id="map"></div>
     <p class="note">Map © OpenStreetMap contributors. Needs an internet connection for map tiles.</p>
@@ -85,22 +85,22 @@
 <section id="calc">
   <h2>Calculators</h2>
   <p class="lead">All calculations run locally in your browser.</p>
-  <label style="font-size:13px;color:var(--text-2)"><input type="checkbox" id="remember"> Remember my calculator inputs on this device</label>
+  <label class="remember"><input type="checkbox" id="remember"> Remember my calculator inputs on this device</label>
   <button class="btn" id="reset-inputs" style="margin-left:8px">Reset to defaults</button>
   <div class="banner" id="calc-for" hidden></div>
 
   <div class="grid g2" style="margin-top:12px">
-    <div class="card"><h3 style="margin-top:0">1 · Purchase costs</h3>
+    <div class="card"><h3>1 · Purchase costs</h3>
       <div class="form" id="f-cost"></div><div class="out" id="o-cost"></div></div>
-    <div class="card"><h3 style="margin-top:0">2 · Mortgage</h3>
+    <div class="card"><h3>2 · Mortgage</h3>
       <div class="form" id="f-mort"></div><div class="out" id="o-mort"></div><div class="chartbox" id="c-mort"></div></div>
   </div>
-  <div class="card" style="margin-top:14px"><h3 style="margin-top:0">3 · Buy vs rent the same home</h3>
+  <div class="card" style="margin-top:14px"><h3>3 · Buy vs rent the same home</h3>
     <p class="note">Same monthly budget in both cases; whatever housing doesn't use is invested in a world index fund. Results in today's euros after tax and selling costs.</p>
     <div class="form" id="f-rvb"></div>
     <div style="margin-top:10px"><button class="btn" id="btn-breakeven">Find break-even price</button> <span class="note" id="be-out"></span></div>
     <div class="out" id="o-rvb"></div><div class="chartbox" id="c-rvb"></div><div class="tip" id="rvb-tip"></div></div>
-  <div class="card" style="margin-top:14px"><h3 style="margin-top:0">4 · Price per m² check</h3>
+  <div class="card" style="margin-top:14px"><h3>4 · Price per m² check</h3>
     <div class="form" id="f-m2"></div><div class="out" id="o-m2"></div></div>
 </section>
 
@@ -120,19 +120,19 @@
 <section id="checklist">
   <h2>Checklist</h2>
   <div class="grid g3">
-    <div class="card"><h3 style="margin-top:0">Ask for before an offer</h3><ul>
+    <div class="card"><h3>Ask for before an offer</h3><ul>
       <li>Floor plan with areas, energy certificate</li>
       <li>Flats: declaration of division (Teilungserklärung), owners' meeting minutes for 3 years, budget (Wirtschaftsplan), last service-charge statement, repair-reserve balance, planned levies</li>
       <li>Land register extract (Grundbuch), easements and building charges (Baulasten), contamination register</li>
       <li>If let: tenancy agreement, rent, notice situation, date of the condominium split</li>
       <li>Heating: type, age, maintenance records</li></ul></div>
-    <div class="card"><h3 style="margin-top:0">At the viewing</h3><ul>
+    <div class="card"><h3>At the viewing</h3><ul>
       <li>Damp: basement, window reveals, smell; roof and gutters</li>
       <li>Noise at rush hour; trains; flight path</li>
       <li>Sun and light at different times; neighbours</li>
       <li>Bathrooms and guest set-up for long family visits</li>
       <li>Parking, bike storage, accessibility for older visitors</li></ul></div>
-    <div class="card"><h3 style="margin-top:0">Money and rules</h3><ul>
+    <div class="card"><h3>Money and rules</h3><ul>
       <li>NRW: transfer tax 6.5%, notary + land registry ~2%, broker usually 3.57% (buyer half)</li>
       <li>Rates jump above 60 / 70 / 80% loan-to-value</li>
       <li>After buying an old house: some heating/insulation duties within 2 years (GEG)</li>
@@ -244,7 +244,7 @@ function buildWeights() {
 }
 QC.setExamples(id => shortlist.map(l => [l.title, SC[l.id][id], "#d-" + l.id]).sort((a, b) => (b[1]?.s ?? -1) - (a[1]?.s ?? -1)));
 function renderCriteria() {
-  $("#crit-cards").innerHTML = QC.GROUPS.map(g => `<div class="card"><h3 style="margin-top:0">${esc(g.label)}</h3>${QC.CRITS.filter(c => c.group === g.id).map(c =>
+  $("#crit-cards").innerHTML = QC.GROUPS.map(g => `<div class="card"><h3>${esc(g.label)}</h3>${QC.CRITS.filter(c => c.group === g.id).map(c =>
     `<div class="critrow">${QC.label(c.id)} <span class="note">${c.kind === "computed" && c.id !== "space" ? "OpenStreetMap" : c.id === "space" ? "from m²" : "judged per home"}</span><div class="note">${esc(c.what)}</div>
       <ol class="scale">${Object.entries(c.scale).sort((x, y) => y[0] - x[0]).map(([k, t]) => `<li><b>${k}</b> ${esc(t)}</li>`).join("")}</ol></div>`).join("")}</div>`).join("");
 }
@@ -304,7 +304,7 @@ function renderRanking() {
   const top = [...rs].sort((a, b) => b.c - a.c);
   const best$ = [...rs].sort((a, b) => b.m.vs_ref_20y - a.m.vs_ref_20y)[0], bestQ = [...rs].sort((a, b) => b.q - a.q)[0];
   $("#kpis").innerHTML = [[top[0].l.title, "Top with your weights"], [best$.l.title, "Best on money"], [bestQ.l.title, "Best on quality"], [String(shortlist.length), "Homes modelled"]]
-    .map(([v, l]) => `<div class="kpi"><div class="v" style="font-size:16px">${esc(v)}</div><div class="l">${l}</div></div>`).join("");
+    .map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${l}</div></div>`).join("");
 }
 
 // ---------- SVG helpers ----------
@@ -354,7 +354,7 @@ function renderScatter() {
     hit.addEventListener("mouseleave", () => tip.style.display = "none");
     hit.addEventListener("click", () => location.hash = "d-" + p.l.id);
   });
-  $("#scatter-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span class="note">Line = range across 9 market scenarios</span><span><i style="background:none;border:1.5px solid var(--text)"></i>Pareto front (dashed): ${fp.map(p => esc(SHORT[p.l.id] || p.l.title)).join(" · ")}</span>`;
+  $("#scatter-legend").innerHTML = ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span class="note">Line = range across 9 market scenarios</span><span><i class="ring"></i>Pareto front (dashed): ${fp.map(p => esc(SHORT[p.l.id] || p.l.title)).join(" · ")}</span>`;
 }
 function paretoFront(pts) {
   return new Set(pts.filter(a => !pts.some(b => b !== a && b.m.vs_ref_20y >= a.m.vs_ref_20y && b.q >= a.q && (b.m.vs_ref_20y > a.m.vs_ref_20y || b.q > a.q))));
@@ -399,7 +399,7 @@ function renderMap() {
     const m = L.circleMarker([lat, lon], {radius: short ? 8 : 5, color: css("--surface"), weight: 2, fillColor: typeColor(l.category === "shortlist" || l.category === "screened" ? l.type : l.category), fillOpacity: short ? .95 : .6}).addTo(map);
     const mm = DATA.model[l.id];
     MARKERS.push([m, l]);
-    m.bindPopup(() => `${l.image ? `<img src="${esc(l.image)}" referrerpolicy="no-referrer" style="width:220px;height:140px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px">` : ""}<b>${esc(l.title)}</b><br>${esc(l.district)} · ${fmtK(l.asking)} · ${l.size_m2 ?? "?"} m²<br>${mm ? "20 yrs vs ref.: " + fmtS(mm.vs_ref_20y) + ` · quality ${quality(l).toFixed(1)} · score ${combined(l).toFixed(2)}<br>` : ""}${esc(l.category === "shortlist" ? "" : l.reason || "")}<br>${short ? `<a href="#d-${l.id}">Details</a> · ` : ""}<a href="${esc(l.url)}" target="_blank" rel="noopener">Listing</a>`);
+    m.bindPopup(() => `${l.image ? `<img src="${esc(l.image)}" referrerpolicy="no-referrer" class="map-photo">` : ""}<b>${esc(l.title)}</b><br>${esc(l.district)} · ${fmtK(l.asking)} · ${l.size_m2 ?? "?"} m²<br>${mm ? "20 yrs vs ref.: " + fmtS(mm.vs_ref_20y) + ` · quality ${quality(l).toFixed(1)} · score ${combined(l).toFixed(2)}<br>` : ""}${esc(l.category === "shortlist" ? "" : l.reason || "")}<br>${short ? `<a href="#d-${l.id}">Details</a> · ` : ""}<a href="${esc(l.url)}" target="_blank" rel="noopener">Listing</a>`);
   });
   drawPrices(); colorMarkers();
 }
@@ -420,7 +420,7 @@ function dotColor(l) {
 function colorMarkers() {
   if (!map) return;
   MARKERS.forEach(([m, l]) => m.setStyle({fillColor: dotColor(l)}));
-  const grad = `<span><i style="background:linear-gradient(90deg,${ramp(0)},${ramp(.5)},${ramp(1)});width:60px;border-radius:5px"></i>`;
+  const grad = `<span><i class="grad" style="background:linear-gradient(90deg,${ramp(0)},${ramp(.5)},${ramp(1)})"></i>`;
   $("#map-legend").innerHTML = mapColor === "type"
     ? ["flat", "house", "renovation"].map(t => `<span><i style="background:${typeColor(t)}"></i>${TYPE_LABEL[t]}</span>`).join("") + `<span><i style="background:${css("--muted")}"></i>Investment / sold</span><span class="note">big dot = modelled</span>`
     : mapColor === "money" ? `${grad}−€150k … ref. … +€150k vs reference (20 yrs)</span><span class="note">grey = not modelled</span>`
