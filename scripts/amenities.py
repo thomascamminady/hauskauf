@@ -16,6 +16,7 @@ from __future__ import annotations
 import itertools
 import json
 import math
+import os
 import time
 from datetime import date
 from pathlib import Path
@@ -85,22 +86,25 @@ def bbox(lat: float, lon: float, r: float) -> dict[str, float]:
     return {"s": lat - dlat, "n": lat + dlat, "w": lon - dlon, "e": lon + dlon}
 
 
-def query(client: httpx.Client, q: str, attempts: int = 12) -> list[dict[str, Any]]:
-    """POST to the mirrors in turn with growing pauses; Overpass is often overloaded."""
+def query(client: httpx.Client, q: str, deadline: float, attempts: int = 6) -> list[dict[str, Any]]:
+    """POST to the mirrors in turn with growing pauses; Overpass is often overloaded.
+
+    Gives up after ``attempts`` tries or when ``deadline`` (time.monotonic) has passed."""
     last = ""
     for attempt in range(attempts):
+        if time.monotonic() > deadline:
+            raise RuntimeError(f"time budget used up ({last or 'no answer yet'})")
         url = MIRRORS[attempt % len(MIRRORS)]
         try:
             r = client.post(url, data={"data": q})
-        except httpx.TransportError as e:
-            last = f"{url}: {type(e).__name__}"
-        else:
             if r.status_code == 200:
                 return r.json()["elements"]
             last = f"{url}: HTTP {r.status_code}"
             if r.status_code not in (429, 502, 503, 504):
-                r.raise_for_status()
-        time.sleep(min(60, 5 * (attempt + 1)))
+                raise RuntimeError(last)
+        except (httpx.TransportError, ValueError, KeyError) as e:  # timeouts, HTML error pages, bad JSON
+            last = f"{url}: {type(e).__name__}"
+        time.sleep(min(30, 5 * (attempt + 1)))
     raise RuntimeError(f"Overpass kept refusing ({last})")
 
 
@@ -226,19 +230,25 @@ def summarise(centre: tuple[float, float], pois: list[dict[str, Any]], greens: l
     }
 
 
-def main(only: str | tuple[str, ...] = "", delay: float = 3.0, refresh: bool = False) -> None:
+def main(only: str | tuple[str, ...] = "", delay: float = 3.0, refresh: bool = False, budget: float = 1500.0) -> None:
     """Fetch amenities for district centres in data/market.json.
+
+    Built to always finish: every query has a timeout and a few retries, the whole run stops after ``budget``
+    seconds, a failing district keeps its previous data, and the file is saved (atomically) after each district.
 
     Args:
         only: comma-separated district names (default: all).
         delay: seconds between queries.
         refresh: re-fetch districts that are already in data/amenities.json.
+        budget: total seconds before the run stops and keeps what it has.
     """
     names = [n for n in (",".join(only) if isinstance(only, tuple) else only).split(",") if n]
     market = json.loads((ROOT / "data" / "market.json").read_text(encoding="utf-8"))
     out_path = ROOT / "data" / "amenities.json"
     out: dict[str, Any] = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {"districts": {}}
-    with httpx.Client(headers=HEADERS, timeout=150) as client:
+    deadline = time.monotonic() + budget
+    done, skipped = 0, []
+    with httpx.Client(headers=HEADERS, timeout=httpx.Timeout(90, connect=15)) as client:
         for name, d in market["districts"].items():
             if names and name not in names:
                 continue
@@ -246,24 +256,41 @@ def main(only: str | tuple[str, ...] = "", delay: float = 3.0, refresh: bool = F
                 continue
             if d.get("lat") is None or d.get("lon") is None:
                 continue  # aggregate entries such as "Bonn (city)" have no centre
+            if time.monotonic() > deadline:
+                skipped.append(name)
+                continue
             lat, lon = d["lat"], d["lon"]
             try:
-                pois = query(client, POI_QUERY.format(r=RADIUS, lat=lat, lon=lon))
+                pois = query(client, POI_QUERY.format(r=RADIUS, lat=lat, lon=lon), deadline)
                 time.sleep(delay)
-                greens = query(client, GREEN_QUERY.format(r=RADIUS, lat=lat, lon=lon))
+                greens = query(client, GREEN_QUERY.format(r=RADIUS, lat=lat, lon=lon), deadline)
                 time.sleep(delay)
-            except RuntimeError as e:
-                print(f"{name}: skipped – {e}", flush=True)
+                new = summarise((lat, lon), pois, greens)
+            except Exception as e:  # noqa: BLE001 – one district must never stop the run
+                print(f"{name}: skipped, keeping previous data – {e}", flush=True)
+                skipped.append(name)
                 continue
-            out["districts"][name] = summarise((lat, lon), pois, greens)
-            s = out["districts"][name]
-            print(f"{name}: supermarket {s['supermarket']}, forest {s['forest']}, rail {s['rail']}", flush=True)
+            old = out["districts"].get(name)
+            if old and old.get("forest") and not new.get("forest"):
+                print(f"{name}: new result lost its forest – keeping previous data", flush=True)
+                skipped.append(name)
+                continue
+            out["districts"][name] = new
+            done += 1
+            print(f"{name}: supermarket {new['supermarket']}, forest {new['forest']}, rail {new['rail']}", flush=True)
             out["source"] = (
                 "OpenStreetMap via Overpass API (© OpenStreetMap contributors, ODbL). Distances are straight-line"
                 f" from the approximate district centre, read {date.today().isoformat()}."
             )
-            out_path.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"wrote {out_path.relative_to(ROOT)}")
+            tmp = out_path.with_suffix(".json.tmp")
+            tmp.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            os.replace(tmp, out_path)
+    print(
+        f"updated {done} districts"
+        + (f"; kept previous data for {len(skipped)}: {', '.join(skipped)}" if skipped else "")
+    )
+    if skipped:
+        print(f"::warning::amenities: kept previous data for {len(skipped)} districts")
 
 
 if __name__ == "__main__":

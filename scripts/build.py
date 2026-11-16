@@ -56,6 +56,17 @@ CSV_FIELDS = [
 ]
 
 
+def optional_json(path: Path) -> Any:
+    """Generated data files are optional: a missing or broken one is skipped with a warning, never fatal."""
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except ValueError as e:
+        print(f"::warning::{path.name} is unreadable ({e}); building without it")
+        return None
+
+
 def load(name: str) -> Any:
     return json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
 
@@ -86,10 +97,9 @@ SHOW_GONE_DAYS = 14
 
 def feed_payload(listings: list[dict[str, Any]], market: dict[str, Any]) -> dict[str, Any] | None:
     """Offers for offers.html: one card per home (duplicates across portals merged), plus derived figures."""
-    path = ROOT / "data" / "feed.json"
-    if not path.exists():
+    feed = optional_json(ROOT / "data" / "feed.json")
+    if feed is None:
         return None
-    feed = json.loads(path.read_text(encoding="utf-8"))
     config = load("feed_config.json")
     scores: dict[str, float] = config.get("location_score", {})
     updated = feed["updated"]
@@ -162,7 +172,7 @@ def shared() -> dict[str, Any]:
     amenities_path = ROOT / "data" / "amenities.json"
     return {
         "criteria": load("criteria.json"),
-        "amenities": json.loads(amenities_path.read_text(encoding="utf-8")) if amenities_path.exists() else None,
+        "amenities": optional_json(amenities_path),
         "districts": {n: {"lat": d["lat"], "lon": d["lon"]} for n, d in market["districts"].items()},
     }
 
@@ -173,10 +183,10 @@ def attach_feed_photos(listings: list[dict[str, Any]]) -> None:
     Same home = same district, living area within 1 m², asking price within 3 %. ImmoScout24 pages can't be
     fetched, but many of those homes are cross-listed on Immowelt or Kleinanzeigen.
     """
-    path = ROOT / "data" / "feed.json"
-    if not path.exists():
+    feed = optional_json(ROOT / "data" / "feed.json")
+    if feed is None:
         return
-    offers = [o for o in json.loads(path.read_text(encoding="utf-8"))["offers"].values() if o.get("active")]
+    offers = [o for o in feed["offers"].values() if o.get("active")]
     for row in listings:
         size, price = row.get("size_m2"), row.get("asking")
         if not size or not price:

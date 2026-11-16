@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -21,9 +22,16 @@ def load(path: Path) -> FeedDict:
     return {"updated": None, "runs": [], "offers": {}}
 
 
+def write_atomic(path: Path, text: str) -> None:
+    """Write via a temp file + rename, so a killed run never leaves a half-written file."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
+
+
 def save(feed: FeedDict, path: Path) -> None:
     feed["offers"] = dict(sorted(feed["offers"].items()))
-    path.write_text(json.dumps(feed, ensure_ascii=False, indent=1, sort_keys=False) + "\n", encoding="utf-8")
+    write_atomic(path, json.dumps(feed, ensure_ascii=False, indent=1, sort_keys=False) + "\n")
 
 
 def keep(offer: Offer, config: dict[str, Any]) -> bool:

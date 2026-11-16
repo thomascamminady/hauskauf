@@ -325,3 +325,62 @@ def test_filters_apply_to_stored_offers_and_same_portal_duplicates() -> None:
     feed["offers"]["kleinanzeigen:a"]["title"] = "Doppelhauspartner gesucht"
     store.merge(feed, [], "2026-11-16", {})
     assert "kleinanzeigen:a" not in feed["offers"]
+
+
+# --- robustness: a stalling or broken portal never stops the run ---------------------------------
+
+
+class SlowSource:
+    """Every page links to a new page – an endless crawl unless something stops it."""
+
+    name = "kleinanzeigen"
+    label = "Slow"
+
+    def seeds(self) -> list[str]:
+        return ["p0"]
+
+    def parse(self, html: str, url: str) -> Page:
+        if url.startswith("x"):
+            raise ValueError("markup changed")
+        n = int(url[1:])
+        return Page(offers=[_offer(url, 400000)], follow=[f"p{n + 1}", f"x{n}"])
+
+
+def test_crawl_stops_on_time_budget_and_survives_parse_errors() -> None:
+    t = [0.0]
+
+    def clock() -> float:
+        t[0] += 10
+        return t[0]
+
+    res = crawl(SlowSource(), lambda u: u, max_requests=1000, budget_s=55, clock=clock)
+    assert not res.complete and not res.ok
+    assert any("time budget" in e for e in res.errors) and any("parse failed" in e for e in res.errors)
+    assert res.offers  # what it found before stopping is kept
+
+
+def test_crawl_stops_on_page_cap() -> None:
+    res = crawl(SlowSource(), lambda u: u, max_requests=4)
+    assert res.requests == 4 and not res.complete and any("page cap" in e for e in res.errors)
+
+
+def test_incomplete_crawl_marks_nothing_gone() -> None:
+    feed = store.load(Path("/nonexistent"))
+    store.merge(feed, [CrawlResult("kleinanzeigen", [_offer("a", 500000), _offer("b", 450000)], 1)], "2026-11-15", {})
+    partial = CrawlResult("kleinanzeigen", [_offer("a", 500000)], 3, ["stopped: time budget"], complete=False)
+    stats = store.merge(feed, [partial], "2026-11-17", {})
+    assert stats["gone"] == 0 and feed["offers"]["kleinanzeigen:b"]["active"] is True
+
+
+def test_save_is_atomic(tmp_path: Path) -> None:
+    p = tmp_path / "feed.json"
+    store.save({"updated": "x", "runs": [], "offers": {"b": {}, "a": {}}}, p)
+    assert list(store.load(p)["offers"]) == ["a", "b"] and not list(tmp_path.glob("*.tmp"))
+
+
+def test_build_skips_broken_data_file(tmp_path: Path) -> None:
+    import build
+
+    bad = tmp_path / "feed.json"
+    bad.write_text("{not json", encoding="utf-8")
+    assert build.optional_json(bad) is None and build.optional_json(tmp_path / "missing.json") is None

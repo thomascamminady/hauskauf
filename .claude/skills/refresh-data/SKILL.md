@@ -39,6 +39,11 @@ uv run scripts/build.py
 uv run pytest -q && uv run ruff check scripts tests && uv run ty check scripts tests
 ```
 
+Everything is built to finish even if one part stalls: each portal has a 10-minute budget (`--budget`), a
+portal that fails or stops early is skipped and marks nothing as gone, the feed is saved after every portal,
+OpenStreetMap has a 25-minute budget and keeps old data for districts it couldn't fetch, and the workflow builds
+and commits whatever finished. Look for `::warning::` lines / annotations to see what was skipped.
+
 ## 3. Sanity-check before publishing
 
 - Scrape summary: every portal `0 errors` (or only 404s past the last page); offers per portal roughly as before

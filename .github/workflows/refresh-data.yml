@@ -21,29 +21,47 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
+    # Every step is time-boxed and allowed to fail on its own: whatever finished still gets built and committed.
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
-      - name: Tests
+      - name: Tests (warn only)
+        timeout-minutes: 5
+        continue-on-error: true
         run: uv run pytest -q
       - name: Scrape portals
-        run: uv run scripts/scrape.py
+        timeout-minutes: 35 # 3 portals × 10 min budget each, saved after every portal
+        continue-on-error: true
+        run: uv run scripts/scrape.py --budget=600
       - name: Neighbourhood facts (on request, or on the 1st of the month)
-        if: ${{ inputs.amenities || github.event_name == 'schedule' }}
+        if: ${{ !cancelled() && (inputs.amenities || github.event_name == 'schedule') }}
+        timeout-minutes: 30
+        continue-on-error: true
         run: |
           if [ "${{ inputs.amenities }}" = "true" ] || [ "$(date -u +%d)" = "01" ]; then
-            uv run scripts/amenities.py --refresh || echo "::warning::amenities refresh failed, keeping old data"
+            uv run scripts/amenities.py --refresh --budget=1500
           else
             echo "not the 1st – skipped"
           fi
       - name: Build pages
+        if: ${{ !cancelled() }}
+        timeout-minutes: 5
+        continue-on-error: true
         run: uv run scripts/build.py
-      - name: Commit if changed
+      - name: Commit and push whatever changed
+        if: ${{ !cancelled() }}
+        timeout-minutes: 5
         run: |
+          rm -f data/*.json.tmp
           git config user.name "thomascamminady"
           git config user.email "24543638+thomascamminady@users.noreply.github.com"
           git add data/feed.json data/amenities.json offers.html overview.html index.html data/listings.csv
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "Refresh data $(date -u +%F)"
-          git push
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "push rejected – rebasing on the latest main and retrying ($i/3)"
+            git pull --rebase -X theirs || { git rebase --abort; git pull --no-rebase -X ours --no-edit; }
+          done
+          echo "::error::could not push after 3 tries"; exit 1
