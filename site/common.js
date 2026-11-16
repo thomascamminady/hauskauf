@@ -112,5 +112,20 @@ const QC = (() => {
     dlg.showModal();
   }
   document.addEventListener("click", ev => { const b = ev.target.closest("button.crit"); if (b) { ev.preventDefault(); ev.stopPropagation(); explain(b.dataset.crit); } }, true);
-  return {rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
+  // Small OpenStreetMap snapshot centred on a district with a circle around it – used where there's no photo.
+  // Homes are only known at district level, so the circle marks the area, not the house.
+  function districtMap(lat, lon, label, {zoom = 13, radiusM = 800, cols = 5, rows = 3} = {}) {
+    if (lat == null || lon == null) return "";
+    const n = 2 ** zoom, x = (lon + 180) / 360 * n, lr = lat * Math.PI / 180;
+    const y = (1 - Math.log(Math.tan(lr) + 1 / Math.cos(lr)) / Math.PI) / 2 * n;
+    const tx = Math.floor(x), ty = Math.floor(y), hx = Math.floor(cols / 2), hy = Math.floor(rows / 2);
+    const offX = (hx + x - tx) * 256, offY = (hy + y - ty) * 256;
+    const rPx = radiusM / (156543.03 * Math.cos(lr) / n);
+    let tiles = "";
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
+      tiles += `<img src="https://tile.openstreetmap.org/${zoom}/${tx - hx + i}/${ty - hy + j}.png" style="left:${i * 256}px;top:${j * 256}px" alt="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">`;
+    return `<div class="dmap" title="Approximate area: ${e(label || "")}"><div class="dmap-in" style="transform:translate(${-offX}px,${-offY}px)">${tiles}</div>
+      <span class="dmap-ring" style="width:${2 * rPx}px;height:${2 * rPx}px"></span>${label ? `<span class="dmap-label">${e(label)}</span>` : ""}<span class="dmap-attr">© OpenStreetMap</span></div>`;
+  }
+  return {districtMap, rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
 })();

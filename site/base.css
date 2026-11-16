@@ -101,6 +101,7 @@ nav.sticky .navtabs a.tab:not(.on):hover { background: var(--surface); }
 .form { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 .filters { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: end; }
 .form label, .filters label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
+.filters:not(.showadv) .adv { display: none !important; }
 .filters label.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 6px; }
 .form input, .form select, .filters input:not([type=checkbox]), .filters select {
   font: inherit; font-size: 14px; width: 100%; padding: 6px 8px; color: var(--text); background: var(--surface);
@@ -159,6 +160,17 @@ dialog[open] { animation: pop .16s ease-out; }
 .homecell { display: flex; gap: 10px; align-items: flex-start; }
 .thumb-s { display: block; flex: none; width: 64px; height: 48px; object-fit: cover; border-radius: var(--radius-s); background: var(--surface-2); }
 
+/* district map in place of a photo */
+.dmap { position: absolute; inset: 0; overflow: hidden; background: #e8e6df; }
+.dmap-in { position: absolute; left: 50%; top: 50%; }
+.dmap-in img { position: absolute; width: 256px; height: 256px; max-width: none; filter: saturate(.75); }
+.dmap-ring { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 3px solid var(--accent); border-radius: 50%; background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.dmap-label { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); padding: 2px 9px; font-size: 12.5px; font-weight: 650; background: var(--surface); color: var(--text); border-radius: 99px; box-shadow: 0 1px 3px rgb(0 0 0 / .2); white-space: nowrap; }
+.dmap-attr { position: absolute; right: 4px; bottom: 2px; font-size: 9.5px; color: #555; background: rgb(255 255 255 / .7); padding: 0 3px; }
+.thumb-s.mapthumb { position: relative; overflow: hidden; }
+.thumb-s.mapthumb .dmap-label, .thumb-s.mapthumb .dmap-attr { display: none; }
+.thumb-s.mapthumb .dmap-ring { border-width: 2px; }
+
 /* ---------- criteria & weights ---------- */
 button.crit { padding: 0; font: inherit; text-align: left; color: var(--accent); background: none; border: 0; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); cursor: pointer; }
 button.crit:hover { color: var(--text); border-bottom-color: var(--text); }
@@ -202,7 +214,7 @@ dialog.critdlg { width: min(760px, 94vw); }
 #rank-table td:nth-child(2) { min-width: 220px; }
 .mv { font-size: 11px; font-weight: 650; }
 .listing { margin-top: 16px; }
-.listing .hero { display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
+.listing .hero { position: relative; overflow: hidden; display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
 .listing .head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; justify-content: space-between; }
 .listing .head h3 { margin: 0; font-size: 18px; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 6px 16px; margin: 10px 0; font-size: 14px; }
@@ -211,6 +223,18 @@ dialog.critdlg { width: min(760px, 94vw); }
 .cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
 .verdict { margin-top: 10px; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; }
 .remember { font-size: 13px; color: var(--text-2); }
+.keyfacts { margin: 8px 0 0; font-size: 14px; color: var(--text-2); }
+details.sect { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+details.sect > summary { list-style: none; display: flex; align-items: center; gap: 8px; color: var(--text); }
+details.sect > summary::-webkit-details-marker { display: none; }
+details.sect > summary::before { content: "▸"; color: var(--text-3); transition: transform .15s; }
+details.sect[open] > summary::before { transform: rotate(90deg); }
+details.sect > summary h3 { margin: 0; font-size: 16px; }
+details.sect[open] > summary { margin-bottom: 12px; }
+.finetune { margin-top: 4px; } .finetune > summary { font-size: 14px; margin-bottom: 8px; }
+details.more { margin-top: 8px; border-top: 1px solid var(--grid); padding-top: 8px; }
+details.more > summary { font-size: 14px; }
+details.more[open] > summary { margin-bottom: 8px; }
 .buygrid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 18px 28px; margin-top: 10px; }
 .buyin fieldset { margin: 0 0 12px; padding: 0; border: 0; }
 .buyin legend { padding: 0; margin-bottom: 6px; font-size: 12px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
@@ -219,6 +243,17 @@ dialog.critdlg { width: min(760px, 94vw); }
 .buyout h4 { margin: 0 0 6px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
 .buyout h4:not(:first-child) { margin-top: 14px; }
 .buyout .out { margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.monthly { margin-bottom: 4px; }
+.mtotal { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 12px; border-radius: 8px; background: var(--accent-soft); }
+.mtotal span { font-weight: 600; color: var(--text-2); } .mtotal b { font-size: 26px; letter-spacing: -.02em; }
+.mstack { display: flex; height: 10px; margin: 8px 0 4px; overflow: hidden; border-radius: 5px; background: var(--surface-2); }
+.mstack > span { height: 100%; border-right: 1px solid var(--surface); }
+.mtable { font-size: 13.5px; } .mtable td { padding: 3px 4px; border-bottom: 1px solid var(--grid); }
+.mtable tbody tr:hover { background: none; }
+.mtable i { display: inline-block; width: 9px; height: 9px; margin-right: 7px; border-radius: 2px; vertical-align: middle; }
+.mtable tr.sum td { font-weight: 600; border-bottom: 0; } .mtable tr.sum:first-of-type td { border-top: 2px solid var(--border); }
+.costline { margin: 8px 0 0; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-radius: 8px; }
+.costline b { font-size: 16px; }
 .warnline { margin: 0 0 12px; padding: 8px 12px; font-size: 13.5px; border-left: 3px solid var(--warn); background: color-mix(in srgb, var(--warn) 10%, transparent); border-radius: 0 6px 6px 0; }
 
 /* ---------- offers page ---------- */

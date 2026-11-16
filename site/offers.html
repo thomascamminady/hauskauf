@@ -26,16 +26,16 @@
       <label>Type<select id="f-kind"><option value="">Flats and houses</option><option value="flat">Flats</option><option value="house">Houses</option></select></label>
       <label>Min m²<input id="f-size" type="number" step="5"></label>
       <label>Max price (€k)<input id="f-price" type="number" step="25"></label>
-      <label>Min rooms<input id="f-rooms" type="number" step="1"></label>
+      <label class="adv">Min rooms<input id="f-rooms" type="number" step="1"></label>
       <label>Area<select id="f-area"><option value="">All of Bonn + Wachtberg</option><option value="4">Preferred (fit ≥ 4)</option><option value="3">Fit ≥ 3</option><option value="nohh">All except Heiderhof</option></select></label>
-      <label>Source<select id="f-src"><option value="">All portals</option></select></label>
-      <label>Seen<select id="f-new"><option value="">Any time</option><option value="1">New in latest run</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
+      <label class="adv">Source<select id="f-src"><option value="">All portals</option></select></label>
+      <label class="adv">Seen<select id="f-new"><option value="">Any time</option><option value="1">New in latest run</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
       <label>Sort<select id="f-sort">
         <option value="you">Your weights</option><option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
         <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Preferred area first</option><option value="hood">Best neighbourhood</option><option value="forest">Closest to forest</option></select></label>
-      <label class="check"><input type="checkbox" id="f-private"> Private sellers only</label>
-      <label class="check"><input type="checkbox" id="f-gone"> Show gone</label>
-      <label><button class="btn" id="f-reset" type="button">Reset filters</button></label>
+      <label class="check adv"><input type="checkbox" id="f-private"> Private sellers only</label>
+      <label class="check adv"><input type="checkbox" id="f-gone"> Show gone</label>
+      <label class="fbtns"><span><button class="btn" id="f-more" type="button">More filters</button> <button class="btn" id="f-reset" type="button">Reset</button></span></label>
     </div>
   </div>
   <div class="bar2"><span id="count"></span><span class="note">“Your weights” uses the sliders under <a href="overview.html#ranking">What matters to you</a> on the Shortlist page.</span><span class="note">Click an offer for a preview · ← → to step through · Esc to close</span></div>
@@ -90,7 +90,7 @@ const today = F.updated, dayDiff = d => Math.round((Date.parse(today) - Date.par
 $("#updated").textContent = F.updated; $("#offers-count").textContent = F.active;
 
 // ---------- filters (kept on this device) ----------
-const DEF = {q: "", kind: "", size: 100, price: 900, rooms: 3, area: "", src: "", new: "", sort: "you", private: false, gone: false};
+const DEF = {q: "", kind: "", size: 100, price: 900, rooms: "", area: "", src: "", new: "", sort: "you", private: false, gone: false};
 let S = Object.assign({}, DEF, store.get("offer-filters", {}));
 const FIELDS = {q: "f-q", kind: "f-kind", size: "f-size", price: "f-price", rooms: "f-rooms", area: "f-area", src: "f-src", new: "f-new", sort: "f-sort", private: "f-private", gone: "f-gone"};
 F.sources.forEach(s => $("#f-src").add(new Option(s.label, s.name)));
@@ -102,6 +102,7 @@ for (const [k, id] of Object.entries(FIELDS)) {
     store.set("offer-filters", S); render();
   });
 }
+$("#f-more").onclick = () => { const on = $("#filters").classList.toggle("showadv"); $("#f-more").textContent = on ? "Fewer filters" : "More filters"; };
 $("#f-reset").onclick = () => { S = Object.assign({}, DEF); store.set("offer-filters", S); syncInputs(); render(); };
 
 function visible() {
@@ -140,6 +141,7 @@ function badges(o) {
 }
 const vsTxt = o => o.vs_district == null ? "" : `<span class="${o.vs_district > 0 ? "neg" : "pos"}">${o.vs_district > 0 ? "+" : ""}${o.vs_district}%</span> vs district`;
 const facts = o => [o.size_m2 ? `${o.size_m2.toLocaleString("en-US")} m²` : null, o.rooms ? `${o.rooms} rooms` : null, o.eur_m2 ? `${fmtE(o.eur_m2)}/m²` : null].filter(Boolean).join(" · ");
+const areaMap = o => { const d = DATA.districts[o.district]; return d ? QC.districtMap(d.lat, d.lon, `${o.area} – approximate area`) : `<div class="dmap nomap"><span class="dmap-label">${esc(o.area)} · ${esc(o.zip ?? "")} – no photo</span></div>`; };
 const img = o => o.image ? `background-image:url('${esc(o.image)}')` : "";
 let CUR = [];
 function render() {
@@ -147,7 +149,7 @@ function render() {
   $("#count").textContent = `${CUR.length} of ${OFFERS.filter(o => o.active).length} offers`;
   $("#navinfo").textContent = `${CUR.length} shown`;
   $("#offers").innerHTML = CUR.length ? CUR.map(o => `<article class="offer${o.active ? "" : " gone"}" data-k="${esc(o.key)}">
-      <div class="thumb" style="${img(o)}"><div class="badges">${badges(o)}</div></div>
+      <div class="thumb" style="${img(o)}">${o.image ? "" : areaMap(o)}<div class="badges">${badges(o)}</div></div>
       <div class="body"><div class="price">${o.price ? fmtE(o.price) : "Price on request"}</div>
         <div class="facts1">${facts(o)}</div>
         <div class="where">${esc(o.area)} ${o.zip ? `· ${esc(o.zip)}` : ""} · ${o.kind === "house" ? "House" : "Flat"}</div>
@@ -173,6 +175,8 @@ function showPreview() {
   if (!o) { if (pv.open) pv.close(); return; }
   const i = CUR.findIndex(x => x.key === key);
   $("#pv-img").style.backgroundImage = o.image ? `url('${o.image.replace(/'/g, "%27")}')` : "";
+  $("#pv-img").querySelector(".dmap")?.remove();
+  if (!o.image) $("#pv-img").insertAdjacentHTML("afterbegin", areaMap(o));
   $("#pv-prev").style.visibility = i > 0 ? "visible" : "hidden"; $("#pv-next").style.visibility = i >= 0 && i < CUR.length - 1 ? "visible" : "hidden";
   const hist = (o.price_history || []).map(([d, p]) => `${esc(d)}: ${fmtE(p)}`).join(" → ");
   const rows = [["Price", o.price ? fmtE(o.price) : "on request"], ["Living area", o.size_m2 ? o.size_m2 + " m²" : "–"], ["Rooms", o.rooms ?? "–"],
@@ -225,6 +229,7 @@ $("#runs").innerHTML = `<thead><tr><th>Date</th><th>Portal</th><th>Status</th><t
 
 window.addEventListener("scroll", () => $("#totop").classList.toggle("show", window.scrollY > 600), {passive: true});
 $("#totop").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+if (["rooms", "src", "new", "private", "gone"].some(k => S[k] !== DEF[k])) { $("#filters").classList.add("showadv"); $("#f-more").textContent = "Fewer filters"; }
 syncInputs(); render(); showPreview();
 </script>
 </body>

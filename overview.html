@@ -770,6 +770,7 @@ nav.sticky .navtabs a.tab:not(.on):hover { background: var(--surface); }
 .form { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 .filters { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: end; }
 .form label, .filters label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
+.filters:not(.showadv) .adv { display: none !important; }
 .filters label.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 6px; }
 .form input, .form select, .filters input:not([type=checkbox]), .filters select {
   font: inherit; font-size: 14px; width: 100%; padding: 6px 8px; color: var(--text); background: var(--surface);
@@ -828,6 +829,17 @@ dialog[open] { animation: pop .16s ease-out; }
 .homecell { display: flex; gap: 10px; align-items: flex-start; }
 .thumb-s { display: block; flex: none; width: 64px; height: 48px; object-fit: cover; border-radius: var(--radius-s); background: var(--surface-2); }
 
+/* district map in place of a photo */
+.dmap { position: absolute; inset: 0; overflow: hidden; background: #e8e6df; }
+.dmap-in { position: absolute; left: 50%; top: 50%; }
+.dmap-in img { position: absolute; width: 256px; height: 256px; max-width: none; filter: saturate(.75); }
+.dmap-ring { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 3px solid var(--accent); border-radius: 50%; background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.dmap-label { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); padding: 2px 9px; font-size: 12.5px; font-weight: 650; background: var(--surface); color: var(--text); border-radius: 99px; box-shadow: 0 1px 3px rgb(0 0 0 / .2); white-space: nowrap; }
+.dmap-attr { position: absolute; right: 4px; bottom: 2px; font-size: 9.5px; color: #555; background: rgb(255 255 255 / .7); padding: 0 3px; }
+.thumb-s.mapthumb { position: relative; overflow: hidden; }
+.thumb-s.mapthumb .dmap-label, .thumb-s.mapthumb .dmap-attr { display: none; }
+.thumb-s.mapthumb .dmap-ring { border-width: 2px; }
+
 /* ---------- criteria & weights ---------- */
 button.crit { padding: 0; font: inherit; text-align: left; color: var(--accent); background: none; border: 0; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); cursor: pointer; }
 button.crit:hover { color: var(--text); border-bottom-color: var(--text); }
@@ -871,7 +883,7 @@ dialog.critdlg { width: min(760px, 94vw); }
 #rank-table td:nth-child(2) { min-width: 220px; }
 .mv { font-size: 11px; font-weight: 650; }
 .listing { margin-top: 16px; }
-.listing .hero { display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
+.listing .hero { position: relative; overflow: hidden; display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
 .listing .head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; justify-content: space-between; }
 .listing .head h3 { margin: 0; font-size: 18px; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 6px 16px; margin: 10px 0; font-size: 14px; }
@@ -880,6 +892,18 @@ dialog.critdlg { width: min(760px, 94vw); }
 .cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
 .verdict { margin-top: 10px; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; }
 .remember { font-size: 13px; color: var(--text-2); }
+.keyfacts { margin: 8px 0 0; font-size: 14px; color: var(--text-2); }
+details.sect { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+details.sect > summary { list-style: none; display: flex; align-items: center; gap: 8px; color: var(--text); }
+details.sect > summary::-webkit-details-marker { display: none; }
+details.sect > summary::before { content: "▸"; color: var(--text-3); transition: transform .15s; }
+details.sect[open] > summary::before { transform: rotate(90deg); }
+details.sect > summary h3 { margin: 0; font-size: 16px; }
+details.sect[open] > summary { margin-bottom: 12px; }
+.finetune { margin-top: 4px; } .finetune > summary { font-size: 14px; margin-bottom: 8px; }
+details.more { margin-top: 8px; border-top: 1px solid var(--grid); padding-top: 8px; }
+details.more > summary { font-size: 14px; }
+details.more[open] > summary { margin-bottom: 8px; }
 .buygrid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 18px 28px; margin-top: 10px; }
 .buyin fieldset { margin: 0 0 12px; padding: 0; border: 0; }
 .buyin legend { padding: 0; margin-bottom: 6px; font-size: 12px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
@@ -888,6 +912,17 @@ dialog.critdlg { width: min(760px, 94vw); }
 .buyout h4 { margin: 0 0 6px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
 .buyout h4:not(:first-child) { margin-top: 14px; }
 .buyout .out { margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.monthly { margin-bottom: 4px; }
+.mtotal { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 12px; border-radius: 8px; background: var(--accent-soft); }
+.mtotal span { font-weight: 600; color: var(--text-2); } .mtotal b { font-size: 26px; letter-spacing: -.02em; }
+.mstack { display: flex; height: 10px; margin: 8px 0 4px; overflow: hidden; border-radius: 5px; background: var(--surface-2); }
+.mstack > span { height: 100%; border-right: 1px solid var(--surface); }
+.mtable { font-size: 13.5px; } .mtable td { padding: 3px 4px; border-bottom: 1px solid var(--grid); }
+.mtable tbody tr:hover { background: none; }
+.mtable i { display: inline-block; width: 9px; height: 9px; margin-right: 7px; border-radius: 2px; vertical-align: middle; }
+.mtable tr.sum td { font-weight: 600; border-bottom: 0; } .mtable tr.sum:first-of-type td { border-top: 2px solid var(--border); }
+.costline { margin: 8px 0 0; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-radius: 8px; }
+.costline b { font-size: 16px; }
 .warnline { margin: 0 0 12px; padding: 8px 12px; font-size: 13.5px; border-left: 3px solid var(--warn); background: color-mix(in srgb, var(--warn) 10%, transparent); border-radius: 0 6px 6px 0; }
 
 /* ---------- offers page ---------- */
@@ -956,8 +991,7 @@ dialog.pv { width: min(860px, 94vw); }
 </div></header>
 <nav class="sticky"><div class="wrap">
   <span class="navtabs"><a href="overview.html" class="tab on">Shortlist</a><a href="offers.html" class="tab">All offers<span class="count" id="offers-count"></span></a></span>
-  <a href="#ranking">Ranking</a><a href="#criteria">What counts</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#hoods">Neighbourhoods</a><a href="#market">Market prices</a>
-  <a href="#calc">Calculators</a><a href="#details">Listings</a><a href="#screened">Screened</a><a href="#checklist">Checklist</a><a href="#log">Log</a><a href="#method">Method</a>
+  <a href="#ranking">Ranking</a><a href="#value">Cost vs quality</a><a href="#map-sec">Map</a><a href="#details">Homes</a><a href="#calc">Calculator</a><a href="#more">More</a>
 </div></nav>
 <main><div class="wrap">
 
@@ -972,19 +1006,13 @@ dialog.pv { width: min(860px, 94vw); }
       <div class="whead"><h3>What matters to you</h3><span class="note">Drag a slider or pick a preset – the ranking, chart and map update instantly. Saved on this device.</span></div>
       <div class="presets" id="presets"></div>
       <div class="moneyw" id="money-w"></div>
-      <div class="wgroups" id="weights"></div>
+      <details class="finetune"><summary>Fine-tune the 14 criteria</summary><div class="wgroups" id="weights"></div></details>
     </div>
     <div class="tablewrap"><table id="rank-table"></table></div>
     <div class="legend"><span><i style="background:var(--text-3)"></i>Money</span><span><i style="background:var(--flat)"></i>The home</span><span><i style="background:var(--renovation)"></i>Neighbourhood</span><span><i style="background:var(--warn)"></i>Risk</span><span class="note">Score bar = where the points come from (hover for the breakdown). ▲▼ = places moved versus the default weights.</span></div>
-    <p class="note">Click a column header to sort. “Std. monthly” = running costs + mortgage if 70% of the all-in cost is borrowed at 4.15% with 3% repayment (a neutral standard, not anyone's real financing). Range = worst/best of 9 market scenarios.</p>
+    <p class="note">Click a column header to sort. <b>Monthly</b> = everything you'd pay per month – mortgage (70 % of the all-in cost at 4.15 %, 3 % repayment) plus running costs (service charge, heating, tax, insurance, repairs reserve). For your own down payment use “Calculate”. Range under “20 yrs” = worst/best of 9 market scenarios.</p>
   </div>
   <div class="kpis" id="kpis"></div>
-</section>
-
-<section id="criteria">
-  <h2>What counts</h2>
-  <p class="lead">The quality score is built from these criteria. Click any of them for the full scale, the data behind it and how every shortlisted home scores. Change the weights above under “Adjust what counts”.</p>
-  <div class="critgrid" id="crit-cards"></div>
 </section>
 
 <section id="value">
@@ -1007,31 +1035,21 @@ dialog.pv { width: min(860px, 94vw); }
   </div>
 </section>
 
-<section id="hoods">
-  <h2>Neighbourhoods</h2>
-  <p class="lead" id="hoods-lead"></p>
-  <div class="tablewrap"><table id="hoods-table"></table></div>
-</section>
-
-<section id="market">
-  <h2>Market prices by district</h2>
-  <p class="lead" id="market-source"></p>
-  <div class="card">
-    <div class="seg" id="mk-kind"><button data-k="flat" class="on">Flats</button><button data-k="house">Houses</button></div>
-    <div class="chartbox" id="market-chart" style="margin-top:10px"></div>
-    <details style="margin-top:10px"><summary>Table</summary><div class="tablewrap" style="margin-top:8px"><table id="market-table"></table></div></details>
-  </div>
+<section id="details">
+  <h2>Homes</h2>
+  <p class="lead">Every modelled home in the current ranking order: monthly cost, verdict, and the details folded underneath.</p>
+  <div id="listing-cards"></div>
 </section>
 
 <section id="calc">
-  <h2>Calculators</h2>
+  <h2>Calculator</h2>
   <p class="lead">All calculations run locally in your browser.</p>
   <label class="remember"><input type="checkbox" id="remember"> Remember my calculator inputs on this device</label>
   <button class="btn" id="reset-inputs" style="margin-left:8px">Reset to defaults</button>
   <div class="banner" id="calc-for" hidden></div>
 
-  <div class="card buycalc" style="margin-top:12px"><h3>1 · Purchase &amp; mortgage</h3>
-    <p class="note">Enter the price and your down payment – the loan is what's left of the all-in cost. The rate follows the loan-to-value (typical 10-year rates; switch to “manual” for your bank's offer).</p>
+  <div class="card buycalc" style="margin-top:12px"><h3>1 · Purchase, mortgage &amp; monthly cost</h3>
+    <p class="note">Enter the price and your down payment – the loan is what's left of the all-in cost. The rate follows the loan-to-value (typical 10-year rates; switch to “manual” for your bank's offer). Running costs are pre-filled from the listing when you come from “Calculate”; hover a field for what it covers.</p>
     <div class="buygrid">
       <div class="buyin" id="f-buy"></div>
       <div class="buyout"><div id="o-buy"></div><div class="chartbox" id="c-mort"></div></div>
@@ -1046,21 +1064,31 @@ dialog.pv { width: min(860px, 94vw); }
     <div class="form" id="f-m2"></div><div class="out" id="o-m2"></div></div>
 </section>
 
-<section id="details">
-  <h2>Listings in detail</h2>
-  <p class="lead">Every home I modelled, in the current ranking order. Links go to the original listing.</p>
-  <div id="listing-cards"></div>
-</section>
-
-<section id="screened">
-  <h2>Screened, not shortlisted</h2>
+<section id="more">
+  <h2>More</h2>
+  <p class="lead">Background: how the quality score works, district facts and prices, screened homes, checklists and the log.</p>
+<details class="sect" id="criteria"><summary><h3>What counts – the 14 quality criteria</h3></summary>
+  <p class="lead">The quality score is built from these criteria. Click any of them for the full scale, the data behind it and how every shortlisted home scores. Change the weights above under “Adjust what counts”.</p>
+  <div class="critgrid" id="crit-cards"></div>
+</details>
+<details class="sect" id="hoods"><summary><h3>Neighbourhoods – district facts from OpenStreetMap</h3></summary>
+  <p class="lead" id="hoods-lead"></p>
+  <div class="tablewrap"><table id="hoods-table"></table></div>
+</details>
+<details class="sect" id="market"><summary><h3>Market prices by district</h3></summary>
+  <p class="lead" id="market-source"></p>
+  <div class="card">
+    <div class="seg" id="mk-kind"><button data-k="flat" class="on">Flats</button><button data-k="house">Houses</button></div>
+    <div class="chartbox" id="market-chart" style="margin-top:10px"></div>
+    <details style="margin-top:10px"><summary>Table</summary><div class="tablewrap" style="margin-top:8px"><table id="market-table"></table></div></details>
+  </div>
+</details>
+<details class="sect" id="screened"><summary><h3>Screened, not shortlisted</h3></summary>
   <div class="tablewrap"><table id="screened-table"></table></div>
   <h3>Investments and sold</h3>
   <div class="tablewrap"><table id="invest-table"></table></div>
-</section>
-
-<section id="checklist">
-  <h2>Checklist</h2>
+</details>
+<details class="sect" id="checklist"><summary><h3>Checklist</h3></summary>
   <div class="grid g3">
     <div class="card"><h3>Ask for before an offer</h3><ul>
       <li>Floor plan with areas, energy certificate</li>
@@ -1082,16 +1110,12 @@ dialog.pv { width: min(860px, 94vw); }
       <li>Buying a let flat to live in: notice periods 3–9 months, hardship objections, possible block after a condo split</li>
       <li>A building surveyor (~€1,000–1,500) pays for itself in negotiation</li></ul></div>
   </div>
-</section>
-
-<section id="log">
-  <h2>Log</h2>
+</details>
+<details class="sect" id="log"><summary><h3>Log</h3></summary>
   <p class="lead">Everything discussed while building this list (15 Nov 2026 unless noted).</p>
   <div class="tablewrap"><table id="log-table"></table></div>
-</section>
-
-<section id="method">
-  <h2>Method and assumptions</h2>
+</details>
+<details class="sect" id="method"><summary><h3>Method and assumptions</h3></summary>
   <div class="card">
     <ul>
       <li><b>Model:</b> monthly simulation over 25 years. Every option gets the same monthly budget and the same starting capital; housing costs come out of the budget and the rest is invested in a world index fund. Personal figures are kept private; only differences are shown here.</li>
@@ -1103,6 +1127,7 @@ dialog.pv { width: min(860px, 94vw); }
       <li><b>Not captured:</b> light, layout, neighbours, and how much extra space is worth to you – that is what the weights are for.</li>
     </ul>
   </div>
+</details>
 </section>
 
 <footer>Data collected from public listings on ImmoScout24, Immowelt, Kleinanzeigen, ohne-makler.net and broker sites. Listings change daily; always check the original. Not financial advice.</footer>
@@ -1231,7 +1256,22 @@ const QC = (() => {
     dlg.showModal();
   }
   document.addEventListener("click", ev => { const b = ev.target.closest("button.crit"); if (b) { ev.preventDefault(); ev.stopPropagation(); explain(b.dataset.crit); } }, true);
-  return {rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
+  // Small OpenStreetMap snapshot centred on a district with a circle around it – used where there's no photo.
+  // Homes are only known at district level, so the circle marks the area, not the house.
+  function districtMap(lat, lon, label, {zoom = 13, radiusM = 800, cols = 5, rows = 3} = {}) {
+    if (lat == null || lon == null) return "";
+    const n = 2 ** zoom, x = (lon + 180) / 360 * n, lr = lat * Math.PI / 180;
+    const y = (1 - Math.log(Math.tan(lr) + 1 / Math.cos(lr)) / Math.PI) / 2 * n;
+    const tx = Math.floor(x), ty = Math.floor(y), hx = Math.floor(cols / 2), hy = Math.floor(rows / 2);
+    const offX = (hx + x - tx) * 256, offY = (hy + y - ty) * 256;
+    const rPx = radiusM / (156543.03 * Math.cos(lr) / n);
+    let tiles = "";
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
+      tiles += `<img src="https://tile.openstreetmap.org/${zoom}/${tx - hx + i}/${ty - hy + j}.png" style="left:${i * 256}px;top:${j * 256}px" alt="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">`;
+    return `<div class="dmap" title="Approximate area: ${e(label || "")}"><div class="dmap-in" style="transform:translate(${-offX}px,${-offY}px)">${tiles}</div>
+      <span class="dmap-ring" style="width:${2 * rPx}px;height:${2 * rPx}px"></span>${label ? `<span class="dmap-label">${e(label)}</span>` : ""}<span class="dmap-attr">© OpenStreetMap</span></div>`;
+  }
+  return {districtMap, rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
 })();
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -1325,7 +1365,11 @@ function renderHoods() {
 }
 
 // ---------- photos (hotlinked from the portal; ImmoScout homes use their Immowelt/Kleinanzeigen copy) ----------
-const thumb = l => l.image ? `<img class="thumb-s" src="${esc(l.image)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : `<span class="thumb-s none"></span>`;
+const thumb = l => l.image ? `<img class="thumb-s" src="${esc(l.image)}" alt="" loading="lazy" referrerpolicy="no-referrer">`
+  : `<span class="thumb-s mapthumb" title="No photo – map of ${esc(l.district)}">${QC.districtMap(l.lat, l.lon, "", {zoom: 12, radiusM: 900, cols: 3, rows: 3})}</span>`;
+const hero = l => l.image
+  ? `<a class="hero" href="${esc((l.also_on || [])[0]?.url || l.url)}" target="_blank" rel="noopener" style="background-image:url('${esc(l.image)}')" title="Photo from the portal – opens the listing"></a>`
+  : `<div class="hero">${QC.districtMap(l.lat, l.lon, `${l.district} – approximate area, no photo available`)}</div>`;
 const alsoOn = l => (l.also_on || []).map(a => `<a class="btn" href="${esc(a.url)}" target="_blank" rel="noopener">Also on ${esc({immowelt: "Immowelt", kleinanzeigen: "Kleinanzeigen", ohnemakler: "ohne-makler"}[a.source] || a.source)} ↗</a>`).join("");
 
 // ---------- ranking table ----------
@@ -1342,10 +1386,9 @@ function stack(l) {
 function renderRanking() {
   const COLS = [
     ["rank", "#", r => "", true], ["title", "Home", null, false], ["district", "District", r => r.l.district, false],
-    ["asking", "Asking", r => r.l.asking, true], ["allin", "All-in", r => r.m.all_in, true], ["m2", "€/m²", r => r.m2, true],
-    ["std", "Std. monthly", r => r.m.std_monthly, true], ["money", "20 yrs vs ref.", r => r.m.vs_ref_20y, true],
+    ["asking", "Asking", r => r.l.asking, true], ["std", "Monthly", r => r.m.std_monthly, true], ["money", "20 yrs vs ref.", r => r.m.vs_ref_20y, true],
     ["q", "Quality", r => r.q, true], ["combined", "Score", r => r.c, true], ["links", "", null, false]];
-  if (DATA.private) COLS.splice(7, 0, ["mine", "My monthly", r => DATA.private.homes[r.l.id]?.monthly, true]);
+  if (DATA.private) COLS.splice(5, 0, ["mine", "My monthly", r => DATA.private.homes[r.l.id]?.monthly, true]);
   let rs = rows();
   const ranked = [...rs].sort((a, b) => b.c - a.c); ranked.forEach((r, i) => r.rank = i + 1);
   const col = COLS.find(c => c[0] === sortKey);
@@ -1356,7 +1399,7 @@ function renderRanking() {
     const m = r.m, v = m.vs_ref_20y, mine = DATA.private ? `<td class="num">${fmtE(DATA.private.homes[r.l.id]?.monthly)}</td>` : "";
     const mv = DEFAULT_RANK[r.l.id] - r.rank;
     return `<tr><td class="num">${r.rank}${mv ? `<br><span class="mv ${mv > 0 ? "pos" : "neg"}" title="vs default weights (#${DEFAULT_RANK[r.l.id]})">${mv > 0 ? "▲" : "▼"}${Math.abs(mv)}</span>` : ""}</td><td><div class="homecell">${thumb(r.l)}<div><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</div></div></td>
-      <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
+      <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td>
       <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
       <td class="num"><button class="qbtn" data-id="${r.l.id}" aria-expanded="${OPEN.has(r.l.id)}">${r.q.toFixed(1)} ${OPEN.has(r.l.id) ? "▴" : "▾"}</button></td><td class="num" style="min-width:130px">${r.c.toFixed(2)}${stack(r.l)}</td>
       <td style="white-space:nowrap"><a href="${esc(r.l.url)}" target="_blank" rel="noopener">${esc(r.l.portal)} ↗</a><br><a href="${calcLink(r.l)}" class="note">Calculate</a></td></tr>
@@ -1517,22 +1560,31 @@ function renderCards() {
       ["Built", esc(l.built)], ["Heating", esc(l.heating)], ["Energy", esc(l.energy)], ["Service charge", l.service_charge ? fmtE(l.service_charge) + "/mo" : "–"], ["Availability", esc(l.availability)],
       ["€/m²", fmtE(l.asking / l.size_m2)], ["First seen", esc(l.first_seen)]];
     const money = [["All-in (price + fees + works)", fmtE(m.all_in) + (m.works ? ` <span class="note">incl. works ${fmtK(m.works)}</span>` : "")], ["Model price", fmtE(m.model_price)],
-      ["Running costs", fmtE(m.running_month) + "/mo"], ["Std. monthly (70% financed)", fmtE(m.std_monthly)], ["20 yrs vs reference", l.id === "roettgener-maisonette" ? "reference" : `${fmtS(m.vs_ref_20y)} <span class="note">(${fmtS(m.vs_ref_min)} … ${fmtS(m.vs_ref_max)})</span>`],
+      ["Running costs", fmtE(m.running_month) + "/mo"], ["Monthly with a 70 % loan", fmtE(m.std_monthly)], ["20 yrs vs reference", l.id === "roettgener-maisonette" ? "reference" : `${fmtS(m.vs_ref_20y)} <span class="note">(${fmtS(m.vs_ref_min)} … ${fmtS(m.vs_ref_max)})</span>`],
       ["Owning vs renting it", fmtS(m.own_vs_rent_20y)]];
     if (m.offer) money.push(["At " + fmtK(m.offer), fmtS(m.vs_ref_at_offer) + " vs ref."]);
     if (m.vs_ref_no_kfw != null) money.push(["Without KfW loan", fmtS(m.vs_ref_no_kfw) + " vs ref."]);
     if (m.vs_ref_as_is != null) money.push(["Without heating fix", fmtS(m.vs_ref_as_is) + " vs ref."]);
     if (p) money.push(["My monthly (private)", fmtE(p.monthly)], ["My net worth 20 yrs (private)", fmtE(p.nw20)]);
     const hist = (l.price_history || []).map(h => `${esc(h.date)}: ${fmtK(h.price)}${h.note ? " – " + esc(h.note) : ""}`).join("<br>");
-
-    return `<div class="card listing" id="d-${l.id}">${l.image ? `<a class="hero" href="${esc((l.also_on || [])[0]?.url || l.url)}" target="_blank" rel="noopener" style="background-image:url('${esc(l.image)}')" title="Photo from the portal – opens the listing"></a>` : ""}<div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a>${alsoOn(l)}</div></div>
+    const key = [fmtE(l.asking), `${l.size_m2} m²`, `${l.rooms} rooms`, `${esc(l.baths)} bath`, `built ${esc(l.built)}`, esc(l.heating)].filter(Boolean).join(" · ");
+    const runFixed = m.running_assumed ?? null, runUpkeep = runFixed != null ? m.running_month - runFixed : null, mortgage = m.std_monthly - m.running_month;
+    const cost = `<div class="costline">≈ <b>${fmtE(m.std_monthly)}</b> per month with a standard 70 % loan
+      <span class="note">= mortgage ${fmtE(mortgage)} + running costs ${fmtE(m.running_month)}${runFixed != null ? ` (service charge, heating, tax, insurance ≈ ${fmtE(runFixed)} + repairs reserve ${fmtE(runUpkeep)})` : ""}.</span>
+      <a href="${calcLink(l)}">With your own down payment →</a></div>`;
+    return `<div class="card listing" id="d-${l.id}">${hero(l)}
+      <div class="head"><h3>#${i + 1} ${esc(l.title)}</h3><div class="linkrow"><span class="pill ${l.type}">${TYPE_LABEL[l.type]}</span><a class="btn" href="${calcLink(l)}">Calculate</a><a class="btn primary" href="${esc(l.url)}" target="_blank" rel="noopener">Open on ${esc(l.portal)} ↗</a>${alsoOn(l)}</div></div>
       <div class="note">${esc(l.district)}${l.area_note ? " · " + esc(l.area_note) : ""}</div>
-      <div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
-      <div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div>
-      <div class="cols3"><div><h4>Good</h4><ul>${l.highlights.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Risks</h4><ul>${l.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Check</h4><ul>${l.checks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
-      ${hist ? `<p class="note" style="margin:10px 0 0"><b>Price history:</b><br>${hist}</p>` : ""}
-      <details class="qdetails" open><summary>Quality <b>${r.q.toFixed(1)}</b> / 5 – how each criterion scores (click a name for its full scale)</summary>${QC.breakdownTable(SC[l.id], W)}</details>
-      <div class="verdict">${esc(l.verdict)}</div></div>`;
+      <p class="keyfacts">${key}</p>
+      ${cost}
+      <div class="verdict">${esc(l.verdict)}</div>
+      <details class="more"><summary>Good, risks and what to check</summary>
+        <div class="cols3"><div><h4>Good</h4><ul>${l.highlights.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Risks</h4><ul>${l.risks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h4>Check</h4><ul>${l.checks.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
+        ${hist ? `<p class="note"><b>Price history:</b><br>${hist}</p>` : ""}</details>
+      <details class="more qdetails"><summary>Quality <b>${r.q.toFixed(1)}</b> / 5 – score per criterion</summary>${QC.breakdownTable(SC[l.id], W)}</details>
+      <details class="more"><summary>Money: all-in cost and 20-year comparison</summary><div class="facts">${money.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div></details>
+      <details class="more"><summary>All facts</summary><div class="facts">${facts.map(([a, b]) => `<div><span>${a}</span>${b}</div>`).join("")}</div></details>
+    </div>`;
   }).join("");
 }
 
@@ -1549,14 +1601,16 @@ function renderOther() {
 // ---------- calculators ----------
 const DEF = {
   buy: {price: 550000, parking: 0, works: 0, broker: 3.57, tax: 6.5, notary: 2.0, down: 165000,
-        rateMode: "auto", rate: 4.25, repay: 3, fix: 10, refix: 4.75},
+        rateMode: "auto", rate: 4.25, repay: 3, fix: 10, refix: 4.75,
+        service: 400, heat: 150, power: 80, ptax: 35, insur: 15, repairs: 230},
   rvb: {price: 550000, fees: 12.07, works: 0, capital: 200000, reserve: 25000, budget: 4500, budgetGrowth: 2.5, rent: 1800, running: 400, upkeep: 0.8,
         rentGrowth: 3, priceGrowth: 3, inflation: 2.3, etf: 6.5, rate: 4.15, repay: 3, fix: 10, refix: 4.25, years: 20, sell: 4},
   m2: {price: 499000, size: 118, district: "Ippendorf", kind: "flat"},
 };
 const LABELS = {
   price: "Price (€)", broker: "Broker (%)", tax: "Transfer tax (%)", notary: "Notary + registry (%)", works: "Renovation (€)", parking: "Parking/garage (€)",
-  down: "Down payment (€)", rateMode: "Interest rate", loan: "Loan (€)", rate: "Rate, fixed period (%)", repay: "Initial repayment (%)", fix: "Fixed period (years)", refix: "Rate afterwards (%)",
+  down: "Down payment (€)", service: "Service charge / Hausgeld", heat: "Heating & hot water", power: "Household electricity",
+  ptax: "Property tax (Grundsteuer)", insur: "Insurance", repairs: "Repairs reserve", rateMode: "Interest rate", loan: "Loan (€)", rate: "Rate, fixed period (%)", repay: "Initial repayment (%)", fix: "Fixed period (years)", refix: "Rate afterwards (%)",
   fees: "Purchase fees (%)", capital: "Starting capital (€)", reserve: "Cash kept back (€)", budget: "Monthly budget (€)", budgetGrowth: "Budget growth (%/yr)",
   rent: "Rent of same home, cold (€/mo)", running: "Running costs (€/mo)", upkeep: "Upkeep (% of value/yr)", rentGrowth: "Rent growth (%/yr)", priceGrowth: "Price growth (%/yr)",
   inflation: "Inflation (%/yr)", etf: "Index fund return (%/yr)", years: "Years", sell: "Selling costs (%)", size: "Living area (m²)", district: "District", kind: "Type"};
@@ -1583,7 +1637,24 @@ function outs(id, items) { $("#" + id).innerHTML = items.map(([v, l]) => `<div><
 // ---------- 1 · purchase & mortgage (down payment in, loan out) ----------
 const LTV_RATES = [[60, 4.05], [70, 4.15], [80, 4.25], [90, 4.45], [100, 4.75], [Infinity, 5.25]];
 const ltvRate = ltv => LTV_RATES.find(([lim]) => ltv <= lim)[1];
-const BUY_GROUPS = [["The purchase", ["price", "parking", "works", "broker", "tax", "notary"]], ["Your money", ["down"]], ["The loan", ["rateMode", "rate", "repay", "fix", "refix"]]];
+const BUY_GROUPS = [["The purchase", ["price", "parking", "works", "broker", "tax", "notary"]], ["Your money", ["down"]], ["The loan", ["rateMode", "rate", "repay", "fix", "refix"]],
+  ["Running costs per month (€)", ["service", "heat", "power", "ptax", "insur", "repairs"]]];
+const HINTS = {
+  service: "Flats: the monthly Hausgeld from the listing. It usually covers building insurance, caretaker, common electricity, water and the repair reserve – and often the heating. Houses: 0.",
+  heat: "Gas/oil/district heat or heat-pump electricity for heating and hot water. Estimated from the energy figure × m². Set to 0 if the service charge already includes heating.",
+  power: "Your own electricity (household, not heating).",
+  ptax: "Grundsteuer, paid quarterly to the city – roughly €25–45/mo for a flat, €40–80 for a house in Bonn.",
+  insur: "Houses: building insurance (Wohngebäude) ~€40–70/mo. Flats: building insurance is in the Hausgeld; this is just contents insurance.",
+  repairs: "Money to set aside for repairs not covered by the service charge: flats ~0.5 %, houses ~0.8–1 % of the price per year.",
+  down: "Your own money going into the purchase. Fees (tax, notary, broker) are usually paid from it.",
+};
+const RUN_KEYS = ["service", "heat", "power", "ptax", "insur", "repairs"];
+// Heating estimate: energy figure (kWh/m²·yr) × living area × price per kWh of the heating type.
+function heatingEstimate(kwhM2, size, heating) {
+  const h = String(heating || "").toLowerCase();
+  const perKwh = /wärmepumpe|heat pump/.test(h) ? 0.10 : /electric|strom|elektro|nachtspeicher/.test(h) ? 0.33 : /oil|öl/.test(h) ? 0.11 : /district|fernwärme|chp/.test(h) ? 0.15 : 0.12;
+  return Math.round(((kwhM2 || 150) * (size || 120) * perKwh / 12) / 5) * 5;
+}
 function buyNumbers(c = IN.buy) {
   const base = c.price + c.parking, feePct = c.broker + c.tax + c.notary, fees = base * feePct / 100, allIn = base + fees + c.works;
   const loan = Math.max(0, allIn - c.down), ltv = base ? 100 * loan / base : 0;
@@ -1595,7 +1666,7 @@ function buildBuy() {
   for (const [title, keys] of BUY_GROUPS) {
     const g = document.createElement("fieldset"); g.innerHTML = `<legend>${title}</legend>`; const grid = document.createElement("div"); grid.className = "form"; g.appendChild(grid);
     for (const k of keys) {
-      const lab = document.createElement("label"); lab.textContent = LABELS[k] || k; lab.dataset.k = k;
+      const lab = document.createElement("label"); lab.textContent = LABELS[k] || k; lab.dataset.k = k; if (HINTS[k]) lab.title = HINTS[k];
       let inp;
       if (k === "rateMode") { inp = document.createElement("select"); inp.add(new Option("Auto from loan-to-value", "auto")); inp.add(new Option("Manual", "manual")); }
       else { inp = document.createElement("input"); inp.type = "number"; inp.step = "any"; if (["price", "parking", "works", "down"].includes(k)) inp.step = "1000"; }
@@ -1607,6 +1678,22 @@ function buildBuy() {
   }
   calcBuy();
 }
+// The headline: what living there costs every month, split into money gone and equity built.
+function monthlyBlock(r, n) {
+  const c = IN.buy, interest = n.loan * n.rate / 100 / 12, repay = Math.max(0, r.pay - interest);
+  const running = RUN_KEYS.reduce((t, k) => t + (+c[k] || 0), 0), total = r.pay + running, gone = interest + running;
+  const parts = [["Interest", interest, "--bad"], ["Repayment", repay, "--good"], ...RUN_KEYS.map((k, i) => [LABELS[k], +c[k] || 0, ["--warn", "--house", "--muted", "--text-3", "--text-2", "--renovation"][i]])].filter(p => p[1] > 0);
+  return `<div class="monthly">
+      <div class="mtotal"><span>Total per month</span><b>${fmtE(total)}</b></div>
+      <div class="mstack">${parts.map(([l, v, col]) => `<span title="${esc(l)}: ${fmtE(v)}" style="width:${(100 * v / total).toFixed(1)}%;background:var(${col})"></span>`).join("")}</div>
+      <table class="mtable"><tbody>
+        <tr><td><i style="background:var(--bad)"></i>Mortgage interest <span class="note">(month 1, falls over time)</span></td><td class="num">${fmtE(interest)}</td></tr>
+        <tr><td><i style="background:var(--good)"></i>Mortgage repayment <span class="note">(builds your equity)</span></td><td class="num">${fmtE(repay)}</td></tr>
+        ${RUN_KEYS.map((k, i) => `<tr><td><i style="background:var(${["--warn", "--house", "--muted", "--text-3", "--text-2", "--renovation"][i]})"></i><span title="${esc(HINTS[k] || "")}">${LABELS[k]}</span></td><td class="num">${fmtE(+c[k] || 0)}</td></tr>`).join("")}
+        <tr class="sum"><td>Money gone each month <span class="note">(interest + running costs)</span></td><td class="num">${fmtE(gone)}</td></tr>
+        <tr class="sum"><td>Builds equity <span class="note">(repayment)</span></td><td class="num">${fmtE(repay)}</td></tr>
+      </tbody></table></div>`;
+}
 function calcBuy() {
   const c = IN.buy, n = buyNumbers(), r = mortgage(n.loan, n.rate, c.repay, c.fix, c.refix);
   const rateInp = $('#f-buy label[data-k="rate"] input');
@@ -1617,7 +1704,7 @@ function calcBuy() {
   $("#o-buy").innerHTML = warn
     + group("Cost", [[fmtE(n.allIn), "All-in (price + fees + works)"], [`${fmtE(n.fees)}`, `Fees (${n.feePct.toFixed(2)}%): tax ${fmtE(n.base * c.tax / 100)} · notary ${fmtE(n.base * c.notary / 100)} · broker ${fmtE(n.base * c.broker / 100)}`]])
     + group("Financing", [[fmtE(n.loan), `Loan (down payment ${downPct.toFixed(0)}% of all-in)`], [n.ltv.toFixed(0) + "%", "Loan-to-value (loan ÷ price)"], [n.rate.toFixed(2) + "%", c.rateMode === "auto" ? "Rate for this loan-to-value" : "Your rate"]])
-    + group("Every month", [[fmtE(r.pay), "Mortgage payment"], [fmtE(n.loan * n.rate / 100 / 12), "of which interest in month 1"]])
+    + monthlyBlock(r, n)
     + group("Over time", [[fmtE(r.balFix), `Loan left after ${c.fix} yrs`], [fmtE(r.interestFix), `Interest paid in ${c.fix} yrs`], [(r.months / 12).toFixed(1) + " yrs", "Paid off after (same payment)"],
         [(shock >= 0 ? "+" : "−") + fmtE(Math.abs(shock)).slice(1) + "/mo", `If refinanced at ${c.refix}%`]]);
   lineChart($("#c-mort"), [{name: "Loan left", pts: r.series, color: css("--accent")}], {yfmt: v => "€" + Math.round(v / 1000) + "k", xlab: "Years", h: 220});
@@ -1702,8 +1789,10 @@ function lineChart(box, series, o) {
 // ---------- calculator presets from a link: #calc?price=…&size=…&kind=…&district=…&broker=… ----------
 function calcLink(l) {
   const m = DATA.model[l.id] || {};
+  const kwh = parseFloat(String(l.energy || "").replace(",", "."));
   const q = {price: l.asking, size: l.size_m2, kind: l.type === "flat" ? "flat" : "house", district: l.district, broker: l.broker_pct || 0,
-    works: m.works || 0, rent: m.rent_equivalent, running: m.running_month, title: l.title, url: l.url, back: "#d-" + l.id};
+    works: m.works || 0, rent: m.rent_equivalent, running: m.running_month, sc: l.service_charge, kwh: isNaN(kwh) ? "" : kwh, heating: l.heating,
+    upk: m.upkeep_pct, title: l.title, url: l.url, back: "#d-" + l.id};
   return "#calc?" + new URLSearchParams(Object.entries(q).filter(([, v]) => v != null && v !== "")).toString();
 }
 function applyCalcPreset() {
@@ -1716,6 +1805,13 @@ function applyCalcPreset() {
   const keep = {down: IN.buy.down, rateMode: IN.buy.rateMode, rate: IN.buy.rate, repay: IN.buy.repay, fix: IN.buy.fix, refix: IN.buy.refix};
   IN = JSON.parse(JSON.stringify(DEF));
   Object.assign(IN.buy, keep, {price, broker, works, parking: 0});
+  const isFlat = kind === "flat", sz = size || 120;
+  Object.assign(IN.buy, {
+    service: isFlat ? (num("sc") ?? Math.round(sz * 3.8 / 10) * 10) : 0,
+    heat: heatingEstimate(num("kwh"), sz, p.get("heating")),
+    power: 80, ptax: isFlat ? 35 : 55, insur: isFlat ? 10 : 50,
+    repairs: Math.round(price * (num("upk") ?? (isFlat ? 0.005 : 0.008)) / 12 / 10) * 10,
+  });
   const feePct = broker + IN.buy.tax + IN.buy.notary;
   const rentGuess = !num("rent") && size ? Math.round(size * 13 / 10) * 10 : null;
   Object.assign(IN.rvb, {rent: num("rent") ?? rentGuess ?? IN.rvb.rent, running: num("running") ?? IN.rvb.running});
@@ -1743,6 +1839,15 @@ function setupNav() {
   window.addEventListener("scroll", onScroll, {passive: true}); onScroll();
   $("#totop").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
 }
+// Links into a folded section (e.g. #criteria) unfold it first.
+function openTarget() {
+  const id = decodeURIComponent(location.hash.slice(1).split("?")[0]), el = id && document.getElementById(id);
+  const d = el && (el.tagName === "DETAILS" ? el : el.closest("details"));
+  if (d && !d.open) { d.open = true; requestAnimationFrame(() => el.scrollIntoView()); }
+}
+window.addEventListener("hashchange", openTarget);
+document.addEventListener("click", ev => { const a = ev.target.closest('a[href^="#"]'); if (a && a.getAttribute("href") === location.hash) openTarget(); });
+$("#market").addEventListener("toggle", () => { if ($("#market").open) renderMarket(); });
 function feedTeaser() {
   const f = DATA.feed; if (!f) return;
   $("#offers-count").textContent = f.active;
@@ -1751,7 +1856,7 @@ function feedTeaser() {
 }
 
 if (DATA.private) { $("#privacy-note").textContent = "PRIVATE VERSION – contains personal figures. Do not publish."; }
-buildWeights(); renderCriteria(); renderHoods(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset();
+buildWeights(); renderCriteria(); renderHoods(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset(); openTarget();
 let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcBuy(); }, 150); });
 </script>
 </body>

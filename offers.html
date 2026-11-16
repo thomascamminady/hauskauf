@@ -109,6 +109,7 @@ nav.sticky .navtabs a.tab:not(.on):hover { background: var(--surface); }
 .form { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 .filters { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: end; }
 .form label, .filters label { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: var(--text-2); }
+.filters:not(.showadv) .adv { display: none !important; }
 .filters label.check { flex-direction: row; align-items: center; gap: 6px; padding-bottom: 6px; }
 .form input, .form select, .filters input:not([type=checkbox]), .filters select {
   font: inherit; font-size: 14px; width: 100%; padding: 6px 8px; color: var(--text); background: var(--surface);
@@ -167,6 +168,17 @@ dialog[open] { animation: pop .16s ease-out; }
 .homecell { display: flex; gap: 10px; align-items: flex-start; }
 .thumb-s { display: block; flex: none; width: 64px; height: 48px; object-fit: cover; border-radius: var(--radius-s); background: var(--surface-2); }
 
+/* district map in place of a photo */
+.dmap { position: absolute; inset: 0; overflow: hidden; background: #e8e6df; }
+.dmap-in { position: absolute; left: 50%; top: 50%; }
+.dmap-in img { position: absolute; width: 256px; height: 256px; max-width: none; filter: saturate(.75); }
+.dmap-ring { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 3px solid var(--accent); border-radius: 50%; background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.dmap-label { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); padding: 2px 9px; font-size: 12.5px; font-weight: 650; background: var(--surface); color: var(--text); border-radius: 99px; box-shadow: 0 1px 3px rgb(0 0 0 / .2); white-space: nowrap; }
+.dmap-attr { position: absolute; right: 4px; bottom: 2px; font-size: 9.5px; color: #555; background: rgb(255 255 255 / .7); padding: 0 3px; }
+.thumb-s.mapthumb { position: relative; overflow: hidden; }
+.thumb-s.mapthumb .dmap-label, .thumb-s.mapthumb .dmap-attr { display: none; }
+.thumb-s.mapthumb .dmap-ring { border-width: 2px; }
+
 /* ---------- criteria & weights ---------- */
 button.crit { padding: 0; font: inherit; text-align: left; color: var(--accent); background: none; border: 0; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); cursor: pointer; }
 button.crit:hover { color: var(--text); border-bottom-color: var(--text); }
@@ -210,7 +222,7 @@ dialog.critdlg { width: min(760px, 94vw); }
 #rank-table td:nth-child(2) { min-width: 220px; }
 .mv { font-size: 11px; font-weight: 650; }
 .listing { margin-top: 16px; }
-.listing .hero { display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
+.listing .hero { position: relative; overflow: hidden; display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
 .listing .head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; justify-content: space-between; }
 .listing .head h3 { margin: 0; font-size: 18px; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 6px 16px; margin: 10px 0; font-size: 14px; }
@@ -219,6 +231,18 @@ dialog.critdlg { width: min(760px, 94vw); }
 .cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
 .verdict { margin-top: 10px; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; }
 .remember { font-size: 13px; color: var(--text-2); }
+.keyfacts { margin: 8px 0 0; font-size: 14px; color: var(--text-2); }
+details.sect { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+details.sect > summary { list-style: none; display: flex; align-items: center; gap: 8px; color: var(--text); }
+details.sect > summary::-webkit-details-marker { display: none; }
+details.sect > summary::before { content: "▸"; color: var(--text-3); transition: transform .15s; }
+details.sect[open] > summary::before { transform: rotate(90deg); }
+details.sect > summary h3 { margin: 0; font-size: 16px; }
+details.sect[open] > summary { margin-bottom: 12px; }
+.finetune { margin-top: 4px; } .finetune > summary { font-size: 14px; margin-bottom: 8px; }
+details.more { margin-top: 8px; border-top: 1px solid var(--grid); padding-top: 8px; }
+details.more > summary { font-size: 14px; }
+details.more[open] > summary { margin-bottom: 8px; }
 .buygrid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 18px 28px; margin-top: 10px; }
 .buyin fieldset { margin: 0 0 12px; padding: 0; border: 0; }
 .buyin legend { padding: 0; margin-bottom: 6px; font-size: 12px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
@@ -227,6 +251,17 @@ dialog.critdlg { width: min(760px, 94vw); }
 .buyout h4 { margin: 0 0 6px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
 .buyout h4:not(:first-child) { margin-top: 14px; }
 .buyout .out { margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.monthly { margin-bottom: 4px; }
+.mtotal { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 12px; border-radius: 8px; background: var(--accent-soft); }
+.mtotal span { font-weight: 600; color: var(--text-2); } .mtotal b { font-size: 26px; letter-spacing: -.02em; }
+.mstack { display: flex; height: 10px; margin: 8px 0 4px; overflow: hidden; border-radius: 5px; background: var(--surface-2); }
+.mstack > span { height: 100%; border-right: 1px solid var(--surface); }
+.mtable { font-size: 13.5px; } .mtable td { padding: 3px 4px; border-bottom: 1px solid var(--grid); }
+.mtable tbody tr:hover { background: none; }
+.mtable i { display: inline-block; width: 9px; height: 9px; margin-right: 7px; border-radius: 2px; vertical-align: middle; }
+.mtable tr.sum td { font-weight: 600; border-bottom: 0; } .mtable tr.sum:first-of-type td { border-top: 2px solid var(--border); }
+.costline { margin: 8px 0 0; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-radius: 8px; }
+.costline b { font-size: 16px; }
 .warnline { margin: 0 0 12px; padding: 8px 12px; font-size: 13.5px; border-left: 3px solid var(--warn); background: color-mix(in srgb, var(--warn) 10%, transparent); border-radius: 0 6px 6px 0; }
 
 /* ---------- offers page ---------- */
@@ -306,16 +341,16 @@ dialog.pv { width: min(860px, 94vw); }
       <label>Type<select id="f-kind"><option value="">Flats and houses</option><option value="flat">Flats</option><option value="house">Houses</option></select></label>
       <label>Min m²<input id="f-size" type="number" step="5"></label>
       <label>Max price (€k)<input id="f-price" type="number" step="25"></label>
-      <label>Min rooms<input id="f-rooms" type="number" step="1"></label>
+      <label class="adv">Min rooms<input id="f-rooms" type="number" step="1"></label>
       <label>Area<select id="f-area"><option value="">All of Bonn + Wachtberg</option><option value="4">Preferred (fit ≥ 4)</option><option value="3">Fit ≥ 3</option><option value="nohh">All except Heiderhof</option></select></label>
-      <label>Source<select id="f-src"><option value="">All portals</option></select></label>
-      <label>Seen<select id="f-new"><option value="">Any time</option><option value="1">New in latest run</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
+      <label class="adv">Source<select id="f-src"><option value="">All portals</option></select></label>
+      <label class="adv">Seen<select id="f-new"><option value="">Any time</option><option value="1">New in latest run</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
       <label>Sort<select id="f-sort">
         <option value="you">Your weights</option><option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
         <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Preferred area first</option><option value="hood">Best neighbourhood</option><option value="forest">Closest to forest</option></select></label>
-      <label class="check"><input type="checkbox" id="f-private"> Private sellers only</label>
-      <label class="check"><input type="checkbox" id="f-gone"> Show gone</label>
-      <label><button class="btn" id="f-reset" type="button">Reset filters</button></label>
+      <label class="check adv"><input type="checkbox" id="f-private"> Private sellers only</label>
+      <label class="check adv"><input type="checkbox" id="f-gone"> Show gone</label>
+      <label class="fbtns"><span><button class="btn" id="f-more" type="button">More filters</button> <button class="btn" id="f-reset" type="button">Reset</button></span></label>
     </div>
   </div>
   <div class="bar2"><span id="count"></span><span class="note">“Your weights” uses the sliders under <a href="overview.html#ranking">What matters to you</a> on the Shortlist page.</span><span class="note">Click an offer for a preview · ← → to step through · Esc to close</span></div>
@@ -455,7 +490,22 @@ const QC = (() => {
     dlg.showModal();
   }
   document.addEventListener("click", ev => { const b = ev.target.closest("button.crit"); if (b) { ev.preventDefault(); ev.stopPropagation(); explain(b.dataset.crit); } }, true);
-  return {rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
+  // Small OpenStreetMap snapshot centred on a district with a circle around it – used where there's no photo.
+  // Homes are only known at district level, so the circle marks the area, not the house.
+  function districtMap(lat, lon, label, {zoom = 13, radiusM = 800, cols = 5, rows = 3} = {}) {
+    if (lat == null || lon == null) return "";
+    const n = 2 ** zoom, x = (lon + 180) / 360 * n, lr = lat * Math.PI / 180;
+    const y = (1 - Math.log(Math.tan(lr) + 1 / Math.cos(lr)) / Math.PI) / 2 * n;
+    const tx = Math.floor(x), ty = Math.floor(y), hx = Math.floor(cols / 2), hy = Math.floor(rows / 2);
+    const offX = (hx + x - tx) * 256, offY = (hy + y - ty) * 256;
+    const rPx = radiusM / (156543.03 * Math.cos(lr) / n);
+    let tiles = "";
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
+      tiles += `<img src="https://tile.openstreetmap.org/${zoom}/${tx - hx + i}/${ty - hy + j}.png" style="left:${i * 256}px;top:${j * 256}px" alt="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">`;
+    return `<div class="dmap" title="Approximate area: ${e(label || "")}"><div class="dmap-in" style="transform:translate(${-offX}px,${-offY}px)">${tiles}</div>
+      <span class="dmap-ring" style="width:${2 * rPx}px;height:${2 * rPx}px"></span>${label ? `<span class="dmap-label">${e(label)}</span>` : ""}<span class="dmap-attr">© OpenStreetMap</span></div>`;
+  }
+  return {districtMap, rule, CRITS, BY, GROUPS, AM, districtOf, area, space, forListing, weighted, breakdownTable, label, bar, explain, m, setExamples: f => { examplesFn = f; }};
 })();
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -486,7 +536,7 @@ const today = F.updated, dayDiff = d => Math.round((Date.parse(today) - Date.par
 $("#updated").textContent = F.updated; $("#offers-count").textContent = F.active;
 
 // ---------- filters (kept on this device) ----------
-const DEF = {q: "", kind: "", size: 100, price: 900, rooms: 3, area: "", src: "", new: "", sort: "you", private: false, gone: false};
+const DEF = {q: "", kind: "", size: 100, price: 900, rooms: "", area: "", src: "", new: "", sort: "you", private: false, gone: false};
 let S = Object.assign({}, DEF, store.get("offer-filters", {}));
 const FIELDS = {q: "f-q", kind: "f-kind", size: "f-size", price: "f-price", rooms: "f-rooms", area: "f-area", src: "f-src", new: "f-new", sort: "f-sort", private: "f-private", gone: "f-gone"};
 F.sources.forEach(s => $("#f-src").add(new Option(s.label, s.name)));
@@ -498,6 +548,7 @@ for (const [k, id] of Object.entries(FIELDS)) {
     store.set("offer-filters", S); render();
   });
 }
+$("#f-more").onclick = () => { const on = $("#filters").classList.toggle("showadv"); $("#f-more").textContent = on ? "Fewer filters" : "More filters"; };
 $("#f-reset").onclick = () => { S = Object.assign({}, DEF); store.set("offer-filters", S); syncInputs(); render(); };
 
 function visible() {
@@ -536,6 +587,7 @@ function badges(o) {
 }
 const vsTxt = o => o.vs_district == null ? "" : `<span class="${o.vs_district > 0 ? "neg" : "pos"}">${o.vs_district > 0 ? "+" : ""}${o.vs_district}%</span> vs district`;
 const facts = o => [o.size_m2 ? `${o.size_m2.toLocaleString("en-US")} m²` : null, o.rooms ? `${o.rooms} rooms` : null, o.eur_m2 ? `${fmtE(o.eur_m2)}/m²` : null].filter(Boolean).join(" · ");
+const areaMap = o => { const d = DATA.districts[o.district]; return d ? QC.districtMap(d.lat, d.lon, `${o.area} – approximate area`) : `<div class="dmap nomap"><span class="dmap-label">${esc(o.area)} · ${esc(o.zip ?? "")} – no photo</span></div>`; };
 const img = o => o.image ? `background-image:url('${esc(o.image)}')` : "";
 let CUR = [];
 function render() {
@@ -543,7 +595,7 @@ function render() {
   $("#count").textContent = `${CUR.length} of ${OFFERS.filter(o => o.active).length} offers`;
   $("#navinfo").textContent = `${CUR.length} shown`;
   $("#offers").innerHTML = CUR.length ? CUR.map(o => `<article class="offer${o.active ? "" : " gone"}" data-k="${esc(o.key)}">
-      <div class="thumb" style="${img(o)}"><div class="badges">${badges(o)}</div></div>
+      <div class="thumb" style="${img(o)}">${o.image ? "" : areaMap(o)}<div class="badges">${badges(o)}</div></div>
       <div class="body"><div class="price">${o.price ? fmtE(o.price) : "Price on request"}</div>
         <div class="facts1">${facts(o)}</div>
         <div class="where">${esc(o.area)} ${o.zip ? `· ${esc(o.zip)}` : ""} · ${o.kind === "house" ? "House" : "Flat"}</div>
@@ -569,6 +621,8 @@ function showPreview() {
   if (!o) { if (pv.open) pv.close(); return; }
   const i = CUR.findIndex(x => x.key === key);
   $("#pv-img").style.backgroundImage = o.image ? `url('${o.image.replace(/'/g, "%27")}')` : "";
+  $("#pv-img").querySelector(".dmap")?.remove();
+  if (!o.image) $("#pv-img").insertAdjacentHTML("afterbegin", areaMap(o));
   $("#pv-prev").style.visibility = i > 0 ? "visible" : "hidden"; $("#pv-next").style.visibility = i >= 0 && i < CUR.length - 1 ? "visible" : "hidden";
   const hist = (o.price_history || []).map(([d, p]) => `${esc(d)}: ${fmtE(p)}`).join(" → ");
   const rows = [["Price", o.price ? fmtE(o.price) : "on request"], ["Living area", o.size_m2 ? o.size_m2 + " m²" : "–"], ["Rooms", o.rooms ?? "–"],
@@ -621,6 +675,7 @@ $("#runs").innerHTML = `<thead><tr><th>Date</th><th>Portal</th><th>Status</th><t
 
 window.addEventListener("scroll", () => $("#totop").classList.toggle("show", window.scrollY > 600), {passive: true});
 $("#totop").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+if (["rooms", "src", "new", "private", "gone"].some(k => S[k] !== DEF[k])) { $("#filters").classList.add("showadv"); $("#f-more").textContent = "Fewer filters"; }
 syncInputs(); render(); showPreview();
 </script>
 </body>
