@@ -237,7 +237,9 @@ _NEW_BUILD = re.compile(
     r"neubau|projektiert|bauprojekt|bauvorhaben|bauträger|\bentsteht\b|\bentstehen\b|im bau\b|baubeginn|rohbau"
     r"|fertigstellung|bezugsfertig\w* (?:ab |im |voraussichtlich )?\w* ?20(?:2[6-9]|3\d)|vorvermarktung|baugenehmigung"
     r"|noch zu (?:errichten|bauen)|wird (?:neu )?errichtet|hausbau|bauen sie|ihr (?:neues )?traumhaus|livinghaus"
-    r"|\berstbezug\b(?! nach)",
+    r"|\berstbezug\b(?! nach)"
+    r"|doppelhauspartner|partner gesucht|bereits reserviert|individuell geplant|maßgeschneidert|hanse ?haus|designhaus"
+    r"|schwörer|kampa|okal|streif|viebrockhaus|town ?& ?country|massa ?haus|fertighaus",
     re.IGNORECASE,
 )
 

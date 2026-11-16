@@ -576,6 +576,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:7953280d-5865-4a00-ac2e-66e288f11e0b",
     "kleinanzeigen:3569064728"
    ]
   },
@@ -1101,6 +1102,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:1b9640c8-f7de-4dad-9aa4-7ab10cf76b9b",
     "kleinanzeigen:3569055890"
    ]
   },
@@ -1211,6 +1213,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:7b6f99c2-d5b3-42db-8ed7-75c806a6ff1e",
     "kleinanzeigen:3569055890"
    ]
   },
@@ -1240,6 +1243,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:17f52fa3-e7aa-47ca-9f65-2a485b3f6f51",
     "kleinanzeigen:3569055890"
    ]
   },
@@ -1321,6 +1325,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:80125655-15aa-46c2-8489-64f028462b7e",
     "kleinanzeigen:3569064506"
    ]
   },
@@ -1434,6 +1439,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:d7e3195e-58d0-4043-b691-293995d3053b",
     "kleinanzeigen:3544395339"
    ]
   },
@@ -1707,6 +1713,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71",
     "kleinanzeigen:3544395289",
     "kleinanzeigen:3544395614"
    ]
@@ -2082,7 +2089,10 @@
      869000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:e01f9409-e55b-4532-94af-a416a29cbd76"
+   ]
   },
   "immowelt:2ec4b5b6-a06c-4664-8a77-8b376bfad311": {
    "source": "immowelt",
@@ -2832,6 +2842,8 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:6ca1108d-b64a-4ea4-9ca1-df1830292023",
+    "immowelt:a533b55b-42db-4166-ae73-0d1b9f5bb068",
     "kleinanzeigen:3282873844",
     "kleinanzeigen:3282873847",
     "kleinanzeigen:3282873849"
@@ -3067,7 +3079,10 @@
      988000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:e8a02ab7-71aa-41bf-9347-c6ef6241c0cd"
+   ]
   },
   "immowelt:46957986-ca1d-407e-8c29-6c1db53db95c": {
    "source": "immowelt",
@@ -3145,7 +3160,10 @@
      309000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:6db60fee-bfa6-4a8d-b0f7-20ef365c0889"
+   ]
   },
   "immowelt:472a6895-9373-4801-8bff-e5a37a4a460b": {
    "source": "immowelt",
@@ -3664,7 +3682,11 @@
      248000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:87732fe4-8f21-45e7-8d53-d277669656ff",
+    "immowelt:ce26c0f7-fb38-4683-8c75-866ffb20bc44"
+   ]
   },
   "immowelt:5182ba06-f7d2-409d-bd60-819007fe6c2b": {
    "source": "immowelt",
@@ -3849,6 +3871,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:863c82e3-ed2d-4da5-9890-5d4df71cc238",
     "kleinanzeigen:3569064506"
    ]
   },
@@ -5118,6 +5141,8 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:40781f86-249f-4a30-97cc-c6130c7c5f1a",
+    "immowelt:a533b55b-42db-4166-ae73-0d1b9f5bb068",
     "kleinanzeigen:3282873844",
     "kleinanzeigen:3282873847",
     "kleinanzeigen:3282873849"
@@ -5176,7 +5201,10 @@
      309000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:46c6c365-b4cc-4f71-83cb-299b2fe772dc"
+   ]
   },
   "immowelt:6dcaab9c-b97b-4ad1-b66f-848bb6e9b49f": {
    "source": "immowelt",
@@ -5736,6 +5764,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:0a7e405f-9bf9-4f9f-b052-d4eadcdf968c",
     "kleinanzeigen:3569064728"
    ]
   },
@@ -5869,6 +5898,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:1b7f5e55-490b-48e4-8d8c-ca097302d71d",
     "kleinanzeigen:3569055890"
    ]
   },
@@ -6191,6 +6221,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:1f5f978a-c64e-44c3-9158-88623f90e8ac",
     "kleinanzeigen:3569064506"
    ]
   },
@@ -6464,7 +6495,10 @@
      970000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:dbad47fd-21ea-42e6-8f16-978c58f6fccd"
+   ]
   },
   "immowelt:85150ad7-f9ed-4602-b6f2-270d71eb0688": {
    "source": "immowelt",
@@ -6518,6 +6552,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:875818d3-1301-473a-9731-8933a2dfaed0",
     "kleinanzeigen:3569064728"
    ]
   },
@@ -6571,10 +6606,7 @@
      999000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3432360242"
-   ]
+   "new_build": false
   },
   "immowelt:863c82e3-ed2d-4da5-9890-5d4df71cc238": {
    "source": "immowelt",
@@ -6602,6 +6634,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:5497b465-ba60-4431-b0bd-d3487868478c",
     "kleinanzeigen:3569064506"
    ]
   },
@@ -6761,6 +6794,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:85403596-8de8-4785-b740-c99b7a8bb46e",
     "kleinanzeigen:3569064728"
    ]
   },
@@ -6788,7 +6822,11 @@
      248000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:512e485c-e5e0-450c-8cbd-dc4527cf1763",
+    "immowelt:ce26c0f7-fb38-4683-8c75-866ffb20bc44"
+   ]
   },
   "immowelt:87b7b512-f5cd-45a0-9d99-e2431e83ab8e": {
    "source": "immowelt",
@@ -6977,7 +7015,10 @@
      479000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:db787e78-67a0-4cd7-83d6-d402e1e1023b"
+   ]
   },
   "immowelt:8f10e4a2-7144-48ea-a679-7702ac01e73e": {
    "source": "immowelt",
@@ -7836,6 +7877,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:e9478f7a-c8e4-4211-b143-29a7f77fdb11",
     "kleinanzeigen:3562154155"
    ]
   },
@@ -7865,6 +7907,8 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:40781f86-249f-4a30-97cc-c6130c7c5f1a",
+    "immowelt:6ca1108d-b64a-4ea4-9ca1-df1830292023",
     "kleinanzeigen:3282873844",
     "kleinanzeigen:3282873847",
     "kleinanzeigen:3282873849"
@@ -8672,6 +8716,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69",
     "kleinanzeigen:3544395289",
     "kleinanzeigen:3544395614"
    ]
@@ -8862,10 +8907,7 @@
      754500
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3460989639"
-   ]
+   "new_build": false
   },
   "immowelt:b7d0212e-af72-4b62-8a81-bcaa8e0ef697": {
    "source": "immowelt",
@@ -9654,7 +9696,11 @@
      248000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:512e485c-e5e0-450c-8cbd-dc4527cf1763",
+    "immowelt:87732fe4-8f21-45e7-8d53-d277669656ff"
+   ]
   },
   "immowelt:cf22cd7a-ceee-47e4-8dd9-5d5e7576306f": {
    "source": "immowelt",
@@ -9740,6 +9786,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8",
     "kleinanzeigen:2843885059",
     "kleinanzeigen:2843885062"
    ]
@@ -10055,6 +10102,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:2341a585-3779-457c-8101-0fd7bf726b08",
     "kleinanzeigen:3544395339"
    ]
   },
@@ -10192,7 +10240,10 @@
      479000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:8e42b75e-a407-4d42-a58a-3fdb9243caf3"
+   ]
   },
   "immowelt:dbad47fd-21ea-42e6-8f16-978c58f6fccd": {
    "source": "immowelt",
@@ -10218,7 +10269,10 @@
      970000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:84feb46f-230f-48c1-9975-1cd19e6313df"
+   ]
   },
   "immowelt:dbaed4f8-a269-4c2b-96ed-460fbb6acba1": {
    "source": "immowelt",
@@ -10301,6 +10355,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:d03d0ec4-de8f-4790-adac-09ec6f35a6ae",
     "kleinanzeigen:2843885059",
     "kleinanzeigen:2843885062"
    ]
@@ -10357,6 +10412,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:dd808bbe-d456-4ba5-a37b-4aee3ea36ef5",
     "kleinanzeigen:3553571367",
     "kleinanzeigen:3569262786"
    ]
@@ -10416,6 +10472,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:dd4edc81-7d78-483e-ac5e-dd9e629fcb43",
     "kleinanzeigen:3553571367",
     "kleinanzeigen:3569262786"
    ]
@@ -10470,10 +10527,7 @@
      1186400
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3569122933"
-   ]
+   "new_build": false
   },
   "immowelt:e00d6842-ef56-40ec-983b-b79eeaa364f5": {
    "source": "immowelt",
@@ -10528,7 +10582,10 @@
      869000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:2d5c963b-7e8b-4210-97ff-3671510e745b"
+   ]
   },
   "immowelt:e02579c7-8537-414f-b578-800e1b2e98d9": {
    "source": "immowelt",
@@ -10956,7 +11013,10 @@
      999000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:467c821f-8fdf-4313-b80e-f3cbe556d376"
+   ]
   },
   "immowelt:e8f2220b-4565-4cd3-bd6b-a190258b08bf": {
    "source": "immowelt",
@@ -11013,6 +11073,7 @@
    ],
    "new_build": false,
    "same_as": [
+    "immowelt:a52fd8eb-8e7e-4893-b60a-ee5a610a5987",
     "kleinanzeigen:3562154155"
    ]
   },
@@ -11069,7 +11130,10 @@
      295000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:f7d7595f-8a09-47ea-8bd1-1d2ded928c96"
+   ]
   },
   "immowelt:e9837b14-db65-4ea8-94e1-26880c785f7a": {
    "source": "immowelt",
@@ -11533,7 +11597,10 @@
      295000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:e96073ca-e847-4cc8-a3d6-4a096fd0d537"
+   ]
   },
   "immowelt:f8dbd91c-ad79-4f73-83dd-634a464ed4b7": {
    "source": "immowelt",
@@ -11964,7 +12031,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:d03d0ec4-de8f-4790-adac-09ec6f35a6ae",
-    "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8"
+    "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8",
+    "kleinanzeigen:2843885062"
    ]
   },
   "kleinanzeigen:2843885062": {
@@ -11994,7 +12062,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:d03d0ec4-de8f-4790-adac-09ec6f35a6ae",
-    "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8"
+    "immowelt:dcece25f-e8f4-46a5-b407-1d959b8010a8",
+    "kleinanzeigen:2843885059"
    ]
   },
   "kleinanzeigen:2844528683": {
@@ -12071,32 +12140,6 @@
     [
      "2026-11-15",
      1190000
-    ]
-   ],
-   "new_build": false
-  },
-  "kleinanzeigen:3155719349": {
-   "source": "kleinanzeigen",
-   "source_id": "3155719349",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/altbau-mit-potenzial-zum-19-98-fachen-der-jahresnettokaltmiete-in-beliebter-lage-von-poppelsdorf/3155719349-208-23685",
-   "kind": "house",
-   "title": "Altbau mit Potenzial zum 19,98-fachen der Jahresnettokaltmiete in beliebter Lage von Poppelsdorf",
-   "price": 945000,
-   "size_m2": null,
-   "rooms": null,
-   "zip": "53115",
-   "district": "Zentrum",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/10/10502f52-cafe-47e6-9c4f-035e87d06fe5?rule=$_1.AUTO",
-   "seller": "agent",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     945000
     ]
    ],
    "new_build": false
@@ -12492,32 +12535,6 @@
    "same_as": [
     "immowelt:4b782dee-0e1f-4dc9-bca9-f7020a976bbb"
    ]
-  },
-  "kleinanzeigen:3348418568": {
-   "source": "kleinanzeigen",
-   "source_id": "3348418568",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/kapitalanlage-langfristig-vermietetes-ladenlokal-im-zentrum-von-bonn-mehlem/3348418568-208-23757",
-   "kind": "house",
-   "title": "Kapitalanlage: Langfristig vermietetes Ladenlokal im Zentrum von Bonn-Mehlem",
-   "price": 890000,
-   "size_m2": null,
-   "rooms": null,
-   "zip": "53179",
-   "district": "Mehlem",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c5/c5542b7f-d2ab-4a33-890c-1397a55910c0?rule=$_1.AUTO",
-   "seller": "agent",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     890000
-    ]
-   ],
-   "new_build": false
   },
   "kleinanzeigen:3358040820": {
    "source": "kleinanzeigen",
@@ -12921,35 +12938,6 @@
     "immowelt:e02579c7-8537-414f-b578-800e1b2e98d9"
    ]
   },
-  "kleinanzeigen:3432360242": {
-   "source": "kleinanzeigen",
-   "source_id": "3432360242",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/designhaus-und-grundstueck-in-holzlar/3432360242-208-23780",
-   "kind": "house",
-   "title": "DESIGNHAUS UND GRUNDSTÜCK IN HOLZLAR",
-   "price": 999000,
-   "size_m2": 152.0,
-   "rooms": 4.0,
-   "zip": "53229",
-   "district": "Holzlar",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c676dcad-adc4-4f5f-8c3a-256d363e7f0d?rule=$_2.AUTO",
-   "seller": "agent",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     999000
-    ]
-   ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:85d570f5-43ad-47ae-a2ca-fbfada5fb7ed"
-   ]
-  },
   "kleinanzeigen:3436177755": {
    "source": "kleinanzeigen",
    "source_id": "3436177755",
@@ -13232,35 +13220,6 @@
    "new_build": false,
    "same_as": [
     "immowelt:ecc82acc-23d3-49cf-9b16-024f27838c2a"
-   ]
-  },
-  "kleinanzeigen:3460989639": {
-   "source": "kleinanzeigen",
-   "source_id": "3460989639",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/individuell-geplantes-einfamilienhaus-mit-modernem-satteldach-inklusive-grundstueck-/3460989639-208-23772",
-   "kind": "house",
-   "title": "Individuell geplantes Einfamilienhaus mit modernem Satteldach (inklusive Grundstück)",
-   "price": 754500,
-   "size_m2": 113.0,
-   "rooms": 5.0,
-   "zip": "53227",
-   "district": null,
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/5d/5d013545-2033-4ce0-9918-64d688147c36?rule=$_2.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     754500
-    ]
-   ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:b70ad03e-9a16-42d6-a9b9-01236f22aae5"
    ]
   },
   "kleinanzeigen:3466091212": {
@@ -14030,32 +13989,6 @@
    ],
    "new_build": false
   },
-  "kleinanzeigen:3516027650": {
-   "source": "kleinanzeigen",
-   "source_id": "3516027650",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/designhaus-der-extraklasse/3516027650-208-23726",
-   "kind": "house",
-   "title": "DESIGNHAUS DER EXTRAKLASSE",
-   "price": 1214901,
-   "size_m2": 183.0,
-   "rooms": 5.0,
-   "zip": "53125",
-   "district": "Röttgen",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ca/cada1da9-e8cc-432e-8d8c-b35e62d41414?rule=$_2.AUTO",
-   "seller": "agent",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     1214901
-    ]
-   ],
-   "new_build": false
-  },
   "kleinanzeigen:3516709024": {
    "source": "kleinanzeigen",
    "source_id": "3516709024",
@@ -14362,32 +14295,6 @@
     "immowelt:67adf7df-dd92-4543-a409-7c0a7985d7f2",
     "ohnemakler:393836"
    ]
-  },
-  "kleinanzeigen:3531915740": {
-   "source": "kleinanzeigen",
-   "source_id": "3531915740",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/doppelhauspartner-gesucht-eine-haushaelfte-ist-bereits-reserviert-jetzt-suchen-wir-sie-als-partner-fuer-die-zweite-haushaelfte/3531915740-208-23726",
-   "kind": "house",
-   "title": "Doppelhauspartner gesucht Eine Haushälfte ist bereits reserviert - jetzt suchen wir Sie als Partner für die zweite Haushälfte",
-   "price": 695000,
-   "size_m2": 164.0,
-   "rooms": 5.0,
-   "zip": "53125",
-   "district": "Röttgen",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c3/c347c8e7-b9ac-470c-a42b-a009b9bd1cf7?rule=$_1.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     695000
-    ]
-   ],
-   "new_build": false
   },
   "kleinanzeigen:3532427180": {
    "source": "kleinanzeigen",
@@ -15251,7 +15158,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69",
-    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71"
+    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71",
+    "kleinanzeigen:3544395614"
    ]
   },
   "kleinanzeigen:3544395339": {
@@ -15311,7 +15219,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:2716ec89-9177-4807-8ea8-53fffb1f3c69",
-    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71"
+    "immowelt:b331c1f8-5e90-42cb-8d6c-f08be5479f71",
+    "kleinanzeigen:3544395289"
    ]
   },
   "kleinanzeigen:3544395984": {
@@ -15662,32 +15571,6 @@
    ],
    "new_build": false
   },
-  "kleinanzeigen:3551996061": {
-   "source": "kleinanzeigen",
-   "source_id": "3551996061",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/individuell-geplant-ihr-massgeschneidertes-reihenhaus-von-hanse-haus/3551996061-208-23726",
-   "kind": "house",
-   "title": "Individuell geplant - Ihr maßgeschneidertes Reihenhaus von Hanse Haus",
-   "price": 509000,
-   "size_m2": 162.0,
-   "rooms": 4.0,
-   "zip": "53125",
-   "district": "Röttgen",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/23/23e2e5b2-4166-4a59-b684-e5e1b122bfaa?rule=$_1.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     509000
-    ]
-   ],
-   "new_build": false
-  },
   "kleinanzeigen:3552981102": {
    "source": "kleinanzeigen",
    "source_id": "3552981102",
@@ -15744,7 +15627,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:dd4edc81-7d78-483e-ac5e-dd9e629fcb43",
-    "immowelt:dd808bbe-d456-4ba5-a37b-4aee3ea36ef5"
+    "immowelt:dd808bbe-d456-4ba5-a37b-4aee3ea36ef5",
+    "kleinanzeigen:3569262786"
    ]
   },
   "kleinanzeigen:3553853140": {
@@ -15888,32 +15772,6 @@
    "same_as": [
     "immowelt:7ffb8cf7-74a0-4fad-a61c-2d3b884c84ad"
    ]
-  },
-  "kleinanzeigen:3554577459": {
-   "source": "kleinanzeigen",
-   "source_id": "3554577459",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/individuell-geplant-ihr-massgeschneidertes-reihenhaus-von-hanse-haus/3554577459-208-23726",
-   "kind": "house",
-   "title": "Individuell geplant - Ihr maßgeschneidertes Reihenhaus von Hanse Haus",
-   "price": 480000,
-   "size_m2": 113.0,
-   "rooms": 4.0,
-   "zip": "53125",
-   "district": "Röttgen",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/46/46ed42dc-14e3-43b4-a2da-a63bb18cc5cc?rule=$_1.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     480000
-    ]
-   ],
-   "new_build": false
   },
   "kleinanzeigen:3554701730": {
    "source": "kleinanzeigen",
@@ -16166,32 +16024,6 @@
    "same_as": [
     "immowelt:e78ea609-6fb5-43c0-b495-6a0af4a8a51a"
    ]
-  },
-  "kleinanzeigen:3557456160": {
-   "source": "kleinanzeigen",
-   "source_id": "3557456160",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/doppelhauspartner-gesucht-eine-haushaelfte-ist-bereits-reserviert-jetzt-suchen-wir-sie-als-partner-fuer-die-zweite-haushaelfte/3557456160-208-23726",
-   "kind": "house",
-   "title": "Doppelhauspartner gesucht Eine Haushälfte ist bereits reserviert - jetzt suchen wir Sie als Partner für die zweite Haushälfte",
-   "price": 695000,
-   "size_m2": 164.0,
-   "rooms": 5.0,
-   "zip": "53125",
-   "district": "Röttgen",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c8/c85a77f0-2768-4282-8f25-5fe69c979216?rule=$_1.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     695000
-    ]
-   ],
-   "new_build": false
   },
   "kleinanzeigen:3559803475": {
    "source": "kleinanzeigen",
@@ -16904,35 +16736,6 @@
     "immowelt:875818d3-1301-473a-9731-8933a2dfaed0"
    ]
   },
-  "kleinanzeigen:3569122933": {
-   "source": "kleinanzeigen",
-   "source_id": "3569122933",
-   "url": "https://www.kleinanzeigen.de/s-anzeige/individuell-geplantes-streif-doppelhaus-in-wachtberg-preisangabe-fuer-beide-dhh-inklusive-grundstueck/3569122933-208-1662",
-   "kind": "house",
-   "title": "Individuell geplantes STREIF Doppelhaus in Wachtberg (Preisangabe für beide DHH) inklusive Grundstück",
-   "price": 1186400,
-   "size_m2": 240.0,
-   "rooms": 10.0,
-   "zip": "53343",
-   "district": "Wachtberg",
-   "plot_m2": null,
-   "energy_class": null,
-   "image": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/43/43382234-0825-46fc-a996-2396f96337cd?rule=$_2.AUTO",
-   "seller": "private",
-   "first_seen": "2026-11-15",
-   "last_seen": "2026-11-15",
-   "active": true,
-   "price_history": [
-    [
-     "2026-11-15",
-     1186400
-    ]
-   ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:deca691b-c64e-4269-bcc9-4a431599b49a"
-   ]
-  },
   "kleinanzeigen:3569261800": {
    "source": "kleinanzeigen",
    "source_id": "3569261800",
@@ -17015,7 +16818,8 @@
    "new_build": false,
    "same_as": [
     "immowelt:dd4edc81-7d78-483e-ac5e-dd9e629fcb43",
-    "immowelt:dd808bbe-d456-4ba5-a37b-4aee3ea36ef5"
+    "immowelt:dd808bbe-d456-4ba5-a37b-4aee3ea36ef5",
+    "kleinanzeigen:3553571367"
    ]
   },
   "kleinanzeigen:3569266146": {

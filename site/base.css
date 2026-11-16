@@ -164,3 +164,18 @@ nav.sticky .navtabs a.tab:not(.on):hover { background: var(--surface); }
 .listing .hero { display: block; height: 260px; margin: -16px -18px 14px; border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-2) center / cover no-repeat; }
 .scale { list-style: none; margin: 4px 0 0; padding: 0; font-size: 12.5px; color: var(--text-2); }
 .scale li { padding: 1px 0; } .scale b { display: inline-block; width: 16px; color: var(--text); }
+
+/* weights panel */
+.wpanel { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; background: var(--surface); }
+.whead { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; } .whead h3 { margin: 0; font-size: 16px; }
+.presets { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
+.presets .btn.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+.wrow { display: grid !important; grid-template-columns: 1fr 120px 92px; gap: 8px; align-items: center; flex-direction: row !important; margin: 0 0 4px !important; }
+.wrow .val { font-size: 12.5px; color: var(--text); white-space: nowrap; text-align: right; }
+.wrow .wl { min-width: 0; }
+.moneyw .wrow { grid-template-columns: 150px 1fr 190px; }
+.wgroup h4 i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.stack { display: flex; height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; margin-top: 3px; min-width: 110px; }
+.stack > span { display: block; height: 100%; border-right: 1px solid var(--surface); }
+.mv { font-size: 11px; font-weight: 650; }
+.yourfit { font-size: 12.5px; color: var(--text-2); margin-top: 4px; padding-top: 4px; border-top: 1px dashed var(--grid); }

@@ -27,9 +27,14 @@
   <h2>Ranking</h2>
   <p class="lead">Weigh money against quality yourself. <b>Money</b> = 20-year wealth compared with the reference flat (same budget and starting capital everywhere; money not spent on the home is invested). <b>Quality</b> = weighted average of 14 criteria, 0–5 each – click a <b>quality score</b> to see every criterion with its reason, or a <b>criterion name</b> to see what it means and how all homes compare.</p>
   <div class="card">
-    <div class="moneyw" id="money-w"></div>
-    <details class="wdetails"><summary>Adjust what counts (criterion weights)</summary><div class="wgroups" id="weights"></div></details>
+    <div class="wpanel">
+      <div class="whead"><h3>What matters to you</h3><span class="note">Drag a slider or pick a preset – the ranking, chart and map update instantly. Saved on this device.</span></div>
+      <div class="presets" id="presets"></div>
+      <div class="moneyw" id="money-w"></div>
+      <div class="wgroups" id="weights"></div>
+    </div>
     <div class="tablewrap"><table id="rank-table"></table></div>
+    <div class="legend"><span><i style="background:var(--text-3)"></i>Money</span><span><i style="background:var(--flat)"></i>The home</span><span><i style="background:var(--renovation)"></i>Neighbourhood</span><span><i style="background:var(--warn)"></i>Risk</span><span class="note">Score bar = where the points come from (hover for the breakdown). ▲▼ = places moved versus the default weights.</span></div>
     <p class="note">Click a column header to sort. “Std. monthly” = running costs + mortgage if 70% of the all-in cost is borrowed at 4.15% with 3% repayment (a neutral standard, not anyone's real financing). Range = worst/best of 9 market scenarios.</p>
   </div>
   <div class="kpis" id="kpis"></div>
@@ -186,28 +191,56 @@ shortlist.forEach(l => SHORT[l.id] = l.short || l.title);
 const DEFAULT_W = Object.assign(Object.fromEntries(QC.CRITS.map(c => [c.id, c.weight])), {money: 50});
 let W = Object.assign({}, DEFAULT_W, store.get("weights2", {}));
 const SC = Object.fromEntries(shortlist.map(l => [l.id, QC.forListing(l)]));
-function quality(l) { return QC.weighted(SC[l.id], W); }
+function quality(l, w = W) { return QC.weighted(SC[l.id], w); }
 function moneyScore(id) { const v = DATA.model[id].vs_ref_20y; return Math.max(0, Math.min(5, 2.5 + v / 80000)); }
-function combined(l) { const m = W.money / 100; return m * moneyScore(l.id) + (1 - m) * quality(l); }
+function combined(l, w = W) { const m = w.money / 100; return m * moneyScore(l.id) + (1 - m) * quality(l, w); }
+// Where each point of a home's score comes from: money + every criterion (weight × score / total weight).
+function contributions(l) {
+  const m = W.money / 100, sc = SC[l.id];
+  const avail = QC.CRITS.filter(c => sc[c.id] && sc[c.id].s != null && W[c.id]), tot = avail.reduce((t, c) => t + W[c.id], 0) || 1;
+  return [{id: "money", label: "Money (20 yrs)", group: "money", v: m * moneyScore(l.id)},
+    ...avail.map(c => ({id: c.id, label: c.label, group: c.group, v: (1 - m) * W[c.id] * sc[c.id].s / tot}))];
+}
+const GROUP_COLOR = {money: "--text-3", home: "--flat", area: "--renovation", risk: "--warn"};
+const DEFAULT_RANK = Object.fromEntries([...shortlist].sort((a, b) => combined(b, DEFAULT_W) - combined(a, DEFAULT_W)).map((l, i) => [l.id, i + 1]));
+const PRESETS = [
+  ["Balanced", {}],
+  ["Nature first", {nature: 25, quiet: 10, garden: 15, location: 14, city: 1, transport: 2, shopping: 2}],
+  ["Close to the city", {city: 22, transport: 16, shopping: 10, schools: 5, nature: 3, garden: 4}],
+  ["Garden & space", {garden: 24, space: 18, office: 10, stepfree: 2}],
+  ["Family visits", {guests: 26, stepfree: 12, office: 8, space: 10}],
+  ["Money first", {money: 80}],
+  ["Quality only", {money: 0}],
+];
 function rerender() { store.set("weights2", W); renderRanking(); renderScatter(); renderCards(); colorMarkers(); }
-function slider(k, lab, txt) {
-  const wrap = document.createElement("label");
-  wrap.innerHTML = `<span>${lab} <span class="val">${txt()}</span></span><input type="range" min="0" max="${k === "money" ? 100 : 30}" step="1" value="${W[k]}">`;
-  wrap.querySelector("input").addEventListener("input", e => { W[k] = +e.target.value; wrap.querySelector(".val").textContent = txt(); rerender(); });
+const IMPORTANCE = v => v === 0 ? "ignore" : v < 4 ? "low" : v < 9 ? "some" : v < 15 ? "medium" : v < 22 ? "high" : "very high";
+function share(k) { const tot = QC.CRITS.reduce((t, c) => t + W[c.id], 0) || 1; return Math.round(100 * W[k] / tot); }
+function updateShares() { document.querySelectorAll("#weights .wrow").forEach(r => { const k = r.dataset.k; r.querySelector(".val").innerHTML = `${IMPORTANCE(W[k])} <span class="note">${share(k)}%</span>`; }); }
+function slider(k, lab) {
+  const wrap = document.createElement("label"); wrap.className = "wrow"; wrap.dataset.k = k;
+  wrap.innerHTML = `<span class="wl">${lab}</span><input type="range" min="0" max="${k === "money" ? 100 : 30}" step="1" value="${W[k]}"><span class="val"></span>`;
+  wrap.querySelector("input").addEventListener("input", e => { W[k] = +e.target.value; markPreset(); if (k === "money") moneyTxt(); else updateShares(); rerender(); });
   return wrap;
 }
+const moneyTxt = () => { const v = $("#money-w .val"); if (v) v.textContent = `${W.money}% money · ${100 - W.money}% quality`; };
+function markPreset() {
+  document.querySelectorAll("#presets button").forEach(b => {
+    const want = Object.assign({}, DEFAULT_W, PRESETS[+b.dataset.i][1]);
+    b.classList.toggle("on", Object.keys(want).every(k => want[k] === W[k]));
+  });
+}
 function buildWeights() {
-  const mw = $("#money-w"); mw.innerHTML = "";
-  mw.appendChild(slider("money", "<b>Money vs quality</b>", () => `${W.money}% money · ${100 - W.money}% quality`));
+  $("#presets").innerHTML = PRESETS.map(([n], i) => `<button class="btn" data-i="${i}">${esc(n)}</button>`).join("");
+  document.querySelectorAll("#presets button").forEach(b => b.onclick = () => { W = Object.assign({}, DEFAULT_W, PRESETS[+b.dataset.i][1]); buildWeights(); rerender(); });
+  const mw = $("#money-w"); mw.innerHTML = ""; mw.appendChild(slider("money", "<b>Money vs quality</b>")); moneyTxt();
   const el = $("#weights"); el.innerHTML = "";
   for (const g of QC.GROUPS) {
-    const box = document.createElement("div"); box.className = "wgroup"; box.innerHTML = `<h4>${esc(g.label)}</h4>`;
-    QC.CRITS.filter(c => c.group === g.id).forEach(c => box.appendChild(slider(c.id, QC.label(c.id), () => `${W[c.id]}`)));
+    const box = document.createElement("div"); box.className = "wgroup";
+    box.innerHTML = `<h4><i style="background:var(${GROUP_COLOR[g.id]})"></i>${esc(g.label)}</h4>`;
+    QC.CRITS.filter(c => c.group === g.id).forEach(c => box.appendChild(slider(c.id, QC.label(c.id))));
     el.appendChild(box);
   }
-  const reset = document.createElement("div"); reset.innerHTML = `<button class="btn">Reset weights</button>`;
-  reset.querySelector("button").onclick = () => { W = Object.assign({}, DEFAULT_W); store.del("weights2"); buildWeights(); rerender(); };
-  el.appendChild(reset);
+  updateShares(); markPreset();
 }
 QC.setExamples(id => shortlist.map(l => [l.title, SC[l.id][id], "#d-" + l.id]).sort((a, b) => (b[1]?.s ?? -1) - (a[1]?.s ?? -1)));
 function renderCriteria() {
@@ -238,6 +271,11 @@ const OPEN = new Set();
 function rows() {
   return shortlist.map(l => { const m = DATA.model[l.id]; return {l, m, q: quality(l), c: combined(l), m2: l.asking / l.size_m2}; });
 }
+function stack(l) {
+  const parts = contributions(l).filter(p => p.v > 0.005);
+  const tip = [...parts].sort((a, b) => b.v - a.v).map(p => `${p.label}: +${p.v.toFixed(2)}`).join("\n");
+  return `<div class="stack" title="Where the points come from:\n${esc(tip)}">${parts.map(p => `<span style="width:${(100 * p.v / 5).toFixed(1)}%;background:var(${GROUP_COLOR[p.group]})"></span>`).join("")}</div>`;
+}
 function renderRanking() {
   const COLS = [
     ["rank", "#", r => "", true], ["title", "Home", null, false], ["district", "District", r => r.l.district, false],
@@ -249,14 +287,15 @@ function renderRanking() {
   const ranked = [...rs].sort((a, b) => b.c - a.c); ranked.forEach((r, i) => r.rank = i + 1);
   const col = COLS.find(c => c[0] === sortKey);
   rs.sort((a, b) => sortKey === "rank" ? (a.rank - b.rank) * -sortDir : ((col && col[2] ? (col[2](a) ?? -1e12) - (col[2](b) ?? -1e12) : 0) * sortDir) || (b.c - a.c));
-  const maxC = Math.max(...rs.map(r => r.c));
+  const maxC = 5;
   const t = $("#rank-table");
   t.innerHTML = `<thead><tr>${COLS.map(c => `<th class="${c[3] ? "num " : ""}${c[2] || c[0] === "rank" ? "sortable" : ""}" data-k="${c[0]}">${c[1]}${sortKey === c[0] ? (sortDir < 0 ? " ↓" : " ↑") : ""}</th>`).join("")}</tr></thead><tbody>${rs.map(r => {
     const m = r.m, v = m.vs_ref_20y, mine = DATA.private ? `<td class="num">${fmtE(DATA.private.homes[r.l.id]?.monthly)}</td>` : "";
-    return `<tr><td class="num">${r.rank}</td><td><div class="homecell">${thumb(r.l)}<div><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</div></div></td>
+    const mv = DEFAULT_RANK[r.l.id] - r.rank;
+    return `<tr><td class="num">${r.rank}${mv ? `<br><span class="mv ${mv > 0 ? "pos" : "neg"}" title="vs default weights (#${DEFAULT_RANK[r.l.id]})">${mv > 0 ? "▲" : "▼"}${Math.abs(mv)}</span>` : ""}</td><td><div class="homecell">${thumb(r.l)}<div><a href="#d-${r.l.id}">${esc(r.l.title)}</a> <span class="pill ${r.l.type}">${TYPE_LABEL[r.l.type]}</span>${r.l.private_sale ? ' <span class="note">private</span>' : ""}</div></div></td>
       <td>${esc(r.l.district)}</td><td class="num">${fmtK(r.l.asking)}</td><td class="num">${fmtK(m.all_in)}</td><td class="num">${fmtE(r.m2)}</td>
       <td class="num">${fmtE(m.std_monthly)}</td>${mine}<td class="num"><span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${r.l.id === "roettgener-maisonette" ? "ref." : fmtS(v)}</span><br><span class="note">${r.l.id === "roettgener-maisonette" ? "" : fmtS(m.vs_ref_min) + " … " + fmtS(m.vs_ref_max)}</span></td>
-      <td class="num"><button class="qbtn" data-id="${r.l.id}" aria-expanded="${OPEN.has(r.l.id)}">${r.q.toFixed(1)} ${OPEN.has(r.l.id) ? "▴" : "▾"}</button></td><td class="num" style="min-width:90px">${r.c.toFixed(2)}<div class="bar"><span style="width:${(100 * r.c / maxC).toFixed(0)}%"></span></div></td>
+      <td class="num"><button class="qbtn" data-id="${r.l.id}" aria-expanded="${OPEN.has(r.l.id)}">${r.q.toFixed(1)} ${OPEN.has(r.l.id) ? "▴" : "▾"}</button></td><td class="num" style="min-width:130px">${r.c.toFixed(2)}${stack(r.l)}</td>
       <td style="white-space:nowrap"><a href="${esc(r.l.url)}" target="_blank" rel="noopener">${esc(r.l.portal)} ↗</a><br><a href="${calcLink(r.l)}" class="note">Calculate</a></td></tr>
       ${OPEN.has(r.l.id) ? `<tr class="qrow"><td></td><td colspan="${COLS.length - 1}">${QC.breakdownTable(SC[r.l.id], W)}</td></tr>` : ""}`;
   }).join("")}</tbody>`;

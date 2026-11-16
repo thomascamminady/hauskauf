@@ -62,14 +62,14 @@ dialog::backdrop { background: rgba(0,0,0,.5); }
       <label>Source<select id="f-src"><option value="">All portals</option></select></label>
       <label>Seen<select id="f-new"><option value="">Any time</option><option value="1">New today</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
       <label>Sort<select id="f-sort">
-        <option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
+        <option value="you">Your weights</option><option value="new">Newest first</option><option value="price">Price ↑</option><option value="m2">€/m² ↑</option>
         <option value="vs">Cheapest vs district</option><option value="size">Largest first</option><option value="fit">Preferred area first</option><option value="hood">Best neighbourhood</option><option value="forest">Closest to forest</option></select></label>
       <label class="check"><input type="checkbox" id="f-private"> Private sellers only</label>
       <label class="check"><input type="checkbox" id="f-gone"> Show gone</label>
       <label><button class="btn" id="f-reset" type="button">Reset filters</button></label>
     </div>
   </div>
-  <div class="bar2"><span id="count"></span><span class="note">Click an offer for a preview · ← → to step through · Esc to close</span></div>
+  <div class="bar2"><span id="count"></span><span class="note">“Your weights” uses the sliders under <a href="overview.html#ranking">What matters to you</a> on the Shortlist page.</span><span class="note">Click an offer for a preview · ← → to step through · Esc to close</span></div>
   <div class="offers" id="offers"></div>
 </section>
 
@@ -107,12 +107,21 @@ for (const o of OFFERS) {
   o.hood = d ? Object.fromEntries(AREA_IDS.map(id => [id, QC.area(id, d)])) : null;
   o.hood_avg = d ? AREA_IDS.reduce((t, id) => t + (o.hood[id]?.s ?? 0), 0) / AREA_IDS.length : null;
 }
+// "Your weights": the criterion weights set on the Shortlist page (same browser), applied to what an offer reveals.
+const UW = Object.assign(Object.fromEntries(QC.CRITS.map(c => [c.id, c.weight])), (() => { try { return JSON.parse(localStorage.getItem("hk:weights2") || "{}"); } catch { return {}; } })());
+function offerScores(o) {
+  const sc = Object.fromEntries(homeRows(o)), hood = o.hood || {};
+  for (const id of AREA_IDS) sc[id] = hood[id] ?? null;
+  sc.location = o.fit != null ? {s: o.fit, why: "district preference"} : null;
+  return sc;
+}
+for (const o of OFFERS) { o.you = QC.weighted(offerScores(o), UW); o.you_n = Object.values(offerScores(o)).filter(x => x && x.s != null).length; }
 const LABEL = Object.fromEntries(F.sources.map(s => [s.name, s.label]));
 const today = F.updated, dayDiff = d => Math.round((Date.parse(today) - Date.parse(d)) / 864e5);
 $("#updated").textContent = F.updated; $("#offers-count").textContent = F.active;
 
 // ---------- filters (kept on this device) ----------
-const DEF = {q: "", kind: "", size: 100, price: 900, rooms: 3, area: "", src: "", new: "", sort: "new", private: false, gone: false};
+const DEF = {q: "", kind: "", size: 100, price: 900, rooms: 3, area: "", src: "", new: "", sort: "you", private: false, gone: false};
 let S = Object.assign({}, DEF, store.get("offer-filters", {}));
 const FIELDS = {q: "f-q", kind: "f-kind", size: "f-size", price: "f-price", rooms: "f-rooms", area: "f-area", src: "f-src", new: "f-new", sort: "f-sort", private: "f-private", gone: "f-gone"};
 F.sources.forEach(s => $("#f-src").add(new Option(s.label, s.name)));
@@ -144,7 +153,7 @@ function visible() {
   });
   const by = {new: o => -Date.parse(o.first_seen) - (o.price ?? 0) / 1e12, price: o => o.price ?? 1e12, m2: o => o.eur_m2 ?? 1e12,
               vs: o => o.vs_district ?? 1e3, size: o => -(o.size_m2 ?? 0), fit: o => -(o.fit ?? 0) * 1e7 + (o.eur_m2 ?? 0),
-              hood: o => -(o.hood_avg ?? -1), forest: o => o.district && QC.AM[o.district]?.forest ? QC.AM[o.district].forest.m : 1e9}[S.sort] || (o => 0);
+              hood: o => -(o.hood_avg ?? -1), you: o => -(o.you || 0) + (o.you_n < 5 ? 5 : 0) + (o.price ? 0 : 2), forest: o => o.district && QC.AM[o.district]?.forest ? QC.AM[o.district].forest.m : 1e9}[S.sort] || (o => 0);
   return list.sort((a, b) => by(a) - by(b));
 }
 
@@ -175,7 +184,8 @@ function render() {
         <div class="where">${esc(o.area)} ${o.zip ? `· ${esc(o.zip)}` : ""} · ${o.kind === "house" ? "House" : "Flat"}</div>
         <div class="title">${esc(o.title)}</div>
         ${o.district && QC.AM[o.district] ? `<div class="note">Forest ${QC.m(QC.AM[o.district].forest?.m)} · Supermarket ${QC.m(QC.AM[o.district].supermarket?.m)}</div>` : ""}
-        <div class="foot"><span>${o.sources.map(s => LABEL[s]).join(" · ")}</span><span>${vsTxt(o)}</span></div></div></article>`).join("")
+        <div class="foot"><span>${o.sources.map(s => LABEL[s]).join(" · ")}</span><span>${vsTxt(o)}</span></div>
+        ${o.you ? `<div class="yourfit" title="Weighted with your criterion weights from the Shortlist page, over the ${o.you_n} criteria this listing reveals">Your weights: <b>${o.you.toFixed(1)}</b> / 5 <span class="note">(${o.you_n} of 14 criteria known)</span></div>` : ""}</div></article>`).join("")
     : `<div class="empty">No offers match these filters.</div>`;
 }
 $("#offers").addEventListener("click", e => { const c = e.target.closest(".offer"); if (c) openPreview(c.dataset.k); });

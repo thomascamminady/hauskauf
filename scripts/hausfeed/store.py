@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from hausfeed.core import Offer
+from hausfeed.core import Offer, is_new_build
 from hausfeed.fetch import CrawlResult
 
 FeedDict = dict[str, Any]
@@ -40,6 +40,14 @@ def keep(offer: Offer, config: dict[str, Any]) -> bool:
     return not (pattern and re.search(pattern, offer.title, re.IGNORECASE))
 
 
+def keep_record(rec: FeedDict, config: dict[str, Any]) -> bool:
+    """`keep` for a stored record (title-based new-build check, since the card text isn't stored)."""
+    if config.get("exclude_new_build", True) and is_new_build(rec.get("title", "")):
+        return False
+    pattern = config.get("exclude_title_regex")
+    return not (pattern and re.search(pattern, rec.get("title", ""), re.IGNORECASE))
+
+
 def _days_between(a: str, b: str) -> int:
     from datetime import date
 
@@ -50,6 +58,9 @@ def merge(feed: FeedDict, results: list[CrawlResult], today: str, config: dict[s
     """Fold one run into ``feed`` in place. Returns counts for the run log."""
     offers: dict[str, FeedDict] = feed["offers"]
     stats = {"new": 0, "price_changed": 0, "gone": 0, "seen": 0}
+    # Filters apply retroactively: drop stored offers that today's rules would reject.
+    for key in [k for k, r in offers.items() if not keep_record(r, config)]:
+        del offers[key]
     for res in results:
         seen_now: set[str] = set()
         for o in res.offers:
@@ -131,7 +142,7 @@ def link_duplicates(offers: dict[str, FeedDict]) -> None:
                 m
                 for m in keys
                 if m != k
-                and offers[m]["source"] != offers[k]["source"]
+                and (offers[m]["source"] != offers[k]["source"] or offers[m]["title"] == offers[k]["title"])
                 and abs(offers[m]["price"] - offers[k]["price"]) <= 0.03 * offers[k]["price"]
             ]
             if mates:

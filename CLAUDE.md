@@ -55,6 +55,8 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
   (Kleinanzeigen/broker `og:image`) or automatically at build time from the same home in the feed
   (`build.attach_feed_photos`: same district, ±1 m², ±3 % price), which also adds "Also on" links.
 - **Checks:** `uv run pytest -q && uv run ruff check scripts tests && uv run ty check scripts tests`.
+- **Weights:** the "What matters to you" panel (presets in `PRESETS`, `site/template.html`) stores weights in
+  `localStorage` key `hk:weights2`; the offers page reads the same key for its "Your weights" sort.
 - **Calculator links:** `overview.html#calc?price=…&size=…&kind=flat|house&district=…&broker=…&title=…&url=…&back=…`
   pre-fills all four calculators.
 - **Private view:** `uv run scripts/build.py --private_model=private/model_private.json --out=private/overview_private.html`.

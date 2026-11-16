@@ -90,6 +90,8 @@ def test_squash_scrubs_personal_bits(text: str) -> None:
         ("Das projektierte Einfamilienhaus", True),
         ("Fertigstellung voraussichtlich Ende 2027", True),
         ("Reihenmittelhaus zum Kauf - Erstbezug · provisionsfrei", True),
+        ("Doppelhauspartner gesucht Eine Haushälfte ist bereits reserviert", True),
+        ("Individuell geplant - Ihr maßgeschneidertes Reihenhaus von Hanse Haus", True),
         ("Erstbezug nach Kernsanierung – modernes Apartment", False),
         ("Gepflegtes Einfamilienhaus aus 1986 mit Garten", False),
     ],
@@ -312,3 +314,14 @@ def test_amenities_summary() -> None:
     assert s2["forest"] is not None and s2["forest"]["name"] == "Kottenforst" and s2["forest"]["m"] < 400
     inside = amenities.ring_distance((50.708, 7.067), sq)
     assert inside == 0.0
+
+
+def test_filters_apply_to_stored_offers_and_same_portal_duplicates() -> None:
+    feed = store.load(Path("/nonexistent"))
+    a = Offer("kleinanzeigen", "a", "u1", "house", "Schönes Haus", 600000, 150, 5, "53125", "Röttgen")
+    b = Offer("kleinanzeigen", "b", "u2", "house", "Schönes Haus", 600000, 150, 5, "53125", "Röttgen")
+    store.merge(feed, [CrawlResult("kleinanzeigen", [a, b], 1)], "2026-11-15", {})
+    assert feed["offers"]["kleinanzeigen:a"]["same_as"] == ["kleinanzeigen:b"]
+    feed["offers"]["kleinanzeigen:a"]["title"] = "Doppelhauspartner gesucht"
+    store.merge(feed, [], "2026-11-16", {})
+    assert "kleinanzeigen:a" not in feed["offers"]
