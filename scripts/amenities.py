@@ -58,7 +58,7 @@ GREEN_QUERY = """
   relation(around:{r},{lat},{lon})[natural=wood];
   way(around:{r},{lat},{lon})[leisure=park];
 );
-out tags geom;
+out geom;
 """
 MIN_FOREST_HA = 5.0  # ignore small copses: only woodland of roughly this size counts as "forest"
 
@@ -127,6 +127,17 @@ def ring_area_ha(coords: list[tuple[float, float]]) -> float:
     return abs(a) / 2 / 10_000
 
 
+def element_area_ha(el: dict[str, Any], rings: list[list[tuple[float, float]]]) -> float:
+    """Size of a way/relation. Relations are made of open member segments, so use the bounding box for them."""
+    b = el.get("bounds")
+    if el["type"] == "relation" and b:
+        lat0 = (b["minlat"] + b["maxlat"]) / 2
+        w = (b["maxlon"] - b["minlon"]) * 111_320 * math.cos(math.radians(lat0))
+        h = (b["maxlat"] - b["minlat"]) * 111_320
+        return w * h / 10_000
+    return sum(ring_area_ha(r) for r in rings)
+
+
 def ring_distance(centre: tuple[float, float], ring: list[tuple[float, float]]) -> float:
     """Metres from ``centre`` to the nearest edge of ``ring`` (0 if inside a closed ring)."""
     lat0, lon0 = centre
@@ -193,7 +204,7 @@ def summarise(centre: tuple[float, float], pois: list[dict[str, Any]], greens: l
         name = tags.get("name", "")
         if tags.get("leisure") == "park":
             park.append((d, name))
-        elif sum(ring_area_ha(r) for r in rings) >= MIN_FOREST_HA:
+        elif element_area_ha(el, rings) >= MIN_FOREST_HA:
             forest.append((d, name or "Wald"))
     near = lambda k, r: sum(1 for d, _ in by[k] if d <= r)
     return {
@@ -233,6 +244,8 @@ def main(only: str | tuple[str, ...] = "", delay: float = 3.0, refresh: bool = F
                 continue
             if name in out["districts"] and not refresh and not names:
                 continue
+            if d.get("lat") is None or d.get("lon") is None:
+                continue  # aggregate entries such as "Bonn (city)" have no centre
             lat, lon = d["lat"], d["lon"]
             try:
                 pois = query(client, POI_QUERY.format(r=RADIUS, lat=lat, lon=lon))

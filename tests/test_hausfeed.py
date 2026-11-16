@@ -301,5 +301,14 @@ def test_amenities_summary() -> None:
     assert s["forest"]["name"] == "Kottenforst" and 300 < s["forest"]["m"] < 360  # the copse is ignored
     assert s["rail"]["m"] == 500 and s["bus_stops_500m"] == 1
     assert 2 < s["hbf_km"] < 4
+    # A forest relation: open member segments, sized by its bounding box.
+    rel = {
+        "type": "relation",
+        "tags": {"landuse": "forest", "name": "Kottenforst"},
+        "bounds": {"minlat": 50.61, "minlon": 7.02, "maxlat": 50.70, "maxlon": 7.13},
+        "members": [{"geometry": [{"lat": 50.7125, "lon": 7.06}, {"lat": 50.7125, "lon": 7.074}]}],
+    }
+    s2 = amenities.summarise(centre, [], [rel])
+    assert s2["forest"] is not None and s2["forest"]["name"] == "Kottenforst" and s2["forest"]["m"] < 400
     inside = amenities.ring_distance((50.708, 7.067), sq)
     assert inside == 0.0

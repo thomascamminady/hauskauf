@@ -1,0 +1,1226 @@
+{
+ "districts": {
+  "Ippendorf": {
+   "supermarket": {
+    "m": 524,
+    "name": "EDEKA Kipping"
+   },
+   "supermarkets_1km": 4,
+   "primary_school": {
+    "m": 1311,
+    "name": "Finkenhofschule"
+   },
+   "secondary_school": {
+    "m": 886,
+    "name": "Helmholtz-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 464,
+    "name": "Kita Zauberkiste"
+   },
+   "kindergartens_1km": 7,
+   "pharmacy": {
+    "m": 500,
+    "name": "Mühlenhof-Apotheke"
+   },
+   "doctors_1km": 10,
+   "cafes_restaurants_1km": 12,
+   "rail": {
+    "m": 1096,
+    "name": "Bonn Helmholtzstraße"
+   },
+   "bus_stops_500m": 8,
+   "forest": {
+    "m": 771,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 350,
+    "name": ""
+   },
+   "hbf_km": 2.9,
+   "godesberg_km": 7.5
+  },
+  "Venusberg": {
+   "supermarket": {
+    "m": 822,
+    "name": "Netto City"
+   },
+   "supermarkets_1km": 1,
+   "primary_school": {
+    "m": 1339,
+    "name": "Gemeinschaftsgrundschule Waldschule Bonn-Venusberg"
+   },
+   "secondary_school": {
+    "m": 967,
+    "name": "Emilie-Heyermann-Realschule"
+   },
+   "kindergarten": {
+    "m": 551,
+    "name": "Gemeinnützige Kindertagesstätte Mini-Mäuse GmbH - Venusberg"
+   },
+   "kindergartens_1km": 2,
+   "pharmacy": {
+    "m": 903,
+    "name": "Venusberg-Apotheke"
+   },
+   "doctors_1km": 3,
+   "cafes_restaurants_1km": 5,
+   "rail": {
+    "m": 1511,
+    "name": "Bergstraße"
+   },
+   "bus_stops_500m": 4,
+   "forest": {
+    "m": 36,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 867,
+    "name": "Kreuzbergpark"
+   },
+   "hbf_km": 2.7,
+   "godesberg_km": 5.6
+  },
+  "Röttgen": {
+   "supermarket": {
+    "m": 832,
+    "name": "REWE City"
+   },
+   "supermarkets_1km": 1,
+   "primary_school": {
+    "m": 1804,
+    "name": "Finkenhofschule"
+   },
+   "secondary_school": {
+    "m": 1264,
+    "name": "Realschule Hardtberg (RSH)"
+   },
+   "kindergarten": {
+    "m": 920,
+    "name": "Kindergarten Brüser Zwerge e.V."
+   },
+   "kindergartens_1km": 3,
+   "pharmacy": {
+    "m": 854,
+    "name": "Max & Moritz Apotheke"
+   },
+   "doctors_1km": 2,
+   "cafes_restaurants_1km": 0,
+   "rail": {
+    "m": 1719,
+    "name": "Alfter-Witterschlick"
+   },
+   "bus_stops_500m": 2,
+   "forest": {
+    "m": 0,
+    "name": "Kottenforst"
+   },
+   "park": {
+    "m": 963,
+    "name": ""
+   },
+   "hbf_km": 5.7,
+   "godesberg_km": 7.6
+  },
+  "Ückesdorf": {
+   "supermarket": {
+    "m": 812,
+    "name": "REWE City"
+   },
+   "supermarkets_1km": 1,
+   "primary_school": {
+    "m": 991,
+    "name": "Finkenhofschule"
+   },
+   "secondary_school": {
+    "m": 692,
+    "name": "Realschule Hardtberg (RSH)"
+   },
+   "kindergarten": {
+    "m": 522,
+    "name": "Katholische Kindertagesstätte St. Rochus"
+   },
+   "kindergartens_1km": 3,
+   "pharmacy": {
+    "m": 793,
+    "name": "Max & Moritz Apotheke"
+   },
+   "doctors_1km": 2,
+   "cafes_restaurants_1km": 4,
+   "rail": {
+    "m": 1685,
+    "name": "Alfter-Witterschlick"
+   },
+   "bus_stops_500m": 4,
+   "forest": {
+    "m": 362,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 464,
+    "name": "Derletal"
+   },
+   "hbf_km": 5.2,
+   "godesberg_km": 8.1
+  },
+  "Poppelsdorf": {
+   "supermarket": {
+    "m": 176,
+    "name": "Netto Marken-Discount"
+   },
+   "supermarkets_1km": 4,
+   "primary_school": {
+    "m": 819,
+    "name": "Michaelschule"
+   },
+   "secondary_school": {
+    "m": 606,
+    "name": "Felix-Hausdorff-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 445,
+    "name": "Kath. Kindergarten St. Sebastian"
+   },
+   "kindergartens_1km": 8,
+   "pharmacy": {
+    "m": 144,
+    "name": "Flora-Apotheke"
+   },
+   "doctors_1km": 17,
+   "cafes_restaurants_1km": 56,
+   "rail": {
+    "m": 1012,
+    "name": "Weberstraße"
+   },
+   "bus_stops_500m": 17,
+   "forest": {
+    "m": 626,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 189,
+    "name": ""
+   },
+   "hbf_km": 1.1,
+   "godesberg_km": 6.6
+  },
+  "Kessenich": {
+   "supermarket": {
+    "m": 165,
+    "name": "REWE"
+   },
+   "supermarkets_1km": 4,
+   "primary_school": {
+    "m": 1816,
+    "name": "Gemeinschaftsgrundschule Waldschule Bonn-Venusberg"
+   },
+   "secondary_school": {
+    "m": 569,
+    "name": "Gesamtschule Bonns Fünfte"
+   },
+   "kindergarten": {
+    "m": 267,
+    "name": "Kindertageseinrichtung Kindertreff Rübezahl"
+   },
+   "kindergartens_1km": 11,
+   "pharmacy": {
+    "m": 74,
+    "name": "Zedern Apotheke"
+   },
+   "doctors_1km": 14,
+   "cafes_restaurants_1km": 21,
+   "rail": {
+    "m": 186,
+    "name": "Pützstraße"
+   },
+   "bus_stops_500m": 13,
+   "forest": {
+    "m": 397,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 693,
+    "name": "Reuterpark"
+   },
+   "hbf_km": 2.3,
+   "godesberg_km": 4.7
+  },
+  "Südstadt": {
+   "supermarket": {
+    "m": 169,
+    "name": "REWE City"
+   },
+   "supermarkets_1km": 8,
+   "primary_school": {
+    "m": 627,
+    "name": "Münsterschule"
+   },
+   "secondary_school": {
+    "m": 233,
+    "name": "Clara-Schumann-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 156,
+    "name": "Hexenkessel"
+   },
+   "kindergartens_1km": 14,
+   "pharmacy": {
+    "m": 128,
+    "name": "Adler-Apotheke"
+   },
+   "doctors_1km": 48,
+   "cafes_restaurants_1km": 91,
+   "rail": {
+    "m": 92,
+    "name": "Weberstraße"
+   },
+   "bus_stops_500m": 16,
+   "forest": {
+    "m": 889,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 402,
+    "name": ""
+   },
+   "hbf_km": 0.9,
+   "godesberg_km": 6.0
+  },
+  "Zentrum": {
+   "supermarket": {
+    "m": 186,
+    "name": "Bonn oriental"
+   },
+   "supermarkets_1km": 20,
+   "primary_school": {
+    "m": 724,
+    "name": "Münsterschule"
+   },
+   "secondary_school": {
+    "m": 870,
+    "name": "Beethoven-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 413,
+    "name": "Stadthaus-Kita"
+   },
+   "kindergartens_1km": 12,
+   "pharmacy": {
+    "m": 102,
+    "name": "Löwen-Apotheke"
+   },
+   "doctors_1km": 67,
+   "cafes_restaurants_1km": 189,
+   "rail": {
+    "m": 243,
+    "name": "Bertha-von-Suttner-Platz / Beethovenhaus"
+   },
+   "bus_stops_500m": 37,
+   "forest": {
+    "m": 1911,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 223,
+    "name": "Budafok-Park"
+   },
+   "hbf_km": 0.5,
+   "godesberg_km": 7.1
+  },
+  "Weststadt": {
+   "supermarket": {
+    "m": 15,
+    "name": "EDEKA Vogl"
+   },
+   "supermarkets_1km": 10,
+   "primary_school": {
+    "m": 255,
+    "name": "Michaelschule"
+   },
+   "secondary_school": {
+    "m": 610,
+    "name": "Felix-Hausdorff-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 362,
+    "name": "Kindertageseinrichtung Rasselbande e. V."
+   },
+   "kindergartens_1km": 10,
+   "pharmacy": {
+    "m": 268,
+    "name": "Beethoven-Apotheke"
+   },
+   "doctors_1km": 22,
+   "cafes_restaurants_1km": 50,
+   "rail": {
+    "m": 404,
+    "name": "Bonn West"
+   },
+   "bus_stops_500m": 11,
+   "forest": {
+    "m": 1675,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 225,
+    "name": ""
+   },
+   "hbf_km": 1.0,
+   "godesberg_km": 7.6
+  },
+  "Endenich": {
+   "supermarket": {
+    "m": 97,
+    "name": "Norma"
+   },
+   "supermarkets_1km": 7,
+   "primary_school": {
+    "m": 987,
+    "name": "Michaelschule"
+   },
+   "secondary_school": {
+    "m": 1109,
+    "name": "Helmholtz-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 159,
+    "name": ""
+   },
+   "kindergartens_1km": 9,
+   "pharmacy": {
+    "m": 133,
+    "name": "Burg-Apotheke Endenich"
+   },
+   "doctors_1km": 5,
+   "cafes_restaurants_1km": 19,
+   "rail": {
+    "m": 1111,
+    "name": "Bonn-Endenich Nord"
+   },
+   "bus_stops_500m": 17,
+   "forest": {
+    "m": 1234,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 215,
+    "name": ""
+   },
+   "hbf_km": 2.0,
+   "godesberg_km": 7.8
+  },
+  "Dottendorf": {
+   "supermarket": {
+    "m": 279,
+    "name": "EDEKA"
+   },
+   "supermarkets_1km": 4,
+   "primary_school": {
+    "m": 1766,
+    "name": "Gemeinschaftsgrundschule Waldschule Bonn-Venusberg"
+   },
+   "secondary_school": {
+    "m": 406,
+    "name": "Friedrich-Ebert-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 302,
+    "name": "Kleine Wolkenstürmer"
+   },
+   "kindergartens_1km": 14,
+   "pharmacy": {
+    "m": 637,
+    "name": "Phönix-Apotheke"
+   },
+   "doctors_1km": 13,
+   "cafes_restaurants_1km": 24,
+   "rail": {
+    "m": 595,
+    "name": "Ollenhauerstraße"
+   },
+   "bus_stops_500m": 8,
+   "forest": {
+    "m": 882,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 283,
+    "name": ""
+   },
+   "hbf_km": 3.1,
+   "godesberg_km": 3.8
+  },
+  "Gronau": {
+   "supermarket": {
+    "m": 1214,
+    "name": "REWE"
+   },
+   "supermarkets_1km": 0,
+   "primary_school": {
+    "m": 1962,
+    "name": "Münsterschule"
+   },
+   "secondary_school": {
+    "m": 952,
+    "name": "Friedrich-Ebert-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 75,
+    "name": "Internationale Kindertageseinrichtung Bonn"
+   },
+   "kindergartens_1km": 10,
+   "pharmacy": {
+    "m": 1112,
+    "name": "Zedern Apotheke"
+   },
+   "doctors_1km": 5,
+   "cafes_restaurants_1km": 22,
+   "rail": {
+    "m": 295,
+    "name": "Heussallee/Museumsmeile"
+   },
+   "bus_stops_500m": 13,
+   "forest": {
+    "m": 1439,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 261,
+    "name": ""
+   },
+   "hbf_km": 2.5,
+   "godesberg_km": 4.4
+  },
+  "Lengsdorf": {
+   "supermarket": {
+    "m": 156,
+    "name": "Ümit"
+   },
+   "supermarkets_1km": 5,
+   "primary_school": {
+    "m": 811,
+    "name": "Finkenhofschule"
+   },
+   "secondary_school": {
+    "m": 763,
+    "name": "Margot-Barnard-Realschule"
+   },
+   "kindergarten": {
+    "m": 210,
+    "name": "Städt. Kindergarten Flemingstraße"
+   },
+   "kindergartens_1km": 8,
+   "pharmacy": {
+    "m": 232,
+    "name": "Engel-Apotheke"
+   },
+   "doctors_1km": 26,
+   "cafes_restaurants_1km": 24,
+   "rail": {
+    "m": 561,
+    "name": "Bonn-Duisdorf"
+   },
+   "bus_stops_500m": 16,
+   "forest": {
+    "m": 758,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 265,
+    "name": ""
+   },
+   "hbf_km": 4.0,
+   "godesberg_km": 8.4
+  },
+  "Duisdorf": {
+   "supermarket": {
+    "m": 324,
+    "name": "Aldi Süd"
+   },
+   "supermarkets_1km": 3,
+   "primary_school": {
+    "m": 492,
+    "name": "FCSB Grundschule im Schöntalweg"
+   },
+   "secondary_school": {
+    "m": 552,
+    "name": "Gymnasium Alfter"
+   },
+   "kindergarten": {
+    "m": 419,
+    "name": "Heilpädagogischer Kindergarten Die Burgkinder"
+   },
+   "kindergartens_1km": 10,
+   "pharmacy": {
+    "m": 427,
+    "name": "Quellen-Apotheke"
+   },
+   "doctors_1km": 5,
+   "cafes_restaurants_1km": 5,
+   "rail": {
+    "m": 758,
+    "name": "Bonn-Duisdorf"
+   },
+   "bus_stops_500m": 11,
+   "forest": {
+    "m": 484,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 449,
+    "name": ""
+   },
+   "hbf_km": 4.9,
+   "godesberg_km": 9.7
+  },
+  "Brüser Berg": {
+   "supermarket": {
+    "m": 1283,
+    "name": "REWE City"
+   },
+   "supermarkets_1km": 0,
+   "primary_school": {
+    "m": 1120,
+    "name": "Finkenhofschule"
+   },
+   "secondary_school": {
+    "m": 1051,
+    "name": "Realschule Hardtberg (RSH)"
+   },
+   "kindergarten": {
+    "m": 681,
+    "name": "Kindertagesstätte Regenbogenhaus"
+   },
+   "kindergartens_1km": 3,
+   "pharmacy": {
+    "m": 1205,
+    "name": "Hardt-Apotheke"
+   },
+   "doctors_1km": 0,
+   "cafes_restaurants_1km": 3,
+   "rail": {
+    "m": 1550,
+    "name": "Alfter-Witterschlick"
+   },
+   "bus_stops_500m": 0,
+   "forest": {
+    "m": 6,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 10,
+    "name": "Derletal"
+   },
+   "hbf_km": 5.3,
+   "godesberg_km": 8.6
+  },
+  "Schweinheim": {
+   "supermarket": {
+    "m": 1380,
+    "name": "Netto Marken-Discount"
+   },
+   "supermarkets_1km": 0,
+   "primary_school": {
+    "m": 2046,
+    "name": "Gemeinschaftsgrundschule Heiderhof"
+   },
+   "secondary_school": {
+    "m": 1014,
+    "name": "Aloisiuskolleg"
+   },
+   "kindergarten": {
+    "m": 443,
+    "name": "Kindergarten Elterninitiative Waldkiga Laubfrösche"
+   },
+   "kindergartens_1km": 3,
+   "pharmacy": {
+    "m": 1399,
+    "name": "Kurpark-Apotheke"
+   },
+   "doctors_1km": 0,
+   "cafes_restaurants_1km": 1,
+   "rail": {
+    "m": 1697,
+    "name": "Stadthalle"
+   },
+   "bus_stops_500m": 2,
+   "forest": {
+    "m": 86,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 638,
+    "name": "Schweinheimer Platz"
+   },
+   "hbf_km": 6.6,
+   "godesberg_km": 1.8
+  },
+  "Friesdorf": {
+   "supermarket": {
+    "m": 198,
+    "name": "SES Market"
+   },
+   "supermarkets_1km": 7,
+   "primary_school": {
+    "m": 1297,
+    "name": "Gotenschule"
+   },
+   "secondary_school": {
+    "m": 787,
+    "name": "Elisabeth-Selbert-Gesamtschule"
+   },
+   "kindergarten": {
+    "m": 558,
+    "name": "Kindergarten Godeszwerge"
+   },
+   "kindergartens_1km": 7,
+   "pharmacy": {
+    "m": 698,
+    "name": "Stern-Apotheke"
+   },
+   "doctors_1km": 6,
+   "cafes_restaurants_1km": 15,
+   "rail": {
+    "m": 401,
+    "name": "Hochkreuz / Deutsches Museum Bonn"
+   },
+   "bus_stops_500m": 15,
+   "forest": {
+    "m": 579,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 320,
+    "name": ""
+   },
+   "hbf_km": 5.0,
+   "godesberg_km": 1.9
+  },
+  "Alt-Godesberg": {
+   "supermarket": {
+    "m": 66,
+    "name": "Aleppo Markt"
+   },
+   "supermarkets_1km": 9,
+   "primary_school": {
+    "m": 1310,
+    "name": "Gotenschule"
+   },
+   "secondary_school": {
+    "m": 294,
+    "name": "Clara-Fey-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 204,
+    "name": "Kindertageseinrichtung Kinderhaus Bonn e.V."
+   },
+   "kindergartens_1km": 12,
+   "pharmacy": {
+    "m": 57,
+    "name": "Burg Apotheke"
+   },
+   "doctors_1km": 21,
+   "cafes_restaurants_1km": 49,
+   "rail": {
+    "m": 224,
+    "name": "Bad Godesberg Bahnhof"
+   },
+   "bus_stops_500m": 19,
+   "forest": {
+    "m": 184,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 197,
+    "name": ""
+   },
+   "hbf_km": 6.6,
+   "godesberg_km": 0.2
+  },
+  "Godesberg-Villenviertel": {
+   "supermarket": {
+    "m": 353,
+    "name": "EDEKA"
+   },
+   "supermarkets_1km": 7,
+   "primary_school": {
+    "m": 545,
+    "name": "Gotenschule"
+   },
+   "secondary_school": {
+    "m": 471,
+    "name": "Nicolaus-Cusanus-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 298,
+    "name": "Kindertagesstätte bumble bees I"
+   },
+   "kindergartens_1km": 12,
+   "pharmacy": {
+    "m": 318,
+    "name": "Donatus-Apotheke"
+   },
+   "doctors_1km": 7,
+   "cafes_restaurants_1km": 38,
+   "rail": {
+    "m": 724,
+    "name": "Plittersdorfer Straße"
+   },
+   "bus_stops_500m": 19,
+   "forest": {
+    "m": 983,
+    "name": "Stadtwald"
+   },
+   "park": {
+    "m": 60,
+    "name": "Arndtplatz"
+   },
+   "hbf_km": 6.2,
+   "godesberg_km": 1.0
+  },
+  "Plittersdorf": {
+   "supermarket": {
+    "m": 265,
+    "name": "REWE City"
+   },
+   "supermarkets_1km": 3,
+   "primary_school": {
+    "m": 460,
+    "name": "Gotenschule"
+   },
+   "secondary_school": {
+    "m": 470,
+    "name": "Nicolaus-Cusanus-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 114,
+    "name": "Kath. Kindergarten St. Evergislus"
+   },
+   "kindergartens_1km": 6,
+   "pharmacy": {
+    "m": 313,
+    "name": "Donatus-Apotheke"
+   },
+   "doctors_1km": 3,
+   "cafes_restaurants_1km": 11,
+   "rail": {
+    "m": 1200,
+    "name": "Wurzerstraße"
+   },
+   "bus_stops_500m": 16,
+   "forest": {
+    "m": 1433,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 171,
+    "name": ""
+   },
+   "hbf_km": 5.8,
+   "godesberg_km": 1.6
+  },
+  "Mehlem": {
+   "supermarket": {
+    "m": 184,
+    "name": "EDEKA"
+   },
+   "supermarkets_1km": 7,
+   "primary_school": {
+    "m": 264,
+    "name": "KGS Am Domhof"
+   },
+   "secondary_school": {
+    "m": 1687,
+    "name": "Konrad-Adenauer-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 115,
+    "name": "Monti-Haus"
+   },
+   "kindergartens_1km": 11,
+   "pharmacy": {
+    "m": 209,
+    "name": "Alte Apotheke"
+   },
+   "doctors_1km": 10,
+   "cafes_restaurants_1km": 10,
+   "rail": {
+    "m": 913,
+    "name": "Bonn-Mehlem"
+   },
+   "bus_stops_500m": 11,
+   "forest": {
+    "m": 208,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 63,
+    "name": "Mehlemer Dorfplatz"
+   },
+   "hbf_km": 10.1,
+   "godesberg_km": 3.2
+  },
+  "Heiderhof": {
+   "supermarket": {
+    "m": 2358,
+    "name": "EDEKA Bock"
+   },
+   "supermarkets_1km": 0,
+   "primary_school": {
+    "m": 1853,
+    "name": "Katholische Grundschule Pech"
+   },
+   "secondary_school": {
+    "m": 2095,
+    "name": "Aloisiuskolleg"
+   },
+   "kindergarten": {
+    "m": 1653,
+    "name": "Kindergarten Elterninitiative Waldkiga Laubfrösche"
+   },
+   "kindergartens_1km": 0,
+   "pharmacy": {
+    "m": 2398,
+    "name": "Akazien-Apotheke"
+   },
+   "doctors_1km": 0,
+   "cafes_restaurants_1km": 0,
+   "rail": null,
+   "bus_stops_500m": 0,
+   "forest": {
+    "m": 35,
+    "name": "Kottenforst"
+   },
+   "park": {
+    "m": 1953,
+    "name": "Schweinheimer Platz"
+   },
+   "hbf_km": 7.2,
+   "godesberg_km": 3.0
+  },
+  "Muffendorf": {
+   "supermarket": {
+    "m": 687,
+    "name": "Netto Marken-Discount"
+   },
+   "supermarkets_1km": 1,
+   "primary_school": {
+    "m": 799,
+    "name": "Robert-Koch-Schule"
+   },
+   "secondary_school": {
+    "m": 576,
+    "name": "Amos-Comenius-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 243,
+    "name": "Kita St. Martin"
+   },
+   "kindergartens_1km": 10,
+   "pharmacy": {
+    "m": 191,
+    "name": "Martin-Apotheke"
+   },
+   "doctors_1km": 7,
+   "cafes_restaurants_1km": 8,
+   "rail": {
+    "m": 970,
+    "name": "Stadthalle"
+   },
+   "bus_stops_500m": 15,
+   "forest": {
+    "m": 425,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 235,
+    "name": "Parkanlage der ehemaligen Kommende Muffendorf"
+   },
+   "hbf_km": 7.9,
+   "godesberg_km": 1.3
+  },
+  "Lannesdorf": {
+   "supermarket": {
+    "m": 105,
+    "name": "Netto City"
+   },
+   "supermarkets_1km": 7,
+   "primary_school": {
+    "m": 177,
+    "name": "Lyngsbergschule"
+   },
+   "secondary_school": {
+    "m": 792,
+    "name": "Konrad-Adenauer-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 137,
+    "name": "Kath. Kindergarten Herz Jesu"
+   },
+   "kindergartens_1km": 11,
+   "pharmacy": {
+    "m": 95,
+    "name": "St. Anna-Apotheke"
+   },
+   "doctors_1km": 0,
+   "cafes_restaurants_1km": 7,
+   "rail": {
+    "m": 871,
+    "name": "Bonn-Mehlem"
+   },
+   "bus_stops_500m": 9,
+   "forest": {
+    "m": 462,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 874,
+    "name": "Parkanlage der ehemaligen Kommende Muffendorf"
+   },
+   "hbf_km": 9.2,
+   "godesberg_km": 2.4
+  },
+  "Rüngsdorf": {
+   "supermarket": {
+    "m": 38,
+    "name": "Aldi Süd"
+   },
+   "supermarkets_1km": 3,
+   "primary_school": {
+    "m": 54,
+    "name": "Andreasschule"
+   },
+   "secondary_school": {
+    "m": 294,
+    "name": "Johannes-Rau-Schule"
+   },
+   "kindergarten": {
+    "m": 282,
+    "name": "Kindertageseinrichtung Sozialdienst Kath. Frauen e.V."
+   },
+   "kindergartens_1km": 6,
+   "pharmacy": {
+    "m": 433,
+    "name": "Deutschherren-Apotheke"
+   },
+   "doctors_1km": 8,
+   "cafes_restaurants_1km": 10,
+   "rail": {
+    "m": 1034,
+    "name": "Stadthalle"
+   },
+   "bus_stops_500m": 16,
+   "forest": {
+    "m": 549,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 31,
+    "name": ""
+   },
+   "hbf_km": 8.1,
+   "godesberg_km": 1.3
+  },
+  "Pennenfeld": {
+   "supermarket": {
+    "m": 740,
+    "name": "REWE"
+   },
+   "supermarkets_1km": 5,
+   "primary_school": {
+    "m": 1564,
+    "name": "Robert-Koch-Schule"
+   },
+   "secondary_school": {
+    "m": 193,
+    "name": "Aloisiuskolleg"
+   },
+   "kindergarten": {
+    "m": 310,
+    "name": "Kindergarten am Leuchtturm"
+   },
+   "kindergartens_1km": 7,
+   "pharmacy": {
+    "m": 650,
+    "name": "Kurpark-Apotheke"
+   },
+   "doctors_1km": 18,
+   "cafes_restaurants_1km": 34,
+   "rail": {
+    "m": 802,
+    "name": "Stadthalle"
+   },
+   "bus_stops_500m": 6,
+   "forest": {
+    "m": 216,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 52,
+    "name": ""
+   },
+   "hbf_km": 7.0,
+   "godesberg_km": 1.0
+  },
+  "Beuel-Mitte": {
+   "supermarket": {
+    "m": 179,
+    "name": "Alnatura Super Natur Markt"
+   },
+   "supermarkets_1km": 10,
+   "primary_school": {
+    "m": 353,
+    "name": "Gemeinschaftsgrundschule Paul-Gerhardt"
+   },
+   "secondary_school": {
+    "m": 1214,
+    "name": "Beethoven-Gymnasium"
+   },
+   "kindergarten": {
+    "m": 164,
+    "name": "Kindergarten Elterninitiative Aktion Regenbogen e.V."
+   },
+   "kindergartens_1km": 15,
+   "pharmacy": {
+    "m": 185,
+    "name": "Apotheke zur Alten Post"
+   },
+   "doctors_1km": 27,
+   "cafes_restaurants_1km": 38,
+   "rail": {
+    "m": 185,
+    "name": "Beuel Rathaus"
+   },
+   "bus_stops_500m": 23,
+   "forest": {
+    "m": 975,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 75,
+    "name": "Synagogenplatz"
+   },
+   "hbf_km": 1.9,
+   "godesberg_km": 6.5
+  },
+  "Holzlar": {
+   "supermarket": {
+    "m": 174,
+    "name": "Lidl"
+   },
+   "supermarkets_1km": 3,
+   "primary_school": {
+    "m": 721,
+    "name": "Marktschule"
+   },
+   "secondary_school": {
+    "m": 1162,
+    "name": "Integrierte Gesamtschule Bonn-Beuel"
+   },
+   "kindergarten": {
+    "m": 151,
+    "name": ""
+   },
+   "kindergartens_1km": 5,
+   "pharmacy": {
+    "m": 685,
+    "name": "Guten Tag Apotheke Bonn Pützchen"
+   },
+   "doctors_1km": 2,
+   "cafes_restaurants_1km": 4,
+   "rail": {
+    "m": 1177,
+    "name": "Hangelar West"
+   },
+   "bus_stops_500m": 9,
+   "forest": {
+    "m": 25,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 208,
+    "name": ""
+   },
+   "hbf_km": 5.0,
+   "godesberg_km": 7.1
+  },
+  "Wachtberg": {
+   "supermarket": {
+    "m": 1704,
+    "name": "Bioland Hofladen Wittfelder Hof"
+   },
+   "supermarkets_1km": 0,
+   "primary_school": {
+    "m": 1360,
+    "name": "Grundschule Drachenfelser Ländchen"
+   },
+   "secondary_school": null,
+   "kindergarten": {
+    "m": 1564,
+    "name": "Stepke-KiTa Schatzkiste"
+   },
+   "kindergartens_1km": 0,
+   "pharmacy": {
+    "m": 2141,
+    "name": "Forum Apotheke"
+   },
+   "doctors_1km": 0,
+   "cafes_restaurants_1km": 0,
+   "rail": null,
+   "bus_stops_500m": 0,
+   "forest": {
+    "m": 258,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 1500,
+    "name": ""
+   },
+   "hbf_km": 10.6,
+   "godesberg_km": 5.2
+  },
+  "Alfter": {
+   "supermarket": {
+    "m": 441,
+    "name": "EDEKA Mohr"
+   },
+   "supermarkets_1km": 1,
+   "primary_school": {
+    "m": 610,
+    "name": "Anna-Schule"
+   },
+   "secondary_school": {
+    "m": 2091,
+    "name": "Gymnasium Alfter"
+   },
+   "kindergarten": {
+    "m": 411,
+    "name": ""
+   },
+   "kindergartens_1km": 12,
+   "pharmacy": {
+    "m": 490,
+    "name": "Bären-Apotheke"
+   },
+   "doctors_1km": 2,
+   "cafes_restaurants_1km": 9,
+   "rail": {
+    "m": 1280,
+    "name": "Alfter/Alanus Hochschule"
+   },
+   "bus_stops_500m": 8,
+   "forest": {
+    "m": 516,
+    "name": "Wald"
+   },
+   "park": {
+    "m": 53,
+    "name": ""
+   },
+   "hbf_km": 6.5,
+   "godesberg_km": 12.2
+  }
+ },
+ "source": "OpenStreetMap via Overpass API (© OpenStreetMap contributors, ODbL). Distances are straight-line from the approximate district centre, read 2026-11-16."
+}
