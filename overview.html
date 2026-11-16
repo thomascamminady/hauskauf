@@ -880,6 +880,15 @@ dialog.critdlg { width: min(760px, 94vw); }
 .cols3 ul { margin: 4px 0 0; padding-left: 18px; } .cols3 h4 { margin: 0; font-size: 13px; color: var(--text-2); }
 .verdict { margin-top: 10px; padding: 8px 12px; font-size: 14px; background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; }
 .remember { font-size: 13px; color: var(--text-2); }
+.buygrid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 18px 28px; margin-top: 10px; }
+.buyin fieldset { margin: 0 0 12px; padding: 0; border: 0; }
+.buyin legend { padding: 0; margin-bottom: 6px; font-size: 12px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
+.buyin label[data-k="down"] input { font-weight: 650; border-color: var(--accent); }
+.buyin input:disabled { color: var(--text-3); background: var(--surface-2); }
+.buyout h4 { margin: 0 0 6px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
+.buyout h4:not(:first-child) { margin-top: 14px; }
+.buyout .out { margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.warnline { margin: 0 0 12px; padding: 8px 12px; font-size: 13.5px; border-left: 3px solid var(--warn); background: color-mix(in srgb, var(--warn) 10%, transparent); border-radius: 0 6px 6px 0; }
 
 /* ---------- offers page ---------- */
 .bar2 { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 16px 0 10px; font-size: 14px; color: var(--text-2); }
@@ -908,6 +917,7 @@ dialog.pv { width: min(860px, 94vw); }
 .pv-pos { font-size: 12px; color: var(--text-3); }
 
 /* ---------- responsive ---------- */
+@media (max-width: 900px) { .buygrid { grid-template-columns: 1fr; } }
 @media (max-width: 720px) {
   body { font-size: 14px; }
   header.top .wrap { padding: 18px 14px 12px; }
@@ -916,6 +926,7 @@ dialog.pv { width: min(860px, 94vw); }
   .card { padding: 12px 14px; }
   .listing .hero { height: 180px; margin: -12px -14px 12px; }
   #map { height: 380px; }
+  .buygrid { grid-template-columns: 1fr; }
   .moneyw .wrow { grid-template-columns: 1fr; gap: 2px; }
   .moneyw .wrow .val { text-align: left; }
   .wrow { grid-template-columns: minmax(0, 1fr) 90px 80px; }
@@ -1019,18 +1030,19 @@ dialog.pv { width: min(860px, 94vw); }
   <button class="btn" id="reset-inputs" style="margin-left:8px">Reset to defaults</button>
   <div class="banner" id="calc-for" hidden></div>
 
-  <div class="grid g2" style="margin-top:12px">
-    <div class="card"><h3>1 · Purchase costs</h3>
-      <div class="form" id="f-cost"></div><div class="out" id="o-cost"></div></div>
-    <div class="card"><h3>2 · Mortgage</h3>
-      <div class="form" id="f-mort"></div><div class="out" id="o-mort"></div><div class="chartbox" id="c-mort"></div></div>
+  <div class="card buycalc" style="margin-top:12px"><h3>1 · Purchase &amp; mortgage</h3>
+    <p class="note">Enter the price and your down payment – the loan is what's left of the all-in cost. The rate follows the loan-to-value (typical 10-year rates; switch to “manual” for your bank's offer).</p>
+    <div class="buygrid">
+      <div class="buyin" id="f-buy"></div>
+      <div class="buyout"><div id="o-buy"></div><div class="chartbox" id="c-mort"></div></div>
+    </div>
   </div>
-  <div class="card" style="margin-top:14px"><h3>3 · Buy vs rent the same home</h3>
-    <p class="note">Same monthly budget in both cases; whatever housing doesn't use is invested in a world index fund. Results in today's euros after tax and selling costs.</p>
+  <div class="card" style="margin-top:14px"><h3>2 · Buy vs rent the same home</h3>
+    <p class="note">Same monthly budget in both cases; whatever housing doesn't use is invested in a world index fund. Results in today's euros after tax and selling costs. Price, fees, renovation, down payment and loan terms come from calculator 1.</p>
     <div class="form" id="f-rvb"></div>
     <div style="margin-top:10px"><button class="btn" id="btn-breakeven">Find break-even price</button> <span class="note" id="be-out"></span></div>
     <div class="out" id="o-rvb"></div><div class="chartbox" id="c-rvb"></div><div class="tip" id="rvb-tip"></div></div>
-  <div class="card" style="margin-top:14px"><h3>4 · Price per m² check</h3>
+  <div class="card" style="margin-top:14px"><h3>3 · Price per m² check</h3>
     <div class="form" id="f-m2"></div><div class="out" id="o-m2"></div></div>
 </section>
 
@@ -1536,15 +1548,15 @@ function renderOther() {
 
 // ---------- calculators ----------
 const DEF = {
-  cost: {price: 550000, broker: 3.57, tax: 6.5, notary: 2.0, works: 0, parking: 0},
-  mort: {loan: 400000, rate: 4.15, repay: 3, fix: 10, refix: 4.75},
+  buy: {price: 550000, parking: 0, works: 0, broker: 3.57, tax: 6.5, notary: 2.0, down: 165000,
+        rateMode: "auto", rate: 4.25, repay: 3, fix: 10, refix: 4.75},
   rvb: {price: 550000, fees: 12.07, works: 0, capital: 200000, reserve: 25000, budget: 4500, budgetGrowth: 2.5, rent: 1800, running: 400, upkeep: 0.8,
         rentGrowth: 3, priceGrowth: 3, inflation: 2.3, etf: 6.5, rate: 4.15, repay: 3, fix: 10, refix: 4.25, years: 20, sell: 4},
   m2: {price: 499000, size: 118, district: "Ippendorf", kind: "flat"},
 };
 const LABELS = {
   price: "Price (€)", broker: "Broker (%)", tax: "Transfer tax (%)", notary: "Notary + registry (%)", works: "Renovation (€)", parking: "Parking/garage (€)",
-  loan: "Loan (€)", rate: "Rate, fixed period (%)", repay: "Initial repayment (%)", fix: "Fixed period (years)", refix: "Rate afterwards (%)",
+  down: "Down payment (€)", rateMode: "Interest rate", loan: "Loan (€)", rate: "Rate, fixed period (%)", repay: "Initial repayment (%)", fix: "Fixed period (years)", refix: "Rate afterwards (%)",
   fees: "Purchase fees (%)", capital: "Starting capital (€)", reserve: "Cash kept back (€)", budget: "Monthly budget (€)", budgetGrowth: "Budget growth (%/yr)",
   rent: "Rent of same home, cold (€/mo)", running: "Running costs (€/mo)", upkeep: "Upkeep (% of value/yr)", rentGrowth: "Rent growth (%/yr)", priceGrowth: "Price growth (%/yr)",
   inflation: "Inflation (%/yr)", etf: "Index fund return (%/yr)", years: "Years", sell: "Selling costs (%)", size: "Living area (m²)", district: "District", kind: "Type"};
@@ -1552,9 +1564,10 @@ let IN = JSON.parse(JSON.stringify(DEF));
 if (store.get("remember", false)) { $("#remember").checked = true; const saved = store.get("inputs", null); if (saved) for (const k in DEF) IN[k] = Object.assign({}, DEF[k], saved[k] || {}); }
 $("#remember").onchange = e => { store.set("remember", e.target.checked); if (e.target.checked) store.set("inputs", IN); else store.del("inputs"); };
 $("#reset-inputs").onclick = () => { IN = JSON.parse(JSON.stringify(DEF)); store.del("inputs"); buildForms(); };
-function buildForm(id, key, onChange) {
+function buildForm(id, key, onChange, skip = []) {
   const f = $("#" + id); f.innerHTML = "";
   for (const k in IN[key]) {
+    if (skip.includes(k)) continue;
     const lab = document.createElement("label"); lab.textContent = LABELS[k] || k;
     let inp;
     if (k === "district") { inp = document.createElement("select"); Object.keys(DATA.market.districts).forEach(n => inp.add(new Option(n, n))); }
@@ -1567,22 +1580,60 @@ function buildForm(id, key, onChange) {
   onChange();
 }
 function outs(id, items) { $("#" + id).innerHTML = items.map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join(""); }
-function calcCost() {
-  const c = IN.cost, base = c.price + c.parking, fees = base * (c.broker + c.tax + c.notary) / 100;
-  outs("o-cost", [[fmtE(base + fees + c.works), "All-in"], [fmtE(base * c.tax / 100), "Transfer tax"], [fmtE(base * c.notary / 100), "Notary + registry"], [fmtE(base * c.broker / 100), "Broker"], [((c.broker + c.tax + c.notary)).toFixed(2) + "%", "Fees in total"]]);
+// ---------- 1 · purchase & mortgage (down payment in, loan out) ----------
+const LTV_RATES = [[60, 4.05], [70, 4.15], [80, 4.25], [90, 4.45], [100, 4.75], [Infinity, 5.25]];
+const ltvRate = ltv => LTV_RATES.find(([lim]) => ltv <= lim)[1];
+const BUY_GROUPS = [["The purchase", ["price", "parking", "works", "broker", "tax", "notary"]], ["Your money", ["down"]], ["The loan", ["rateMode", "rate", "repay", "fix", "refix"]]];
+function buyNumbers(c = IN.buy) {
+  const base = c.price + c.parking, feePct = c.broker + c.tax + c.notary, fees = base * feePct / 100, allIn = base + fees + c.works;
+  const loan = Math.max(0, allIn - c.down), ltv = base ? 100 * loan / base : 0;
+  const rate = c.rateMode === "auto" ? ltvRate(ltv) : c.rate;
+  return {base, feePct, fees, allIn, loan, ltv, rate};
+}
+function buildBuy() {
+  const f = $("#f-buy"); f.innerHTML = "";
+  for (const [title, keys] of BUY_GROUPS) {
+    const g = document.createElement("fieldset"); g.innerHTML = `<legend>${title}</legend>`; const grid = document.createElement("div"); grid.className = "form"; g.appendChild(grid);
+    for (const k of keys) {
+      const lab = document.createElement("label"); lab.textContent = LABELS[k] || k; lab.dataset.k = k;
+      let inp;
+      if (k === "rateMode") { inp = document.createElement("select"); inp.add(new Option("Auto from loan-to-value", "auto")); inp.add(new Option("Manual", "manual")); }
+      else { inp = document.createElement("input"); inp.type = "number"; inp.step = "any"; if (["price", "parking", "works", "down"].includes(k)) inp.step = "1000"; }
+      inp.value = IN.buy[k];
+      inp.addEventListener("input", () => { IN.buy[k] = inp.tagName === "SELECT" ? inp.value : +inp.value; if ($("#remember").checked) store.set("inputs", IN); calcBuy(); });
+      lab.appendChild(inp); grid.appendChild(lab);
+    }
+    f.appendChild(g);
+  }
+  calcBuy();
+}
+function calcBuy() {
+  const c = IN.buy, n = buyNumbers(), r = mortgage(n.loan, n.rate, c.repay, c.fix, c.refix);
+  const rateInp = $('#f-buy label[data-k="rate"] input');
+  if (rateInp) { rateInp.disabled = c.rateMode === "auto"; if (c.rateMode === "auto") rateInp.value = n.rate; }
+  const shock = (r.balFix || 0) * (c.refix - n.rate) / 100 / 12, downPct = n.allIn ? 100 * c.down / n.allIn : 0;
+  const warn = c.down < n.fees ? `<p class="warnline">The down payment doesn't cover the purchase fees (${fmtE(n.fees)}); most banks want those paid from your own money.</p>` : "";
+  const group = (t, items) => `<h4>${t}</h4><div class="out">${items.map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join("")}</div>`;
+  $("#o-buy").innerHTML = warn
+    + group("Cost", [[fmtE(n.allIn), "All-in (price + fees + works)"], [`${fmtE(n.fees)}`, `Fees (${n.feePct.toFixed(2)}%): tax ${fmtE(n.base * c.tax / 100)} · notary ${fmtE(n.base * c.notary / 100)} · broker ${fmtE(n.base * c.broker / 100)}`]])
+    + group("Financing", [[fmtE(n.loan), `Loan (down payment ${downPct.toFixed(0)}% of all-in)`], [n.ltv.toFixed(0) + "%", "Loan-to-value (loan ÷ price)"], [n.rate.toFixed(2) + "%", c.rateMode === "auto" ? "Rate for this loan-to-value" : "Your rate"]])
+    + group("Every month", [[fmtE(r.pay), "Mortgage payment"], [fmtE(n.loan * n.rate / 100 / 12), "of which interest in month 1"]])
+    + group("Over time", [[fmtE(r.balFix), `Loan left after ${c.fix} yrs`], [fmtE(r.interestFix), `Interest paid in ${c.fix} yrs`], [(r.months / 12).toFixed(1) + " yrs", "Paid off after (same payment)"],
+        [(shock >= 0 ? "+" : "−") + fmtE(Math.abs(shock)).slice(1) + "/mo", `If refinanced at ${c.refix}%`]]);
+  lineChart($("#c-mort"), [{name: "Loan left", pts: r.series, color: css("--accent")}], {yfmt: v => "€" + Math.round(v / 1000) + "k", xlab: "Years", h: 220});
+  if (typeof calcRvB === "function" && $("#o-rvb")) calcRvB();
+}
+// Buy-vs-rent takes the purchase and loan from calculator 1.
+const RVB_LINKED = ["price", "fees", "works", "capital", "rate", "repay", "fix", "refix"];
+function rvbInputs() {
+  const b = IN.buy, n = buyNumbers();
+  return Object.assign({}, IN.rvb, {price: n.base, fees: n.feePct, works: b.works, capital: b.down + IN.rvb.reserve, rate: n.rate, repay: b.repay, fix: b.fix, refix: b.refix});
 }
 function mortgage(loan, rate, repay, fix, refix, months = 600) {
   const pay = loan * (rate + repay) / 100 / 12; let bal = loan, interestFix = 0, balFix = null, m = 0; const series = [[0, loan]];
   while (bal > 0.5 && m < months) { const r = (m < fix * 12 ? rate : refix) / 100 / 12, i = bal * r; bal = bal + i - Math.min(pay, bal + i); m++; if (m <= fix * 12) interestFix += i; if (m === fix * 12) balFix = bal; if (m % 12 === 0) series.push([m / 12, bal]); }
   if (m % 12) series.push([m / 12, 0]);
   return {pay, interestFix, balFix: balFix ?? 0, months: m, series};
-}
-function calcMort() {
-  const c = IN.mort, r = mortgage(c.loan, c.rate, c.repay, c.fix, c.refix);
-  const shock = (r.balFix || 0) * (c.refix - c.rate) / 100 / 12;
-  outs("o-mort", [[fmtE(r.pay), "Monthly payment"], [fmtE(c.loan * c.rate / 100 / 12), "Interest in month 1"], [fmtE(r.balFix), `Left after ${c.fix} yrs`], [fmtE(r.interestFix), `Interest over ${c.fix} yrs`],
-    [(r.months / 12).toFixed(1) + " yrs", "Paid off after (same payment)"], [(shock >= 0 ? "+" : "−") + fmtE(Math.abs(shock)).slice(1) + "/mo", "Payment change if refinanced at new rate"]]);
-  lineChart($("#c-mort"), [{name: "Loan left", pts: r.series, color: css("--accent")}], {yfmt: v => "€" + Math.round(v / 1000) + "k", xlab: "Years", h: 240});
 }
 function simulateRvB(c, priceOverride) {
   const price = priceOverride ?? c.price, months = c.years * 12, fees = price * c.fees / 100, need = price + fees + c.works, avail = c.capital - c.reserve;
@@ -1605,14 +1656,14 @@ function simulateRvB(c, priceOverride) {
   return {loan, pay, sB, sR, fees, need};
 }
 function calcRvB() {
-  const c = IN.rvb, r = simulateRvB(c), last = r.sB.length - 1, d = r.sB[last][1] - r.sR[last][1];
+  const c = rvbInputs(), r = simulateRvB(c), last = r.sB.length - 1, d = r.sB[last][1] - r.sR[last][1];
   let cross = null; for (let i = 1; i <= last; i++) if ((r.sB[i][1] - r.sR[i][1]) * (r.sB[i - 1][1] - r.sR[i - 1][1]) <= 0 && r.sB[i][1] >= r.sR[i][1]) { cross = i; break; }
   outs("o-rvb", [[fmtE(r.loan), "Loan"], [fmtE(r.pay), "Mortgage payment"], [fmtE(r.sB[last][1]), `Net worth if buying (${c.years} yrs)`], [fmtE(r.sR[last][1]), "Net worth if renting"],
     [`<span class="${d >= 0 ? "pos" : "neg"}">${fmtS(d)}</span>`, "Buying minus renting"], [cross ? cross + " yrs" : "–", "Buying pulls ahead after"]]);
   lineChart($("#c-rvb"), [{name: "Buy", pts: r.sB, color: css("--house")}, {name: "Rent & invest", pts: r.sR, color: css("--flat")}], {yfmt: v => Math.abs(v) >= 1e6 ? "€" + (v / 1e6).toFixed(1) + "M" : "€" + Math.round(v / 1000) + "k", xlab: "Years from purchase", h: 300, tip: $("#rvb-tip")});
 }
 $("#btn-breakeven").onclick = () => {
-  const c = IN.rvb; let lo = 50000, hi = 3000000;
+  const c = rvbInputs(); let lo = 50000, hi = 3000000;
   const diff = p => { const r = simulateRvB(c, p), L = r.sB.length - 1; return r.sB[L][1] - r.sR[L][1]; };
   if (diff(lo) < 0) { $("#be-out").textContent = "Renting wins at any price with these inputs."; return; }
   for (let i = 0; i < 50; i++) { const mid = (lo + hi) / 2; if (diff(mid) > 0) lo = mid; else hi = mid; }
@@ -1624,7 +1675,7 @@ function calcM2() {
   outs("o-m2", [[fmtE(per), "Price per m²"], [d?.eur ? fmtE(d.eur) : "–", `${c.district} average (${c.kind})`], [diff == null ? "–" : `<span class="${diff > 0 ? "neg" : "pos"}">${diff > 0 ? "+" : ""}${diff.toFixed(0)}%</span>`, "vs district average"],
     [d?.eur ? fmtE(d.eur * c.size) : "–", "Price at district average"]]);
 }
-function buildForms() { buildForm("f-cost", "cost", calcCost); buildForm("f-mort", "mort", calcMort); buildForm("f-rvb", "rvb", calcRvB); buildForm("f-m2", "m2", calcM2); $("#be-out").textContent = ""; }
+function buildForms() { buildForm("f-rvb", "rvb", calcRvB, RVB_LINKED); buildBuy(); buildForm("f-m2", "m2", calcM2); $("#be-out").textContent = ""; }
 
 function lineChart(box, series, o) {
   box.innerHTML = ""; const W0 = Math.max(320, box.clientWidth || 900), H0 = o.h || 260, P = {l: 60, r: 104, t: 14, b: 40}, s = svg(W0, H0); box.appendChild(s);
@@ -1662,19 +1713,19 @@ function applyCalcPreset() {
   const price = num("price"); if (!price) return false;
   const size = num("size"), broker = num("broker") ?? 3.57, works = num("works") ?? 0, kind = p.get("kind") === "house" ? "house" : "flat";
   const district = DATA.market.districts[p.get("district")] ? p.get("district") : IN.m2.district;
+  const keep = {down: IN.buy.down, rateMode: IN.buy.rateMode, rate: IN.buy.rate, repay: IN.buy.repay, fix: IN.buy.fix, refix: IN.buy.refix};
   IN = JSON.parse(JSON.stringify(DEF));
-  Object.assign(IN.cost, {price, broker, works});
-  const feePct = broker + IN.cost.tax + IN.cost.notary, allIn = price * (1 + feePct / 100) + works;
-  IN.mort.loan = Math.round(0.7 * allIn / 1000) * 1000;
+  Object.assign(IN.buy, keep, {price, broker, works, parking: 0});
+  const feePct = broker + IN.buy.tax + IN.buy.notary;
   const rentGuess = !num("rent") && size ? Math.round(size * 13 / 10) * 10 : null;
-  Object.assign(IN.rvb, {price, fees: +feePct.toFixed(2), works, rent: num("rent") ?? rentGuess ?? IN.rvb.rent, running: num("running") ?? IN.rvb.running});
+  Object.assign(IN.rvb, {rent: num("rent") ?? rentGuess ?? IN.rvb.rent, running: num("running") ?? IN.rvb.running});
   Object.assign(IN.m2, {price, size: size ?? IN.m2.size, district, kind});
   buildForms();
   const title = p.get("title") || "this home", url = p.get("url"), back = p.get("back");
   const b = $("#calc-for"); b.hidden = false;
-  b.innerHTML = `<div>Set up for <b>${esc(title)}</b> · ${fmtE(price)}${size ? ` · ${size} m²` : ""} · broker ${broker}%${works ? ` · works ${fmtK(works)}` : ""}${rentGuess ? ` · <span class="note">rent estimated at €13/m²</span>` : ""}. Loan = 70% of all-in.</div>
+  b.innerHTML = `<div>Set up for <b>${esc(title)}</b> · ${fmtE(price)}${size ? ` · ${size} m²` : ""} · broker ${broker}%${works ? ` · works ${fmtK(works)}` : ""}${rentGuess ? ` · <span class="note">rent estimated at €13/m²</span>` : ""}. Your down payment and loan terms stay as you set them.</div>
     <div class="linkrow">${back ? `<a class="btn" href="${esc(back)}">← Back</a>` : ""}${url ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">Listing ↗</a>` : ""}<button class="btn" id="calc-clear">Clear</button></div>`;
-  $("#calc-clear").onclick = () => { b.hidden = true; IN = JSON.parse(JSON.stringify(DEF)); buildForms(); history.replaceState(null, "", "#calc"); };
+  $("#calc-clear").onclick = () => { b.hidden = true; const down = IN.buy.down; IN = JSON.parse(JSON.stringify(DEF)); IN.buy.down = down; buildForms(); history.replaceState(null, "", "#calc"); };
   requestAnimationFrame(() => $("#calc").scrollIntoView());
   return true;
 }
@@ -1701,7 +1752,7 @@ function feedTeaser() {
 
 if (DATA.private) { $("#privacy-note").textContent = "PRIVATE VERSION – contains personal figures. Do not publish."; }
 buildWeights(); renderCriteria(); renderHoods(); renderRanking(); renderScatter(); renderMarket(); renderOther(); renderCards(); buildForms(); renderMap(); setupNav(); feedTeaser(); applyCalcPreset();
-let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcMort(); calcRvB(); }, 150); });
+let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { renderScatter(); renderMarket(); calcBuy(); }, 150); });
 </script>
 </body>
 </html>
