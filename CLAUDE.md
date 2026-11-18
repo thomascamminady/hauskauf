@@ -47,7 +47,7 @@ from `private/` into tracked files, commit messages, issues or PR descriptions.
   `uv run --with numpy --with matplotlib --with fire python private/compute.py`, then `uv run scripts/build.py`.
   The page only shows shortlist entries that have model results.
 - **Offer feed:** `uv run scripts/scrape.py` (all portals, ~5 min) or `--sources=immowelt --max_requests=5 --dry_run`.
-  Runs every other day on GitHub Actions (`refresh-data.yml`; neighbourhood facts on the 1st of the month) and commits `data/feed.json` + rebuilt pages. To refresh on demand use the project skill `/refresh-data` (`.claude/skills/refresh-data/SKILL.md`). Add a portal by writing a `Source`
+  Runs every other day on GitHub Actions for Immowelt and ohne-makler (Kleinanzeigen blocks GitHub's servers, so it is refreshed locally on request via `/refresh-data`) (`refresh-data.yml`; neighbourhood facts on the 1st of the month) and commits `data/feed.json` + rebuilt pages. To refresh on demand use the project skill `/refresh-data` (`.claude/skills/refresh-data/SKILL.md`). Add a portal by writing a `Source`
   (`seeds()` + pure `parse(html, url) -> Page`) in `scripts/hausfeed/sources/`, registering it in `sources/__init__.py`,
   and adding a synthetic fixture test. Never store street addresses or contact names; `clean_location` reduces
   locations to postcode + district. ImmoScout24 blocks automated access – don't try to get around it.

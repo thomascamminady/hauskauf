@@ -9,6 +9,11 @@ The GitHub Action `.github/workflows/refresh-data.yml` already does this **every
 the month) and refreshes neighbourhood facts on the 1st. Prefer triggering that workflow; run locally only when the
 Action is failing or the user wants to watch it here.
 
+**Kleinanzeigen is blocked on GitHub** (403 for GitHub's servers since Nov 2026), so the Action only scrapes Immowelt
+and ohne-makler. The user decided Kleinanzeigen is refreshed **locally, on request** – whenever this skill runs, always
+do step 2b for Kleinanzeigen (`uv run scripts/scrape.py --sources=kleinanzeigen`), even if the Action is healthy. Don't
+try to get around the block (no proxies or disguised clients).
+
 ## 1. See what's there
 
 ```bash
@@ -19,7 +24,7 @@ python3 -c "import json;f=json.load(open('data/feed.json'));print(f['updated'], 
 
 If the last run failed, open it with `gh run view <id> --log-failed` before doing anything else.
 
-## 2a. Refresh via GitHub Actions (preferred)
+## 2a. Refresh Immowelt and ohne-makler via GitHub Actions
 
 ```bash
 gh workflow run refresh-data.yml                    # offers only (~6 min)
@@ -30,7 +35,10 @@ git pull --rebase
 
 Run `gh run watch` in the background; you'll be notified when it ends.
 
-## 2b. Refresh locally (fallback)
+## 2b. Refresh locally (always for Kleinanzeigen; for everything if the Action is failing)
+
+`uv run scripts/scrape.py --sources=kleinanzeigen` (~1 min) after pulling the Action's commit, or all portals:
+
 
 ```bash
 uv run scripts/scrape.py                 # all portals, polite 2 s delay, ~6 min – run in the background

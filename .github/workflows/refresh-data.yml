@@ -31,9 +31,10 @@ jobs:
         continue-on-error: true
         run: uv run pytest -q
       - name: Scrape portals
-        timeout-minutes: 35 # 3 portals × 10 min budget each, saved after every portal
+        timeout-minutes: 25 # 2 portals × 10 min budget each, saved after every portal
         continue-on-error: true
-        run: uv run scripts/scrape.py --budget=600
+        # Kleinanzeigen answers GitHub runners with 403, so it is refreshed locally on request (/refresh-data).
+        run: uv run scripts/scrape.py --budget=600 --sources=immowelt,ohnemakler
       - name: Neighbourhood facts (on request, or on the 1st of the month)
         if: ${{ !cancelled() && (inputs.amenities || github.event_name == 'schedule') }}
         timeout-minutes: 30
