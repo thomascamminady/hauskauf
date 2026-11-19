@@ -197,6 +197,22 @@
    "requests": 16,
    "offers": 13,
    "errors": []
+  },
+  {
+   "date": "2026-11-19",
+   "source": "immowelt",
+   "ok": true,
+   "requests": 87,
+   "offers": 380,
+   "errors": []
+  },
+  {
+   "date": "2026-11-19",
+   "source": "ohnemakler",
+   "ok": true,
+   "requests": 16,
+   "offers": 13,
+   "errors": []
   }
  ],
  "offers": {
@@ -1537,6 +1553,32 @@
    ],
    "new_build": false
   },
+  "immowelt:21423a77-aa45-4554-839a-642d666f41a4": {
+   "source": "immowelt",
+   "source_id": "21423a77-aa45-4554-839a-642d666f41a4",
+   "url": "https://www.immowelt.de/expose/21423a77-aa45-4554-839a-642d666f41a4",
+   "kind": "house",
+   "title": "Haus · als Kapitalanlage geeignet",
+   "price": 225000,
+   "size_m2": 83.0,
+   "rooms": 3.0,
+   "zip": "53177",
+   "district": "Heiderhof",
+   "plot_m2": null,
+   "energy_class": "D",
+   "image": "https://mms.immowelt.de/c/5/c/a/c5ca75e2-0e7e-48b6-b4c5-e4d1625c1007.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-19",
+     225000
+    ]
+   ]
+  },
   "immowelt:22adfb35-8ff6-4800-b2fb-44d5b1bc1aa5": {
    "source": "immowelt",
    "source_id": "22adfb35-8ff6-4800-b2fb-44d5b1bc1aa5",
@@ -1833,6 +1875,32 @@
    "new_build": false,
    "same_as": [
     "kleinanzeigen:3532427180"
+   ]
+  },
+  "immowelt:26igzd1guufw": {
+   "source": "immowelt",
+   "source_id": "26igzd1guufw",
+   "url": "https://www.immowelt.de/expose/26igzd1guufw",
+   "kind": "house",
+   "title": "Reihenhaus · provisionsfrei",
+   "price": 529000,
+   "size_m2": 145.0,
+   "rooms": 4.5,
+   "zip": "53123",
+   "district": "Duisdorf",
+   "plot_m2": 399.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/e/5/1/f/e51ffc69-c247-431d-94dc-bc41a091a30e.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-19",
+     529000
+    ]
    ]
   },
   "immowelt:2727c6b4-6484-490f-a8e8-0584b08a1d9a": {
@@ -10559,14 +10627,15 @@
    "seller": null,
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-15",
      225000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "gone": "2026-11-19"
   },
   "immowelt:ecc82acc-23d3-49cf-9b16-024f27838c2a": {
    "source": "immowelt",
@@ -10956,6 +11025,32 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:f73a3a15-71e2-4e0a-9744-53034af854a0": {
+   "source": "immowelt",
+   "source_id": "f73a3a15-71e2-4e0a-9744-53034af854a0",
+   "url": "https://www.immowelt.de/expose/f73a3a15-71e2-4e0a-9744-53034af854a0",
+   "kind": "house",
+   "title": "Doppelhaushälfte",
+   "price": 439000,
+   "size_m2": 130.0,
+   "rooms": 4.0,
+   "zip": "53119",
+   "district": null,
+   "plot_m2": 426.0,
+   "energy_class": "D",
+   "image": "https://mms.immowelt.de/c/6/a/f/c6afd447-2dea-4e6e-90bb-e8ab29f5d9ed.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-19",
+   "last_seen": "2026-11-19",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-19",
+     439000
+    ]
+   ]
   },
   "immowelt:f7d7595f-8a09-47ea-8bd1-1d2ded928c96": {
    "source": "immowelt",
@@ -17657,7 +17752,7 @@
    "district": "Röttgen",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL20waWJyeXdp?sig=Tyy5mPjfxz0BWEMG2Zhe1Cve4emJuZQei5dwRQbUcFg&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL20waWJyeXdp?sig=E-Rw8yJLCsyfXw4kVNTmLF3fE1OZV2gw_ajyB0JhNSE&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17683,7 +17778,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=pK4rJWD_WXYw-teQPh9226vdfQwX0JeWGXhzdXBYMiI&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=eSzIOKOqdUKkIyFGfqz9pkpw1x8a2O1vtiKFTGEi-Kk&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17713,7 +17808,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=gm8EMr3XQaldz_gqiXJz19SoSFsyTiN8SulzGazEZ7c&exp=1795119008",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=xWleiBEyhaqnFSnNtQ4xmeumOQItHPjkMGR3mpi6-_0&exp=1795141877",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17743,7 +17838,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=pvUdSf97YRXze317_hhTPGwchpio3y86LJ9e73b8iLE&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=QVajIfQa8TD8PKLQ4G4bLvydsHFdhTHe-cuIdwxQKJ8&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17773,7 +17868,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": "D",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=CM_hpCPcMIvbtAVBdZt-W9-G_PDaB9tgPLqZXxsUZoI&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=8bGt4wTKD_dIbBPiHP_cH3011-xfE8AZ6DofbymxcQs&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17799,7 +17894,7 @@
    "district": "Brüser Berg",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=RgaQbkHxDkM4Toa_i9CVfPV-DkSrFc6DjSz8g5IHoXE&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=o0Qp2hwITamXaXNM3JozDMxxnf7OyWj8YUz9Vxlu7ZY&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17828,7 +17923,7 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=FLxFympShZNH_VGymCH0-KLLuhZ1hyikRV5X-6AlCr4&exp=1795119008",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=6rPzbHBTmQ9kq2DZm9JPU0At0lyJ7S09ll8d3Rb9r8Y&exp=1795141877",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17854,7 +17949,7 @@
    "district": null,
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=nBw-nynaOIuWdYNnjEiKQX3FftRdsEn8WyeZ4nHvgHY&exp=1795119008",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=l7I2zg5cIF83LJshiLVCgkKj_Nvni5lbBgx2QG9JTaY&exp=1795141877",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17880,7 +17975,7 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=AXRHL7R3eWFsyRPVuhjehi3xO4OOdOR2Q4h-_xaLjJE&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=OL42UHuItcYHnFkTRqLyFzvxc-V0D0Us7N4B9yeyb3Y&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17909,7 +18004,7 @@
    "district": "Heiderhof",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=wxGG4zVtvezvpCOIxEShtAN4HNKcs7f4dr9VVq-G4Qg&exp=1795119008",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=dwP1PD7rne4o5DknDgfiXPFnS_xDHBX9jldDkXbEL68&exp=1795141877",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17939,7 +18034,7 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=masagwRgi_qUmqPe2hOaaP-nkFhMnnQsVmeSmLcSH_g&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=o-FVM6WAf0deD6UWAXsdpaF4jFEgATODk1IXitiRckE&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -17969,7 +18064,7 @@
    "district": "Ippendorf",
    "plot_m2": null,
    "energy_class": "F",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=OmjoECqD6M0LYbtCaH6nVBI1L1Mt07tAY7UCkRh7T4s&exp=1795119015",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=H-94jxL--7Df3W4Al9FuPZi0XrsQZwvbxXwRXMirJjQ&exp=1795141883",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
@@ -18026,7 +18121,7 @@
    "district": "Lengsdorf",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=BBKpw0YqUU4P_PfPGhwF_zxdQ752JwGyuS8WL9v0xyw&exp=1795119008",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=YBAAwWD_5Q_wAfSRASavNh_PGgcK7SCFIokabb3mrQQ&exp=1795141877",
    "seller": "private",
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
