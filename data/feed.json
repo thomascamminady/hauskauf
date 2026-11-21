@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-21",
  "runs": [
   {
    "date": "2026-11-15",
@@ -213,6 +213,22 @@
    "requests": 16,
    "offers": 13,
    "errors": []
+  },
+  {
+   "date": "2026-11-21",
+   "source": "immowelt",
+   "ok": true,
+   "requests": 87,
+   "offers": 383,
+   "errors": []
+  },
+  {
+   "date": "2026-11-21",
+   "source": "ohnemakler",
+   "ok": true,
+   "requests": 16,
+   "offers": 13,
+   "errors": []
   }
  ],
  "offers": {
@@ -259,7 +275,7 @@
    "image": "https://mms.immowelt.de/9/d/a/9/9da9942b-f9a9-481d-a5b6-c49d6c538363.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -285,7 +301,7 @@
    "image": "https://mms.immowelt.de/6/8/8/d/688dd3c8-1ae4-46a9-94a5-0ca31fbbaa53.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -311,7 +327,7 @@
    "image": "https://mms.immowelt.de/a/d/a/2/ada240de-670b-4747-8e89-0b86643e9ebb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -337,7 +353,7 @@
    "image": "https://mms.immowelt.de/5/5/b/e/55bebdda-31e3-4bb1-b860-680fa3c8d5d9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -363,7 +379,7 @@
    "image": "https://mms.immowelt.de/8/f/d/6/8fd6a78e-78bc-4a9f-94da-b7422d5cc08f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -385,7 +401,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -394,7 +410,7 @@
     ]
    ],
    "same_as": [
-    "immowelt:55d99202-f505-4289-8151-dc31093cab69",
+    "immowelt:b9a07854-1cff-41f2-b5ab-fb9ccfe7653a",
     "kleinanzeigen:3574212414"
    ]
   },
@@ -414,7 +430,7 @@
    "image": "https://mms.immowelt.de/3/0/2/e/302e25dc-0c80-43fc-ba5c-4f136eb94d09.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -443,7 +459,7 @@
    "image": "https://mms.immowelt.de/c/3/8/7/c3870ee8-c173-4ce9-b481-b47c0892728a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -472,7 +488,7 @@
    "image": "https://mms.immowelt.de/5/2/6/f/526ffe80-d8d4-459c-880f-9a7ba3733781.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -502,7 +518,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -511,7 +527,7 @@
     ]
    ],
    "same_as": [
-    "immowelt:cf80fe87-222d-456e-b225-a5602c700fb2",
+    "immowelt:e48a5d2b-3220-4e60-ad1e-0e184e81278e",
     "kleinanzeigen:3574212574"
    ]
   },
@@ -531,7 +547,7 @@
    "image": "https://mms.immowelt.de/4/2/3/d/423d76c7-e22d-4e17-ac7a-6c29afe851f6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -557,7 +573,7 @@
    "image": "https://mms.immowelt.de/2/1/f/0/21f0c0d8-59b9-4873-b715-97fb7cf74279.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -586,7 +602,7 @@
    "image": "https://mms.immowelt.de/0/e/c/c/0ecc51fe-e9ae-4272-b418-cb00f1612ffc.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -612,7 +628,7 @@
    "image": "https://mms.immowelt.de/a/3/d/e/a3de73db-0450-4682-8765-eabe89913f59.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -638,7 +654,7 @@
    "image": "https://mms.immowelt.de/a/9/b/d/a9bdda00-7ab1-4ef9-8a6d-b94b7691f45c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -664,7 +680,7 @@
    "image": "https://mms.immowelt.de/f/7/5/1/f751ff47-2f42-4af9-a0ee-0755961fe8f3.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -693,7 +709,7 @@
    "image": "https://mms.immowelt.de/f/1/b/3/f1b34dbb-37d9-4155-a111-b8c75edd5ebc.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -719,7 +735,7 @@
    "image": "https://mms.immowelt.de/7/2/7/3/727318f2-dd9a-437c-9238-1f50105066b1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -745,7 +761,7 @@
    "image": "https://mms.immowelt.de/7/c/0/5/7c050a21-c50a-468e-a676-f2171bdcb9d4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -798,7 +814,7 @@
    "image": "https://mms.immowelt.de/5/3/5/e/535ef83b-5794-4ab9-a98b-3bdeb19e32b6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -819,7 +835,7 @@
    "image": "https://mms.immowelt.de/0/8/3/8/0838c621-7698-47b8-b513-fc39fa1f639c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -845,7 +861,7 @@
    "image": "https://mms.immowelt.de/0/f/7/6/0f76c175-a2b4-4110-9027-a53210906548.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -874,7 +890,7 @@
    "image": "https://mms.immowelt.de/9/c/3/4/9c34df40-9c8c-43cd-932e-e30d84c4687a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -903,7 +919,7 @@
    "image": "https://mms.immowelt.de/8/d/d/b/8ddbaf05-678a-4249-9987-bf42766a810c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -929,7 +945,7 @@
    "image": "https://mms.immowelt.de/9/c/1/7/9c17d3a2-1d85-4da1-affd-fc4b9db96a0c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -958,7 +974,7 @@
    "image": "https://mms.immowelt.de/b/d/0/8/bd0846e2-c751-4d45-9f0c-15b6f4afbd17.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -984,7 +1000,7 @@
    "image": "https://mms.immowelt.de/5/9/1/b/591bfb08-59f3-490b-895d-c3af6f40ea4e.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -1005,7 +1021,7 @@
    "image": "https://mms.immowelt.de/f/7/f/b/f7fb3b55-5d58-44f8-9003-3448d261ff22.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1034,7 +1050,7 @@
    "image": "https://mms.immowelt.de/2/c/2/7/2c271ded-aac5-4d06-a18c-01c0c2a1d239.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1060,7 +1076,7 @@
    "image": "https://mms.immowelt.de/c/5/a/9/c5a9b17b-a8a9-45f5-9c8e-3f2a68e0ed41.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1086,7 +1102,7 @@
    "image": "https://mms.immowelt.de/d/0/8/4/d084790a-43e6-4c76-842f-b0aefe9b4d70.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1113,7 +1129,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1122,6 +1138,7 @@
     ]
    ],
    "same_as": [
+    "immowelt:bda2e3bf-83bf-47cb-865d-d739c8cf7dd9",
     "kleinanzeigen:3574212574"
    ]
   },
@@ -1141,7 +1158,7 @@
    "image": "https://mms.immowelt.de/9/d/4/5/9d453922-4eb2-4381-841f-8eff652d152f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1170,7 +1187,7 @@
    "image": "https://mms.immowelt.de/3/5/a/9/35a9e87b-a75b-4123-bf8e-511c2a82c749.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1197,7 +1214,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1222,7 +1239,7 @@
    "image": "https://mms.immowelt.de/d/2/a/c/d2ac97ae-f634-4512-b24c-27f6b7814fce.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1231,6 +1248,32 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:1712f2b2-531b-4c8e-9447-a1ef92258573": {
+   "source": "immowelt",
+   "source_id": "1712f2b2-531b-4c8e-9447-a1ef92258573",
+   "url": "https://www.immowelt.de/expose/1712f2b2-531b-4c8e-9447-a1ef92258573",
+   "kind": "house",
+   "title": "Bungalow",
+   "price": 699000,
+   "size_m2": 130.9,
+   "rooms": 5.0,
+   "zip": "53229",
+   "district": "Holzlar",
+   "plot_m2": 1038.0,
+   "energy_class": "F",
+   "image": "https://mms.immowelt.de/9/7/8/c/978c5b37-062b-4b74-8730-832c4a7673b3.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     699000
+    ]
+   ]
   },
   "immowelt:17b8d2f2-a853-40bd-8e18-e1407e9733ac": {
    "source": "immowelt",
@@ -1248,7 +1291,7 @@
    "image": "https://mms.immowelt.de/9/5/3/7/95375134-5d43-4144-bc77-54de4c49a6d9.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1301,7 +1344,7 @@
    "image": "https://mms.immowelt.de/b/d/d/d/bddda9a3-61d4-4594-b539-7e66cefdbc1b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1327,7 +1370,7 @@
    "image": "https://mms.immowelt.de/a/8/3/f/a83fbced-0512-4b49-b5f7-11df636ee3c5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1356,7 +1399,7 @@
    "image": "https://mms.immowelt.de/c/2/3/4/c23485db-c8e1-4921-bedc-7404d2c69ec5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1409,7 +1452,7 @@
    "image": "https://mms.immowelt.de/4/3/e/1/43e19a24-fcee-4b43-b564-02d0aa6dab1b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1438,7 +1481,7 @@
    "image": "https://mms.immowelt.de/b/8/2/8/b82820c0-0c8f-4e4c-8ef3-9a1ce229e225.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1464,7 +1507,7 @@
    "image": "https://mms.immowelt.de/3/2/5/b/325b700d-ce41-4681-93ac-b1751f0384bf.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1517,7 +1560,7 @@
    "image": "https://mms.immowelt.de/e/e/e/7/eee74a30-3cee-487f-8140-16fbaa988542.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1543,7 +1586,7 @@
    "image": "https://mms.immowelt.de/5/3/a/9/53a98ae5-5d70-4a97-b932-b90ed4518b8a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1571,13 +1614,14 @@
    "new_build": false,
    "first_seen": "2026-11-19",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-19",
      225000
     ]
-   ]
+   ],
+   "gone": "2026-11-21"
   },
   "immowelt:22adfb35-8ff6-4800-b2fb-44d5b1bc1aa5": {
    "source": "immowelt",
@@ -1596,7 +1640,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1621,7 +1665,7 @@
    "image": "https://mms.immowelt.de/a/4/7/8/a478cef3-37aa-4e6d-8421-307c8d4ccac5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1647,7 +1691,7 @@
    "image": "https://mms.immowelt.de/5/6/0/f/560f115e-0ee0-4d83-b672-f229c375c0d5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1673,7 +1717,7 @@
    "image": "https://mms.immowelt.de/2/3/9/3/239350ee-6ac1-40ad-97d7-5f5cbce5b108.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1699,7 +1743,7 @@
    "image": "https://mms.immowelt.de/5/0/e/b/50eb4561-0d03-4f41-b301-4c19f3ae6fb9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1707,7 +1751,10 @@
      299000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "same_as": [
+    "immowelt:852feb3d-64f3-4d19-b4a4-c21817c3917b"
+   ]
   },
   "immowelt:252a7cd5-801f-4b30-9d2f-44e8c93c3ba3": {
    "source": "immowelt",
@@ -1725,7 +1772,7 @@
    "image": "https://mms.immowelt.de/e/c/e/0/ece0ce66-017c-41d6-82bd-08a0be60dfea.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1755,7 +1802,7 @@
    "image": "https://mms.immowelt.de/d/b/f/e/dbfeb9a1-15b7-46cc-a213-06785ba7938e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1812,7 +1859,7 @@
    "image": "https://mms.immowelt.de/0/8/4/f/084f4268-52aa-4217-b12a-6a5dab79e9f4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1838,7 +1885,7 @@
    "image": "https://mms.immowelt.de/4/2/6/8/4268ea8f-ae94-4e9c-86a1-b2434af8ee5e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1864,7 +1911,7 @@
    "image": "https://mms.immowelt.de/1/0/a/f/10afbddf-a993-4f5c-9495-17694c26d329.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1894,7 +1941,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1919,7 +1966,7 @@
    "image": "https://mms.immowelt.de/c/6/2/c/c62c8940-9509-4544-87de-3483fa1fa7e4.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1945,7 +1992,7 @@
    "image": "https://mms.immowelt.de/f/7/e/0/f7e0f69a-60fe-4923-b11c-584a8e9ce9e0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -1975,7 +2022,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2005,13 +2052,14 @@
    "new_build": false,
    "first_seen": "2026-11-17",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-17",
      434600
     ]
-   ]
+   ],
+   "gone": "2026-11-21"
   },
   "immowelt:279831ff-377b-44d5-b321-bd472a72cd52": {
    "source": "immowelt",
@@ -2029,7 +2077,7 @@
    "image": "https://mms.immowelt.de/b/7/f/7/b7f70104-2892-4548-93b9-458a12f1c919.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2055,7 +2103,7 @@
    "image": "https://mms.immowelt.de/e/1/6/0/e16052d6-ff43-43ff-b395-e230f711f9c4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2081,7 +2129,7 @@
    "image": "https://mms.immowelt.de/2/2/1/2/2212bab7-da3b-42b0-87e7-51d037e7e538.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2107,7 +2155,7 @@
    "image": "https://mms.immowelt.de/9/9/b/3/99b3c4cc-41b7-43b1-a283-18c0b3037f80.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2133,7 +2181,7 @@
    "image": "https://mms.immowelt.de/9/4/6/e/946e32fb-5b12-4697-a6a5-522c6932e6c8.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2159,7 +2207,7 @@
    "image": "https://mms.immowelt.de/2/7/a/2/27a227b7-5c50-47bb-babc-c91cb872f075.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2185,7 +2233,7 @@
    "image": "https://mms.immowelt.de/4/e/3/4/4e340829-0641-43be-aa5d-d309d28a9f93.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2214,7 +2262,7 @@
    "image": "https://mms.immowelt.de/3/0/0/6/30069a56-9875-46ff-bbc6-200a25bdddca.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2267,7 +2315,7 @@
    "image": "https://mms.immowelt.de/b/b/d/1/bbd1a5d6-78df-4e7a-a021-9bcd5d9dd0d7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2293,7 +2341,7 @@
    "image": "https://mms.immowelt.de/f/f/9/f/ff9f6124-0481-45f8-88a7-236a9d9c0834.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2322,7 +2370,7 @@
    "image": "https://mms.immowelt.de/b/3/3/0/b330a0e1-fe93-4c2a-a50a-8c92d6df80bf.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2351,7 +2399,7 @@
    "image": "https://mms.immowelt.de/5/6/3/d/563d319f-da56-4e0e-9a4d-2531d26276cf.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2377,7 +2425,7 @@
    "image": "https://mms.immowelt.de/8/7/7/7/877790d3-1a20-4865-800b-a9ca446a49c5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2406,7 +2454,7 @@
    "image": "https://mms.immowelt.de/1/1/1/3/11130db2-a7e4-4161-bb35-5a5ea8e51c46.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2432,7 +2480,7 @@
    "image": "https://mms.immowelt.de/4/3/d/4/43d49e2d-de06-4aea-b390-6d011b966045.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2458,7 +2506,7 @@
    "image": "https://mms.immowelt.de/4/5/9/d/459dd621-9a49-4d79-bc62-2c24035df67d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2487,7 +2535,7 @@
    "image": "https://mms.immowelt.de/9/1/5/d/915d1f6d-a61e-4a0b-87eb-07d742cc9dcd.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2513,7 +2561,7 @@
    "image": "https://mms.immowelt.de/e/e/d/f/eedf4f79-eebd-4e6c-8c69-91db3c81a8d1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2539,7 +2587,7 @@
    "image": "https://mms.immowelt.de/0/b/d/8/0bd8ed78-9d23-4cee-9993-3c9404d3cb25.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2565,7 +2613,7 @@
    "image": "https://mms.immowelt.de/b/3/f/2/b3f2306e-8cd1-4f5e-84b8-b33490ac9c87.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2591,7 +2639,7 @@
    "image": "https://mms.immowelt.de/b/1/0/3/b1030e75-c096-4fa1-98d9-4f02123f486a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2620,7 +2668,7 @@
    "image": "https://mms.immowelt.de/6/b/4/a/6b4a693f-2552-4614-b173-83b7bb595589.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2646,7 +2694,7 @@
    "image": "https://mms.immowelt.de/5/0/1/2/5012acf2-bce2-4012-be05-553437a18223.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2675,7 +2723,7 @@
    "image": "https://mms.immowelt.de/7/b/d/f/7bdf358e-c939-43e1-8fcc-8f0fd9aff2a9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2701,7 +2749,7 @@
    "image": "https://mms.immowelt.de/1/8/2/b/182b998f-eb1b-467f-981a-4133b0f63b8a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -2722,7 +2770,7 @@
    "image": "https://mms.immowelt.de/1/7/6/4/1764abc9-90bd-4171-9125-c05d524899a9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2748,7 +2796,7 @@
    "image": "https://mms.immowelt.de/7/a/7/8/7a78ed6f-aa53-42c2-b5f2-d050d0ae8f1d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2777,7 +2825,7 @@
    "image": "https://mms.immowelt.de/d/0/8/7/d087e1f2-4f46-4ec1-a43a-887d4b4d4636.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2803,7 +2851,7 @@
    "image": "https://mms.immowelt.de/4/a/f/f/4afff04d-a52b-4d30-9fec-c6a0a37e8e78.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2832,7 +2880,7 @@
    "image": "https://mms.immowelt.de/a/d/b/b/adbbccc7-498b-473d-8189-854f97d659bf.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2862,7 +2910,7 @@
    "image": "https://mms.immowelt.de/5/e/1/0/5e10d7c2-07cf-4728-bc0b-d324ca816480.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2888,7 +2936,7 @@
    "image": "https://mms.immowelt.de/5/b/1/e/5b1ec0cf-dddd-43a3-ac84-0ec7be83c5d4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2897,6 +2945,32 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:3a9128e0-8b01-4d96-a11c-9de8484a2f5b": {
+   "source": "immowelt",
+   "source_id": "3a9128e0-8b01-4d96-a11c-9de8484a2f5b",
+   "url": "https://www.immowelt.de/expose/3a9128e0-8b01-4d96-a11c-9de8484a2f5b",
+   "kind": "house",
+   "title": "Reihenmittelhaus",
+   "price": 499000,
+   "size_m2": 139.0,
+   "rooms": 5.0,
+   "zip": "53179",
+   "district": "Mehlem",
+   "plot_m2": 131.0,
+   "energy_class": "A",
+   "image": "https://mms.immowelt.de/5/5/e/6/55e65759-efa9-4b36-b044-a8994211e9e1.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     499000
+    ]
+   ]
   },
   "immowelt:3ca075bc-6653-4a4d-8346-a4159ea4ddac": {
    "source": "immowelt",
@@ -2914,7 +2988,7 @@
    "image": "https://mms.immowelt.de/d/f/a/9/dfa9cc60-66e3-458f-8e73-5de83a669b0f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2940,7 +3014,7 @@
    "image": "https://mms.immowelt.de/4/e/3/2/4e3263fe-5af3-43d5-b245-8c9c33e3e7c1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2949,6 +3023,32 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:3e0fd0c8-a4b7-4325-aa8e-17478c1ece7c": {
+   "source": "immowelt",
+   "source_id": "3e0fd0c8-a4b7-4325-aa8e-17478c1ece7c",
+   "url": "https://www.immowelt.de/expose/3e0fd0c8-a4b7-4325-aa8e-17478c1ece7c",
+   "kind": "house",
+   "title": "Mehrfamilienhaus",
+   "price": 1052128,
+   "size_m2": 192.0,
+   "rooms": 7.0,
+   "zip": "53229",
+   "district": null,
+   "plot_m2": 626.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/0/6/b/d/06bdac96-1dc1-4137-b151-f94d3b5d456e.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     1052128
+    ]
+   ]
   },
   "immowelt:3e4d38da-d5d0-465b-96f9-3a06470fc0ec": {
    "source": "immowelt",
@@ -2966,7 +3066,7 @@
    "image": "https://mms.immowelt.de/d/9/1/d/d91d0b25-5a41-4115-b87a-a267e43dae9e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -2992,7 +3092,7 @@
    "image": "https://mms.immowelt.de/5/1/9/8/5198e4ae-9b3d-44ea-a5a3-3102dd92bbc0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3023,13 +3123,14 @@
    "new_build": false,
    "first_seen": "2026-11-18",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-18",
      970000
     ]
-   ]
+   ],
+   "gone": "2026-11-21"
   },
   "immowelt:40781f86-249f-4a30-97cc-c6130c7c5f1a": {
    "source": "immowelt",
@@ -3047,7 +3148,7 @@
    "image": "https://mms.immowelt.de/c/d/6/e/cd6e19ee-2cd1-4b64-b0d9-080cc76e683a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3134,7 +3235,7 @@
    "image": "https://mms.immowelt.de/8/b/2/a/8b2a66d1-bc76-4416-bb46-122212f9e1db.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3160,7 +3261,7 @@
    "image": "https://mms.immowelt.de/e/4/e/a/e4ead0b1-21b1-4b1c-9927-27a33de08ff1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3186,7 +3287,7 @@
    "image": "https://mms.immowelt.de/3/c/e/3/3ce3b02a-3565-49eb-a71b-cfc409d23cf1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3212,7 +3313,7 @@
    "image": "https://mms.immowelt.de/3/a/2/3/3a230dd1-767b-48cb-81b7-710b3993d15e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3238,7 +3339,7 @@
    "image": "https://mms.immowelt.de/b/c/5/2/bc526cda-5d7b-4582-bb61-4f126160b134.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -3286,7 +3387,7 @@
    "image": "https://mms.immowelt.de/4/9/7/6/4976879d-6096-41b7-9448-d9492033ece7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3302,7 +3403,7 @@
    "url": "https://www.immowelt.de/expose/46c6c365-b4cc-4f71-83cb-299b2fe772dc",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 309000,
+   "price": 299000,
    "size_m2": 92.1,
    "rooms": 4.0,
    "zip": "53119",
@@ -3312,18 +3413,21 @@
    "image": "https://mms.immowelt.de/b/6/c/5/b6c562cf-4ee9-4121-b7af-7b4f5b5e18fa.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      309000
+    ],
+    [
+     "2026-11-21",
+     299000
     ]
    ],
    "new_build": false,
    "same_as": [
-    "immowelt:6db60fee-bfa6-4a8d-b0f7-20ef365c0889",
-    "kleinanzeigen:2399992156"
+    "immowelt:6db60fee-bfa6-4a8d-b0f7-20ef365c0889"
    ]
   },
   "immowelt:472a6895-9373-4801-8bff-e5a37a4a460b": {
@@ -3342,7 +3446,7 @@
    "image": "https://mms.immowelt.de/2/3/9/b/239b318b-cde3-4ac0-8ea0-f7d10ce3f8cb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3368,7 +3472,7 @@
    "image": "https://mms.immowelt.de/3/b/8/7/3b87376e-9a34-4441-950e-11095393cc69.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3397,7 +3501,7 @@
    "image": "https://mms.immowelt.de/4/b/e/9/4be9c813-df11-4a98-8c95-6dce3372c1f1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3423,7 +3527,7 @@
    "image": "https://mms.immowelt.de/8/2/7/2/8272117d-5a91-4a4c-ac84-756c43073596.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -3444,7 +3548,7 @@
    "image": "https://mms.immowelt.de/7/8/5/2/78525622-a384-4831-9579-ed74b012eaa7.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -3465,7 +3569,7 @@
    "image": "https://mms.immowelt.de/7/0/9/9/7099f19f-139e-4c0f-9e8b-52d5380e9647.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3491,7 +3595,7 @@
    "image": "https://mms.immowelt.de/3/b/2/e/3b2ef3a8-d342-489e-8575-8557714317d8.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3520,7 +3624,7 @@
    "image": "https://mms.immowelt.de/3/6/e/1/36e1dbd0-0ff8-487b-a7bd-bfb87074a920.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3546,7 +3650,7 @@
    "image": "https://mms.immowelt.de/1/e/2/c/1e2c7c60-bc72-445b-8355-d49639afe81c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3575,7 +3679,7 @@
    "image": "https://mms.immowelt.de/2/3/5/5/23558876-226d-4f45-951a-a5fb772fbe92.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3604,7 +3708,7 @@
    "image": "https://mms.immowelt.de/0/7/5/2/07525d9f-0a2c-4d45-bbd5-c670446ec93b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3630,7 +3734,7 @@
    "image": "https://mms.immowelt.de/4/a/c/e/4ace01a6-2df5-4df9-8995-ca698b96e241.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3656,7 +3760,7 @@
    "image": "https://mms.immowelt.de/5/4/4/3/54438df8-09cd-4fd7-ba69-241659b5a144.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3682,7 +3786,7 @@
    "image": "https://mms.immowelt.de/a/3/a/a/a3aa30ba-4dff-4c54-a18c-398328df17fa.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3708,7 +3812,7 @@
    "image": "https://mms.immowelt.de/7/c/a/5/7ca59ab1-f75a-449f-89c4-3c1b39762886.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3737,7 +3841,7 @@
    "image": "https://mms.immowelt.de/f/a/8/2/fa826589-6af2-4c76-b702-ba0d3eefb9d2.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3790,7 +3894,7 @@
    "image": "https://mms.immowelt.de/d/a/b/2/dab266b0-ca29-40d5-95a6-e59cd13a4f38.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3816,7 +3920,7 @@
    "image": "https://mms.immowelt.de/a/6/a/c/a6acade9-1b48-4069-8620-c384a61d7ed5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3849,7 +3953,7 @@
    "image": "https://mms.immowelt.de/4/a/6/8/4a6883ab-5080-493e-91d8-71233a7f19bb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3875,7 +3979,7 @@
    "image": "https://mms.immowelt.de/9/e/0/9/9e09a1ee-2fd9-4fc6-ab11-e9ab9d15c1b8.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3904,7 +4008,7 @@
    "image": "https://mms.immowelt.de/4/a/a/b/4aabeb4e-ce56-40f1-b48e-a39a51daac6d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3933,7 +4037,7 @@
    "image": "https://mms.immowelt.de/d/8/7/e/d87ec3c8-2034-47ee-a4de-ffd99ba35a0a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -3954,7 +4058,7 @@
    "image": "https://mms.immowelt.de/e/4/a/8/e4a86fa5-3461-485c-b8be-b78a8a111986.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -3983,7 +4087,7 @@
    "image": "https://mms.immowelt.de/e/f/9/c/ef9c8db0-7cc1-45e3-8372-bb0c83f9ab39.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4009,7 +4113,7 @@
    "image": "https://mms.immowelt.de/b/2/2/7/b227db2a-55e4-4d6f-acf9-6ee14850f982.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4040,17 +4144,14 @@
    "new_build": false,
    "first_seen": "2026-11-17",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-17",
      370000
     ]
    ],
-   "same_as": [
-    "immowelt:037513db-8bf5-4e46-a2ba-10d94e0b2c86",
-    "kleinanzeigen:3574212414"
-   ]
+   "gone": "2026-11-21"
   },
   "immowelt:55f685d5-7ef8-470c-b253-55d844435037": {
    "source": "immowelt",
@@ -4068,7 +4169,7 @@
    "image": "https://mms.immowelt.de/c/f/5/2/cf5293b7-495d-4aa6-99ab-d81ec0fdfcf4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4097,7 +4198,7 @@
    "image": "https://mms.immowelt.de/7/5/f/9/75f95153-44eb-4b9c-b13c-df476b73636d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4126,7 +4227,7 @@
    "image": "https://mms.immowelt.de/a/c/8/7/ac874840-f2d3-48d1-9f31-1ef1c13a4e57.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4155,7 +4256,7 @@
    "image": "https://mms.immowelt.de/c/2/3/c/c23cea35-22de-4c8e-a42c-759ef5b66577.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4181,7 +4282,7 @@
    "image": "https://mms.immowelt.de/b/4/0/b/b40b7424-83d2-4e2e-9240-b29ba8e86c5e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4207,7 +4308,7 @@
    "image": "https://mms.immowelt.de/0/7/0/9/07097132-1c6d-4331-818b-4db7de89b363.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4233,7 +4334,7 @@
    "image": "https://mms.immowelt.de/d/7/d/6/d7d68637-6595-4c0e-995c-25d10e52d5b2.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4259,7 +4360,7 @@
    "image": "https://mms.immowelt.de/6/3/d/3/63d392f9-dabf-41a9-869a-6d17f42cd52c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4288,7 +4389,7 @@
    "image": "https://mms.immowelt.de/e/1/c/3/e1c3ac9c-e829-497f-a1be-98e287a3dea0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4314,7 +4415,7 @@
    "image": "https://mms.immowelt.de/6/0/7/4/60743ce3-7ea8-47f3-81d1-84bcd2a86c0d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4343,7 +4444,7 @@
    "image": "https://mms.immowelt.de/8/3/0/1/8301c087-8a08-4afd-b9eb-7bc5c6fe154f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4369,7 +4470,7 @@
    "image": "https://mms.immowelt.de/9/9/3/a/993a9407-17ff-4fb4-a72d-35d112174dc2.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4395,7 +4496,7 @@
    "image": "https://mms.immowelt.de/7/2/b/1/72b18567-8473-42e9-a027-d0bfd1c6888d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4421,7 +4522,7 @@
    "image": "https://mms.immowelt.de/e/f/8/f/ef8f1dae-dd0e-477c-a99f-bbd73f155fae.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4447,7 +4548,7 @@
    "image": "https://mms.immowelt.de/a/4/a/2/a4a2652f-d32a-4410-b4a6-f489bde72d52.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4473,7 +4574,7 @@
    "image": "https://mms.immowelt.de/e/8/1/4/e814a406-3763-4118-a2a1-8a765081b3e5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4502,7 +4603,7 @@
    "image": "https://mms.immowelt.de/3/9/4/6/3946fc4f-bb36-4269-9f78-0edddfb918f4.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -4523,7 +4624,7 @@
    "image": "https://mms.immowelt.de/1/a/9/c/1a9c4659-3064-470d-91b4-c4a634831051.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4549,7 +4650,7 @@
    "image": "https://mms.immowelt.de/7/a/0/c/7a0cf61e-c743-4db5-976f-94b635441abb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4575,7 +4676,7 @@
    "image": "https://mms.immowelt.de/2/b/f/0/2bf0584d-4072-4684-8a98-f899c423e84f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4604,7 +4705,7 @@
    "image": "https://mms.immowelt.de/c/9/0/5/c90557e4-71ab-4e65-99ff-8e54f275c22b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4633,7 +4734,7 @@
    "image": "https://mms.immowelt.de/2/4/a/9/24a975b1-42b1-454c-90d0-e63a4c2f5af7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4659,7 +4760,7 @@
    "image": "https://mms.immowelt.de/1/c/7/5/1c75b1dd-aeb6-47df-8216-5efd1e2bba4b.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4688,7 +4789,7 @@
    "image": "https://mms.immowelt.de/6/3/6/c/636ca63d-36af-40a0-bc25-d50e2db6fa57.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4718,7 +4819,7 @@
    "image": "https://mms.immowelt.de/c/2/e/e/c2ee4c11-e532-4d04-b6a8-e7148e925a72.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4734,7 +4835,7 @@
    "url": "https://www.immowelt.de/expose/657e966e-a345-4467-82b6-81242a9ee405",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 259000,
+   "price": 242000,
    "size_m2": 82.9,
    "rooms": 4.0,
    "zip": "53119",
@@ -4744,18 +4845,19 @@
    "image": "https://mms.immowelt.de/2/7/9/9/2799dbf6-0360-49c5-9f29-def60909de92.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      259000
+    ],
+    [
+     "2026-11-21",
+     242000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:2399989956"
-   ]
+   "new_build": false
   },
   "immowelt:6777ca81-fe79-4836-9f99-b51d5b43da85": {
    "source": "immowelt",
@@ -4773,7 +4875,7 @@
    "image": "https://mms.immowelt.de/6/4/e/e/64eefdf1-9cdf-45e2-a1f1-20d74a65c873.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4799,7 +4901,7 @@
    "image": "https://mms.immowelt.de/9/9/8/7/9987d30a-3d32-41fe-961b-c709e6d5c7d4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -4820,7 +4922,7 @@
    "image": "https://mms.immowelt.de/5/e/0/3/5e03cfb6-24b2-4e01-8561-f4e20f29b2a8.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4850,7 +4952,7 @@
    "image": "https://mms.immowelt.de/5/1/a/6/51a6b991-eb71-474a-8098-d10e7b1e0de0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4876,7 +4978,7 @@
    "image": "https://mms.immowelt.de/7/f/d/a/7fda5e3a-8d2f-46cf-a6e5-fb0d92a6bd36.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4903,14 +5005,15 @@
    "seller": null,
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-15",
      225000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "gone": "2026-11-21"
   },
   "immowelt:6a46666a-1c84-4e57-aaae-7b0797e0344e": {
    "source": "immowelt",
@@ -4928,7 +5031,7 @@
    "image": "https://mms.immowelt.de/4/2/6/7/4267d203-4ab4-4aaf-8580-8e3a0ac12df5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4954,7 +5057,7 @@
    "image": "https://mms.immowelt.de/b/c/4/c/bc4ccb4a-39a5-40a1-a6ca-213f36006757.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -4983,7 +5086,7 @@
    "image": "https://mms.immowelt.de/0/1/1/3/01138f68-76ae-4900-91ef-637a6baae0ae.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5009,7 +5112,7 @@
    "image": "https://mms.immowelt.de/4/b/b/4/4bb46a2c-629e-43eb-8fa9-57c44a265bf1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5035,7 +5138,7 @@
    "image": "https://mms.immowelt.de/e/d/9/9/ed99894f-354a-45b7-9709-a9084d26dcf9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5061,7 +5164,7 @@
    "image": "https://mms.immowelt.de/7/1/a/1/71a168b1-5992-4003-9e30-d202f9d5479b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5087,7 +5190,7 @@
    "image": "https://mms.immowelt.de/5/0/7/6/5076fb76-f23b-4019-9b29-6bd003da1f72.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5120,7 +5223,7 @@
    "image": "https://mms.immowelt.de/e/7/9/e/e79eb42c-6faf-4194-9cc1-31be872cbd43.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5150,7 +5253,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5165,7 +5268,7 @@
    "url": "https://www.immowelt.de/expose/6db60fee-bfa6-4a8d-b0f7-20ef365c0889",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 309000,
+   "price": 299000,
    "size_m2": 92.1,
    "rooms": 4.0,
    "zip": "53119",
@@ -5175,18 +5278,21 @@
    "image": "https://mms.immowelt.de/0/8/0/2/08020dba-c796-4c70-ab4b-a7b5427ea438.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      309000
+    ],
+    [
+     "2026-11-21",
+     299000
     ]
    ],
    "new_build": false,
    "same_as": [
-    "immowelt:46c6c365-b4cc-4f71-83cb-299b2fe772dc",
-    "kleinanzeigen:2399992156"
+    "immowelt:46c6c365-b4cc-4f71-83cb-299b2fe772dc"
    ]
   },
   "immowelt:6dcaab9c-b97b-4ad1-b66f-848bb6e9b49f": {
@@ -5205,7 +5311,7 @@
    "image": "https://mms.immowelt.de/8/c/4/3/8c43a296-cbb1-46c5-9ad5-4605b06541c6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5231,7 +5337,7 @@
    "image": "https://mms.immowelt.de/f/0/5/2/f0520286-6d95-4444-b968-dacc09dec950.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5257,7 +5363,7 @@
    "image": "https://mms.immowelt.de/9/4/1/9/9419884c-d775-443c-b540-8e7fdbb268af.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5283,7 +5389,7 @@
    "image": "https://mms.immowelt.de/c/c/d/f/ccdf2c4f-67fe-4ca7-b4fd-98e8e86ff2a9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5309,7 +5415,7 @@
    "image": "https://mms.immowelt.de/c/1/7/8/c1781e76-c5b8-4ecc-9f2c-0af192fd59c4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5318,6 +5424,32 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:6fbd2d6b-b451-4700-b4d9-0b0b870800b8": {
+   "source": "immowelt",
+   "source_id": "6fbd2d6b-b451-4700-b4d9-0b0b870800b8",
+   "url": "https://www.immowelt.de/expose/6fbd2d6b-b451-4700-b4d9-0b0b870800b8",
+   "kind": "house",
+   "title": "Einfamilienhaus",
+   "price": 1250000,
+   "size_m2": 354.0,
+   "rooms": 9.0,
+   "zip": "53173",
+   "district": "Rüngsdorf",
+   "plot_m2": 772.0,
+   "energy_class": "H",
+   "image": "https://mms.immowelt.de/a/e/0/6/ae066d12-014c-4a9d-a3c6-febb6ee2ad73.png?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     1250000
+    ]
+   ]
   },
   "immowelt:70977be5-cf90-40b8-8860-32e1967eeea6": {
    "source": "immowelt",
@@ -5335,7 +5467,7 @@
    "image": "https://mms.immowelt.de/b/d/c/1/bdc1d3d2-da4d-4080-9b14-93ad3c9b985e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5361,7 +5493,7 @@
    "image": "https://mms.immowelt.de/0/6/f/b/06fb9a24-41f5-480d-9e3f-a0bb8ccc26aa.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5388,7 +5520,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5413,7 +5545,7 @@
    "image": "https://mms.immowelt.de/b/a/b/7/bab74b35-cb98-4d9f-a0d7-a56a178aae62.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5439,7 +5571,7 @@
    "image": "https://mms.immowelt.de/9/1/4/1/9141f2b1-383a-493d-9dd9-7bbe14572214.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5465,7 +5597,7 @@
    "image": "https://mms.immowelt.de/4/1/9/7/41974ba8-dcb8-4658-a418-1e2167c557c0.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5491,7 +5623,7 @@
    "image": "https://mms.immowelt.de/e/5/d/2/e5d268c2-40f4-429c-a97e-b1195c596df1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5517,7 +5649,7 @@
    "image": "https://mms.immowelt.de/f/9/c/3/f9c37403-a756-4a7d-a2cd-4f3f6fe19b17.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5546,7 +5678,7 @@
    "image": "https://mms.immowelt.de/c/8/c/9/c8c9e325-0d25-41fe-b6e4-d98129eb3d6d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5572,7 +5704,7 @@
    "image": "https://mms.immowelt.de/6/8/5/d/685da0a4-939c-49c7-8d4b-ad685c7fb490.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5601,7 +5733,7 @@
    "image": "https://mms.immowelt.de/f/7/d/9/f7d90526-21b5-4044-8703-f015964a85c1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5627,7 +5759,7 @@
    "image": "https://mms.immowelt.de/5/b/c/6/5bc694de-1cc1-4740-9b6c-a34e938d9386.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5653,7 +5785,7 @@
    "image": "https://mms.immowelt.de/5/6/b/7/56b7c6cf-7503-4412-91a0-5ee4ce22f5ea.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5679,7 +5811,7 @@
    "image": "https://mms.immowelt.de/a/5/1/2/a5121882-60ae-45e3-8cf5-0bbe1c24a3f1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5705,7 +5837,7 @@
    "image": "https://mms.immowelt.de/a/5/3/a/a53a7be2-fb13-446f-8b30-fc5ec53b6e2f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5761,7 +5893,7 @@
    "image": "https://mms.immowelt.de/1/2/9/3/1293f99f-f37f-4d7c-80fa-9776859a0207.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5787,7 +5919,7 @@
    "image": "https://mms.immowelt.de/b/c/3/e/bc3e3829-d6db-4801-9635-bf9bc6d07ed5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5813,7 +5945,7 @@
    "image": "https://mms.immowelt.de/4/6/4/f/464f651e-02de-4848-b6b3-2dc2e5a789e5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5866,7 +5998,7 @@
    "image": "https://mms.immowelt.de/d/7/8/4/d784f145-8d70-4ba3-a502-d5c60d768f22.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5895,7 +6027,7 @@
    "image": "https://mms.immowelt.de/9/d/e/7/9de7207f-afee-4f57-825d-93160246142a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5911,7 +6043,7 @@
    "url": "https://www.immowelt.de/expose/7d4b3826-70e6-487f-8fa9-e20be0a5c298",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 279000,
+   "price": 271000,
    "size_m2": 79.9,
    "rooms": 3.0,
    "zip": "53125",
@@ -5921,12 +6053,16 @@
    "image": "https://mms.immowelt.de/b/5/2/6/b526eec0-6cf9-4b73-a676-e8acbc12088d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      279000
+    ],
+    [
+     "2026-11-21",
+     271000
     ]
    ],
    "new_build": false,
@@ -5950,7 +6086,7 @@
    "image": "https://mms.immowelt.de/9/8/e/0/98e0b61d-0d5e-4df3-910e-c8eb81e1a3da.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -5976,7 +6112,7 @@
    "image": "https://mms.immowelt.de/5/0/e/b/50ebc52e-41b7-4d72-b7ba-e9f8c8ee914b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6002,7 +6138,7 @@
    "image": "https://mms.immowelt.de/f/3/e/b/f3ebf26a-a58c-44db-8746-9aeb8b73b2c2.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -6023,7 +6159,7 @@
    "image": "https://mms.immowelt.de/5/7/f/6/57f68ee6-c799-490a-b0f8-a86b19e42a1c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6039,7 +6175,7 @@
    "url": "https://www.immowelt.de/expose/7ffb8cf7-74a0-4fad-a61c-2d3b884c84ad",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 269000,
+   "price": 249000,
    "size_m2": 78.0,
    "rooms": 3.0,
    "zip": "53175",
@@ -6049,17 +6185,21 @@
    "image": "https://mms.immowelt.de/3/8/7/8/3878fbce-a39a-4975-b352-59d531bee3a4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      269000
+    ],
+    [
+     "2026-11-21",
+     249000
     ]
    ],
    "new_build": false,
    "same_as": [
-    "kleinanzeigen:3554447515"
+    "immowelt:af18d5c4-2a89-4a50-aa4d-b27dd53ef4c3"
    ]
   },
   "immowelt:80125655-15aa-46c2-8489-64f028462b7e": {
@@ -6105,7 +6245,7 @@
    "image": "https://mms.immowelt.de/4/5/4/9/45494af5-a206-4802-9dbb-ff2468f43cb9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6131,7 +6271,7 @@
    "image": "https://mms.immowelt.de/7/a/f/d/7afdeecd-293e-4a2f-b8cf-c0a185dd4219.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6157,7 +6297,7 @@
    "image": "https://mms.immowelt.de/6/6/e/6/66e6a73d-9242-46a3-8f01-f08a1a1253d6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6183,7 +6323,7 @@
    "image": "https://mms.immowelt.de/b/2/d/a/b2dacff2-a458-4bd7-a358-e5e27b083c21.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6199,7 +6339,7 @@
    "url": "https://www.immowelt.de/expose/831709d8-eeb7-40c8-8bc8-ebe6357fc074",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 309000,
+   "price": 289000,
    "size_m2": 90.0,
    "rooms": 4.0,
    "zip": "53175",
@@ -6209,18 +6349,19 @@
    "image": "https://mms.immowelt.de/5/6/f/9/56f97f34-7c7f-49ee-999c-22672297caf4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      309000
+    ],
+    [
+     "2026-11-21",
+     289000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3554447514"
-   ]
+   "new_build": false
   },
   "immowelt:836cb46d-55e3-4f0e-ac91-3eff745eebb6": {
    "source": "immowelt",
@@ -6238,7 +6379,7 @@
    "image": "https://mms.immowelt.de/2/6/f/6/26f6a62a-2917-4cf2-abc3-f80b4aa2201c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6264,7 +6405,7 @@
    "image": "https://mms.immowelt.de/9/3/3/5/93351609-666b-42df-a88a-863b56721771.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6290,7 +6431,7 @@
    "image": "https://mms.immowelt.de/c/7/a/2/c7a2720a-c127-431f-a497-bd91586a94f5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6316,7 +6457,7 @@
    "image": "https://mms.immowelt.de/4/c/f/f/4cff483c-2dc1-4990-b025-af0f2dca8c6e.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6380,6 +6521,35 @@
    "new_build": false,
    "gone": "2026-11-17"
   },
+  "immowelt:852feb3d-64f3-4d19-b4a4-c21817c3917b": {
+   "source": "immowelt",
+   "source_id": "852feb3d-64f3-4d19-b4a4-c21817c3917b",
+   "url": "https://www.immowelt.de/expose/852feb3d-64f3-4d19-b4a4-c21817c3917b",
+   "kind": "flat",
+   "title": "Wohnung",
+   "price": 295000,
+   "size_m2": 92.2,
+   "rooms": 4.0,
+   "zip": "53179",
+   "district": "Rüngsdorf",
+   "plot_m2": null,
+   "energy_class": "E",
+   "image": "https://mms.immowelt.de/9/a/1/f/9a1febc1-9aed-4a45-a49e-0b04995f70df.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     295000
+    ]
+   ],
+   "same_as": [
+    "immowelt:2482115e-6863-4a65-a9e8-f28e7f8aa23f"
+   ]
+  },
   "immowelt:85403596-8de8-4785-b740-c99b7a8bb46e": {
    "source": "immowelt",
    "source_id": "85403596-8de8-4785-b740-c99b7a8bb46e",
@@ -6423,7 +6593,7 @@
    "image": "https://mms.immowelt.de/7/c/3/8/7c3860fc-9d30-4edd-aed5-575ad59b0468.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6476,7 +6646,7 @@
    "image": "https://mms.immowelt.de/5/0/7/1/50712500-edd1-466b-9c57-e480609ff3d3.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6502,7 +6672,7 @@
    "image": "https://mms.immowelt.de/8/1/b/1/81b11fe5-1ca0-4b9c-82d0-9568a4e9b545.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6528,7 +6698,7 @@
    "image": "https://mms.immowelt.de/c/8/1/3/c8130ed8-e11b-4dc3-8cf5-212c087f5f60.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6554,7 +6724,7 @@
    "image": "https://mms.immowelt.de/7/2/9/2/7292f95a-1bdc-4ca5-a240-ffc696ca83df.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6607,7 +6777,7 @@
    "image": "https://mms.immowelt.de/0/a/9/f/0a9fd5b2-e4a2-478d-b695-dd3001cdd23b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6640,7 +6810,7 @@
    "image": "https://mms.immowelt.de/3/d/6/9/3d691283-d806-42ee-837e-aa5c21f1ea22.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6666,7 +6836,7 @@
    "image": "https://mms.immowelt.de/7/c/a/6/7ca6a8a9-e6c8-4130-b76e-45f888a6193b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6696,7 +6866,7 @@
    "image": "https://mms.immowelt.de/b/c/e/1/bce17048-113c-4f2a-b3a2-190561c52c8c.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6722,7 +6892,7 @@
    "image": "https://mms.immowelt.de/f/b/b/7/fbb7ecb5-f366-474f-bec7-d28f5b1faef3.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6748,7 +6918,7 @@
    "image": "https://mms.immowelt.de/0/e/b/9/0eb98aa8-edc3-4b7c-8e6f-de556b342728.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6774,7 +6944,7 @@
    "image": "https://mms.immowelt.de/9/e/9/d/9e9d0824-6043-4865-b22b-9e58b141ae97.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6831,7 +7001,7 @@
    "image": "https://mms.immowelt.de/f/4/f/f/f4ff2a86-bff5-42e5-8c3a-142bcc88b8de.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6857,7 +7027,7 @@
    "image": "https://mms.immowelt.de/e/3/1/1/e3119eff-bc8d-4031-8442-82ee5bb06592.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6883,7 +7053,7 @@
    "image": "https://mms.immowelt.de/c/0/d/a/c0da2158-9c0c-4134-bb1c-a4b7b6874328.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6909,7 +7079,7 @@
    "image": "https://mms.immowelt.de/7/5/5/a/755a78b2-8e4e-4f6e-afbe-166bf1f67daf.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6938,7 +7108,7 @@
    "image": "https://mms.immowelt.de/8/4/a/5/84a5fe01-2a54-4624-85c2-bb6586a249ee.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6964,7 +7134,7 @@
    "image": "https://mms.immowelt.de/d/6/7/c/d67cfbe1-ad68-4685-9cf0-d8ad2ab75de5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -6990,7 +7160,7 @@
    "image": "https://mms.immowelt.de/6/2/e/9/62e99fb6-6dbe-4b0c-8eb1-9937ffc44b76.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7016,7 +7186,7 @@
    "image": "https://mms.immowelt.de/2/b/0/c/2b0ce805-8950-406f-a281-7e79d01e008a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7042,7 +7212,7 @@
    "image": "https://mms.immowelt.de/b/f/1/1/bf116ddb-0bc0-4301-9546-c793cab17da0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7068,7 +7238,7 @@
    "image": "https://mms.immowelt.de/a/3/b/8/a3b884c8-804b-4bd5-b6e9-52f99a43ff4b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7097,7 +7267,7 @@
    "image": "https://mms.immowelt.de/8/9/a/1/89a1aa98-09d9-41bf-adaf-cdd767216e86.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7123,7 +7293,7 @@
    "image": "https://mms.immowelt.de/b/3/9/f/b39fca80-7e8e-4021-b518-35371959305b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7149,7 +7319,7 @@
    "image": "https://mms.immowelt.de/6/6/0/1/66019103-3bea-4b5a-94c3-c2b7a0e875a0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7175,7 +7345,7 @@
    "image": "https://mms.immowelt.de/c/0/a/c/c0ac8479-f7bc-4f25-8a70-8de8ec4fa284.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7194,7 +7364,7 @@
    "url": "https://www.immowelt.de/expose/99668df2-1f4c-4c3a-a8b5-a240dffc7b47",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 379000,
+   "price": 356000,
    "size_m2": 108.1,
    "rooms": 5.0,
    "zip": "53177",
@@ -7204,18 +7374,19 @@
    "image": "https://mms.immowelt.de/d/7/1/7/d717a1b8-b7f5-487a-adda-b1b7c5d8941b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      379000
+    ],
+    [
+     "2026-11-21",
+     356000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:2791828952"
-   ]
+   "new_build": false
   },
   "immowelt:99694fc7-194f-4140-8df5-1db35a2b1795": {
    "source": "immowelt",
@@ -7233,7 +7404,7 @@
    "image": "https://mms.immowelt.de/8/b/d/4/8bd46f35-2cfc-4f1c-a3df-b14ec8cda27d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7259,7 +7430,7 @@
    "image": "https://mms.immowelt.de/f/8/c/2/f8c233c3-f181-4773-9372-995067da87d6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7288,7 +7459,7 @@
    "image": "https://mms.immowelt.de/9/1/e/c/91ec2baf-bfa5-43e2-912d-a380fcf82678.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7314,10 +7485,36 @@
    "image": "https://mms.immowelt.de/8/0/6/9/80695ace-708f-4461-9f0c-323096a96beb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
+  },
+  "immowelt:9ce1dada-0c37-4ccb-8b4a-db9a7e19f583": {
+   "source": "immowelt",
+   "source_id": "9ce1dada-0c37-4ccb-8b4a-db9a7e19f583",
+   "url": "https://www.immowelt.de/expose/9ce1dada-0c37-4ccb-8b4a-db9a7e19f583",
+   "kind": "flat",
+   "title": "Maisonette",
+   "price": 495000,
+   "size_m2": 125.0,
+   "rooms": 3.0,
+   "zip": "53179",
+   "district": "Rüngsdorf",
+   "plot_m2": null,
+   "energy_class": "D",
+   "image": "https://mms.immowelt.de/0/2/a/a/02aa0701-eef5-4927-aa63-768952a447ce.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     495000
+    ]
+   ]
   },
   "immowelt:9f4a2a70-1a25-48dc-b17e-f41bab6092c3": {
    "source": "immowelt",
@@ -7335,7 +7532,7 @@
    "image": "https://mms.immowelt.de/f/b/a/0/fba0b797-38d6-430e-9980-fb6ba6bd7add.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7361,7 +7558,7 @@
    "image": "https://mms.immowelt.de/8/b/b/0/8bb07eb2-5318-4b01-9c94-65df59bae9c7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7390,7 +7587,7 @@
    "image": "https://mms.immowelt.de/c/6/8/9/c689d181-aec7-4462-8500-e7d84d06b202.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7419,7 +7616,7 @@
    "image": "https://mms.immowelt.de/3/e/8/1/3e818e3d-0997-4ab1-8b21-00a7f840fc24.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7435,7 +7632,7 @@
    "url": "https://www.immowelt.de/expose/a146e341-eeab-4deb-a069-eb1c366c0af9",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 284900,
+   "price": 277000,
    "size_m2": 81.8,
    "rooms": 3.0,
    "zip": "53125",
@@ -7445,12 +7642,16 @@
    "image": "https://mms.immowelt.de/3/1/a/e/31aeafa5-c583-4e6b-9da3-1abf48cdcc39.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      284900
+    ],
+    [
+     "2026-11-21",
+     277000
     ]
    ],
    "new_build": false
@@ -7471,7 +7672,7 @@
    "image": "https://mms.immowelt.de/4/e/2/e/4e2e98c9-8813-438b-9bbc-a60c334dc8e5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7498,7 +7699,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7526,7 +7727,7 @@
    "image": "https://mms.immowelt.de/5/2/a/0/52a0d13a-5f99-46fd-aba3-e8c3feef2103.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7552,7 +7753,7 @@
    "image": "https://mms.immowelt.de/d/8/c/3/d8c37ee9-21fa-44fe-ab98-0938d02f6f27.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7578,7 +7779,7 @@
    "image": "https://mms.immowelt.de/c/b/1/0/cb1038c5-bc51-440b-8a6f-d1de78d2e206.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7631,7 +7832,7 @@
    "image": "https://mms.immowelt.de/4/b/5/3/4b5368e4-6034-4a70-9465-32d4bebe06ca.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7661,7 +7862,7 @@
    "image": "https://mms.immowelt.de/2/5/1/0/251049ed-1690-4331-b88a-70558f4b6f43.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7684,7 +7885,7 @@
    "url": "https://www.immowelt.de/expose/a5c75a28-ca89-4848-8c8a-a5c24259ce3b",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 259000,
+   "price": 236000,
    "size_m2": 84.8,
    "rooms": 4.0,
    "zip": "53175",
@@ -7694,18 +7895,19 @@
    "image": "https://mms.immowelt.de/e/a/6/8/ea6889e3-4d7b-43de-85d0-58fc62758672.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      259000
+    ],
+    [
+     "2026-11-21",
+     236000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:2399989712"
-   ]
+   "new_build": false
   },
   "immowelt:a5d8258b-8142-496d-a7ba-187b06652307": {
    "source": "immowelt",
@@ -7723,7 +7925,7 @@
    "image": "https://mms.immowelt.de/b/5/c/1/b5c1b86a-4959-4b33-b4f8-ce71007e7d50.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7750,7 +7952,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7778,7 +7980,7 @@
    "image": "https://mms.immowelt.de/8/7/7/7/877739b2-275d-4699-ba12-8018e784e59c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7805,7 +8007,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7833,7 +8035,7 @@
    "image": "https://mms.immowelt.de/8/c/3/a/8c3a45ad-b3d3-4c5e-b4f6-b298f96e3ca5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7859,7 +8061,7 @@
    "image": "https://mms.immowelt.de/e/6/b/4/e6b49f49-b639-4e29-a2ef-05ac983543ea.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7885,7 +8087,7 @@
    "image": "https://mms.immowelt.de/d/9/a/1/d9a159ce-f8a2-4af9-b568-1a8493b5c34b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7912,14 +8114,15 @@
    "seller": null,
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-15",
      335000
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "gone": "2026-11-21"
   },
   "immowelt:a8771c48-4c00-4120-a0c1-6f5795a465f8": {
    "source": "immowelt",
@@ -7937,7 +8140,7 @@
    "image": "https://mms.immowelt.de/9/d/7/9/9d79c42f-b452-4d33-9707-faa6c095aaef.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7966,7 +8169,7 @@
    "image": "https://mms.immowelt.de/9/7/4/8/9748210c-4072-47f5-afa6-71ecbb2c0cd9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -7992,7 +8195,7 @@
    "image": "https://mms.immowelt.de/6/8/2/8/68280c4b-3a19-43f5-9077-c334319f1148.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8018,7 +8221,7 @@
    "image": "https://mms.immowelt.de/f/a/c/6/fac69c13-4ccb-43bc-a918-41812e5dedf7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8048,7 +8251,7 @@
    "image": "https://mms.immowelt.de/4/e/d/7/4ed7e2d4-68c0-47ea-b208-f5763ab12cdd.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8074,7 +8277,7 @@
    "image": "https://mms.immowelt.de/9/3/6/d/936d3d28-0de3-4892-9a8f-20ee757ec805.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8100,7 +8303,7 @@
    "image": "https://mms.immowelt.de/3/d/f/2/3df2ea72-215d-48b4-b083-5705a5334e05.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8126,7 +8329,7 @@
    "image": "https://mms.immowelt.de/b/e/2/6/be269ca4-84a4-4a51-9907-ce9c2838d6b9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8152,7 +8355,7 @@
    "image": "https://mms.immowelt.de/9/3/4/9/93493f81-be7c-4b8c-be95-0b74f420bec9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8178,7 +8381,7 @@
    "image": "https://mms.immowelt.de/3/a/b/7/3ab72dbb-d883-4fe3-83de-81fdecf26cbb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8204,7 +8407,7 @@
    "image": "https://mms.immowelt.de/8/8/3/e/883ec6de-8c71-4d51-9403-a8a980374efd.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8260,7 +8463,7 @@
    "image": "https://mms.immowelt.de/9/4/e/9/94e99585-8742-4703-93a5-dda2acf139ab.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8280,7 +8483,7 @@
    "url": "https://www.immowelt.de/expose/af18d5c4-2a89-4a50-aa4d-b27dd53ef4c3",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 259000,
+   "price": 244000,
    "size_m2": 78.3,
    "rooms": 4.0,
    "zip": "53175",
@@ -8290,17 +8493,21 @@
    "image": "https://mms.immowelt.de/b/f/f/2/bff2f51b-8708-4562-9a8c-39292cfaf7eb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      259000
+    ],
+    [
+     "2026-11-21",
+     244000
     ]
    ],
    "new_build": false,
    "same_as": [
-    "kleinanzeigen:2399987432"
+    "immowelt:7ffb8cf7-74a0-4fad-a61c-2d3b884c84ad"
    ]
   },
   "immowelt:b002a745-8453-4c1f-b229-941c1d87f251": {
@@ -8319,7 +8526,7 @@
    "image": "https://mms.immowelt.de/5/b/4/3/5b43195f-f539-4f08-bea3-fe57332d7c58.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8345,7 +8552,7 @@
    "image": "https://mms.immowelt.de/9/c/d/6/9cd62b26-3c16-4ece-a08a-1b180b918d4f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8371,7 +8578,7 @@
    "image": "https://mms.immowelt.de/b/0/b/1/b0b1b441-f92d-4426-bdad-cfa3fa7b0663.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8398,14 +8605,15 @@
    "seller": null,
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-15",
      434600
     ]
    ],
-   "new_build": false
+   "new_build": false,
+   "gone": "2026-11-21"
   },
   "immowelt:b2c462ed-ee4e-4422-b29d-03dc26271407": {
    "source": "immowelt",
@@ -8423,7 +8631,7 @@
    "image": "https://mms.immowelt.de/4/1/0/3/41034873-e1ca-457a-b355-fac082d5d16e.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8453,7 +8661,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-18",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8462,6 +8670,7 @@
     ]
    ],
    "same_as": [
+    "immowelt:fd19a4d9-1f05-40a8-860a-2446f9cbfafe",
     "kleinanzeigen:3574218405"
    ]
   },
@@ -8481,7 +8690,7 @@
    "image": "https://mms.immowelt.de/3/1/8/0/31805dfa-d1ae-411b-b856-e1e30b02e896.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8507,7 +8716,7 @@
    "image": "https://mms.immowelt.de/b/1/5/e/b15e3c84-6aae-487c-a04b-883199dbb1f0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8563,7 +8772,7 @@
    "image": "https://mms.immowelt.de/8/f/3/5/8f35f3e1-e78c-4909-bf4d-5b0d84f7852a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8589,7 +8798,7 @@
    "image": "https://mms.immowelt.de/5/5/c/e/55ce0558-7c3d-465d-a36b-978b6831528b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8615,7 +8824,7 @@
    "image": "https://mms.immowelt.de/d/8/2/f/d82fdb44-e228-4e66-9d4d-37e20b619b2f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8641,7 +8850,7 @@
    "image": "https://mms.immowelt.de/5/9/2/2/592268fe-f594-49e1-b7f9-1219ef6a48e5.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8667,7 +8876,7 @@
    "image": "https://mms.immowelt.de/7/a/6/a/7a6a6722-7764-467c-9962-08d2b0646881.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8676,6 +8885,36 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:b9a07854-1cff-41f2-b5ab-fb9ccfe7653a": {
+   "source": "immowelt",
+   "source_id": "b9a07854-1cff-41f2-b5ab-fb9ccfe7653a",
+   "url": "https://www.immowelt.de/expose/b9a07854-1cff-41f2-b5ab-fb9ccfe7653a",
+   "kind": "house",
+   "title": "Doppelhaushälfte · provisionsfrei",
+   "price": 370000,
+   "size_m2": 102.0,
+   "rooms": 3.0,
+   "zip": "53179",
+   "district": "Mehlem",
+   "plot_m2": 291.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/3/8/5/9/3859fc04-ea58-488f-97c3-cbd8e481e0ba.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     370000
+    ]
+   ],
+   "same_as": [
+    "immowelt:037513db-8bf5-4e46-a2ba-10d94e0b2c86",
+    "kleinanzeigen:3574212414"
+   ]
   },
   "immowelt:b9f75599-98aa-455a-bcac-4f113f848744": {
    "source": "immowelt",
@@ -8693,7 +8932,7 @@
    "image": "https://mms.immowelt.de/8/6/d/1/86d16d34-31a6-44a8-ba71-40a50c7f90c2.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8719,7 +8958,7 @@
    "image": "https://mms.immowelt.de/1/0/e/7/10e71628-5c5a-46fc-943c-260140dd0263.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8745,7 +8984,7 @@
    "image": "https://mms.immowelt.de/0/5/8/3/058376bd-cdc6-476c-a59e-7d0954f391b9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8772,7 +9011,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8811,6 +9050,36 @@
    "new_build": false,
    "gone": "2026-11-17"
   },
+  "immowelt:bda2e3bf-83bf-47cb-865d-d739c8cf7dd9": {
+   "source": "immowelt",
+   "source_id": "bda2e3bf-83bf-47cb-865d-d739c8cf7dd9",
+   "url": "https://www.immowelt.de/expose/bda2e3bf-83bf-47cb-865d-d739c8cf7dd9",
+   "kind": "flat",
+   "title": "Wohnung",
+   "price": 360000,
+   "size_m2": 103.2,
+   "rooms": null,
+   "zip": "53127",
+   "district": "Ippendorf",
+   "plot_m2": null,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/a/7/5/1/a751d15a-1011-4586-8994-09f8a8b89e91.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     360000
+    ]
+   ],
+   "same_as": [
+    "immowelt:147a810f-fd48-4b42-9daa-d7c2ac56529d",
+    "kleinanzeigen:3574212574"
+   ]
+  },
   "immowelt:bea88d7f-8fbe-4f28-80e5-7f0d5bfc8440": {
    "source": "immowelt",
    "source_id": "bea88d7f-8fbe-4f28-80e5-7f0d5bfc8440",
@@ -8827,7 +9096,7 @@
    "image": "https://mms.immowelt.de/2/5/b/5/25b52a83-87bd-476f-9891-8a128c1a15d3.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8907,7 +9176,7 @@
    "image": "https://mms.immowelt.de/a/a/c/d/aacd5bb2-080d-4461-8939-cf233542a1e9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8933,7 +9202,7 @@
    "image": "https://mms.immowelt.de/b/c/7/2/bc7292ba-ae9d-4723-8124-8823188cdd45.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -8954,7 +9223,7 @@
    "image": "https://mms.immowelt.de/3/d/0/f/3d0f2dce-c13f-460a-859a-78f593a4022a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -8980,7 +9249,7 @@
    "image": "https://mms.immowelt.de/0/0/7/0/0070565d-7e55-416d-903f-f044a190a9a5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9006,7 +9275,7 @@
    "image": "https://mms.immowelt.de/e/9/d/c/e9dc89f6-89f6-41eb-8065-6706246897ab.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9032,7 +9301,7 @@
    "image": "https://mms.immowelt.de/5/d/5/a/5d5af8d5-7f22-481e-b915-a462c14302a9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9061,7 +9330,7 @@
    "image": "https://mms.immowelt.de/b/2/b/1/b2b1e259-1645-4b6e-8608-921f8d3f1328.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9087,7 +9356,7 @@
    "image": "https://mms.immowelt.de/b/0/f/1/b0f11397-fe54-41e5-9154-2059d621187d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9140,7 +9409,7 @@
    "image": "https://mms.immowelt.de/9/a/e/2/9ae22550-3151-4d8d-8d1d-fed35e68d9ad.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9169,7 +9438,7 @@
    "image": "https://mms.immowelt.de/3/5/4/4/35446201-6373-46f3-b017-14f0a81982e1.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9198,7 +9467,7 @@
    "image": "https://mms.immowelt.de/2/b/9/2/2b924df7-f053-4dcd-9020-057028767a57.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -9219,7 +9488,7 @@
    "image": "https://mms.immowelt.de/e/4/2/8/e42837e7-0d13-4b9a-9f2b-28cb5181a56d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9245,7 +9514,7 @@
    "image": "https://mms.immowelt.de/c/9/a/4/c9a4ad89-504b-49ba-8552-b0dba63f62b0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9271,7 +9540,7 @@
    "image": "https://mms.immowelt.de/9/8/a/3/98a36173-eb28-406a-b8b8-407c28008486.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9297,7 +9566,7 @@
    "image": "https://mms.immowelt.de/7/b/8/1/7b81fc8d-cff7-498c-a859-3c30aa72fbb6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9326,7 +9595,7 @@
    "image": "https://mms.immowelt.de/f/e/f/8/fef84443-4abd-4676-bf48-da51a5cd9023.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9349,7 +9618,7 @@
    "url": "https://www.immowelt.de/expose/cf22cd7a-ceee-47e4-8dd9-5d5e7576306f",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 309000,
+   "price": 299000,
    "size_m2": 99.0,
    "rooms": 4.0,
    "zip": "53123",
@@ -9359,18 +9628,19 @@
    "image": "https://mms.immowelt.de/b/2/d/b/b2dbc7f9-ed86-486d-99f9-2066c97fc472.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      309000
+    ],
+    [
+     "2026-11-21",
+     299000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3282873903"
-   ]
+   "new_build": false
   },
   "immowelt:cf80fe87-222d-456e-b225-a5602c700fb2": {
    "source": "immowelt",
@@ -9390,17 +9660,14 @@
    "new_build": false,
    "first_seen": "2026-11-17",
    "last_seen": "2026-11-19",
-   "active": true,
+   "active": false,
    "price_history": [
     [
      "2026-11-17",
      360000
     ]
    ],
-   "same_as": [
-    "immowelt:0587c8fb-e1cf-4f52-a295-5004fb49d852",
-    "kleinanzeigen:3574212574"
-   ]
+   "gone": "2026-11-21"
   },
   "immowelt:cfdc67fc-91ee-4946-a73d-f97c951712d2": {
    "source": "immowelt",
@@ -9418,7 +9685,7 @@
    "image": "https://mms.immowelt.de/b/0/f/0/b0f0d392-c07a-4cb0-a8aa-eb709f2971a2.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9434,7 +9701,7 @@
    "url": "https://www.immowelt.de/expose/d03d0ec4-de8f-4790-adac-09ec6f35a6ae",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 239000,
+   "price": 229000,
    "size_m2": 77.4,
    "rooms": 3.0,
    "zip": "53175",
@@ -9444,12 +9711,16 @@
    "image": "https://mms.immowelt.de/1/f/d/f/1fdfd0fd-8c70-4423-8f09-2c2a86537671.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      239000
+    ],
+    [
+     "2026-11-21",
+     229000
     ]
    ],
    "new_build": false,
@@ -9473,7 +9744,7 @@
    "image": "https://mms.immowelt.de/2/2/4/e/224e511b-461d-4e2e-bcb2-0a27a5b318c7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -9494,7 +9765,7 @@
    "image": "https://mms.immowelt.de/d/6/8/0/d6807aea-e479-493e-9cbb-c2f59fa53753.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9521,7 +9792,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9546,7 +9817,7 @@
    "image": "https://mms.immowelt.de/1/f/4/4/1f447191-0d49-4225-abf7-c88469d34529.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9572,7 +9843,7 @@
    "image": "https://mms.immowelt.de/6/0/9/2/6092fe66-c05a-43e9-a9c1-4bd6aba6dfea.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9598,7 +9869,7 @@
    "image": "https://mms.immowelt.de/9/e/8/8/9e88872c-6ede-4179-ad3e-4de2634a9b34.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9624,7 +9895,7 @@
    "image": "https://mms.immowelt.de/9/0/2/5/902518a7-bd7c-4265-b11b-926a46c95b02.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9650,7 +9921,7 @@
    "image": "https://mms.immowelt.de/a/8/3/6/a836a7b7-f692-4797-9137-e4d53b4ea490.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9679,7 +9950,7 @@
    "image": "https://mms.immowelt.de/1/0/e/b/10eb3849-feac-46cf-9d62-b042646bf1fe.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9705,7 +9976,7 @@
    "image": "https://mms.immowelt.de/f/d/3/a/fd3a7cb5-a633-447a-93c6-0f27584983f4.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [],
    "new_build": false
@@ -9726,7 +9997,7 @@
    "image": "https://mms.immowelt.de/4/7/c/b/47cb54a2-f4d4-45b5-8589-44bc4d2b8979.png?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9752,7 +10023,7 @@
    "image": "https://mms.immowelt.de/e/8/1/f/e81fee3b-9823-42af-abd8-c7fef0706da4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9835,7 +10106,7 @@
    "image": "https://mms.immowelt.de/c/2/f/8/c2f87510-93e3-4d03-9022-09f38a18dbee.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9851,7 +10122,7 @@
    "url": "https://www.immowelt.de/expose/dcece25f-e8f4-46a5-b407-1d959b8010a8",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 239000,
+   "price": 229000,
    "size_m2": 77.4,
    "rooms": 3.0,
    "zip": "53175",
@@ -9861,12 +10132,16 @@
    "image": "https://mms.immowelt.de/e/1/e/9/e1e9db96-a9b1-46d9-9967-6f32f89f741a.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      239000
+    ],
+    [
+     "2026-11-21",
+     229000
     ]
    ],
    "new_build": false,
@@ -9891,7 +10166,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9916,7 +10191,7 @@
    "image": "https://mms.immowelt.de/3/0/3/c/303c7fdc-ca1c-496c-b22b-7a73b27a79b5.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9942,7 +10217,7 @@
    "image": "https://mms.immowelt.de/6/d/b/6/6db6d23d-daa1-4f66-8eac-84ab494919f0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9971,7 +10246,7 @@
    "image": "https://mms.immowelt.de/9/d/0/2/9d020a83-cbc0-4d7c-8aac-bf9afd709a88.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -9998,7 +10273,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-17",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10023,7 +10298,7 @@
    "image": "https://mms.immowelt.de/0/8/5/e/085eff67-7b72-4c4e-8d6d-e73f98ce0507.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10049,7 +10324,7 @@
    "image": "https://mms.immowelt.de/b/8/0/8/b808d806-ae9e-4e17-b60b-3361d42cdb8f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10078,7 +10353,7 @@
    "image": "https://mms.immowelt.de/7/6/a/a/76aa3826-30a1-49dd-a01f-9fffea0ad7b4.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10107,7 +10382,7 @@
    "image": "https://mms.immowelt.de/9/1/2/8/912861e0-32e6-40bd-9a82-f0e964c797c9.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10136,7 +10411,7 @@
    "image": "https://mms.immowelt.de/e/3/0/b/e30b2f38-4570-4b34-9183-d10722d032cc.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10162,7 +10437,7 @@
    "image": "https://mms.immowelt.de/6/4/0/6/6406c8c9-4b59-4c75-b0c2-2b9c0c54775d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10191,7 +10466,7 @@
    "image": "https://mms.immowelt.de/4/e/6/0/4e600ef2-8275-4df6-b2d6-cc75481e30df.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10207,7 +10482,7 @@
    "url": "https://www.immowelt.de/expose/e1b0292c-fab2-4b73-bf37-aa91b348c0fa",
    "kind": "flat",
    "title": "Wohnung · provisionsfrei",
-   "price": 249000,
+   "price": 239000,
    "size_m2": 73.3,
    "rooms": 3.0,
    "zip": "53119",
@@ -10217,18 +10492,19 @@
    "image": "https://mms.immowelt.de/b/0/b/7/b0b7b29a-b5b7-4c1f-b57d-25c2f13ccc4d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
      "2026-11-15",
      249000
+    ],
+    [
+     "2026-11-21",
+     239000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "kleinanzeigen:3013854369"
-   ]
+   "new_build": false
   },
   "immowelt:e2224616-f423-408d-9ff2-08c09cc1cf65": {
    "source": "immowelt",
@@ -10246,7 +10522,7 @@
    "image": "https://mms.immowelt.de/f/e/a/9/fea9e240-c8ce-4b36-9f8e-7b39a422a9d3.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10272,7 +10548,7 @@
    "image": "https://mms.immowelt.de/7/0/c/e/70ce6135-8261-4345-9f20-faa1aa8c9c70.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10325,7 +10601,7 @@
    "image": "https://mms.immowelt.de/5/d/9/8/5d98b467-983a-43d7-a1f8-60f4b39e8b85.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10351,7 +10627,7 @@
    "image": "https://mms.immowelt.de/e/6/2/f/e62f2d39-a99a-4518-82eb-dfbbc9e5eed6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10377,7 +10653,7 @@
    "image": "https://mms.immowelt.de/f/1/a/b/f1abe404-fc00-4461-919b-f52227bc0c58.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10386,6 +10662,36 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:e48a5d2b-3220-4e60-ad1e-0e184e81278e": {
+   "source": "immowelt",
+   "source_id": "e48a5d2b-3220-4e60-ad1e-0e184e81278e",
+   "url": "https://www.immowelt.de/expose/e48a5d2b-3220-4e60-ad1e-0e184e81278e",
+   "kind": "flat",
+   "title": "Wohnung · provisionsfrei",
+   "price": 360000,
+   "size_m2": 102.9,
+   "rooms": 4.0,
+   "zip": "53127",
+   "district": "Ippendorf",
+   "plot_m2": null,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/2/d/d/d/2dddce3f-9840-4ad9-b391-7f9af7d2a784.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     360000
+    ]
+   ],
+   "same_as": [
+    "immowelt:0587c8fb-e1cf-4f52-a295-5004fb49d852",
+    "kleinanzeigen:3574212574"
+   ]
   },
   "immowelt:e4f9d3fb-35c5-4639-8d08-d39bdf247ed5": {
    "source": "immowelt",
@@ -10403,7 +10709,7 @@
    "image": "https://mms.immowelt.de/e/a/5/f/ea5f2235-e346-4c25-995b-5d765e9012ec.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10429,7 +10735,7 @@
    "image": "https://mms.immowelt.de/4/9/f/b/49fb4d20-0a91-4ca0-9fab-fd5777c33190.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10457,7 +10763,7 @@
    "image": "https://mms.immowelt.de/2/4/2/9/2429f3f8-1765-46d0-9abe-6ed0fcf8ca9f.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10483,7 +10789,7 @@
    "image": "https://mms.immowelt.de/3/f/f/e/3ffef4fa-bc1e-4b90-b696-f53ce60825ae.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10494,6 +10800,32 @@
    "new_build": false,
    "same_as": [
     "kleinanzeigen:3515777168"
+   ]
+  },
+  "immowelt:e8c981d5-c6e9-46e6-810d-87aa33cbdc71": {
+   "source": "immowelt",
+   "source_id": "e8c981d5-c6e9-46e6-810d-87aa33cbdc71",
+   "url": "https://www.immowelt.de/expose/e8c981d5-c6e9-46e6-810d-87aa33cbdc71",
+   "kind": "flat",
+   "title": "Wohnung",
+   "price": 264000,
+   "size_m2": 103.0,
+   "rooms": 4.0,
+   "zip": "53123",
+   "district": null,
+   "plot_m2": null,
+   "energy_class": "D",
+   "image": "https://mms.immowelt.de/9/9/c/7/99c70153-04fe-4436-9c66-6beec146b5c8.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     264000
+    ]
    ]
   },
   "immowelt:e8f2220b-4565-4cd3-bd6b-a190258b08bf": {
@@ -10512,7 +10844,7 @@
    "image": "https://mms.immowelt.de/f/0/5/a/f05aeb9a-4f1c-4a38-ae09-424349174fbb.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10538,7 +10870,7 @@
    "image": "https://mms.immowelt.de/c/f/c/6/cfc67312-96a1-4afc-a785-410791b1bf27.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10568,7 +10900,7 @@
    "image": "https://mms.immowelt.de/9/c/3/e/9c3e7211-1c69-41b1-bb90-1ecdc7dda394.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10597,7 +10929,7 @@
    "image": "https://mms.immowelt.de/a/d/0/d/ad0d315f-60d4-449e-acbd-344d1f86fb90.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10653,7 +10985,7 @@
    "image": "https://mms.immowelt.de/5/0/f/8/50f83518-4597-4324-a9f8-6882bf3b41a6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10679,7 +11011,7 @@
    "image": "https://mms.immowelt.de/5/2/c/1/52c11e6f-073b-4769-942a-da4f18fa073b.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10708,7 +11040,7 @@
    "image": "https://mms.immowelt.de/9/2/c/e/92cee6d6-114a-4783-af45-0ca52439e4c7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10734,7 +11066,7 @@
    "image": "https://mms.immowelt.de/1/6/a/5/16a54c1a-8fe8-47f0-af80-c7f8eb7b63ca.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10760,7 +11092,7 @@
    "image": "https://mms.immowelt.de/9/3/5/a/935a9417-3539-40bf-9868-741e18ecb5b0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10790,7 +11122,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10815,7 +11147,7 @@
    "image": "https://mms.immowelt.de/b/b/8/3/bb83f847-8ce6-4a49-98bf-656c723d605d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10845,7 +11177,7 @@
    "image": "https://mms.immowelt.de/4/e/7/4/4e74757d-7330-48d3-96fb-4db92f9640c7.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10874,7 +11206,7 @@
    "image": "https://mms.immowelt.de/9/a/a/0/9aa0f88f-552c-4adf-a99e-a1a6577921cc.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10903,7 +11235,7 @@
    "image": "https://mms.immowelt.de/b/7/6/2/b762bcfe-b6ef-43f3-bf11-fe62dc35c098.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10929,7 +11261,7 @@
    "image": "https://mms.immowelt.de/0/9/5/2/09529791-156f-4765-a4f5-215f7dff6163.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10958,7 +11290,7 @@
    "image": "https://mms.immowelt.de/5/c/7/4/5c740dde-3cd8-4d7a-b5e7-8a0d43244612.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -10987,7 +11319,7 @@
    "image": "https://mms.immowelt.de/1/3/1/4/1314295d-14d6-43ed-adaa-ea7b0c120c1c.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11016,7 +11348,7 @@
    "image": "https://mms.immowelt.de/3/a/c/9/3ac9de81-a1bd-408f-a757-f5cfcce54462.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11043,7 +11375,7 @@
    "seller": null,
    "new_build": false,
    "first_seen": "2026-11-19",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11068,7 +11400,7 @@
    "image": "https://mms.immowelt.de/2/c/f/d/2cfdf685-a4c9-4c07-9f21-238790109c49.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11097,7 +11429,7 @@
    "image": "https://mms.immowelt.de/9/2/f/3/92f31b4f-e456-437a-8f1e-778a1f5173f6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11123,7 +11455,7 @@
    "image": "https://mms.immowelt.de/5/e/3/6/5e36073d-9323-42ed-94bc-c938015cd370.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11176,7 +11508,7 @@
    "image": "https://mms.immowelt.de/f/9/4/d/f94d2d7e-d142-44be-8be5-3dd50a735521.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11202,7 +11534,7 @@
    "image": "https://mms.immowelt.de/3/8/5/2/3852f718-4c53-4e3c-898d-43c69b46470d.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11228,7 +11560,7 @@
    "image": "https://mms.immowelt.de/e/1/e/4/e1e480aa-9c7d-4a49-b40a-6db6023b53d0.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11237,6 +11569,36 @@
     ]
    ],
    "new_build": false
+  },
+  "immowelt:fd19a4d9-1f05-40a8-860a-2446f9cbfafe": {
+   "source": "immowelt",
+   "source_id": "fd19a4d9-1f05-40a8-860a-2446f9cbfafe",
+   "url": "https://www.immowelt.de/expose/fd19a4d9-1f05-40a8-860a-2446f9cbfafe",
+   "kind": "house",
+   "title": "Einfamilienhaus · provisionsfrei",
+   "price": 520000,
+   "size_m2": 128.7,
+   "rooms": 6.0,
+   "zip": "53225",
+   "district": null,
+   "plot_m2": 608.0,
+   "energy_class": null,
+   "image": "https://mms.immowelt.de/8/6/b/1/86b163e9-805e-4ea4-af34-76a0c4b62ba5.jpg?w=480&h=360",
+   "seller": null,
+   "new_build": false,
+   "first_seen": "2026-11-21",
+   "last_seen": "2026-11-21",
+   "active": true,
+   "price_history": [
+    [
+     "2026-11-21",
+     520000
+    ]
+   ],
+   "same_as": [
+    "immowelt:b33ccbf4-8961-4fd8-bddf-75fb6e19a552",
+    "kleinanzeigen:3574218405"
+   ]
   },
   "immowelt:fefaaec1-ce47-41b7-ae85-063f906ea95b": {
    "source": "immowelt",
@@ -11254,7 +11616,7 @@
    "image": "https://mms.immowelt.de/b/7/5/e/b75e2f22-64ce-47d2-ab26-1b512b4f7b03.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11280,7 +11642,7 @@
    "image": "https://mms.immowelt.de/5/b/1/5/5b15610a-3ae9-4bd4-8f5c-a3ceb4cbc5e6.jpg?w=480&h=360",
    "seller": null,
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -11341,9 +11703,6 @@
      "2026-11-19",
      259000
     ]
-   ],
-   "same_as": [
-    "immowelt:af18d5c4-2a89-4a50-aa4d-b27dd53ef4c3"
    ]
   },
   "kleinanzeigen:2399989712": {
@@ -11370,9 +11729,6 @@
      "2026-11-19",
      259000
     ]
-   ],
-   "same_as": [
-    "immowelt:a5c75a28-ca89-4848-8c8a-a5c24259ce3b"
    ]
   },
   "kleinanzeigen:2399989956": {
@@ -11399,9 +11755,6 @@
      "2026-11-18",
      259000
     ]
-   ],
-   "same_as": [
-    "immowelt:657e966e-a345-4467-82b6-81242a9ee405"
    ]
   },
   "kleinanzeigen:2399990878": {
@@ -11457,10 +11810,6 @@
      "2026-11-19",
      309000
     ]
-   ],
-   "same_as": [
-    "immowelt:46c6c365-b4cc-4f71-83cb-299b2fe772dc",
-    "immowelt:6db60fee-bfa6-4a8d-b0f7-20ef365c0889"
    ]
   },
   "kleinanzeigen:2644290289": {
@@ -11576,9 +11925,6 @@
      "2026-11-19",
      379000
     ]
-   ],
-   "same_as": [
-    "immowelt:99668df2-1f4c-4c3a-a8b5-a240dffc7b47"
    ]
   },
   "kleinanzeigen:2814990656": {
@@ -11831,9 +12177,6 @@
      "2026-11-19",
      249000
     ]
-   ],
-   "same_as": [
-    "immowelt:e1b0292c-fab2-4b73-bf37-aa91b348c0fa"
    ]
   },
   "kleinanzeigen:3117836312": {
@@ -12143,10 +12486,7 @@
      309000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:cf22cd7a-ceee-47e4-8dd9-5d5e7576306f"
-   ]
+   "new_build": false
   },
   "kleinanzeigen:3304613495": {
    "source": "kleinanzeigen",
@@ -15870,10 +16210,7 @@
      309000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:831709d8-eeb7-40c8-8bc8-ebe6357fc074"
-   ]
+   "new_build": false
   },
   "kleinanzeigen:3554447515": {
    "source": "kleinanzeigen",
@@ -15899,10 +16236,7 @@
      269000
     ]
    ],
-   "new_build": false,
-   "same_as": [
-    "immowelt:7ffb8cf7-74a0-4fad-a61c-2d3b884c84ad"
-   ]
+   "new_build": false
   },
   "kleinanzeigen:3554969337": {
    "source": "kleinanzeigen",
@@ -17520,7 +17854,7 @@
    "same_as": [
     "immowelt:037513db-8bf5-4e46-a2ba-10d94e0b2c86",
     "immowelt:5497b465-ba60-4431-b0bd-d3487868478c",
-    "immowelt:55d99202-f505-4289-8151-dc31093cab69"
+    "immowelt:b9a07854-1cff-41f2-b5ab-fb9ccfe7653a"
    ]
   },
   "kleinanzeigen:3574212574": {
@@ -17551,7 +17885,8 @@
    "same_as": [
     "immowelt:0587c8fb-e1cf-4f52-a295-5004fb49d852",
     "immowelt:147a810f-fd48-4b42-9daa-d7c2ac56529d",
-    "immowelt:cf80fe87-222d-456e-b225-a5602c700fb2"
+    "immowelt:bda2e3bf-83bf-47cb-865d-d739c8cf7dd9",
+    "immowelt:e48a5d2b-3220-4e60-ad1e-0e184e81278e"
    ]
   },
   "kleinanzeigen:3574218405": {
@@ -17580,7 +17915,8 @@
     ]
    ],
    "same_as": [
-    "immowelt:b33ccbf4-8961-4fd8-bddf-75fb6e19a552"
+    "immowelt:b33ccbf4-8961-4fd8-bddf-75fb6e19a552",
+    "immowelt:fd19a4d9-1f05-40a8-860a-2446f9cbfafe"
    ]
   },
   "kleinanzeigen:3575175546": {
@@ -17752,10 +18088,10 @@
    "district": "Röttgen",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL20waWJyeXdp?sig=E-Rw8yJLCsyfXw4kVNTmLF3fE1OZV2gw_ajyB0JhNSE&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzYzMDYyL20waWJyeXdp?sig=84wvbIwLdvjjJssjBIbg_zoQDXOvJNvsFBzPBSe3O70&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17778,10 +18114,10 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=eSzIOKOqdUKkIyFGfqz9pkpw1x8a2O1vtiKFTGEi-Kk&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzkzODM2LzB2MTdvNXBv?sig=DXkowJJM5SdYhd8wbVl9lnlM4L8P9rGt63DALPL8ckU&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17808,10 +18144,10 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=xWleiBEyhaqnFSnNtQ4xmeumOQItHPjkMGR3mpi6-_0&exp=1795141877",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDE0MTc1LzNkcHR4Z2k0?sig=ZmfMDMf_A-3eFWh4TK3_rOINEnVslkI8Oj3UnmU7TW0&exp=1795311169",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17838,10 +18174,10 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "G",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=QVajIfQa8TD8PKLQ4G4bLvydsHFdhTHe-cuIdwxQKJ8&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI4MTk4L2Jzb25nYjVx?sig=jrKoUJvOY9HOUSSPCrwU8F9xiAHteJBKGywhCHU1Qdc&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17868,10 +18204,10 @@
    "district": null,
    "plot_m2": null,
    "energy_class": "D",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=8bGt4wTKD_dIbBPiHP_cH3011-xfE8AZ6DofbymxcQs&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDU4ODY2L2tkYW9td2dt?sig=Nfge-Vh2HQYRTS9RpZgTWzZaVhtYT6kDYpSAZlZukNg&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17894,10 +18230,10 @@
    "district": "Brüser Berg",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=o0Qp2hwITamXaXNM3JozDMxxnf7OyWj8YUz9Vxlu7ZY&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDY0MTk4L3V2czcyZ3R4?sig=sdAtC5d-Z8vEpzcXJ2bdv1eNSC7nL260V8wvFn1SWMk&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17923,10 +18259,10 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=6rPzbHBTmQ9kq2DZm9JPU0At0lyJ7S09ll8d3Rb9r8Y&exp=1795141877",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTEyNS9naHZxNjF2Ng?sig=jGf4D5viNyfEzpwZfvoiauaISaWvkiNxgWNXmATr4Mw&exp=1795311169",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17949,10 +18285,10 @@
    "district": null,
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=l7I2zg5cIF83LJshiLVCgkKj_Nvni5lbBgx2QG9JTaY&exp=1795141877",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvZXh0LzQ3NTcwMC9xdWphZnkwZQ?sig=7vGG4oeMDll_zOAosnUN5N6tPYdGHtdJcy9sdFDau-k&exp=1795311169",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -17975,10 +18311,10 @@
    "district": "Muffendorf",
    "plot_m2": null,
    "energy_class": "C",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=OL42UHuItcYHnFkTRqLyFzvxc-V0D0Us7N4B9yeyb3Y&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDg2MTYzL294emJiNTM4?sig=s3EE0megoSHZb2lZ4jPyfTgpfT7uNC5CefJFjEU1oU4&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -18004,10 +18340,10 @@
    "district": "Heiderhof",
    "plot_m2": null,
    "energy_class": null,
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=dwP1PD7rne4o5DknDgfiXPFnS_xDHBX9jldDkXbEL68&exp=1795141877",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzMjc3L29reGUxdmg0?sig=rPpvUH1J2-yHW0nSwaEsSdHa1WV8s_AwYjHijeEpMwA&exp=1795311169",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -18034,10 +18370,10 @@
    "district": "Wachtberg",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=o-FVM6WAf0deD6UWAXsdpaF4jFEgATODk1IXitiRckE&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDkzNzM0L2ZrNXY2dGhk?sig=PUitrsIkIn0dCd5Rx2AY6f47DYtgPI8EXxG4E9H_gzE&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -18064,10 +18400,10 @@
    "district": "Ippendorf",
    "plot_m2": null,
    "energy_class": "F",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=H-94jxL--7Df3W4Al9FuPZi0XrsQZwvbxXwRXMirJjQ&exp=1795141883",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDk3ODg4L2I0cXYwaTZj?sig=rOGNEg6WKAS3cqk3tEPNoXCQ33GvTEW29ZAYoOrUABs&exp=1795311176",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
@@ -18121,10 +18457,10 @@
    "district": "Lengsdorf",
    "plot_m2": null,
    "energy_class": "E",
-   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=YBAAwWD_5Q_wAfSRASavNh_PGgcK7SCFIokabb3mrQQ&exp=1795141877",
+   "image": "https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvbGlzdGluZ19mbG93LzUyODEzL2Y4YzdjNjZhODRlNjRjMjRiY2QxYzJkZmUyMmI3ZjBhLmpwZw?sig=mO3gS2aBFhaqvvlpXwma4l9AlczJbHNz5plj60idnK0&exp=1795311169",
    "seller": "private",
    "first_seen": "2026-11-15",
-   "last_seen": "2026-11-19",
+   "last_seen": "2026-11-21",
    "active": true,
    "price_history": [
     [
